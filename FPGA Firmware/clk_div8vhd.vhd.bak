@@ -1,0 +1,6 @@
+entity clk_div is
+port(clk_in : in std_logic;
+divider : in unsigned(7 downto 0);
+clk_out);
+
+end entity;

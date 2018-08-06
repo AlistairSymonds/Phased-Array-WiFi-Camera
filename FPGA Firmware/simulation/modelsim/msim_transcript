@@ -1,0 +1,78 @@
+# Reading C:/intelFPGA_lite/17.1/modelsim_ase/tcl/vsim/pref.tcl
+# do Phased_WiFi_Telescope_FW_run_msim_rtl_vhdl.do
+# if {[file exists rtl_work]} {
+# 	vdel -lib rtl_work -all
+# }
+# vlib rtl_work
+# vmap work rtl_work
+# Model Technology ModelSim - Intel FPGA Edition vmap 10.5b Lib Mapping Utility 2016.10 Oct  5 2016
+# vmap work rtl_work 
+# Copying C:/intelFPGA_lite/17.1/modelsim_ase/win32aloem/../modelsim.ini to modelsim.ini
+# Modifying modelsim.ini
+# 
+# vcom -2008 -work work {C:/Users/alist/OneDrive/Electrickery/Phased Array Radio Telescope/WiFi Tele/FPGA Firmware/adc_spi.vhd}
+# Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 02:02:07 on Aug 05,2018
+# vcom -reportprogress 300 -2008 -work work C:/Users/alist/OneDrive/Electrickery/Phased Array Radio Telescope/WiFi Tele/FPGA Firmware/adc_spi.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity adc_spi
+# -- Compiling architecture arch of adc_spi
+# End time: 02:02:07 on Aug 05,2018, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vcom -2008 -work work {C:/Users/alist/OneDrive/Electrickery/Phased Array Radio Telescope/WiFi Tele/FPGA Firmware/clk_div8vhd.vhd}
+# Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 02:02:07 on Aug 05,2018
+# vcom -reportprogress 300 -2008 -work work C:/Users/alist/OneDrive/Electrickery/Phased Array Radio Telescope/WiFi Tele/FPGA Firmware/clk_div8vhd.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity clk_div8
+# -- Compiling architecture arch of clk_div8
+# End time: 02:02:07 on Aug 05,2018, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# 
+# vcom -2008 -work work {C:/Users/alist/OneDrive/Electrickery/Phased Array Radio Telescope/WiFi Tele/FPGA Firmware/simulation/modelsim/adc_spi.vht}
+# Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 02:02:07 on Aug 05,2018
+# vcom -reportprogress 300 -2008 -work work C:/Users/alist/OneDrive/Electrickery/Phased Array Radio Telescope/WiFi Tele/FPGA Firmware/simulation/modelsim/adc_spi.vht 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity adc_spi_vhd_tst
+# -- Compiling architecture adc_spi_arch of adc_spi_vhd_tst
+# End time: 02:02:07 on Aug 05,2018, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# 
+# vsim -t 1ps -L altera -L lpm -L sgate -L altera_mf -L altera_lnsim -L cyclone10lp -L rtl_work -L work -voptargs="+acc"  adc_spi_vhd_tst
+# vsim -t 1ps -L altera -L lpm -L sgate -L altera_mf -L altera_lnsim -L cyclone10lp -L rtl_work -L work -voptargs=""+acc"" adc_spi_vhd_tst 
+# Start time: 02:02:07 on Aug 05,2018
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading ieee.numeric_std(body)
+# Loading work.adc_spi_vhd_tst(adc_spi_arch)
+# Loading work.adc_spi(arch)
+# Loading work.clk_div8(arch)
+# 
+# add wave *
+# ** Warning: (vsim-WLF-5000) WLF file currently in use: vsim.wlf
+#           File in use by: alist  Hostname: TOWER  ProcessID: 20764
+#           Attempting to use alternate WLF file "./wlft95756z".
+# ** Warning: (vsim-WLF-5001) Could not open WLF file: vsim.wlf
+#           Using alternate file: ./wlft95756z
+# view structure
+# .main_pane.structure.interior.cs.body.struct
+# view signals
+# .main_pane.objects.interior.cs.body.tree
+# run 1000 ns
+# ** Warning: NUMERIC_STD."<": metavalue detected, returning FALSE
+#    Time: 20 ns  Iteration: 1  Instance: /adc_spi_vhd_tst/i1/spi_clk_divider
+# ** Warning: NUMERIC_STD."<": metavalue detected, returning FALSE
+#    Time: 40 ns  Iteration: 1  Instance: /adc_spi_vhd_tst/i1/spi_clk_divider
+# ** Warning: NUMERIC_STD."<": metavalue detected, returning FALSE
+#    Time: 60 ns  Iteration: 1  Instance: /adc_spi_vhd_tst/i1/spi_clk_divider

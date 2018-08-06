@@ -1,0 +1,16 @@
+Fitter Status : Successful - Mon Aug 06 12:04:54 2018
+Quartus Prime Version : 17.1.0 Build 590 10/25/2017 SJ Lite Edition
+Revision Name : Phased_WiFi_Telescope_FW
+Top-level Entity Name : adc_spi
+Family : Cyclone 10 LP
+Device : 10CL025YU256C8G
+Timing Models : Final
+Total logic elements : 71 / 24,624 ( < 1 % )
+    Total combinational functions : 58 / 24,624 ( < 1 % )
+    Dedicated logic registers : 49 / 24,624 ( < 1 % )
+Total registers : 49
+Total pins : 38 / 151 ( 25 % )
+Total virtual pins : 0
+Total memory bits : 0 / 608,256 ( 0 % )
+Embedded Multiplier 9-bit elements : 0 / 132 ( 0 % )
+Total PLLs : 0 / 4 ( 0 % )

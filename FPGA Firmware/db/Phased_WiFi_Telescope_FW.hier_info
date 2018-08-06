@@ -1,0 +1,13 @@
+|wifi_tele_top_level
+hmcad1511_fclk => ~NO_FANOUT~
+hmcad1511_lclk => ~NO_FANOUT~
+hmcad1511_d1a => ~NO_FANOUT~
+hmcad1511_d1b => ~NO_FANOUT~
+hmcad1511_d2a => ~NO_FANOUT~
+hmcad1511_d2b => ~NO_FANOUT~
+hmcad1511_d3a => ~NO_FANOUT~
+hmcad1511_d3b => ~NO_FANOUT~
+hmcad1511_d4a => ~NO_FANOUT~
+hmcad1511_d4b => ~NO_FANOUT~
+
+

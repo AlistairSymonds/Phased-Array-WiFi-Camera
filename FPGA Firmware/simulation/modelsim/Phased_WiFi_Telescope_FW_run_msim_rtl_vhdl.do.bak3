@@ -1,0 +1,19 @@
+transcript on
+if {[file exists rtl_work]} {
+	vdel -lib rtl_work -all
+}
+vlib rtl_work
+vmap work rtl_work
+
+vlog -vlog01compat -work work +incdir+C:/Users/alist/OneDrive/Electrickery/Phased\ Array\ Radio\ Telescope/WiFi\ Tele/FPGA\ Firmware/db {C:/Users/alist/OneDrive/Electrickery/Phased Array Radio Telescope/WiFi Tele/FPGA Firmware/db/adc_lvds_lvds_rx.v}
+vcom -2008 -work work {C:/Users/alist/OneDrive/Electrickery/Phased Array Radio Telescope/WiFi Tele/FPGA Firmware/adc_lvds.vhd}
+vcom -2008 -work work {C:/Users/alist/OneDrive/Electrickery/Phased Array Radio Telescope/WiFi Tele/FPGA Firmware/hmcad1511_controller.vhd}
+
+vcom -2008 -work work {C:/Users/alist/OneDrive/Electrickery/Phased Array Radio Telescope/WiFi Tele/FPGA Firmware/simulation/modelsim/hmcad1511_controller.vht}
+
+vsim -t 1ps -L altera -L lpm -L sgate -L altera_mf -L altera_lnsim -L cyclone10lp -L rtl_work -L work -voptargs="+acc"  hmcad1511_controller_vhd_tst
+
+add wave *
+view structure
+view signals
+run 100 ns

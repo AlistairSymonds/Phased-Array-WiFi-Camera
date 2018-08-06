@@ -1,0 +1,6 @@
+
+State Machine - |adc_spi|state
+Name state.tx state.saving state.idle 
+state.idle 0 0 0 
+state.saving 0 1 1 
+state.tx 1 0 1 

@@ -1,0 +1,133 @@
+m255
+K4
+z2
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z0 dC:/Users/alist/OneDrive/Electrickery/Phased Array Radio Telescope/WiFi Tele/FPGA Firmware/simulation/modelsim
+Eadc_spi
+Z1 w1533396967
+Z2 DPx4 ieee 11 numeric_std 0 22 :ASDNFgHXf_ih3J@9F3Ze1
+Z3 DPx3 std 6 textio 0 22 zE1`LPoLg^DX3Oz^4Fj1K3
+Z4 DPx4 ieee 14 std_logic_1164 0 22 eNV`TJ_GofJTzYa?f<@Oe1
+R0
+Z5 8C:/Users/alist/OneDrive/Electrickery/Phased Array Radio Telescope/WiFi Tele/FPGA Firmware/adc_spi.vhd
+Z6 FC:/Users/alist/OneDrive/Electrickery/Phased Array Radio Telescope/WiFi Tele/FPGA Firmware/adc_spi.vhd
+l0
+L5
+VDjZgXS<Am<YZiVEk?zRRa0
+!s100 @hbF7Dz3C`QY15ioJlBLU1
+Z7 OV;C;10.5b;63
+33
+Z8 !s110 1533398527
+!i10b 1
+Z9 !s108 1533398527.000000
+Z10 !s90 -reportprogress|300|-2008|-work|work|C:/Users/alist/OneDrive/Electrickery/Phased Array Radio Telescope/WiFi Tele/FPGA Firmware/adc_spi.vhd|
+Z11 !s107 C:/Users/alist/OneDrive/Electrickery/Phased Array Radio Telescope/WiFi Tele/FPGA Firmware/adc_spi.vhd|
+!i113 1
+Z12 o-2008 -work work
+Z13 tExplicit 1 CvgOpt 0
+Aarch
+R2
+R3
+R4
+DEx4 work 7 adc_spi 0 22 DjZgXS<Am<YZiVEk?zRRa0
+l44
+L20
+V[n7c`@oXP5_39>M7CM?Lk2
+!s100 _?<5U=3<kMP5OLjXm@A9[1
+R7
+33
+R8
+!i10b 1
+R9
+R10
+R11
+!i113 1
+R12
+R13
+Eadc_spi_vhd_tst
+Z14 w1533395800
+R2
+R3
+R4
+R0
+Z15 8C:/Users/alist/OneDrive/Electrickery/Phased Array Radio Telescope/WiFi Tele/FPGA Firmware/simulation/modelsim/adc_spi.vht
+Z16 FC:/Users/alist/OneDrive/Electrickery/Phased Array Radio Telescope/WiFi Tele/FPGA Firmware/simulation/modelsim/adc_spi.vht
+l0
+L31
+VeI[<B2L8ZkSGcFeOJaO]Z3
+!s100 :LzbjcnYzniKTETg>RLIa2
+R7
+33
+R8
+!i10b 1
+R9
+Z17 !s90 -reportprogress|300|-2008|-work|work|C:/Users/alist/OneDrive/Electrickery/Phased Array Radio Telescope/WiFi Tele/FPGA Firmware/simulation/modelsim/adc_spi.vht|
+Z18 !s107 C:/Users/alist/OneDrive/Electrickery/Phased Array Radio Telescope/WiFi Tele/FPGA Firmware/simulation/modelsim/adc_spi.vht|
+!i113 1
+R12
+R13
+Aadc_spi_arch
+R2
+R3
+R4
+DEx4 work 15 adc_spi_vhd_tst 0 22 eI[<B2L8ZkSGcFeOJaO]Z3
+l57
+L33
+VIM70oE^4SQ[I^o3cMdO2;2
+!s100 :TH^L^Wlcfge[LF>^JhDD3
+R7
+33
+R8
+!i10b 1
+R9
+R17
+R18
+!i113 1
+R12
+R13
+Eclk_div8
+Z19 w1533396045
+R2
+R3
+R4
+R0
+Z20 8C:/Users/alist/OneDrive/Electrickery/Phased Array Radio Telescope/WiFi Tele/FPGA Firmware/clk_div8vhd.vhd
+Z21 FC:/Users/alist/OneDrive/Electrickery/Phased Array Radio Telescope/WiFi Tele/FPGA Firmware/clk_div8vhd.vhd
+l0
+L5
+V`TlBQGi0^PnM>j:m[zHg@3
+!s100 `DdiPY3iGjz>JV48P0AJ;2
+R7
+33
+R8
+!i10b 1
+R9
+Z22 !s90 -reportprogress|300|-2008|-work|work|C:/Users/alist/OneDrive/Electrickery/Phased Array Radio Telescope/WiFi Tele/FPGA Firmware/clk_div8vhd.vhd|
+Z23 !s107 C:/Users/alist/OneDrive/Electrickery/Phased Array Radio Telescope/WiFi Tele/FPGA Firmware/clk_div8vhd.vhd|
+!i113 1
+R12
+R13
+Aarch
+R2
+R3
+R4
+DEx4 work 8 clk_div8 0 22 `TlBQGi0^PnM>j:m[zHg@3
+l20
+L15
+V9ka[AmQ6N_[QAWl5SMMeE2
+!s100 o@kG5]:^l51hPPbdN`>hQ1
+R7
+33
+R8
+!i10b 1
+R9
+R22
+R23
+!i113 1
+R12
+R13

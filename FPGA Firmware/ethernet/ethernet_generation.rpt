@@ -1,0 +1,64 @@
+Info: Starting: Create simulation model
+Info: qsys-generate "C:\Users\alist\OneDrive\Electrickery\Phased Array Radio Telescope\WiFi Tele\FPGA Firmware\ethernet.qsys" --simulation=VHDL --allow-mixed-language-simulation --output-directory="C:\Users\alist\OneDrive\Electrickery\Phased Array Radio Telescope\WiFi Tele\FPGA Firmware\ethernet\simulation" --family="Cyclone 10 LP" --part=10CL025YU256C8G
+Progress: Loading FPGA Firmware/ethernet.qsys
+Progress: Reading input file
+Progress: Adding eth_tse_0 [altera_eth_tse 17.1]
+Progress: Parameterizing module eth_tse_0
+Progress: Building connections
+Progress: Parameterizing connections
+Progress: Validating
+Progress: Done reading input file
+Info: ethernet: Generating ethernet "ethernet" for SIM_VHDL
+Info: eth_tse_0: "ethernet" instantiated altera_eth_tse "eth_tse_0"
+Info: i_tse_mac: "eth_tse_0" instantiated altera_eth_tse_mac "i_tse_mac"
+Info: ethernet: Done "ethernet" with 3 modules, 227 files
+Info: qsys-generate succeeded.
+Info: Finished: Create simulation model
+Info: Starting: Create Modelsim Project.
+Info: sim-script-gen --spd="C:\Users\alist\OneDrive\Electrickery\Phased Array Radio Telescope\WiFi Tele\FPGA Firmware\ethernet\ethernet.spd" --output-directory="C:/Users/alist/OneDrive/Electrickery/Phased Array Radio Telescope/WiFi Tele/FPGA Firmware/ethernet/simulation/" --use-relative-paths=true
+Info: Doing: ip-make-simscript --spd=C:\Users\alist\OneDrive\Electrickery\Phased Array Radio Telescope\WiFi Tele\FPGA Firmware\ethernet\ethernet.spd --output-directory=C:/Users/alist/OneDrive/Electrickery/Phased Array Radio Telescope/WiFi Tele/FPGA Firmware/ethernet/simulation/ --use-relative-paths=true
+Info: Generating the following file(s) for MODELSIM simulator in C:/Users/alist/OneDrive/Electrickery/Phased Array Radio Telescope/WiFi Tele/FPGA Firmware/ethernet/simulation/ directory:
+Info: 	mentor/msim_setup.tcl
+Info: Skipping VCS script generation since VHDL file $QUARTUS_INSTALL_DIR/eda/sim_lib/altera_syn_attributes.vhd is required for simulation
+Info: Generating the following file(s) for VCSMX simulator in C:/Users/alist/OneDrive/Electrickery/Phased Array Radio Telescope/WiFi Tele/FPGA Firmware/ethernet/simulation/ directory:
+Info: 	synopsys/vcsmx/synopsys_sim.setup
+Info: 	synopsys/vcsmx/vcsmx_setup.sh
+Info: Generating the following file(s) for NCSIM simulator in C:/Users/alist/OneDrive/Electrickery/Phased Array Radio Telescope/WiFi Tele/FPGA Firmware/ethernet/simulation/ directory:
+Info: 	cadence/cds.lib
+Info: 	cadence/hdl.var
+Info: 	cadence/ncsim_setup.sh
+Info: 	2 .cds.lib files in cadence/cds_libs/ directory
+Info: Generating the following file(s) for RIVIERA simulator in C:/Users/alist/OneDrive/Electrickery/Phased Array Radio Telescope/WiFi Tele/FPGA Firmware/ethernet/simulation/ directory:
+Info: 	aldec/rivierapro_setup.tcl
+Info: For information on how to simulate your IP, see the explanatory comments in the simulator-specific subdirectories under C:/Users/alist/OneDrive/Electrickery/Phased Array Radio Telescope/WiFi Tele/FPGA Firmware/ethernet/simulation/.
+Info: Regenerate these scripts whenever you make any change to any Quartus-generated IP in your project.
+Info: Finished: Create Modelsim Project.
+Info: Starting: Create block symbol file (.bsf)
+Info: qsys-generate "C:\Users\alist\OneDrive\Electrickery\Phased Array Radio Telescope\WiFi Tele\FPGA Firmware\ethernet.qsys" --block-symbol-file --output-directory="C:\Users\alist\OneDrive\Electrickery\Phased Array Radio Telescope\WiFi Tele\FPGA Firmware\ethernet" --family="Cyclone 10 LP" --part=10CL025YU256C8G
+Progress: Loading FPGA Firmware/ethernet.qsys
+Progress: Reading input file
+Progress: Adding eth_tse_0 [altera_eth_tse 17.1]
+Progress: Parameterizing module eth_tse_0
+Progress: Building connections
+Progress: Parameterizing connections
+Progress: Validating
+Progress: Done reading input file
+Info: qsys-generate succeeded.
+Info: Finished: Create block symbol file (.bsf)
+Info: 
+Info: Starting: Create HDL design files for synthesis
+Info: qsys-generate "C:\Users\alist\OneDrive\Electrickery\Phased Array Radio Telescope\WiFi Tele\FPGA Firmware\ethernet.qsys" --synthesis=VHDL --output-directory="C:\Users\alist\OneDrive\Electrickery\Phased Array Radio Telescope\WiFi Tele\FPGA Firmware\ethernet\synthesis" --family="Cyclone 10 LP" --part=10CL025YU256C8G
+Progress: Loading FPGA Firmware/ethernet.qsys
+Progress: Reading input file
+Progress: Adding eth_tse_0 [altera_eth_tse 17.1]
+Progress: Parameterizing module eth_tse_0
+Progress: Building connections
+Progress: Parameterizing connections
+Progress: Validating
+Progress: Done reading input file
+Info: ethernet: Generating ethernet "ethernet" for QUARTUS_SYNTH
+Info: eth_tse_0: "ethernet" instantiated altera_eth_tse "eth_tse_0"
+Info: i_tse_mac: "eth_tse_0" instantiated altera_eth_tse_mac "i_tse_mac"
+Info: ethernet: Done "ethernet" with 3 modules, 118 files
+Info: qsys-generate succeeded.
+Info: Finished: Create HDL design files for synthesis
