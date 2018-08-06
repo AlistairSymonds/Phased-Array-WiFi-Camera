@@ -1,4 +1,4 @@
-|wifi_tele_top_level
+|wifi_tele_phy
 hmcad1511_fclk => ~NO_FANOUT~
 hmcad1511_lclk => ~NO_FANOUT~
 hmcad1511_d1a => ~NO_FANOUT~

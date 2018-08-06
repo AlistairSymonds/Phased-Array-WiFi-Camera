@@ -1,7 +1,7 @@
-Analysis & Synthesis Status : Successful - Mon Aug 06 12:13:16 2018
+Analysis & Synthesis Status : Successful - Mon Aug 06 14:03:51 2018
 Quartus Prime Version : 17.1.0 Build 590 10/25/2017 SJ Lite Edition
 Revision Name : Phased_WiFi_Telescope_FW
-Top-level Entity Name : wifi_tele_top_level
+Top-level Entity Name : wifi_tele_phy
 Family : Cyclone 10 LP
 Total logic elements : 0
     Total combinational functions : 0

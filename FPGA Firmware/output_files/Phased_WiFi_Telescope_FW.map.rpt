@@ -1,5 +1,5 @@
 Analysis & Synthesis report for Phased_WiFi_Telescope_FW
-Mon Aug 06 12:13:16 2018
+Mon Aug 06 14:03:51 2018
 Quartus Prime Version 17.1.0 Build 590 10/25/2017 SJ Lite Edition
 
 
@@ -42,10 +42,10 @@ refer to the applicable agreement for further details.
 +----------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                     ;
 +------------------------------------+---------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Mon Aug 06 12:13:16 2018       ;
+; Analysis & Synthesis Status        ; Successful - Mon Aug 06 14:03:51 2018       ;
 ; Quartus Prime Version              ; 17.1.0 Build 590 10/25/2017 SJ Lite Edition ;
 ; Revision Name                      ; Phased_WiFi_Telescope_FW                    ;
-; Top-level Entity Name              ; wifi_tele_top_level                         ;
+; Top-level Entity Name              ; wifi_tele_phy                               ;
 ; Family                             ; Cyclone 10 LP                               ;
 ; Total logic elements               ; 0                                           ;
 ;     Total combinational functions  ; 0                                           ;
@@ -59,91 +59,91 @@ refer to the applicable agreement for further details.
 +------------------------------------+---------------------------------------------+
 
 
-+-----------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Settings                                                                                               ;
-+----------------------------------------------------------------------------+---------------------+--------------------------+
-; Option                                                                     ; Setting             ; Default Value            ;
-+----------------------------------------------------------------------------+---------------------+--------------------------+
-; Device                                                                     ; 10CL025YU256C8G     ;                          ;
-; Top-level entity name                                                      ; wifi_tele_top_level ; Phased_WiFi_Telescope_FW ;
-; Family name                                                                ; Cyclone 10 LP       ; Cyclone V                ;
-; VHDL Show LMF Mapping Messages                                             ; Off                 ;                          ;
-; VHDL Version                                                               ; VHDL_2008           ; VHDL_1993                ;
-; Use smart compilation                                                      ; Off                 ; Off                      ;
-; Enable parallel Assembler and TimeQuest Timing Analyzer during compilation ; On                  ; On                       ;
-; Enable compact report table                                                ; Off                 ; Off                      ;
-; Restructure Multiplexers                                                   ; Auto                ; Auto                     ;
-; Create Debugging Nodes for IP Cores                                        ; Off                 ; Off                      ;
-; Preserve fewer node names                                                  ; On                  ; On                       ;
-; Intel FPGA IP Evaluation Mode                                              ; Enable              ; Enable                   ;
-; Verilog Version                                                            ; Verilog_2001        ; Verilog_2001             ;
-; State Machine Processing                                                   ; Auto                ; Auto                     ;
-; Safe State Machine                                                         ; Off                 ; Off                      ;
-; Extract Verilog State Machines                                             ; On                  ; On                       ;
-; Extract VHDL State Machines                                                ; On                  ; On                       ;
-; Ignore Verilog initial constructs                                          ; Off                 ; Off                      ;
-; Iteration limit for constant Verilog loops                                 ; 5000                ; 5000                     ;
-; Iteration limit for non-constant Verilog loops                             ; 250                 ; 250                      ;
-; Add Pass-Through Logic to Inferred RAMs                                    ; On                  ; On                       ;
-; Infer RAMs from Raw Logic                                                  ; On                  ; On                       ;
-; Parallel Synthesis                                                         ; On                  ; On                       ;
-; DSP Block Balancing                                                        ; Auto                ; Auto                     ;
-; NOT Gate Push-Back                                                         ; On                  ; On                       ;
-; Power-Up Don't Care                                                        ; On                  ; On                       ;
-; Remove Redundant Logic Cells                                               ; Off                 ; Off                      ;
-; Remove Duplicate Registers                                                 ; On                  ; On                       ;
-; Ignore CARRY Buffers                                                       ; Off                 ; Off                      ;
-; Ignore CASCADE Buffers                                                     ; Off                 ; Off                      ;
-; Ignore GLOBAL Buffers                                                      ; Off                 ; Off                      ;
-; Ignore ROW GLOBAL Buffers                                                  ; Off                 ; Off                      ;
-; Ignore LCELL Buffers                                                       ; Off                 ; Off                      ;
-; Ignore SOFT Buffers                                                        ; On                  ; On                       ;
-; Limit AHDL Integers to 32 Bits                                             ; Off                 ; Off                      ;
-; Optimization Technique                                                     ; Balanced            ; Balanced                 ;
-; Carry Chain Length                                                         ; 70                  ; 70                       ;
-; Auto Carry Chains                                                          ; On                  ; On                       ;
-; Auto Open-Drain Pins                                                       ; On                  ; On                       ;
-; Perform WYSIWYG Primitive Resynthesis                                      ; Off                 ; Off                      ;
-; Auto ROM Replacement                                                       ; On                  ; On                       ;
-; Auto RAM Replacement                                                       ; On                  ; On                       ;
-; Auto DSP Block Replacement                                                 ; On                  ; On                       ;
-; Auto Shift Register Replacement                                            ; Auto                ; Auto                     ;
-; Allow Shift Register Merging across Hierarchies                            ; Auto                ; Auto                     ;
-; Auto Clock Enable Replacement                                              ; On                  ; On                       ;
-; Strict RAM Replacement                                                     ; Off                 ; Off                      ;
-; Allow Synchronous Control Signals                                          ; On                  ; On                       ;
-; Force Use of Synchronous Clear Signals                                     ; Off                 ; Off                      ;
-; Auto RAM Block Balancing                                                   ; On                  ; On                       ;
-; Auto RAM to Logic Cell Conversion                                          ; Off                 ; Off                      ;
-; Auto Resource Sharing                                                      ; Off                 ; Off                      ;
-; Allow Any RAM Size For Recognition                                         ; Off                 ; Off                      ;
-; Allow Any ROM Size For Recognition                                         ; Off                 ; Off                      ;
-; Allow Any Shift Register Size For Recognition                              ; Off                 ; Off                      ;
-; Use LogicLock Constraints during Resource Balancing                        ; On                  ; On                       ;
-; Ignore translate_off and synthesis_off directives                          ; Off                 ; Off                      ;
-; Timing-Driven Synthesis                                                    ; On                  ; On                       ;
-; Report Parameter Settings                                                  ; On                  ; On                       ;
-; Report Source Assignments                                                  ; On                  ; On                       ;
-; Report Connectivity Checks                                                 ; On                  ; On                       ;
-; Ignore Maximum Fan-Out Assignments                                         ; Off                 ; Off                      ;
-; Synchronization Register Chain Length                                      ; 2                   ; 2                        ;
-; Power Optimization During Synthesis                                        ; Normal compilation  ; Normal compilation       ;
-; HDL message level                                                          ; Level2              ; Level2                   ;
-; Suppress Register Optimization Related Messages                            ; Off                 ; Off                      ;
-; Number of Removed Registers Reported in Synthesis Report                   ; 5000                ; 5000                     ;
-; Number of Swept Nodes Reported in Synthesis Report                         ; 5000                ; 5000                     ;
-; Number of Inverted Registers Reported in Synthesis Report                  ; 100                 ; 100                      ;
-; Clock MUX Protection                                                       ; On                  ; On                       ;
-; Auto Gated Clock Conversion                                                ; Off                 ; Off                      ;
-; Block Design Naming                                                        ; Auto                ; Auto                     ;
-; SDC constraint protection                                                  ; Off                 ; Off                      ;
-; Synthesis Effort                                                           ; Auto                ; Auto                     ;
-; Shift Register Replacement - Allow Asynchronous Clear Signal               ; On                  ; On                       ;
-; Pre-Mapping Resynthesis Optimization                                       ; Off                 ; Off                      ;
-; Analysis & Synthesis Message Level                                         ; Medium              ; Medium                   ;
-; Disable Register Merging Across Hierarchies                                ; Auto                ; Auto                     ;
-; Resource Aware Inference For Block RAM                                     ; On                  ; On                       ;
-+----------------------------------------------------------------------------+---------------------+--------------------------+
++----------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Settings                                                                                              ;
++----------------------------------------------------------------------------+--------------------+--------------------------+
+; Option                                                                     ; Setting            ; Default Value            ;
++----------------------------------------------------------------------------+--------------------+--------------------------+
+; Device                                                                     ; 10CL025YU256C8G    ;                          ;
+; Top-level entity name                                                      ; wifi_tele_phy      ; Phased_WiFi_Telescope_FW ;
+; Family name                                                                ; Cyclone 10 LP      ; Cyclone V                ;
+; VHDL Show LMF Mapping Messages                                             ; Off                ;                          ;
+; VHDL Version                                                               ; VHDL_2008          ; VHDL_1993                ;
+; Use smart compilation                                                      ; Off                ; Off                      ;
+; Enable parallel Assembler and TimeQuest Timing Analyzer during compilation ; On                 ; On                       ;
+; Enable compact report table                                                ; Off                ; Off                      ;
+; Restructure Multiplexers                                                   ; Auto               ; Auto                     ;
+; Create Debugging Nodes for IP Cores                                        ; Off                ; Off                      ;
+; Preserve fewer node names                                                  ; On                 ; On                       ;
+; Intel FPGA IP Evaluation Mode                                              ; Enable             ; Enable                   ;
+; Verilog Version                                                            ; Verilog_2001       ; Verilog_2001             ;
+; State Machine Processing                                                   ; Auto               ; Auto                     ;
+; Safe State Machine                                                         ; Off                ; Off                      ;
+; Extract Verilog State Machines                                             ; On                 ; On                       ;
+; Extract VHDL State Machines                                                ; On                 ; On                       ;
+; Ignore Verilog initial constructs                                          ; Off                ; Off                      ;
+; Iteration limit for constant Verilog loops                                 ; 5000               ; 5000                     ;
+; Iteration limit for non-constant Verilog loops                             ; 250                ; 250                      ;
+; Add Pass-Through Logic to Inferred RAMs                                    ; On                 ; On                       ;
+; Infer RAMs from Raw Logic                                                  ; On                 ; On                       ;
+; Parallel Synthesis                                                         ; On                 ; On                       ;
+; DSP Block Balancing                                                        ; Auto               ; Auto                     ;
+; NOT Gate Push-Back                                                         ; On                 ; On                       ;
+; Power-Up Don't Care                                                        ; On                 ; On                       ;
+; Remove Redundant Logic Cells                                               ; Off                ; Off                      ;
+; Remove Duplicate Registers                                                 ; On                 ; On                       ;
+; Ignore CARRY Buffers                                                       ; Off                ; Off                      ;
+; Ignore CASCADE Buffers                                                     ; Off                ; Off                      ;
+; Ignore GLOBAL Buffers                                                      ; Off                ; Off                      ;
+; Ignore ROW GLOBAL Buffers                                                  ; Off                ; Off                      ;
+; Ignore LCELL Buffers                                                       ; Off                ; Off                      ;
+; Ignore SOFT Buffers                                                        ; On                 ; On                       ;
+; Limit AHDL Integers to 32 Bits                                             ; Off                ; Off                      ;
+; Optimization Technique                                                     ; Balanced           ; Balanced                 ;
+; Carry Chain Length                                                         ; 70                 ; 70                       ;
+; Auto Carry Chains                                                          ; On                 ; On                       ;
+; Auto Open-Drain Pins                                                       ; On                 ; On                       ;
+; Perform WYSIWYG Primitive Resynthesis                                      ; Off                ; Off                      ;
+; Auto ROM Replacement                                                       ; On                 ; On                       ;
+; Auto RAM Replacement                                                       ; On                 ; On                       ;
+; Auto DSP Block Replacement                                                 ; On                 ; On                       ;
+; Auto Shift Register Replacement                                            ; Auto               ; Auto                     ;
+; Allow Shift Register Merging across Hierarchies                            ; Auto               ; Auto                     ;
+; Auto Clock Enable Replacement                                              ; On                 ; On                       ;
+; Strict RAM Replacement                                                     ; Off                ; Off                      ;
+; Allow Synchronous Control Signals                                          ; On                 ; On                       ;
+; Force Use of Synchronous Clear Signals                                     ; Off                ; Off                      ;
+; Auto RAM Block Balancing                                                   ; On                 ; On                       ;
+; Auto RAM to Logic Cell Conversion                                          ; Off                ; Off                      ;
+; Auto Resource Sharing                                                      ; Off                ; Off                      ;
+; Allow Any RAM Size For Recognition                                         ; Off                ; Off                      ;
+; Allow Any ROM Size For Recognition                                         ; Off                ; Off                      ;
+; Allow Any Shift Register Size For Recognition                              ; Off                ; Off                      ;
+; Use LogicLock Constraints during Resource Balancing                        ; On                 ; On                       ;
+; Ignore translate_off and synthesis_off directives                          ; Off                ; Off                      ;
+; Timing-Driven Synthesis                                                    ; On                 ; On                       ;
+; Report Parameter Settings                                                  ; On                 ; On                       ;
+; Report Source Assignments                                                  ; On                 ; On                       ;
+; Report Connectivity Checks                                                 ; On                 ; On                       ;
+; Ignore Maximum Fan-Out Assignments                                         ; Off                ; Off                      ;
+; Synchronization Register Chain Length                                      ; 2                  ; 2                        ;
+; Power Optimization During Synthesis                                        ; Normal compilation ; Normal compilation       ;
+; HDL message level                                                          ; Level2             ; Level2                   ;
+; Suppress Register Optimization Related Messages                            ; Off                ; Off                      ;
+; Number of Removed Registers Reported in Synthesis Report                   ; 5000               ; 5000                     ;
+; Number of Swept Nodes Reported in Synthesis Report                         ; 5000               ; 5000                     ;
+; Number of Inverted Registers Reported in Synthesis Report                  ; 100                ; 100                      ;
+; Clock MUX Protection                                                       ; On                 ; On                       ;
+; Auto Gated Clock Conversion                                                ; Off                ; Off                      ;
+; Block Design Naming                                                        ; Auto               ; Auto                     ;
+; SDC constraint protection                                                  ; Off                ; Off                      ;
+; Synthesis Effort                                                           ; Auto               ; Auto                     ;
+; Shift Register Replacement - Allow Asynchronous Clear Signal               ; On                 ; On                       ;
+; Pre-Mapping Resynthesis Optimization                                       ; Off                ; Off                      ;
+; Analysis & Synthesis Message Level                                         ; Medium             ; Medium                   ;
+; Disable Register Merging Across Hierarchies                                ; Auto               ; Auto                     ;
+; Resource Aware Inference For Block RAM                                     ; On                 ; On                       ;
++----------------------------------------------------------------------------+--------------------+--------------------------+
 
 
 +------------------------------------------+
@@ -163,13 +163,13 @@ refer to the applicable agreement for further details.
 +----------------------------+-------------+
 
 
-+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Source Files Read                                                                                                                                                             ;
-+----------------------------------+-----------------+-----------------+-------------------------------------------------------------------------------------------------------------------+---------+
-; File Name with User-Entered Path ; Used in Netlist ; File Type       ; File Name with Absolute Path                                                                                      ; Library ;
-+----------------------------------+-----------------+-----------------+-------------------------------------------------------------------------------------------------------------------+---------+
-; wifi_tele_top_level.vhd          ; yes             ; User VHDL File  ; C:/Users/alist/OneDrive/Electrickery/Phased Array Radio Telescope/WiFi Tele/FPGA Firmware/wifi_tele_top_level.vhd ;         ;
-+----------------------------------+-----------------+-----------------+-------------------------------------------------------------------------------------------------------------------+---------+
++-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                                                                                                      ;
++----------------------------------+-----------------+-----------------+----------------------------------------------------------------------------------------------------------------------------+---------+
+; File Name with User-Entered Path ; Used in Netlist ; File Type       ; File Name with Absolute Path                                                                                               ; Library ;
++----------------------------------+-----------------+-----------------+----------------------------------------------------------------------------------------------------------------------------+---------+
+; wifi_tele_phy.vhd                ; yes             ; User VHDL File  ; C:/Users/alist/OneDrive/Electrickery/Phased Array Radio Telescope/Phased-Array-WiFi-Camera/FPGA Firmware/wifi_tele_phy.vhd ;         ;
++----------------------------------+-----------------+-----------------+----------------------------------------------------------------------------------------------------------------------------+---------+
 
 
 +--------------------------------------------------------------+
@@ -203,13 +203,13 @@ refer to the applicable agreement for further details.
 +---------------------------------------------+----------------+
 
 
-+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                                               ;
-+----------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+----------------------+---------------------+--------------+
-; Compilation Hierarchy Node ; Combinational ALUTs ; Dedicated Logic Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; Full Hierarchy Name  ; Entity Name         ; Library Name ;
-+----------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+----------------------+---------------------+--------------+
-; |wifi_tele_top_level       ; 0 (0)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 10   ; 0            ; |wifi_tele_top_level ; wifi_tele_top_level ; work         ;
-+----------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+----------------------+---------------------+--------------+
++------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                                        ;
++----------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+---------------------+---------------+--------------+
+; Compilation Hierarchy Node ; Combinational ALUTs ; Dedicated Logic Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; Full Hierarchy Name ; Entity Name   ; Library Name ;
++----------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+---------------------+---------------+--------------+
+; |wifi_tele_phy             ; 0 (0)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 10   ; 0            ; |wifi_tele_phy      ; wifi_tele_phy ; work         ;
++----------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+---------------------+---------------+--------------+
 Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
 
 
@@ -255,49 +255,311 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 17.1.0 Build 590 10/25/2017 SJ Lite Edition
-    Info: Processing started: Mon Aug 06 12:13:07 2018
+    Info: Processing started: Mon Aug 06 14:03:33 2018
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off Phased_WiFi_Telescope_FW -c Phased_WiFi_Telescope_FW
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 4 of the 4 processors detected
+Info (12021): Found 2 design units, including 1 entities, in source file ethernet/synthesis/ethernet.vhd
+    Info (12022): Found design unit 1: ethernet-rtl File: C:/Users/alist/OneDrive/Electrickery/Phased Array Radio Telescope/Phased-Array-WiFi-Camera/FPGA Firmware/ethernet/synthesis/ethernet.vhd Line: 70
+    Info (12023): Found entity 1: ethernet File: C:/Users/alist/OneDrive/Electrickery/Phased Array Radio Telescope/Phased-Array-WiFi-Camera/FPGA Firmware/ethernet/synthesis/ethernet.vhd Line: 9
+Info (12021): Found 2 design units, including 1 entities, in source file ethernet/synthesis/ethernet.vhd
+    Info (12022): Found design unit 1: ethernet-rtl File: C:/Users/alist/OneDrive/Electrickery/Phased Array Radio Telescope/Phased-Array-WiFi-Camera/FPGA Firmware/ethernet/synthesis/ethernet.vhd Line: 70
+    Info (12023): Found entity 1: ethernet File: C:/Users/alist/OneDrive/Electrickery/Phased Array Radio Telescope/Phased-Array-WiFi-Camera/FPGA Firmware/ethernet/synthesis/ethernet.vhd Line: 9
+Info (12021): Found 1 design units, including 1 entities, in source file ethernet/synthesis/submodules/ethernet_eth_tse_0.v
+    Info (12023): Found entity 1: ethernet_eth_tse_0 File: C:/Users/alist/OneDrive/Electrickery/Phased Array Radio Telescope/Phased-Array-WiFi-Camera/FPGA Firmware/ethernet/synthesis/submodules/ethernet_eth_tse_0.v Line: 9
+Info (12021): Found 1 design units, including 1 entities, in source file ethernet/synthesis/submodules/altera_eth_tse_mac.v
+    Info (12023): Found entity 1: altera_eth_tse_mac File: C:/Users/alist/OneDrive/Electrickery/Phased Array Radio Telescope/Phased-Array-WiFi-Camera/FPGA Firmware/ethernet/synthesis/submodules/altera_eth_tse_mac.v Line: 44
+Info (12021): Found 1 design units, including 1 entities, in source file ethernet/synthesis/submodules/altera_tse_clk_cntl.v
+    Info (12023): Found entity 1: altera_tse_clk_cntl File: C:/Users/alist/OneDrive/Electrickery/Phased Array Radio Telescope/Phased-Array-WiFi-Camera/FPGA Firmware/ethernet/synthesis/submodules/altera_tse_clk_cntl.v Line: 42
+Info (12021): Found 1 design units, including 1 entities, in source file ethernet/synthesis/submodules/altera_tse_crc328checker.v
+    Info (12023): Found entity 1: altera_tse_crc328checker File: C:/Users/alist/OneDrive/Electrickery/Phased Array Radio Telescope/Phased-Array-WiFi-Camera/FPGA Firmware/ethernet/synthesis/submodules/altera_tse_crc328checker.v Line: 43
+Info (12021): Found 1 design units, including 1 entities, in source file ethernet/synthesis/submodules/altera_tse_crc328generator.v
+    Info (12023): Found entity 1: altera_tse_crc328generator File: C:/Users/alist/OneDrive/Electrickery/Phased Array Radio Telescope/Phased-Array-WiFi-Camera/FPGA Firmware/ethernet/synthesis/submodules/altera_tse_crc328generator.v Line: 43
+Info (12021): Found 1 design units, including 1 entities, in source file ethernet/synthesis/submodules/altera_tse_crc32ctl8.v
+    Info (12023): Found entity 1: altera_tse_crc32ctl8 File: C:/Users/alist/OneDrive/Electrickery/Phased Array Radio Telescope/Phased-Array-WiFi-Camera/FPGA Firmware/ethernet/synthesis/submodules/altera_tse_crc32ctl8.v Line: 43
+Info (12021): Found 1 design units, including 1 entities, in source file ethernet/synthesis/submodules/altera_tse_crc32galois8.v
+    Info (12023): Found entity 1: altera_tse_crc32galois8 File: C:/Users/alist/OneDrive/Electrickery/Phased Array Radio Telescope/Phased-Array-WiFi-Camera/FPGA Firmware/ethernet/synthesis/submodules/altera_tse_crc32galois8.v Line: 42
+Info (12021): Found 1 design units, including 1 entities, in source file ethernet/synthesis/submodules/altera_tse_gmii_io.v
+    Info (12023): Found entity 1: altera_tse_gmii_io File: C:/Users/alist/OneDrive/Electrickery/Phased Array Radio Telescope/Phased-Array-WiFi-Camera/FPGA Firmware/ethernet/synthesis/submodules/altera_tse_gmii_io.v Line: 42
+Info (12021): Found 1 design units, including 1 entities, in source file ethernet/synthesis/submodules/altera_tse_lb_read_cntl.v
+    Info (12023): Found entity 1: altera_tse_lb_read_cntl File: C:/Users/alist/OneDrive/Electrickery/Phased Array Radio Telescope/Phased-Array-WiFi-Camera/FPGA Firmware/ethernet/synthesis/submodules/altera_tse_lb_read_cntl.v Line: 42
+Info (12021): Found 1 design units, including 1 entities, in source file ethernet/synthesis/submodules/altera_tse_lb_wrt_cntl.v
+    Info (12023): Found entity 1: altera_tse_lb_wrt_cntl File: C:/Users/alist/OneDrive/Electrickery/Phased Array Radio Telescope/Phased-Array-WiFi-Camera/FPGA Firmware/ethernet/synthesis/submodules/altera_tse_lb_wrt_cntl.v Line: 42
+Info (12021): Found 1 design units, including 1 entities, in source file ethernet/synthesis/submodules/altera_tse_hashing.v
+    Info (12023): Found entity 1: altera_tse_hashing File: C:/Users/alist/OneDrive/Electrickery/Phased Array Radio Telescope/Phased-Array-WiFi-Camera/FPGA Firmware/ethernet/synthesis/submodules/altera_tse_hashing.v Line: 44
+Info (12021): Found 1 design units, including 1 entities, in source file ethernet/synthesis/submodules/altera_tse_host_control.v
+    Info (12023): Found entity 1: altera_tse_host_control File: C:/Users/alist/OneDrive/Electrickery/Phased Array Radio Telescope/Phased-Array-WiFi-Camera/FPGA Firmware/ethernet/synthesis/submodules/altera_tse_host_control.v Line: 43
+Info (12021): Found 1 design units, including 1 entities, in source file ethernet/synthesis/submodules/altera_tse_host_control_small.v
+    Info (12023): Found entity 1: altera_tse_host_control_small File: C:/Users/alist/OneDrive/Electrickery/Phased Array Radio Telescope/Phased-Array-WiFi-Camera/FPGA Firmware/ethernet/synthesis/submodules/altera_tse_host_control_small.v Line: 43
+Info (12021): Found 1 design units, including 1 entities, in source file ethernet/synthesis/submodules/altera_tse_mac_control.v
+    Info (12023): Found entity 1: altera_tse_mac_control File: C:/Users/alist/OneDrive/Electrickery/Phased Array Radio Telescope/Phased-Array-WiFi-Camera/FPGA Firmware/ethernet/synthesis/submodules/altera_tse_mac_control.v Line: 43
+Info (12021): Found 1 design units, including 1 entities, in source file ethernet/synthesis/submodules/altera_tse_register_map.v
+    Info (12023): Found entity 1: altera_tse_register_map File: C:/Users/alist/OneDrive/Electrickery/Phased Array Radio Telescope/Phased-Array-WiFi-Camera/FPGA Firmware/ethernet/synthesis/submodules/altera_tse_register_map.v Line: 44
+Info (12021): Found 1 design units, including 1 entities, in source file ethernet/synthesis/submodules/altera_tse_register_map_small.v
+    Info (12023): Found entity 1: altera_tse_register_map_small File: C:/Users/alist/OneDrive/Electrickery/Phased Array Radio Telescope/Phased-Array-WiFi-Camera/FPGA Firmware/ethernet/synthesis/submodules/altera_tse_register_map_small.v Line: 44
+Info (12021): Found 1 design units, including 1 entities, in source file ethernet/synthesis/submodules/altera_tse_rx_counter_cntl.v
+    Info (12023): Found entity 1: altera_tse_rx_counter_cntl File: C:/Users/alist/OneDrive/Electrickery/Phased Array Radio Telescope/Phased-Array-WiFi-Camera/FPGA Firmware/ethernet/synthesis/submodules/altera_tse_rx_counter_cntl.v Line: 42
+Info (12021): Found 1 design units, including 1 entities, in source file ethernet/synthesis/submodules/altera_tse_shared_mac_control.v
+    Info (12023): Found entity 1: altera_tse_shared_mac_control File: C:/Users/alist/OneDrive/Electrickery/Phased Array Radio Telescope/Phased-Array-WiFi-Camera/FPGA Firmware/ethernet/synthesis/submodules/altera_tse_shared_mac_control.v Line: 43
+Info (12021): Found 1 design units, including 1 entities, in source file ethernet/synthesis/submodules/altera_tse_shared_register_map.v
+    Info (12023): Found entity 1: altera_tse_shared_register_map File: C:/Users/alist/OneDrive/Electrickery/Phased Array Radio Telescope/Phased-Array-WiFi-Camera/FPGA Firmware/ethernet/synthesis/submodules/altera_tse_shared_register_map.v Line: 44
+Info (12021): Found 1 design units, including 1 entities, in source file ethernet/synthesis/submodules/altera_tse_tx_counter_cntl.v
+    Info (12023): Found entity 1: altera_tse_tx_counter_cntl File: C:/Users/alist/OneDrive/Electrickery/Phased Array Radio Telescope/Phased-Array-WiFi-Camera/FPGA Firmware/ethernet/synthesis/submodules/altera_tse_tx_counter_cntl.v Line: 42
+Info (12021): Found 1 design units, including 1 entities, in source file ethernet/synthesis/submodules/altera_tse_lfsr_10.v
+    Info (12023): Found entity 1: altera_tse_lfsr_10 File: C:/Users/alist/OneDrive/Electrickery/Phased Array Radio Telescope/Phased-Array-WiFi-Camera/FPGA Firmware/ethernet/synthesis/submodules/altera_tse_lfsr_10.v Line: 42
+Info (12021): Found 1 design units, including 1 entities, in source file ethernet/synthesis/submodules/altera_tse_loopback_ff.v
+    Info (12023): Found entity 1: altera_tse_loopback_ff File: C:/Users/alist/OneDrive/Electrickery/Phased Array Radio Telescope/Phased-Array-WiFi-Camera/FPGA Firmware/ethernet/synthesis/submodules/altera_tse_loopback_ff.v Line: 42
+Info (12021): Found 1 design units, including 1 entities, in source file ethernet/synthesis/submodules/altera_tse_altshifttaps.v
+    Info (12023): Found entity 1: altera_tse_altshifttaps File: C:/Users/alist/OneDrive/Electrickery/Phased Array Radio Telescope/Phased-Array-WiFi-Camera/FPGA Firmware/ethernet/synthesis/submodules/altera_tse_altshifttaps.v Line: 32
+Info (12021): Found 1 design units, including 1 entities, in source file ethernet/synthesis/submodules/altera_tse_fifoless_mac_rx.v
+    Info (12023): Found entity 1: altera_tse_fifoless_mac_rx File: C:/Users/alist/OneDrive/Electrickery/Phased Array Radio Telescope/Phased-Array-WiFi-Camera/FPGA Firmware/ethernet/synthesis/submodules/altera_tse_fifoless_mac_rx.v Line: 42
+Info (12021): Found 1 design units, including 1 entities, in source file ethernet/synthesis/submodules/altera_tse_mac_rx.v
+    Info (12023): Found entity 1: altera_tse_mac_rx File: C:/Users/alist/OneDrive/Electrickery/Phased Array Radio Telescope/Phased-Array-WiFi-Camera/FPGA Firmware/ethernet/synthesis/submodules/altera_tse_mac_rx.v Line: 42
+Info (12021): Found 1 design units, including 1 entities, in source file ethernet/synthesis/submodules/altera_tse_fifoless_mac_tx.v
+    Info (12023): Found entity 1: altera_tse_fifoless_mac_tx File: C:/Users/alist/OneDrive/Electrickery/Phased Array Radio Telescope/Phased-Array-WiFi-Camera/FPGA Firmware/ethernet/synthesis/submodules/altera_tse_fifoless_mac_tx.v Line: 42
+Info (12021): Found 1 design units, including 1 entities, in source file ethernet/synthesis/submodules/altera_tse_mac_tx.v
+    Info (12023): Found entity 1: altera_tse_mac_tx File: C:/Users/alist/OneDrive/Electrickery/Phased Array Radio Telescope/Phased-Array-WiFi-Camera/FPGA Firmware/ethernet/synthesis/submodules/altera_tse_mac_tx.v Line: 42
+Info (12021): Found 1 design units, including 1 entities, in source file ethernet/synthesis/submodules/altera_tse_magic_detection.v
+    Info (12023): Found entity 1: altera_tse_magic_detection File: C:/Users/alist/OneDrive/Electrickery/Phased Array Radio Telescope/Phased-Array-WiFi-Camera/FPGA Firmware/ethernet/synthesis/submodules/altera_tse_magic_detection.v Line: 42
+Info (12021): Found 1 design units, including 1 entities, in source file ethernet/synthesis/submodules/altera_tse_mdio.v
+    Info (12023): Found entity 1: altera_tse_mdio File: C:/Users/alist/OneDrive/Electrickery/Phased Array Radio Telescope/Phased-Array-WiFi-Camera/FPGA Firmware/ethernet/synthesis/submodules/altera_tse_mdio.v Line: 42
+Info (12021): Found 1 design units, including 1 entities, in source file ethernet/synthesis/submodules/altera_tse_mdio_clk_gen.v
+    Info (12023): Found entity 1: altera_tse_mdio_clk_gen File: C:/Users/alist/OneDrive/Electrickery/Phased Array Radio Telescope/Phased-Array-WiFi-Camera/FPGA Firmware/ethernet/synthesis/submodules/altera_tse_mdio_clk_gen.v Line: 42
+Info (12021): Found 1 design units, including 1 entities, in source file ethernet/synthesis/submodules/altera_tse_mdio_cntl.v
+    Info (12023): Found entity 1: altera_tse_mdio_cntl File: C:/Users/alist/OneDrive/Electrickery/Phased Array Radio Telescope/Phased-Array-WiFi-Camera/FPGA Firmware/ethernet/synthesis/submodules/altera_tse_mdio_cntl.v Line: 42
+Info (12021): Found 1 design units, including 1 entities, in source file ethernet/synthesis/submodules/altera_tse_top_mdio.v
+    Info (12023): Found entity 1: altera_tse_top_mdio File: C:/Users/alist/OneDrive/Electrickery/Phased Array Radio Telescope/Phased-Array-WiFi-Camera/FPGA Firmware/ethernet/synthesis/submodules/altera_tse_top_mdio.v Line: 42
+Info (12021): Found 1 design units, including 1 entities, in source file ethernet/synthesis/submodules/altera_tse_mii_rx_if.v
+    Info (12023): Found entity 1: altera_tse_mii_rx_if File: C:/Users/alist/OneDrive/Electrickery/Phased Array Radio Telescope/Phased-Array-WiFi-Camera/FPGA Firmware/ethernet/synthesis/submodules/altera_tse_mii_rx_if.v Line: 42
+Info (12021): Found 1 design units, including 1 entities, in source file ethernet/synthesis/submodules/altera_tse_mii_tx_if.v
+    Info (12023): Found entity 1: altera_tse_mii_tx_if File: C:/Users/alist/OneDrive/Electrickery/Phased Array Radio Telescope/Phased-Array-WiFi-Camera/FPGA Firmware/ethernet/synthesis/submodules/altera_tse_mii_tx_if.v Line: 42
+Info (12021): Found 1 design units, including 1 entities, in source file ethernet/synthesis/submodules/altera_tse_pipeline_base.v
+    Info (12023): Found entity 1: altera_tse_pipeline_base File: C:/Users/alist/OneDrive/Electrickery/Phased Array Radio Telescope/Phased-Array-WiFi-Camera/FPGA Firmware/ethernet/synthesis/submodules/altera_tse_pipeline_base.v Line: 16
+Info (12021): Found 1 design units, including 1 entities, in source file ethernet/synthesis/submodules/altera_tse_pipeline_stage.sv
+    Info (12023): Found entity 1: altera_tse_pipeline_stage File: C:/Users/alist/OneDrive/Electrickery/Phased Array Radio Telescope/Phased-Array-WiFi-Camera/FPGA Firmware/ethernet/synthesis/submodules/altera_tse_pipeline_stage.sv Line: 16
+Info (12021): Found 1 design units, including 1 entities, in source file ethernet/synthesis/submodules/altera_tse_dpram_16x32.v
+    Info (12023): Found entity 1: altera_tse_dpram_16x32 File: C:/Users/alist/OneDrive/Electrickery/Phased Array Radio Telescope/Phased-Array-WiFi-Camera/FPGA Firmware/ethernet/synthesis/submodules/altera_tse_dpram_16x32.v Line: 52
+Info (12021): Found 1 design units, including 1 entities, in source file ethernet/synthesis/submodules/altera_tse_dpram_8x32.v
+    Info (12023): Found entity 1: altera_tse_dpram_8x32 File: C:/Users/alist/OneDrive/Electrickery/Phased Array Radio Telescope/Phased-Array-WiFi-Camera/FPGA Firmware/ethernet/synthesis/submodules/altera_tse_dpram_8x32.v Line: 52
+Info (12021): Found 1 design units, including 1 entities, in source file ethernet/synthesis/submodules/altera_tse_dpram_ecc_16x32.v
+    Info (12023): Found entity 1: altera_tse_dpram_ecc_16x32 File: C:/Users/alist/OneDrive/Electrickery/Phased Array Radio Telescope/Phased-Array-WiFi-Camera/FPGA Firmware/ethernet/synthesis/submodules/altera_tse_dpram_ecc_16x32.v Line: 52
+Info (12021): Found 1 design units, including 1 entities, in source file ethernet/synthesis/submodules/altera_tse_fifoless_retransmit_cntl.v
+    Info (12023): Found entity 1: altera_tse_fifoless_retransmit_cntl File: C:/Users/alist/OneDrive/Electrickery/Phased Array Radio Telescope/Phased-Array-WiFi-Camera/FPGA Firmware/ethernet/synthesis/submodules/altera_tse_fifoless_retransmit_cntl.v Line: 42
+Info (12021): Found 1 design units, including 1 entities, in source file ethernet/synthesis/submodules/altera_tse_retransmit_cntl.v
+    Info (12023): Found entity 1: altera_tse_retransmit_cntl File: C:/Users/alist/OneDrive/Electrickery/Phased Array Radio Telescope/Phased-Array-WiFi-Camera/FPGA Firmware/ethernet/synthesis/submodules/altera_tse_retransmit_cntl.v Line: 42
+Info (12021): Found 1 design units, including 1 entities, in source file ethernet/synthesis/submodules/altera_tse_rgmii_in1.v
+    Info (12023): Found entity 1: altera_tse_rgmii_in1 File: C:/Users/alist/OneDrive/Electrickery/Phased Array Radio Telescope/Phased-Array-WiFi-Camera/FPGA Firmware/ethernet/synthesis/submodules/altera_tse_rgmii_in1.v Line: 49
+Info (12021): Found 1 design units, including 1 entities, in source file ethernet/synthesis/submodules/altera_tse_rgmii_in4.v
+    Info (12023): Found entity 1: altera_tse_rgmii_in4 File: C:/Users/alist/OneDrive/Electrickery/Phased Array Radio Telescope/Phased-Array-WiFi-Camera/FPGA Firmware/ethernet/synthesis/submodules/altera_tse_rgmii_in4.v Line: 49
+Info (12021): Found 1 design units, including 1 entities, in source file ethernet/synthesis/submodules/altera_tse_nf_rgmii_module.v
+    Info (12023): Found entity 1: altera_tse_nf_rgmii_module File: C:/Users/alist/OneDrive/Electrickery/Phased Array Radio Telescope/Phased-Array-WiFi-Camera/FPGA Firmware/ethernet/synthesis/submodules/altera_tse_nf_rgmii_module.v Line: 43
+Info (12021): Found 1 design units, including 1 entities, in source file ethernet/synthesis/submodules/altera_tse_rgmii_module.v
+    Info (12023): Found entity 1: altera_tse_rgmii_module File: C:/Users/alist/OneDrive/Electrickery/Phased Array Radio Telescope/Phased-Array-WiFi-Camera/FPGA Firmware/ethernet/synthesis/submodules/altera_tse_rgmii_module.v Line: 44
+Info (12021): Found 1 design units, including 1 entities, in source file ethernet/synthesis/submodules/altera_tse_rgmii_out1.v
+    Info (12023): Found entity 1: altera_tse_rgmii_out1 File: C:/Users/alist/OneDrive/Electrickery/Phased Array Radio Telescope/Phased-Array-WiFi-Camera/FPGA Firmware/ethernet/synthesis/submodules/altera_tse_rgmii_out1.v Line: 49
+Info (12021): Found 1 design units, including 1 entities, in source file ethernet/synthesis/submodules/altera_tse_rgmii_out4.v
+    Info (12023): Found entity 1: altera_tse_rgmii_out4 File: C:/Users/alist/OneDrive/Electrickery/Phased Array Radio Telescope/Phased-Array-WiFi-Camera/FPGA Firmware/ethernet/synthesis/submodules/altera_tse_rgmii_out4.v Line: 49
+Info (12021): Found 1 design units, including 1 entities, in source file ethernet/synthesis/submodules/altera_tse_rx_ff.v
+    Info (12023): Found entity 1: altera_tse_rx_ff File: C:/Users/alist/OneDrive/Electrickery/Phased Array Radio Telescope/Phased-Array-WiFi-Camera/FPGA Firmware/ethernet/synthesis/submodules/altera_tse_rx_ff.v Line: 42
+Info (12021): Found 1 design units, including 1 entities, in source file ethernet/synthesis/submodules/altera_tse_rx_min_ff.v
+    Info (12023): Found entity 1: altera_tse_rx_min_ff File: C:/Users/alist/OneDrive/Electrickery/Phased Array Radio Telescope/Phased-Array-WiFi-Camera/FPGA Firmware/ethernet/synthesis/submodules/altera_tse_rx_min_ff.v Line: 42
+Info (12021): Found 1 design units, including 1 entities, in source file ethernet/synthesis/submodules/altera_tse_rx_ff_cntrl.v
+    Info (12023): Found entity 1: altera_tse_rx_ff_cntrl File: C:/Users/alist/OneDrive/Electrickery/Phased Array Radio Telescope/Phased-Array-WiFi-Camera/FPGA Firmware/ethernet/synthesis/submodules/altera_tse_rx_ff_cntrl.v Line: 42
+Info (12021): Found 1 design units, including 1 entities, in source file ethernet/synthesis/submodules/altera_tse_rx_ff_cntrl_32.v
+    Info (12023): Found entity 1: altera_tse_rx_ff_cntrl_32 File: C:/Users/alist/OneDrive/Electrickery/Phased Array Radio Telescope/Phased-Array-WiFi-Camera/FPGA Firmware/ethernet/synthesis/submodules/altera_tse_rx_ff_cntrl_32.v Line: 42
+Info (12021): Found 1 design units, including 1 entities, in source file ethernet/synthesis/submodules/altera_tse_rx_ff_cntrl_32_shift16.v
+    Info (12023): Found entity 1: altera_tse_rx_ff_cntrl_32_shift16 File: C:/Users/alist/OneDrive/Electrickery/Phased Array Radio Telescope/Phased-Array-WiFi-Camera/FPGA Firmware/ethernet/synthesis/submodules/altera_tse_rx_ff_cntrl_32_shift16.v Line: 42
+Info (12021): Found 1 design units, including 1 entities, in source file ethernet/synthesis/submodules/altera_tse_rx_ff_length.v
+    Info (12023): Found entity 1: altera_tse_rx_ff_length File: C:/Users/alist/OneDrive/Electrickery/Phased Array Radio Telescope/Phased-Array-WiFi-Camera/FPGA Firmware/ethernet/synthesis/submodules/altera_tse_rx_ff_length.v Line: 42
+Info (12021): Found 1 design units, including 1 entities, in source file ethernet/synthesis/submodules/altera_tse_rx_stat_extract.v
+    Info (12023): Found entity 1: altera_tse_rx_stat_extract File: C:/Users/alist/OneDrive/Electrickery/Phased Array Radio Telescope/Phased-Array-WiFi-Camera/FPGA Firmware/ethernet/synthesis/submodules/altera_tse_rx_stat_extract.v Line: 42
+Info (12021): Found 1 design units, including 1 entities, in source file ethernet/synthesis/submodules/altera_tse_timing_adapter32.v
+    Info (12023): Found entity 1: altera_tse_timing_adapter32 File: C:/Users/alist/OneDrive/Electrickery/Phased Array Radio Telescope/Phased-Array-WiFi-Camera/FPGA Firmware/ethernet/synthesis/submodules/altera_tse_timing_adapter32.v Line: 42
+Info (12021): Found 1 design units, including 1 entities, in source file ethernet/synthesis/submodules/altera_tse_timing_adapter8.v
+    Info (12023): Found entity 1: altera_tse_timing_adapter8 File: C:/Users/alist/OneDrive/Electrickery/Phased Array Radio Telescope/Phased-Array-WiFi-Camera/FPGA Firmware/ethernet/synthesis/submodules/altera_tse_timing_adapter8.v Line: 42
+Info (12021): Found 1 design units, including 1 entities, in source file ethernet/synthesis/submodules/altera_tse_timing_adapter_fifo32.v
+    Info (12023): Found entity 1: altera_tse_timing_adapter_fifo32 File: C:/Users/alist/OneDrive/Electrickery/Phased Array Radio Telescope/Phased-Array-WiFi-Camera/FPGA Firmware/ethernet/synthesis/submodules/altera_tse_timing_adapter_fifo32.v Line: 42
+Info (12021): Found 1 design units, including 1 entities, in source file ethernet/synthesis/submodules/altera_tse_timing_adapter_fifo8.v
+    Info (12023): Found entity 1: altera_tse_timing_adapter_fifo8 File: C:/Users/alist/OneDrive/Electrickery/Phased Array Radio Telescope/Phased-Array-WiFi-Camera/FPGA Firmware/ethernet/synthesis/submodules/altera_tse_timing_adapter_fifo8.v Line: 42
+Info (12021): Found 1 design units, including 1 entities, in source file ethernet/synthesis/submodules/altera_tse_top_1geth.v
+    Info (12023): Found entity 1: altera_tse_top_1geth File: C:/Users/alist/OneDrive/Electrickery/Phased Array Radio Telescope/Phased-Array-WiFi-Camera/FPGA Firmware/ethernet/synthesis/submodules/altera_tse_top_1geth.v Line: 42
+Info (12021): Found 1 design units, including 1 entities, in source file ethernet/synthesis/submodules/altera_tse_top_fifoless_1geth.v
+    Info (12023): Found entity 1: altera_tse_top_fifoless_1geth File: C:/Users/alist/OneDrive/Electrickery/Phased Array Radio Telescope/Phased-Array-WiFi-Camera/FPGA Firmware/ethernet/synthesis/submodules/altera_tse_top_fifoless_1geth.v Line: 42
+Info (12021): Found 1 design units, including 1 entities, in source file ethernet/synthesis/submodules/altera_tse_top_w_fifo.v
+    Info (12023): Found entity 1: altera_tse_top_w_fifo File: C:/Users/alist/OneDrive/Electrickery/Phased Array Radio Telescope/Phased-Array-WiFi-Camera/FPGA Firmware/ethernet/synthesis/submodules/altera_tse_top_w_fifo.v Line: 42
+Info (12021): Found 1 design units, including 1 entities, in source file ethernet/synthesis/submodules/altera_tse_top_w_fifo_10_100_1000.v
+    Info (12023): Found entity 1: altera_tse_top_w_fifo_10_100_1000 File: C:/Users/alist/OneDrive/Electrickery/Phased Array Radio Telescope/Phased-Array-WiFi-Camera/FPGA Firmware/ethernet/synthesis/submodules/altera_tse_top_w_fifo_10_100_1000.v Line: 42
+Info (12021): Found 1 design units, including 1 entities, in source file ethernet/synthesis/submodules/altera_tse_top_wo_fifo.v
+    Info (12023): Found entity 1: altera_tse_top_wo_fifo File: C:/Users/alist/OneDrive/Electrickery/Phased Array Radio Telescope/Phased-Array-WiFi-Camera/FPGA Firmware/ethernet/synthesis/submodules/altera_tse_top_wo_fifo.v Line: 42
+Info (12021): Found 1 design units, including 1 entities, in source file ethernet/synthesis/submodules/altera_tse_top_wo_fifo_10_100_1000.v
+    Info (12023): Found entity 1: altera_tse_top_wo_fifo_10_100_1000 File: C:/Users/alist/OneDrive/Electrickery/Phased Array Radio Telescope/Phased-Array-WiFi-Camera/FPGA Firmware/ethernet/synthesis/submodules/altera_tse_top_wo_fifo_10_100_1000.v Line: 42
+Info (12021): Found 1 design units, including 1 entities, in source file ethernet/synthesis/submodules/altera_tse_top_gen_host.v
+    Info (12023): Found entity 1: altera_tse_top_gen_host File: C:/Users/alist/OneDrive/Electrickery/Phased Array Radio Telescope/Phased-Array-WiFi-Camera/FPGA Firmware/ethernet/synthesis/submodules/altera_tse_top_gen_host.v Line: 44
+Info (12021): Found 1 design units, including 1 entities, in source file ethernet/synthesis/submodules/altera_tse_tx_ff.v
+    Info (12023): Found entity 1: altera_tse_tx_ff File: C:/Users/alist/OneDrive/Electrickery/Phased Array Radio Telescope/Phased-Array-WiFi-Camera/FPGA Firmware/ethernet/synthesis/submodules/altera_tse_tx_ff.v Line: 42
+Info (12021): Found 1 design units, including 1 entities, in source file ethernet/synthesis/submodules/altera_tse_tx_min_ff.v
+    Info (12023): Found entity 1: altera_tse_tx_min_ff File: C:/Users/alist/OneDrive/Electrickery/Phased Array Radio Telescope/Phased-Array-WiFi-Camera/FPGA Firmware/ethernet/synthesis/submodules/altera_tse_tx_min_ff.v Line: 42
+Info (12021): Found 1 design units, including 1 entities, in source file ethernet/synthesis/submodules/altera_tse_tx_ff_cntrl.v
+    Info (12023): Found entity 1: altera_tse_tx_ff_cntrl File: C:/Users/alist/OneDrive/Electrickery/Phased Array Radio Telescope/Phased-Array-WiFi-Camera/FPGA Firmware/ethernet/synthesis/submodules/altera_tse_tx_ff_cntrl.v Line: 42
+Info (12021): Found 1 design units, including 1 entities, in source file ethernet/synthesis/submodules/altera_tse_tx_ff_cntrl_32.v
+    Info (12023): Found entity 1: altera_tse_tx_ff_cntrl_32 File: C:/Users/alist/OneDrive/Electrickery/Phased Array Radio Telescope/Phased-Array-WiFi-Camera/FPGA Firmware/ethernet/synthesis/submodules/altera_tse_tx_ff_cntrl_32.v Line: 42
+Info (12021): Found 1 design units, including 1 entities, in source file ethernet/synthesis/submodules/altera_tse_tx_ff_cntrl_32_shift16.v
+    Info (12023): Found entity 1: altera_tse_tx_ff_cntrl_32_shift16 File: C:/Users/alist/OneDrive/Electrickery/Phased Array Radio Telescope/Phased-Array-WiFi-Camera/FPGA Firmware/ethernet/synthesis/submodules/altera_tse_tx_ff_cntrl_32_shift16.v Line: 42
+Info (12021): Found 1 design units, including 1 entities, in source file ethernet/synthesis/submodules/altera_tse_tx_ff_length.v
+    Info (12023): Found entity 1: altera_tse_tx_ff_length File: C:/Users/alist/OneDrive/Electrickery/Phased Array Radio Telescope/Phased-Array-WiFi-Camera/FPGA Firmware/ethernet/synthesis/submodules/altera_tse_tx_ff_length.v Line: 42
+Info (12021): Found 1 design units, including 1 entities, in source file ethernet/synthesis/submodules/altera_tse_tx_ff_read_cntl.v
+    Info (12023): Found entity 1: altera_tse_tx_ff_read_cntl File: C:/Users/alist/OneDrive/Electrickery/Phased Array Radio Telescope/Phased-Array-WiFi-Camera/FPGA Firmware/ethernet/synthesis/submodules/altera_tse_tx_ff_read_cntl.v Line: 42
+Info (12021): Found 1 design units, including 1 entities, in source file ethernet/synthesis/submodules/altera_tse_tx_stat_extract.v
+    Info (12023): Found entity 1: altera_tse_tx_stat_extract File: C:/Users/alist/OneDrive/Electrickery/Phased Array Radio Telescope/Phased-Array-WiFi-Camera/FPGA Firmware/ethernet/synthesis/submodules/altera_tse_tx_stat_extract.v Line: 42
+Info (12021): Found 1 design units, including 1 entities, in source file ethernet/synthesis/submodules/altera_eth_tse_std_synchronizer.v
+    Info (12023): Found entity 1: altera_eth_tse_std_synchronizer File: C:/Users/alist/OneDrive/Electrickery/Phased Array Radio Telescope/Phased-Array-WiFi-Camera/FPGA Firmware/ethernet/synthesis/submodules/altera_eth_tse_std_synchronizer.v Line: 46
+Info (12021): Found 1 design units, including 1 entities, in source file ethernet/synthesis/submodules/altera_eth_tse_std_synchronizer_bundle.v
+    Info (12023): Found entity 1: altera_eth_tse_std_synchronizer_bundle File: C:/Users/alist/OneDrive/Electrickery/Phased Array Radio Telescope/Phased-Array-WiFi-Camera/FPGA Firmware/ethernet/synthesis/submodules/altera_eth_tse_std_synchronizer_bundle.v Line: 27
+Info (12021): Found 1 design units, including 1 entities, in source file ethernet/synthesis/submodules/altera_eth_tse_ptp_std_synchronizer.v
+    Info (12023): Found entity 1: altera_eth_tse_ptp_std_synchronizer File: C:/Users/alist/OneDrive/Electrickery/Phased Array Radio Telescope/Phased-Array-WiFi-Camera/FPGA Firmware/ethernet/synthesis/submodules/altera_eth_tse_ptp_std_synchronizer.v Line: 16
+Info (12021): Found 1 design units, including 1 entities, in source file ethernet/synthesis/submodules/altera_tse_false_path_marker.v
+    Info (12023): Found entity 1: altera_tse_false_path_marker File: C:/Users/alist/OneDrive/Electrickery/Phased Array Radio Telescope/Phased-Array-WiFi-Camera/FPGA Firmware/ethernet/synthesis/submodules/altera_tse_false_path_marker.v Line: 38
+Info (12021): Found 1 design units, including 1 entities, in source file ethernet/synthesis/submodules/altera_tse_reset_synchronizer.v
+    Info (12023): Found entity 1: altera_tse_reset_synchronizer File: C:/Users/alist/OneDrive/Electrickery/Phased Array Radio Telescope/Phased-Array-WiFi-Camera/FPGA Firmware/ethernet/synthesis/submodules/altera_tse_reset_synchronizer.v Line: 36
+Info (12021): Found 1 design units, including 1 entities, in source file ethernet/synthesis/submodules/altera_tse_clock_crosser.v
+    Info (12023): Found entity 1: altera_tse_clock_crosser File: C:/Users/alist/OneDrive/Electrickery/Phased Array Radio Telescope/Phased-Array-WiFi-Camera/FPGA Firmware/ethernet/synthesis/submodules/altera_tse_clock_crosser.v Line: 22
+Info (12021): Found 1 design units, including 1 entities, in source file ethernet/synthesis/submodules/altera_tse_a_fifo_13.v
+    Info (12023): Found entity 1: altera_tse_a_fifo_13 File: C:/Users/alist/OneDrive/Electrickery/Phased Array Radio Telescope/Phased-Array-WiFi-Camera/FPGA Firmware/ethernet/synthesis/submodules/altera_tse_a_fifo_13.v Line: 51
+Info (12021): Found 1 design units, including 1 entities, in source file ethernet/synthesis/submodules/altera_tse_a_fifo_24.v
+    Info (12023): Found entity 1: altera_tse_a_fifo_24 File: C:/Users/alist/OneDrive/Electrickery/Phased Array Radio Telescope/Phased-Array-WiFi-Camera/FPGA Firmware/ethernet/synthesis/submodules/altera_tse_a_fifo_24.v Line: 51
+Info (12021): Found 1 design units, including 1 entities, in source file ethernet/synthesis/submodules/altera_tse_a_fifo_34.v
+    Info (12023): Found entity 1: altera_tse_a_fifo_34 File: C:/Users/alist/OneDrive/Electrickery/Phased Array Radio Telescope/Phased-Array-WiFi-Camera/FPGA Firmware/ethernet/synthesis/submodules/altera_tse_a_fifo_34.v Line: 51
+Info (12021): Found 1 design units, including 1 entities, in source file ethernet/synthesis/submodules/altera_tse_a_fifo_opt_1246.v
+    Info (12023): Found entity 1: altera_tse_a_fifo_opt_1246 File: C:/Users/alist/OneDrive/Electrickery/Phased Array Radio Telescope/Phased-Array-WiFi-Camera/FPGA Firmware/ethernet/synthesis/submodules/altera_tse_a_fifo_opt_1246.v Line: 53
+Info (12021): Found 1 design units, including 1 entities, in source file ethernet/synthesis/submodules/altera_tse_a_fifo_opt_14_44.v
+    Info (12023): Found entity 1: altera_tse_a_fifo_opt_14_44 File: C:/Users/alist/OneDrive/Electrickery/Phased Array Radio Telescope/Phased-Array-WiFi-Camera/FPGA Firmware/ethernet/synthesis/submodules/altera_tse_a_fifo_opt_14_44.v Line: 43
+Info (12021): Found 1 design units, including 1 entities, in source file ethernet/synthesis/submodules/altera_tse_a_fifo_opt_36_10.v
+    Info (12023): Found entity 1: altera_tse_a_fifo_opt_36_10 File: C:/Users/alist/OneDrive/Electrickery/Phased Array Radio Telescope/Phased-Array-WiFi-Camera/FPGA Firmware/ethernet/synthesis/submodules/altera_tse_a_fifo_opt_36_10.v Line: 42
+Info (12021): Found 1 design units, including 1 entities, in source file ethernet/synthesis/submodules/altera_tse_gray_cnt.v
+    Info (12023): Found entity 1: altera_tse_gray_cnt File: C:/Users/alist/OneDrive/Electrickery/Phased Array Radio Telescope/Phased-Array-WiFi-Camera/FPGA Firmware/ethernet/synthesis/submodules/altera_tse_gray_cnt.v Line: 42
+Info (12021): Found 1 design units, including 1 entities, in source file ethernet/synthesis/submodules/altera_tse_sdpm_altsyncram.v
+    Info (12023): Found entity 1: altera_tse_sdpm_altsyncram File: C:/Users/alist/OneDrive/Electrickery/Phased Array Radio Telescope/Phased-Array-WiFi-Camera/FPGA Firmware/ethernet/synthesis/submodules/altera_tse_sdpm_altsyncram.v Line: 46
+Info (12021): Found 1 design units, including 1 entities, in source file ethernet/synthesis/submodules/altera_tse_altsyncram_dpm_fifo.v
+    Info (12023): Found entity 1: altera_tse_altsyncram_dpm_fifo File: C:/Users/alist/OneDrive/Electrickery/Phased Array Radio Telescope/Phased-Array-WiFi-Camera/FPGA Firmware/ethernet/synthesis/submodules/altera_tse_altsyncram_dpm_fifo.v Line: 46
+Info (12021): Found 1 design units, including 1 entities, in source file ethernet/synthesis/submodules/altera_tse_bin_cnt.v
+    Info (12023): Found entity 1: altera_tse_bin_cnt File: C:/Users/alist/OneDrive/Electrickery/Phased Array Radio Telescope/Phased-Array-WiFi-Camera/FPGA Firmware/ethernet/synthesis/submodules/altera_tse_bin_cnt.v Line: 42
+Info (12021): Found 1 design units, including 1 entities, in source file ethernet/synthesis/submodules/altera_tse_ph_calculator.sv
+    Info (12023): Found entity 1: altera_tse_ph_calculator File: C:/Users/alist/OneDrive/Electrickery/Phased Array Radio Telescope/Phased-Array-WiFi-Camera/FPGA Firmware/ethernet/synthesis/submodules/altera_tse_ph_calculator.sv Line: 16
+Info (12021): Found 1 design units, including 1 entities, in source file ethernet/synthesis/submodules/altera_tse_sdpm_gen.v
+    Info (12023): Found entity 1: altera_tse_sdpm_gen File: C:/Users/alist/OneDrive/Electrickery/Phased Array Radio Telescope/Phased-Array-WiFi-Camera/FPGA Firmware/ethernet/synthesis/submodules/altera_tse_sdpm_gen.v Line: 42
+Info (12021): Found 2 design units, including 2 entities, in source file ethernet/synthesis/submodules/altera_tse_ecc_dec_x10.v
+    Info (12023): Found entity 1: altera_tse_ecc_dec_x10_altecc_decoder_h5f File: C:/Users/alist/OneDrive/Electrickery/Phased Array Radio Telescope/Phased-Array-WiFi-Camera/FPGA Firmware/ethernet/synthesis/submodules/altera_tse_ecc_dec_x10.v Line: 59
+    Info (12023): Found entity 2: altera_tse_ecc_dec_x10 File: C:/Users/alist/OneDrive/Electrickery/Phased Array Radio Telescope/Phased-Array-WiFi-Camera/FPGA Firmware/ethernet/synthesis/submodules/altera_tse_ecc_dec_x10.v Line: 164
+Info (12021): Found 2 design units, including 2 entities, in source file ethernet/synthesis/submodules/altera_tse_ecc_enc_x10.v
+    Info (12023): Found entity 1: altera_tse_ecc_enc_x10_altecc_encoder_p8b File: C:/Users/alist/OneDrive/Electrickery/Phased Array Radio Telescope/Phased-Array-WiFi-Camera/FPGA Firmware/ethernet/synthesis/submodules/altera_tse_ecc_enc_x10.v Line: 59
+    Info (12023): Found entity 2: altera_tse_ecc_enc_x10 File: C:/Users/alist/OneDrive/Electrickery/Phased Array Radio Telescope/Phased-Array-WiFi-Camera/FPGA Firmware/ethernet/synthesis/submodules/altera_tse_ecc_enc_x10.v Line: 90
+Info (12021): Found 1 design units, including 1 entities, in source file ethernet/synthesis/submodules/altera_tse_ecc_enc_x10_wrapper.v
+    Info (12023): Found entity 1: altera_tse_ecc_enc_x10_wrapper File: C:/Users/alist/OneDrive/Electrickery/Phased Array Radio Telescope/Phased-Array-WiFi-Camera/FPGA Firmware/ethernet/synthesis/submodules/altera_tse_ecc_enc_x10_wrapper.v Line: 16
+Info (12021): Found 2 design units, including 2 entities, in source file ethernet/synthesis/submodules/altera_tse_ecc_dec_x14.v
+    Info (12023): Found entity 1: altera_tse_ecc_dec_x14_altecc_decoder_cre File: C:/Users/alist/OneDrive/Electrickery/Phased Array Radio Telescope/Phased-Array-WiFi-Camera/FPGA Firmware/ethernet/synthesis/submodules/altera_tse_ecc_dec_x14.v Line: 59
+    Info (12023): Found entity 2: altera_tse_ecc_dec_x14 File: C:/Users/alist/OneDrive/Electrickery/Phased Array Radio Telescope/Phased-Array-WiFi-Camera/FPGA Firmware/ethernet/synthesis/submodules/altera_tse_ecc_dec_x14.v Line: 174
+Info (12021): Found 2 design units, including 2 entities, in source file ethernet/synthesis/submodules/altera_tse_ecc_enc_x14.v
+    Info (12023): Found entity 1: altera_tse_ecc_enc_x14_altecc_encoder_p8b File: C:/Users/alist/OneDrive/Electrickery/Phased Array Radio Telescope/Phased-Array-WiFi-Camera/FPGA Firmware/ethernet/synthesis/submodules/altera_tse_ecc_enc_x14.v Line: 59
+    Info (12023): Found entity 2: altera_tse_ecc_enc_x14 File: C:/Users/alist/OneDrive/Electrickery/Phased Array Radio Telescope/Phased-Array-WiFi-Camera/FPGA Firmware/ethernet/synthesis/submodules/altera_tse_ecc_enc_x14.v Line: 92
+Info (12021): Found 1 design units, including 1 entities, in source file ethernet/synthesis/submodules/altera_tse_ecc_enc_x14_wrapper.v
+    Info (12023): Found entity 1: altera_tse_ecc_enc_x14_wrapper File: C:/Users/alist/OneDrive/Electrickery/Phased Array Radio Telescope/Phased-Array-WiFi-Camera/FPGA Firmware/ethernet/synthesis/submodules/altera_tse_ecc_enc_x14_wrapper.v Line: 16
+Info (12021): Found 2 design units, including 2 entities, in source file ethernet/synthesis/submodules/altera_tse_ecc_dec_x2.v
+    Info (12023): Found entity 1: altera_tse_ecc_dec_x2_altecc_decoder_doe File: C:/Users/alist/OneDrive/Electrickery/Phased Array Radio Telescope/Phased-Array-WiFi-Camera/FPGA Firmware/ethernet/synthesis/submodules/altera_tse_ecc_dec_x2.v Line: 59
+    Info (12023): Found entity 2: altera_tse_ecc_dec_x2 File: C:/Users/alist/OneDrive/Electrickery/Phased Array Radio Telescope/Phased-Array-WiFi-Camera/FPGA Firmware/ethernet/synthesis/submodules/altera_tse_ecc_dec_x2.v Line: 146
+Info (12021): Found 2 design units, including 2 entities, in source file ethernet/synthesis/submodules/altera_tse_ecc_enc_x2.v
+    Info (12023): Found entity 1: altera_tse_ecc_enc_x2_altecc_encoder_q5b File: C:/Users/alist/OneDrive/Electrickery/Phased Array Radio Telescope/Phased-Array-WiFi-Camera/FPGA Firmware/ethernet/synthesis/submodules/altera_tse_ecc_enc_x2.v Line: 59
+    Info (12023): Found entity 2: altera_tse_ecc_enc_x2 File: C:/Users/alist/OneDrive/Electrickery/Phased Array Radio Telescope/Phased-Array-WiFi-Camera/FPGA Firmware/ethernet/synthesis/submodules/altera_tse_ecc_enc_x2.v Line: 88
+Info (12021): Found 1 design units, including 1 entities, in source file ethernet/synthesis/submodules/altera_tse_ecc_enc_x2_wrapper.v
+    Info (12023): Found entity 1: altera_tse_ecc_enc_x2_wrapper File: C:/Users/alist/OneDrive/Electrickery/Phased Array Radio Telescope/Phased-Array-WiFi-Camera/FPGA Firmware/ethernet/synthesis/submodules/altera_tse_ecc_enc_x2_wrapper.v Line: 16
+Info (12021): Found 2 design units, including 2 entities, in source file ethernet/synthesis/submodules/altera_tse_ecc_dec_x23.v
+    Info (12023): Found entity 1: altera_tse_ecc_dec_x23_altecc_decoder_lre File: C:/Users/alist/OneDrive/Electrickery/Phased Array Radio Telescope/Phased-Array-WiFi-Camera/FPGA Firmware/ethernet/synthesis/submodules/altera_tse_ecc_dec_x23.v Line: 59
+    Info (12023): Found entity 2: altera_tse_ecc_dec_x23 File: C:/Users/alist/OneDrive/Electrickery/Phased Array Radio Telescope/Phased-Array-WiFi-Camera/FPGA Firmware/ethernet/synthesis/submodules/altera_tse_ecc_dec_x23.v Line: 192
+Info (12021): Found 2 design units, including 2 entities, in source file ethernet/synthesis/submodules/altera_tse_ecc_enc_x23.v
+    Info (12023): Found entity 1: altera_tse_ecc_enc_x23_altecc_encoder_29b File: C:/Users/alist/OneDrive/Electrickery/Phased Array Radio Telescope/Phased-Array-WiFi-Camera/FPGA Firmware/ethernet/synthesis/submodules/altera_tse_ecc_enc_x23.v Line: 59
+    Info (12023): Found entity 2: altera_tse_ecc_enc_x23 File: C:/Users/alist/OneDrive/Electrickery/Phased Array Radio Telescope/Phased-Array-WiFi-Camera/FPGA Firmware/ethernet/synthesis/submodules/altera_tse_ecc_enc_x23.v Line: 92
+Info (12021): Found 1 design units, including 1 entities, in source file ethernet/synthesis/submodules/altera_tse_ecc_enc_x23_wrapper.v
+    Info (12023): Found entity 1: altera_tse_ecc_enc_x23_wrapper File: C:/Users/alist/OneDrive/Electrickery/Phased Array Radio Telescope/Phased-Array-WiFi-Camera/FPGA Firmware/ethernet/synthesis/submodules/altera_tse_ecc_enc_x23_wrapper.v Line: 16
+Info (12021): Found 2 design units, including 2 entities, in source file ethernet/synthesis/submodules/altera_tse_ecc_dec_x36.v
+    Info (12023): Found entity 1: altera_tse_ecc_dec_x36_altecc_decoder_lre File: C:/Users/alist/OneDrive/Electrickery/Phased Array Radio Telescope/Phased-Array-WiFi-Camera/FPGA Firmware/ethernet/synthesis/submodules/altera_tse_ecc_dec_x36.v Line: 59
+    Info (12023): Found entity 2: altera_tse_ecc_dec_x36 File: C:/Users/alist/OneDrive/Electrickery/Phased Array Radio Telescope/Phased-Array-WiFi-Camera/FPGA Firmware/ethernet/synthesis/submodules/altera_tse_ecc_dec_x36.v Line: 220
+Info (12021): Found 2 design units, including 2 entities, in source file ethernet/synthesis/submodules/altera_tse_ecc_enc_x36.v
+    Info (12023): Found entity 1: altera_tse_ecc_enc_x36_altecc_encoder_29b File: C:/Users/alist/OneDrive/Electrickery/Phased Array Radio Telescope/Phased-Array-WiFi-Camera/FPGA Firmware/ethernet/synthesis/submodules/altera_tse_ecc_enc_x36.v Line: 59
+    Info (12023): Found entity 2: altera_tse_ecc_enc_x36 File: C:/Users/alist/OneDrive/Electrickery/Phased Array Radio Telescope/Phased-Array-WiFi-Camera/FPGA Firmware/ethernet/synthesis/submodules/altera_tse_ecc_enc_x36.v Line: 94
+Info (12021): Found 1 design units, including 1 entities, in source file ethernet/synthesis/submodules/altera_tse_ecc_enc_x36_wrapper.v
+    Info (12023): Found entity 1: altera_tse_ecc_enc_x36_wrapper File: C:/Users/alist/OneDrive/Electrickery/Phased Array Radio Telescope/Phased-Array-WiFi-Camera/FPGA Firmware/ethernet/synthesis/submodules/altera_tse_ecc_enc_x36_wrapper.v Line: 16
+Info (12021): Found 2 design units, including 2 entities, in source file ethernet/synthesis/submodules/altera_tse_ecc_dec_x40.v
+    Info (12023): Found entity 1: altera_tse_ecc_dec_x40_altecc_decoder_kre File: C:/Users/alist/OneDrive/Electrickery/Phased Array Radio Telescope/Phased-Array-WiFi-Camera/FPGA Firmware/ethernet/synthesis/submodules/altera_tse_ecc_dec_x40.v Line: 59
+    Info (12023): Found entity 2: altera_tse_ecc_dec_x40 File: C:/Users/alist/OneDrive/Electrickery/Phased Array Radio Telescope/Phased-Array-WiFi-Camera/FPGA Firmware/ethernet/synthesis/submodules/altera_tse_ecc_dec_x40.v Line: 228
+Info (12021): Found 2 design units, including 2 entities, in source file ethernet/synthesis/submodules/altera_tse_ecc_enc_x40.v
+    Info (12023): Found entity 1: altera_tse_ecc_enc_x40_altecc_encoder_19b File: C:/Users/alist/OneDrive/Electrickery/Phased Array Radio Telescope/Phased-Array-WiFi-Camera/FPGA Firmware/ethernet/synthesis/submodules/altera_tse_ecc_enc_x40.v Line: 59
+    Info (12023): Found entity 2: altera_tse_ecc_enc_x40 File: C:/Users/alist/OneDrive/Electrickery/Phased Array Radio Telescope/Phased-Array-WiFi-Camera/FPGA Firmware/ethernet/synthesis/submodules/altera_tse_ecc_enc_x40.v Line: 94
+Info (12021): Found 1 design units, including 1 entities, in source file ethernet/synthesis/submodules/altera_tse_ecc_enc_x40_wrapper.v
+    Info (12023): Found entity 1: altera_tse_ecc_enc_x40_wrapper File: C:/Users/alist/OneDrive/Electrickery/Phased Array Radio Telescope/Phased-Array-WiFi-Camera/FPGA Firmware/ethernet/synthesis/submodules/altera_tse_ecc_enc_x40_wrapper.v Line: 16
+Info (12021): Found 2 design units, including 2 entities, in source file ethernet/synthesis/submodules/altera_tse_ecc_dec_x30.v
+    Info (12023): Found entity 1: altera_tse_ecc_dec_x30_altecc_decoder_ire File: C:/Users/alist/OneDrive/Electrickery/Phased Array Radio Telescope/Phased-Array-WiFi-Camera/FPGA Firmware/ethernet/synthesis/submodules/altera_tse_ecc_dec_x30.v Line: 59
+    Info (12023): Found entity 2: altera_tse_ecc_dec_x30 File: C:/Users/alist/OneDrive/Electrickery/Phased Array Radio Telescope/Phased-Array-WiFi-Camera/FPGA Firmware/ethernet/synthesis/submodules/altera_tse_ecc_dec_x30.v Line: 208
+Info (12021): Found 2 design units, including 2 entities, in source file ethernet/synthesis/submodules/altera_tse_ecc_enc_x30.v
+    Info (12023): Found entity 1: altera_tse_ecc_enc_x30_altecc_encoder_v8b File: C:/Users/alist/OneDrive/Electrickery/Phased Array Radio Telescope/Phased-Array-WiFi-Camera/FPGA Firmware/ethernet/synthesis/submodules/altera_tse_ecc_enc_x30.v Line: 59
+    Info (12023): Found entity 2: altera_tse_ecc_enc_x30 File: C:/Users/alist/OneDrive/Electrickery/Phased Array Radio Telescope/Phased-Array-WiFi-Camera/FPGA Firmware/ethernet/synthesis/submodules/altera_tse_ecc_enc_x30.v Line: 94
+Info (12021): Found 1 design units, including 1 entities, in source file ethernet/synthesis/submodules/altera_tse_ecc_enc_x30_wrapper.v
+    Info (12023): Found entity 1: altera_tse_ecc_enc_x30_wrapper File: C:/Users/alist/OneDrive/Electrickery/Phased Array Radio Telescope/Phased-Array-WiFi-Camera/FPGA Firmware/ethernet/synthesis/submodules/altera_tse_ecc_enc_x30_wrapper.v Line: 16
+Info (12021): Found 1 design units, including 1 entities, in source file ethernet/synthesis/submodules/altera_tse_ecc_status_crosser.v
+    Info (12023): Found entity 1: altera_tse_ecc_status_crosser File: C:/Users/alist/OneDrive/Electrickery/Phased Array Radio Telescope/Phased-Array-WiFi-Camera/FPGA Firmware/ethernet/synthesis/submodules/altera_tse_ecc_status_crosser.v Line: 18
+Info (12021): Found 1 design units, including 1 entities, in source file ethernet/synthesis/submodules/altera_std_synchronizer_nocut.v
+    Info (12023): Found entity 1: altera_std_synchronizer_nocut File: C:/Users/alist/OneDrive/Electrickery/Phased Array Radio Telescope/Phased-Array-WiFi-Camera/FPGA Firmware/ethernet/synthesis/submodules/altera_std_synchronizer_nocut.v Line: 44
 Info (12021): Found 1 design units, including 1 entities, in source file c10lp_baseline_pinout.v
-    Info (12023): Found entity 1: c10lp_baseline_pinout File: C:/Users/alist/OneDrive/Electrickery/Phased Array Radio Telescope/WiFi Tele/FPGA Firmware/c10lp_baseline_pinout.v Line: 37
+    Info (12023): Found entity 1: c10lp_baseline_pinout File: C:/Users/alist/OneDrive/Electrickery/Phased Array Radio Telescope/Phased-Array-WiFi-Camera/FPGA Firmware/c10lp_baseline_pinout.v Line: 37
 Info (12021): Found 2 design units, including 1 entities, in source file adc_lvds.vhd
-    Info (12022): Found design unit 1: adc_lvds-SYN File: C:/Users/alist/OneDrive/Electrickery/Phased Array Radio Telescope/WiFi Tele/FPGA Firmware/adc_lvds.vhd Line: 52
-    Info (12023): Found entity 1: adc_lvds File: C:/Users/alist/OneDrive/Electrickery/Phased Array Radio Telescope/WiFi Tele/FPGA Firmware/adc_lvds.vhd Line: 42
+    Info (12022): Found design unit 1: adc_lvds-SYN File: C:/Users/alist/OneDrive/Electrickery/Phased Array Radio Telescope/Phased-Array-WiFi-Camera/FPGA Firmware/adc_lvds.vhd Line: 52
+    Info (12023): Found entity 1: adc_lvds File: C:/Users/alist/OneDrive/Electrickery/Phased Array Radio Telescope/Phased-Array-WiFi-Camera/FPGA Firmware/adc_lvds.vhd Line: 42
 Info (12021): Found 2 design units, including 1 entities, in source file hmcad1511_controller.vhd
-    Info (12022): Found design unit 1: hmcad1511_controller-arch File: C:/Users/alist/OneDrive/Electrickery/Phased Array Radio Telescope/WiFi Tele/FPGA Firmware/hmcad1511_controller.vhd Line: 43
-    Info (12023): Found entity 1: hmcad1511_controller File: C:/Users/alist/OneDrive/Electrickery/Phased Array Radio Telescope/WiFi Tele/FPGA Firmware/hmcad1511_controller.vhd Line: 6
+    Info (12022): Found design unit 1: hmcad1511_controller-arch File: C:/Users/alist/OneDrive/Electrickery/Phased Array Radio Telescope/Phased-Array-WiFi-Camera/FPGA Firmware/hmcad1511_controller.vhd Line: 43
+    Info (12023): Found entity 1: hmcad1511_controller File: C:/Users/alist/OneDrive/Electrickery/Phased Array Radio Telescope/Phased-Array-WiFi-Camera/FPGA Firmware/hmcad1511_controller.vhd Line: 6
 Info (12021): Found 2 design units, including 1 entities, in source file adc_spi.vhd
-    Info (12022): Found design unit 1: adc_spi-arch File: C:/Users/alist/OneDrive/Electrickery/Phased Array Radio Telescope/WiFi Tele/FPGA Firmware/adc_spi.vhd Line: 20
-    Info (12023): Found entity 1: adc_spi File: C:/Users/alist/OneDrive/Electrickery/Phased Array Radio Telescope/WiFi Tele/FPGA Firmware/adc_spi.vhd Line: 5
+    Info (12022): Found design unit 1: adc_spi-arch File: C:/Users/alist/OneDrive/Electrickery/Phased Array Radio Telescope/Phased-Array-WiFi-Camera/FPGA Firmware/adc_spi.vhd Line: 20
+    Info (12023): Found entity 1: adc_spi File: C:/Users/alist/OneDrive/Electrickery/Phased Array Radio Telescope/Phased-Array-WiFi-Camera/FPGA Firmware/adc_spi.vhd Line: 5
 Info (12021): Found 2 design units, including 1 entities, in source file clk_div8vhd.vhd
-    Info (12022): Found design unit 1: clk_div8-arch File: C:/Users/alist/OneDrive/Electrickery/Phased Array Radio Telescope/WiFi Tele/FPGA Firmware/clk_div8vhd.vhd Line: 15
-    Info (12023): Found entity 1: clk_div8 File: C:/Users/alist/OneDrive/Electrickery/Phased Array Radio Telescope/WiFi Tele/FPGA Firmware/clk_div8vhd.vhd Line: 5
-Info (12021): Found 2 design units, including 1 entities, in source file wifi_tele_top_level.vhd
-    Info (12022): Found design unit 1: wifi_tele_top_level-arch File: C:/Users/alist/OneDrive/Electrickery/Phased Array Radio Telescope/WiFi Tele/FPGA Firmware/wifi_tele_top_level.vhd Line: 32
-    Info (12023): Found entity 1: wifi_tele_top_level File: C:/Users/alist/OneDrive/Electrickery/Phased Array Radio Telescope/WiFi Tele/FPGA Firmware/wifi_tele_top_level.vhd Line: 4
-Info (12127): Elaborating entity "wifi_tele_top_level" for the top level hierarchy
-Warning (12158): Entity "wifi_tele_top_level" contains only dangling pins
+    Info (12022): Found design unit 1: clk_div8-arch File: C:/Users/alist/OneDrive/Electrickery/Phased Array Radio Telescope/Phased-Array-WiFi-Camera/FPGA Firmware/clk_div8vhd.vhd Line: 15
+    Info (12023): Found entity 1: clk_div8 File: C:/Users/alist/OneDrive/Electrickery/Phased Array Radio Telescope/Phased-Array-WiFi-Camera/FPGA Firmware/clk_div8vhd.vhd Line: 5
+Info (12021): Found 4 design units, including 2 entities, in source file lvds_glue.vhd
+    Info (12022): Found design unit 1: lvds_glue_iobuf_in_t1j-RTL File: C:/Users/alist/OneDrive/Electrickery/Phased Array Radio Telescope/Phased-Array-WiFi-Camera/FPGA Firmware/lvds_glue.vhd Line: 55
+    Info (12022): Found design unit 2: lvds_glue-RTL File: C:/Users/alist/OneDrive/Electrickery/Phased Array Radio Telescope/Phased-Array-WiFi-Camera/FPGA Firmware/lvds_glue.vhd Line: 110
+    Info (12023): Found entity 1: lvds_glue_iobuf_in_t1j File: C:/Users/alist/OneDrive/Electrickery/Phased Array Radio Telescope/Phased-Array-WiFi-Camera/FPGA Firmware/lvds_glue.vhd Line: 46
+    Info (12023): Found entity 2: lvds_glue File: C:/Users/alist/OneDrive/Electrickery/Phased Array Radio Telescope/Phased-Array-WiFi-Camera/FPGA Firmware/lvds_glue.vhd Line: 100
+Info (12021): Found 2 design units, including 1 entities, in source file wifi_tele_phy.vhd
+    Info (12022): Found design unit 1: wifi_tele_phy-arch File: C:/Users/alist/OneDrive/Electrickery/Phased Array Radio Telescope/Phased-Array-WiFi-Camera/FPGA Firmware/wifi_tele_phy.vhd Line: 32
+    Info (12023): Found entity 1: wifi_tele_phy File: C:/Users/alist/OneDrive/Electrickery/Phased Array Radio Telescope/Phased-Array-WiFi-Camera/FPGA Firmware/wifi_tele_phy.vhd Line: 4
+Info (12021): Found 2 design units, including 1 entities, in source file wifi_tele_logic.vhd
+    Info (12022): Found design unit 1: wifi_tele_logic-arch File: C:/Users/alist/OneDrive/Electrickery/Phased Array Radio Telescope/Phased-Array-WiFi-Camera/FPGA Firmware/wifi_tele_logic.vhd Line: 6
+    Info (12023): Found entity 1: wifi_tele_logic File: C:/Users/alist/OneDrive/Electrickery/Phased Array Radio Telescope/Phased-Array-WiFi-Camera/FPGA Firmware/wifi_tele_logic.vhd Line: 1
+Info (12127): Elaborating entity "wifi_tele_phy" for the top level hierarchy
+Warning (12158): Entity "wifi_tele_phy" contains only dangling pins
+Warning (12189): Intel FPGA IP Evaluation Mode (Simulation-Only) feature is turned on for all cores in the design
+    Warning (12191): Some cores in this design do not support the Intel FPGA IP Evaluation Mode feature
+        Warning (12192): "Triple-Speed Ethernet" does not support the Intel FPGA IP Evaluation Mode feature
+Warning (20013): Ignored 51 assignments for entity "altera_eth_tse_mac" -- entity does not exist in design
+Warning (20013): Ignored 31 assignments for entity "ethernet" -- entity does not exist in design
+Warning (20013): Ignored 48 assignments for entity "ethernet_eth_tse_0" -- entity does not exist in design
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
 Warning (21074): Design contains 10 input pin(s) that do not drive logic
-    Warning (15610): No output dependent on input pin "hmcad1511_fclk" File: C:/Users/alist/OneDrive/Electrickery/Phased Array Radio Telescope/WiFi Tele/FPGA Firmware/wifi_tele_top_level.vhd Line: 11
-    Warning (15610): No output dependent on input pin "hmcad1511_lclk" File: C:/Users/alist/OneDrive/Electrickery/Phased Array Radio Telescope/WiFi Tele/FPGA Firmware/wifi_tele_top_level.vhd Line: 12
-    Warning (15610): No output dependent on input pin "hmcad1511_d1a" File: C:/Users/alist/OneDrive/Electrickery/Phased Array Radio Telescope/WiFi Tele/FPGA Firmware/wifi_tele_top_level.vhd Line: 14
-    Warning (15610): No output dependent on input pin "hmcad1511_d1b" File: C:/Users/alist/OneDrive/Electrickery/Phased Array Radio Telescope/WiFi Tele/FPGA Firmware/wifi_tele_top_level.vhd Line: 15
-    Warning (15610): No output dependent on input pin "hmcad1511_d2a" File: C:/Users/alist/OneDrive/Electrickery/Phased Array Radio Telescope/WiFi Tele/FPGA Firmware/wifi_tele_top_level.vhd Line: 17
-    Warning (15610): No output dependent on input pin "hmcad1511_d2b" File: C:/Users/alist/OneDrive/Electrickery/Phased Array Radio Telescope/WiFi Tele/FPGA Firmware/wifi_tele_top_level.vhd Line: 18
-    Warning (15610): No output dependent on input pin "hmcad1511_d3a" File: C:/Users/alist/OneDrive/Electrickery/Phased Array Radio Telescope/WiFi Tele/FPGA Firmware/wifi_tele_top_level.vhd Line: 20
-    Warning (15610): No output dependent on input pin "hmcad1511_d3b" File: C:/Users/alist/OneDrive/Electrickery/Phased Array Radio Telescope/WiFi Tele/FPGA Firmware/wifi_tele_top_level.vhd Line: 21
-    Warning (15610): No output dependent on input pin "hmcad1511_d4a" File: C:/Users/alist/OneDrive/Electrickery/Phased Array Radio Telescope/WiFi Tele/FPGA Firmware/wifi_tele_top_level.vhd Line: 23
-    Warning (15610): No output dependent on input pin "hmcad1511_d4b" File: C:/Users/alist/OneDrive/Electrickery/Phased Array Radio Telescope/WiFi Tele/FPGA Firmware/wifi_tele_top_level.vhd Line: 24
+    Warning (15610): No output dependent on input pin "hmcad1511_fclk" File: C:/Users/alist/OneDrive/Electrickery/Phased Array Radio Telescope/Phased-Array-WiFi-Camera/FPGA Firmware/wifi_tele_phy.vhd Line: 11
+    Warning (15610): No output dependent on input pin "hmcad1511_lclk" File: C:/Users/alist/OneDrive/Electrickery/Phased Array Radio Telescope/Phased-Array-WiFi-Camera/FPGA Firmware/wifi_tele_phy.vhd Line: 12
+    Warning (15610): No output dependent on input pin "hmcad1511_d1a" File: C:/Users/alist/OneDrive/Electrickery/Phased Array Radio Telescope/Phased-Array-WiFi-Camera/FPGA Firmware/wifi_tele_phy.vhd Line: 14
+    Warning (15610): No output dependent on input pin "hmcad1511_d1b" File: C:/Users/alist/OneDrive/Electrickery/Phased Array Radio Telescope/Phased-Array-WiFi-Camera/FPGA Firmware/wifi_tele_phy.vhd Line: 15
+    Warning (15610): No output dependent on input pin "hmcad1511_d2a" File: C:/Users/alist/OneDrive/Electrickery/Phased Array Radio Telescope/Phased-Array-WiFi-Camera/FPGA Firmware/wifi_tele_phy.vhd Line: 17
+    Warning (15610): No output dependent on input pin "hmcad1511_d2b" File: C:/Users/alist/OneDrive/Electrickery/Phased Array Radio Telescope/Phased-Array-WiFi-Camera/FPGA Firmware/wifi_tele_phy.vhd Line: 18
+    Warning (15610): No output dependent on input pin "hmcad1511_d3a" File: C:/Users/alist/OneDrive/Electrickery/Phased Array Radio Telescope/Phased-Array-WiFi-Camera/FPGA Firmware/wifi_tele_phy.vhd Line: 20
+    Warning (15610): No output dependent on input pin "hmcad1511_d3b" File: C:/Users/alist/OneDrive/Electrickery/Phased Array Radio Telescope/Phased-Array-WiFi-Camera/FPGA Firmware/wifi_tele_phy.vhd Line: 21
+    Warning (15610): No output dependent on input pin "hmcad1511_d4a" File: C:/Users/alist/OneDrive/Electrickery/Phased Array Radio Telescope/Phased-Array-WiFi-Camera/FPGA Firmware/wifi_tele_phy.vhd Line: 23
+    Warning (15610): No output dependent on input pin "hmcad1511_d4b" File: C:/Users/alist/OneDrive/Electrickery/Phased Array Radio Telescope/Phased-Array-WiFi-Camera/FPGA Firmware/wifi_tele_phy.vhd Line: 24
 Info (21057): Implemented 10 device resources after synthesis - the final resource count might be different
     Info (21058): Implemented 10 input pins
     Info (21059): Implemented 0 output pins
-Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 13 warnings
-    Info: Peak virtual memory: 4808 megabytes
-    Info: Processing ended: Mon Aug 06 12:13:16 2018
-    Info: Elapsed time: 00:00:09
-    Info: Total CPU time (on all processors): 00:00:18
+Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 19 warnings
+    Info: Peak virtual memory: 4845 megabytes
+    Info: Processing ended: Mon Aug 06 14:03:51 2018
+    Info: Elapsed time: 00:00:18
+    Info: Total CPU time (on all processors): 00:00:27
 
 
