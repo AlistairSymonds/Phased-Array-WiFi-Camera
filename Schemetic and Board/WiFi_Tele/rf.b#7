@@ -1937,10 +1937,15 @@ Note, that not all DRC settings must be set by the manufacturer. Several can be 
 <via x="30.1" y="13.95" extent="1-16" drill="0.35"/>
 <via x="30.2" y="15.65" extent="1-16" drill="0.35"/>
 <via x="30.1" y="11.85" extent="1-16" drill="0.35"/>
+<wire x1="27.2552" y1="9.5206" x2="27.2552" y2="10.7552" width="0.127" layer="1"/>
+<wire x1="27.2552" y1="10.7552" x2="28" y2="11.5" width="0.127" layer="1"/>
+<wire x1="34.94" y1="13.18" x2="37.18" y2="13.18" width="1" layer="1"/>
+<wire x1="37.18" y1="13.18" x2="37.5" y2="13.5" width="0.127" layer="1"/>
+<wire x1="33.23" y1="20.86" x2="36.36" y2="20.86" width="1" layer="1"/>
+<wire x1="36.36" y1="20.86" x2="36.5" y2="21" width="0.127" layer="1"/>
+<wire x1="33.23" y1="20.86" x2="29.86" y2="20.86" width="1" layer="1"/>
+<wire x1="29.86" y1="20.86" x2="29.5" y2="20.5" width="0.127" layer="1"/>
 <wire x1="32.355" y1="30.51" x2="33.655" y2="30.51" width="0" layer="19" extent="1-1"/>
-<wire x1="34.94" y1="13.18" x2="36.45" y2="13.65" width="0" layer="19" extent="1-1"/>
-<wire x1="27.2552" y1="9.5206" x2="28.7" y2="11.4" width="0" layer="19" extent="1-1"/>
-<wire x1="33.23" y1="20.86" x2="35.75" y2="22.1" width="0" layer="19" extent="1-1"/>
 </signal>
 <signal name="N$2">
 <contactref element="C3" pad="1"/>
@@ -2065,7 +2070,14 @@ Note, that not all DRC settings must be set by the manufacturer. Several can be 
 <via x="28" y="15.5" extent="1-16" drill="0.35"/>
 <via x="21.5" y="5.5" extent="1-16" drill="0.35"/>
 <wire x1="21.5" y1="5.5" x2="23.1621" y2="7.1621" width="0.127" layer="1"/>
-<wire x1="23.5" y1="23.33" x2="22.8678" y2="39.22" width="0" layer="19" extent="1-1"/>
+<via x="26" y="17.5" extent="1-16" drill="0.35"/>
+<via x="20" y="22" extent="1-16" drill="0.35"/>
+<via x="26" y="22" extent="1-16" drill="0.35"/>
+<via x="22.5" y="48.5" extent="1-16" drill="0.35"/>
+<via x="17.5" y="46" extent="1-16" drill="0.35"/>
+<via x="22.5" y="45.5" extent="1-16" drill="0.35"/>
+<wire x1="23.96" y1="44.17" x2="22.5" y2="45.5" width="0" layer="19" extent="1-1"/>
+<wire x1="22.5" y1="48.5" x2="23.96" y2="48.4" width="0" layer="19" extent="1-1"/>
 </signal>
 <signal name="N$1">
 <contactref element="R3" pad="1"/>
@@ -2103,7 +2115,8 @@ Note, that not all DRC settings must be set by the manufacturer. Several can be 
 <wire x1="27.2552" y1="8.8602" x2="29.320478125" y2="8.8602" width="0.41896875" layer="1"/>
 <wire x1="29.320478125" y1="8.8602" x2="33.04" y2="12.579721875" width="0.41896875" layer="1" curve="90"/>
 <wire x1="33.04" y1="12.579721875" x2="33.04" y2="13.18" width="0.41896875" layer="1"/>
-<wire x1="33.04" y1="13.18" x2="33.02" y2="15.735" width="0" layer="19" extent="1-1"/>
+<wire x1="33.02" y1="15.735" x2="33.02" y2="13.2" width="0.41896875" layer="1"/>
+<wire x1="33.04" y1="13.18" x2="33.02" y2="13.2" width="0" layer="19" extent="1-1"/>
 </signal>
 <signal name="ANTENNA_IN" class="1">
 <contactref element="C11" pad="1"/>
@@ -2429,6 +2442,28 @@ Note, that not all DRC settings must be set by the manufacturer. Several can be 
 <approved hash="5,1,d1f247a570a1cd10"/>
 <approved hash="5,1,f909cafdd2a3a889"/>
 <approved hash="5,1,3e233e80291cefc7"/>
+<approved hash="5,1,52505a2afe7469eb"/>
+<approved hash="5,1,9fdd2eb96e58c615"/>
+<approved hash="5,1,68f538b1a422518e"/>
+<approved hash="5,1,8ebd7714757e9520"/>
+<approved hash="5,1,6e4070bc6c792a2f"/>
+<approved hash="5,1,10ccc65c42f1e93d"/>
+<approved hash="5,1,c3eddb67f1801814"/>
+<approved hash="5,1,8231a6da79fa0892"/>
+<approved hash="5,1,1186b67b7135454b"/>
+<approved hash="5,1,b26c95b7a8ff28e1"/>
+<approved hash="5,1,fe7c9ca894e00194"/>
+<approved hash="5,1,a90c63a75209fb88"/>
+<approved hash="5,1,60619f7739e25888"/>
+<approved hash="5,1,7a87f9076385cc8d"/>
+<approved hash="5,1,e7107a9cdda343fe"/>
+<approved hash="5,1,51b56b352d897f28"/>
+<approved hash="5,1,27a66b3bc965036b"/>
+<approved hash="5,1,2d934b1ee82dc9f3"/>
+<approved hash="5,1,4c0e040611e5ae3e"/>
+<approved hash="5,1,4dd7520706b6d15d"/>
+<approved hash="5,1,c76cd906dd49b469"/>
+<approved hash="5,1,c919827b64557a46"/>
 </errors>
 </board>
 </drawing>

@@ -117,8 +117,6 @@ set_location_assignment PIN_L7 -to GPIO[16]
 set_location_assignment PIN_M7 -to GPIO[17]
 set_location_assignment PIN_T2 -to GPIO[20]
 set_location_assignment PIN_M6 -to GPIO[21]
-set_location_assignment PIN_R4 -to GPIO[26]
-set_location_assignment PIN_T4 -to GPIO[27]
 set_location_assignment PIN_R1 -to GPIO[35]
 set_location_assignment PIN_R14 -to HBUS_CKn
 set_location_assignment PIN_P14 -to HBUS_CKp
@@ -235,7 +233,6 @@ set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to C10_M10_IO[0]
 set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to GPIO
 set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to GPIO[35]
 set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to GPIO[27]
-set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to GPIO[26]
 set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to GPIO[21]
 set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to GPIO[20]
 set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to GPIO[17]
@@ -367,3 +364,6 @@ set_location_assignment PIN_L16 -to "hmcad1511_fclk(n)"
 set_location_assignment PIN_R16 -to hmcad1511_lclk
 set_location_assignment PIN_P16 -to "hmcad1511_lclk(n)"
 set_global_assignment -name OPTIMIZATION_MODE "HIGH PERFORMANCE EFFORT"
+set_instance_assignment -name IO_STANDARD "DIFFERENTIAL 1.8-V HSTL CLASS I" -to sample_pll_out
+set_location_assignment PIN_R4 -to sample_pll_out
+set_location_assignment PIN_T4 -to "sample_pll_out(n)"

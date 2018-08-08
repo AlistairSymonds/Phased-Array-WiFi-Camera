@@ -1933,10 +1933,19 @@ Note, that not all DRC settings must be set by the manufacturer. Several can be 
 <wire x1="29.765" y1="26.265" x2="29.5" y2="26" width="1.27" layer="1"/>
 <wire x1="33.93" y1="26.265" x2="35.735" y2="26.265" width="1.27" layer="1"/>
 <wire x1="35.735" y1="26.265" x2="36" y2="26" width="1.27" layer="1"/>
+<via x="28.7" y="11.4" extent="1-16" drill="0.35"/>
+<via x="30.1" y="13.95" extent="1-16" drill="0.35"/>
+<via x="30.2" y="15.65" extent="1-16" drill="0.35"/>
+<via x="30.1" y="11.85" extent="1-16" drill="0.35"/>
+<wire x1="27.2552" y1="9.5206" x2="27.2552" y2="10.7552" width="0.127" layer="1"/>
+<wire x1="27.2552" y1="10.7552" x2="28" y2="11.5" width="0.127" layer="1"/>
+<wire x1="34.94" y1="13.18" x2="37.18" y2="13.18" width="1" layer="1"/>
+<wire x1="37.18" y1="13.18" x2="37.5" y2="13.5" width="0.127" layer="1"/>
+<wire x1="33.23" y1="20.86" x2="36.36" y2="20.86" width="1" layer="1"/>
+<wire x1="36.36" y1="20.86" x2="36.5" y2="21" width="0.127" layer="1"/>
+<wire x1="33.23" y1="20.86" x2="29.86" y2="20.86" width="1" layer="1"/>
+<wire x1="29.86" y1="20.86" x2="29.5" y2="20.5" width="0.127" layer="1"/>
 <wire x1="32.355" y1="30.51" x2="33.655" y2="30.51" width="0" layer="19" extent="1-1"/>
-<wire x1="34.94" y1="13.18" x2="36.45" y2="13.65" width="0" layer="19" extent="1-1"/>
-<wire x1="33.23" y1="20.86" x2="35.75" y2="22.1" width="0" layer="19" extent="1-1"/>
-<wire x1="27.2552" y1="9.5206" x2="28.5" y2="6" width="0" layer="19" extent="1-1"/>
 </signal>
 <signal name="N$2">
 <contactref element="C3" pad="1"/>
@@ -2417,6 +2426,22 @@ Note, that not all DRC settings must be set by the manufacturer. Several can be 
 <approved hash="5,1,526d4e8f503d56a8"/>
 <approved hash="5,1,d70aeb6ab89ecc3c"/>
 <approved hash="5,1,526d4e8f503d56a8"/>
+<approved hash="5,1,4e2798b2611223c4"/>
+<approved hash="5,1,7971044624274b1b"/>
+<approved hash="5,1,ae9c10d38c9942e5"/>
+<approved hash="5,1,a33cba219b6f4d7d"/>
+<approved hash="5,1,2238bea42d4f6c13"/>
+<approved hash="5,1,d1f247a570a1cd10"/>
+<approved hash="5,1,f909cafdd2a3a889"/>
+<approved hash="5,1,3e233e80291cefc7"/>
+<approved hash="5,1,52505a2afe7469eb"/>
+<approved hash="5,1,9fdd2eb96e58c615"/>
+<approved hash="5,1,68f538b1a422518e"/>
+<approved hash="5,1,8ebd7714757e9520"/>
+<approved hash="5,1,6e4070bc6c792a2f"/>
+<approved hash="5,1,10ccc65c42f1e93d"/>
+<approved hash="5,1,c3eddb67f1801814"/>
+<approved hash="5,1,8231a6da79fa0892"/>
 </errors>
 </board>
 </drawing>

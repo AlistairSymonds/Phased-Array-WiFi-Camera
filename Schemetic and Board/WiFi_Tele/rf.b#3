@@ -1949,6 +1949,29 @@ Note, that not all DRC settings must be set by the manufacturer. Several can be 
 <wire x1="32.355" y1="30.51" x2="32.355" y2="32.5" width="0.127" layer="1"/>
 <wire x1="33.655" y1="30.51" x2="33.655" y2="32.5" width="0.127" layer="1"/>
 <via x="30" y="30.5" extent="1-16" drill="0.35"/>
+<via x="30" y="33" extent="1-16" drill="0.35"/>
+<via x="30" y="34" extent="1-16" drill="0.35"/>
+<via x="30" y="31.5" extent="1-16" drill="0.35"/>
+<via x="29" y="21" extent="1-16" drill="0.35"/>
+<via x="30" y="20" extent="1-16" drill="0.35"/>
+<via x="29" y="22" extent="1-16" drill="0.35"/>
+<via x="30" y="22.5" extent="1-16" drill="0.35"/>
+<via x="30" y="25" extent="1-16" drill="0.35"/>
+<via x="30" y="28.5" extent="1-16" drill="0.35"/>
+<via x="30" y="29.5" extent="1-16" drill="0.35"/>
+<via x="30" y="27.5" extent="1-16" drill="0.35"/>
+<via x="35.8" y="33.9" extent="1-16" drill="0.35"/>
+<via x="35.8" y="34.9" extent="1-16" drill="0.35"/>
+<via x="35.7" y="37.85" extent="1-16" drill="0.35"/>
+<via x="35.4" y="38.85" extent="1-16" drill="0.35"/>
+<via x="34.65" y="39.75" extent="1-16" drill="0.35"/>
+<via x="33.85" y="40.55" extent="1-16" drill="0.35"/>
+<via x="32.85" y="41.05" extent="1-16" drill="0.35"/>
+<via x="31.75" y="41.45" extent="1-16" drill="0.35"/>
+<via x="30.5" y="41.5" extent="1-16" drill="0.35"/>
+<via x="29.5" y="41.5" extent="1-16" drill="0.35"/>
+<via x="26.5" y="41.5" extent="1-16" drill="0.35"/>
+<via x="25" y="41.5" extent="1-16" drill="0.35"/>
 </signal>
 <signal name="N$2">
 <contactref element="C3" pad="1"/>
@@ -2143,75 +2166,6 @@ Note, that not all DRC settings must be set by the manufacturer. Several can be 
 <wire x1="13.67" y1="38.67" x2="13.67" y2="38.66" width="0.41896875" layer="1"/>
 <wire x1="16.775" y1="38.67" x2="13.67" y2="38.67" width="0.41896875" layer="1"/>
 <wire x1="13.67" y1="38.67" x2="13.67" y2="38.66" width="0.41896875" layer="1"/>
-</signal>
-<signal name="N$8">
-<via x="30" y="34" extent="1-16" drill="0.35"/>
-</signal>
-<signal name="N$9">
-<via x="30" y="33" extent="1-16" drill="0.35"/>
-</signal>
-<signal name="N$10">
-<via x="30" y="31.5" extent="1-16" drill="0.35"/>
-</signal>
-<signal name="N$11">
-<via x="30" y="29.5" extent="1-16" drill="0.35"/>
-</signal>
-<signal name="N$12">
-<via x="30" y="28.5" extent="1-16" drill="0.35"/>
-</signal>
-<signal name="N$13">
-<via x="30" y="27.5" extent="1-16" drill="0.35"/>
-</signal>
-<signal name="N$14">
-<via x="30" y="25" extent="1-16" drill="0.35"/>
-</signal>
-<signal name="N$15">
-<via x="30" y="22.5" extent="1-16" drill="0.35"/>
-</signal>
-<signal name="N$16">
-<via x="30" y="20" extent="1-16" drill="0.35"/>
-</signal>
-<signal name="N$17">
-<via x="29" y="21" extent="1-16" drill="0.35"/>
-</signal>
-<signal name="N$18">
-<via x="29" y="22" extent="1-16" drill="0.35"/>
-</signal>
-<signal name="N$19">
-<via x="25" y="41.5" extent="1-16" drill="0.35"/>
-</signal>
-<signal name="N$20">
-<via x="26.5" y="41.5" extent="1-16" drill="0.35"/>
-</signal>
-<signal name="N$21">
-<via x="29.5" y="41.5" extent="1-16" drill="0.35"/>
-</signal>
-<signal name="N$22">
-<via x="30.5" y="41.5" extent="1-16" drill="0.35"/>
-</signal>
-<signal name="N$23">
-<via x="31.75" y="41.45" extent="1-16" drill="0.35"/>
-</signal>
-<signal name="N$24">
-<via x="32.85" y="41.05" extent="1-16" drill="0.35"/>
-</signal>
-<signal name="N$25">
-<via x="33.85" y="40.55" extent="1-16" drill="0.35"/>
-</signal>
-<signal name="N$26">
-<via x="34.65" y="39.75" extent="1-16" drill="0.35"/>
-</signal>
-<signal name="N$27">
-<via x="35.4" y="38.85" extent="1-16" drill="0.35"/>
-</signal>
-<signal name="N$28">
-<via x="35.7" y="37.85" extent="1-16" drill="0.35"/>
-</signal>
-<signal name="N$29">
-<via x="35.8" y="34.9" extent="1-16" drill="0.35"/>
-</signal>
-<signal name="N$30">
-<via x="35.8" y="33.9" extent="1-16" drill="0.35"/>
 </signal>
 </signals>
 <mfgpreviewcolors>

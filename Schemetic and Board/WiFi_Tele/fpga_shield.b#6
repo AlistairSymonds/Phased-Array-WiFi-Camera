@@ -2746,18 +2746,12 @@ design rules under a new name.</description>
 </signal>
 <signal name="HMCAD1511_D2A_N">
 <contactref element="SV1" pad="21"/>
-<contactref element="ADC" pad="14"/>
-<wire x1="66.04" y1="29.21" x2="81.59" y2="64.48" width="0" layer="19" extent="1-1"/>
 </signal>
 <signal name="HMCAD1511_D2B_N">
 <contactref element="SV1" pad="25"/>
-<contactref element="ADC" pad="16"/>
-<wire x1="71.12" y1="29.21" x2="81.59" y2="63.48" width="0" layer="19" extent="1-1"/>
 </signal>
 <signal name="HMCAD1511_D3A_N">
 <contactref element="SV1" pad="27"/>
-<contactref element="ADC" pad="22"/>
-<wire x1="73.66" y1="29.21" x2="81.59" y2="60.48" width="0" layer="19" extent="1-1"/>
 </signal>
 <signal name="3V3_GPIO">
 <contactref element="SV1" pad="30"/>
@@ -2782,18 +2776,12 @@ design rules under a new name.</description>
 </signal>
 <signal name="HMCAD1511_D3A_P">
 <contactref element="SV1" pad="28"/>
-<contactref element="ADC" pad="21"/>
-<wire x1="73.66" y1="26.67" x2="81.59" y2="60.98" width="0" layer="19" extent="1-1"/>
 </signal>
 <signal name="HMCAD1511_D2B_P">
 <contactref element="SV1" pad="26"/>
-<contactref element="ADC" pad="15"/>
-<wire x1="71.12" y1="26.67" x2="81.59" y2="63.98" width="0" layer="19" extent="1-1"/>
 </signal>
 <signal name="HMCAD1511_D2A_P">
 <contactref element="SV1" pad="22"/>
-<contactref element="ADC" pad="13"/>
-<wire x1="66.04" y1="26.67" x2="81.59" y2="64.98" width="0" layer="19" extent="1-1"/>
 </signal>
 <signal name="SPI_CLK">
 <contactref element="SV1" pad="14"/>
@@ -3254,6 +3242,18 @@ design rules under a new name.</description>
 <signal name="N$59">
 <contactref element="ADC" pad="5"/>
 </signal>
+<signal name="N$60">
+<contactref element="ADC" pad="13"/>
+</signal>
+<signal name="N$61">
+<contactref element="ADC" pad="14"/>
+</signal>
+<signal name="N$62">
+<contactref element="ADC" pad="15"/>
+</signal>
+<signal name="N$63">
+<contactref element="ADC" pad="16"/>
+</signal>
 <signal name="N$64">
 <contactref element="ADC" pad="17"/>
 </signal>
@@ -3265,6 +3265,12 @@ design rules under a new name.</description>
 </signal>
 <signal name="N$67">
 <contactref element="ADC" pad="20"/>
+</signal>
+<signal name="N$68">
+<contactref element="ADC" pad="21"/>
+</signal>
+<signal name="N$69">
+<contactref element="ADC" pad="22"/>
 </signal>
 <signal name="N$70">
 <contactref element="ADC" pad="23"/>
