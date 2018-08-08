@@ -17600,9 +17600,9 @@ W = angled&lt;p&gt;
 <part name="SUPPLY3" library="supply2" library_urn="urn:adsk.eagle:library:372" deviceset="GND" device=""/>
 <part name="SUPPLY4" library="supply2" library_urn="urn:adsk.eagle:library:372" deviceset="GND" device=""/>
 <part name="SUPPLY5" library="supply2" library_urn="urn:adsk.eagle:library:372" deviceset="GND" device=""/>
-<part name="LNA_RF" library="ADL5523ACPZ-R7" deviceset="ADL5523ACPZ-R7" device="CP_8_2-M" value="ADL5523ACPZ-R7CP_8_2-M"/>
-<part name="BPF_RF" library="Johanson BPF 2450BP18C100C" deviceset="2450BP18C100C" device=""/>
-<part name="BPF_LO" library="Johanson BPF 2450BP18C100C" deviceset="2450BP18C100C" device=""/>
+<part name="LNA" library="ADL5523ACPZ-R7" deviceset="ADL5523ACPZ-R7" device="CP_8_2-M" value="ADL5523ACPZ-R7CP_8_2-M"/>
+<part name="BPF1" library="Johanson BPF 2450BP18C100C" deviceset="2450BP18C100C" device=""/>
+<part name="BPF2" library="Johanson BPF 2450BP18C100C" deviceset="2450BP18C100C" device=""/>
 <part name="SUPPLY8" library="supply2" library_urn="urn:adsk.eagle:library:372" deviceset="GND" device=""/>
 <part name="SUPPLY10" library="supply2" library_urn="urn:adsk.eagle:library:372" deviceset="GND" device=""/>
 <part name="SUPPLY12" library="supply2" library_urn="urn:adsk.eagle:library:372" deviceset="GND" device=""/>
@@ -17621,7 +17621,7 @@ W = angled&lt;p&gt;
 <part name="SUPPLY20" library="supply2" library_urn="urn:adsk.eagle:library:372" deviceset="GND" device=""/>
 <part name="SV1" library="con-lsta" library_urn="urn:adsk.eagle:library:161" deviceset="FE05-1" device="" package3d_urn="urn:adsk.eagle:package:8190/1"/>
 <part name="SUPPLY21" library="supply2" library_urn="urn:adsk.eagle:library:372" deviceset="GND" device=""/>
-<part name="U1" library="LT5522" deviceset="LT5522EUF" device=""/>
+<part name="MIX" library="LT5522" deviceset="LT5522EUF" device=""/>
 <part name="L3" library="Passives" deviceset="L2012M" device="" package3d_urn="urn:adsk.eagle:package:4532137/1" value="4.7nH"/>
 <part name="SUPPLY6" library="supply2" library_urn="urn:adsk.eagle:library:372" deviceset="GND" device=""/>
 <part name="SUPPLY7" library="supply2" library_urn="urn:adsk.eagle:library:372" deviceset="GND" device=""/>
@@ -17650,9 +17650,9 @@ W = angled&lt;p&gt;
 <instance part="SUPPLY3" gate="GND" x="0" y="111.76"/>
 <instance part="SUPPLY4" gate="GND" x="7.62" y="96.52"/>
 <instance part="SUPPLY5" gate="GND" x="71.12" y="116.84"/>
-<instance part="LNA_RF" gate="A" x="78.74" y="60.96"/>
-<instance part="BPF_RF" gate="A" x="193.04" y="53.34"/>
-<instance part="BPF_LO" gate="A" x="193.04" y="116.84"/>
+<instance part="LNA" gate="A" x="78.74" y="60.96"/>
+<instance part="BPF1" gate="A" x="193.04" y="53.34"/>
+<instance part="BPF2" gate="A" x="193.04" y="116.84"/>
 <instance part="SUPPLY8" gate="GND" x="246.38" y="60.96" rot="R270"/>
 <instance part="SUPPLY10" gate="GND" x="193.04" y="33.02"/>
 <instance part="SUPPLY12" gate="GND" x="193.04" y="96.52"/>
@@ -17671,7 +17671,7 @@ W = angled&lt;p&gt;
 <instance part="SUPPLY20" gate="GND" x="-7.62" y="33.02"/>
 <instance part="SV1" gate="G$1" x="-96.52" y="63.5"/>
 <instance part="SUPPLY21" gate="GND" x="147.32" y="58.42"/>
-<instance part="U1" gate="A" x="248.92" y="60.96"/>
+<instance part="MIX" gate="A" x="248.92" y="60.96"/>
 <instance part="L3" gate="A" x="236.22" y="63.5" rot="R180"/>
 <instance part="SUPPLY6" gate="GND" x="243.84" y="68.58"/>
 <instance part="SUPPLY7" gate="GND" x="248.92" y="53.34" rot="R270"/>
@@ -17715,13 +17715,13 @@ W = angled&lt;p&gt;
 <pinref part="SUPPLY5" gate="GND" pin="GND"/>
 </segment>
 <segment>
-<pinref part="BPF_RF" gate="A" pin="GND"/>
+<pinref part="BPF1" gate="A" pin="GND"/>
 <pinref part="SUPPLY10" gate="GND" pin="GND"/>
 <wire x1="193.04" y1="43.18" x2="193.04" y2="35.56" width="0.1524" layer="91"/>
 </segment>
 <segment>
 <pinref part="SUPPLY12" gate="GND" pin="GND"/>
-<pinref part="BPF_LO" gate="A" pin="GND"/>
+<pinref part="BPF2" gate="A" pin="GND"/>
 <wire x1="193.04" y1="106.68" x2="193.04" y2="99.06" width="0.1524" layer="91"/>
 </segment>
 <segment>
@@ -17748,15 +17748,15 @@ W = angled&lt;p&gt;
 <wire x1="-7.62" y1="40.64" x2="-7.62" y2="35.56" width="0.1524" layer="91"/>
 </segment>
 <segment>
-<pinref part="LNA_RF" gate="A" pin="EP"/>
+<pinref part="LNA" gate="A" pin="EP"/>
 <pinref part="SUPPLY21" gate="GND" pin="GND"/>
 <wire x1="142.24" y1="60.96" x2="147.32" y2="60.96" width="0.1524" layer="91"/>
 </segment>
 <segment>
-<pinref part="U1" gate="A" pin="RF+"/>
+<pinref part="MIX" gate="A" pin="RF+"/>
 <wire x1="251.46" y1="58.42" x2="248.92" y2="58.42" width="0.1524" layer="91"/>
 <wire x1="248.92" y1="58.42" x2="248.92" y2="60.96" width="0.1524" layer="91"/>
-<pinref part="U1" gate="A" pin="NC_2"/>
+<pinref part="MIX" gate="A" pin="NC_2"/>
 <wire x1="248.92" y1="60.96" x2="251.46" y2="60.96" width="0.1524" layer="91"/>
 <pinref part="SUPPLY8" gate="GND" pin="GND"/>
 <junction x="248.92" y="60.96"/>
@@ -17767,11 +17767,11 @@ W = angled&lt;p&gt;
 <wire x1="236.22" y1="71.12" x2="243.84" y2="71.12" width="0.1524" layer="91"/>
 </segment>
 <segment>
-<pinref part="U1" gate="A" pin="NC_3"/>
+<pinref part="MIX" gate="A" pin="NC_3"/>
 <pinref part="SUPPLY7" gate="GND" pin="GND"/>
 </segment>
 <segment>
-<pinref part="U1" gate="A" pin="NC_4"/>
+<pinref part="MIX" gate="A" pin="NC_4"/>
 <pinref part="SUPPLY9" gate="GND" pin="GND"/>
 <wire x1="251.46" y1="38.1" x2="251.46" y2="40.64" width="0.1524" layer="91"/>
 <pinref part="C6" gate="G$1" pin="2"/>
@@ -17783,28 +17783,28 @@ W = angled&lt;p&gt;
 <junction x="251.46" y="40.64"/>
 </segment>
 <segment>
-<pinref part="U1" gate="A" pin="GND_2"/>
+<pinref part="MIX" gate="A" pin="GND_2"/>
 <pinref part="SUPPLY11" gate="GND" pin="GND"/>
 </segment>
 <segment>
-<pinref part="U1" gate="A" pin="NC_5"/>
+<pinref part="MIX" gate="A" pin="NC_5"/>
 <pinref part="SUPPLY14" gate="GND" pin="GND"/>
 <wire x1="289.56" y1="50.8" x2="287.02" y2="50.8" width="0.1524" layer="91"/>
 <wire x1="289.56" y1="50.8" x2="289.56" y2="48.26" width="0.1524" layer="91"/>
 <junction x="289.56" y="50.8"/>
-<pinref part="U1" gate="A" pin="GND_3"/>
+<pinref part="MIX" gate="A" pin="GND_3"/>
 <wire x1="289.56" y1="48.26" x2="287.02" y2="48.26" width="0.1524" layer="91"/>
 <wire x1="289.56" y1="50.8" x2="289.56" y2="53.34" width="0.1524" layer="91"/>
-<pinref part="U1" gate="A" pin="LO-"/>
+<pinref part="MIX" gate="A" pin="LO-"/>
 <wire x1="289.56" y1="53.34" x2="287.02" y2="53.34" width="0.1524" layer="91"/>
 </segment>
 <segment>
-<pinref part="U1" gate="A" pin="GND"/>
+<pinref part="MIX" gate="A" pin="GND"/>
 <pinref part="SUPPLY22" gate="GND" pin="GND"/>
 <wire x1="289.56" y1="60.96" x2="287.02" y2="60.96" width="0.1524" layer="91"/>
 <wire x1="289.56" y1="60.96" x2="289.56" y2="58.42" width="0.1524" layer="91"/>
 <junction x="289.56" y="60.96"/>
-<pinref part="U1" gate="A" pin="NC"/>
+<pinref part="MIX" gate="A" pin="NC"/>
 <wire x1="289.56" y1="58.42" x2="287.02" y2="58.42" width="0.1524" layer="91"/>
 </segment>
 <segment>
@@ -17851,7 +17851,7 @@ W = angled&lt;p&gt;
 </net>
 <net name="LO_AMPED" class="1">
 <segment>
-<pinref part="BPF_LO" gate="A" pin="I/O_1"/>
+<pinref part="BPF2" gate="A" pin="I/O_1"/>
 <wire x1="142.24" y1="119.38" x2="177.8" y2="119.38" width="0.1524" layer="91"/>
 <label x="162.56" y="116.84" size="1.778" layer="95"/>
 <pinref part="C10" gate="G$1" pin="1"/>
@@ -17866,18 +17866,18 @@ W = angled&lt;p&gt;
 </net>
 <net name="RF_AMPED" class="1">
 <segment>
-<pinref part="LNA_RF" gate="A" pin="RFOUT"/>
-<pinref part="BPF_RF" gate="A" pin="I/O_1"/>
+<pinref part="LNA" gate="A" pin="RFOUT"/>
+<pinref part="BPF1" gate="A" pin="I/O_1"/>
 <wire x1="142.24" y1="55.88" x2="177.8" y2="55.88" width="0.1524" layer="91"/>
 <label x="162.56" y="53.34" size="1.778" layer="95"/>
 </segment>
 </net>
 <net name="RF_FILTERED" class="1">
 <segment>
-<pinref part="BPF_RF" gate="A" pin="I/O_2"/>
+<pinref part="BPF1" gate="A" pin="I/O_2"/>
 <wire x1="208.28" y1="55.88" x2="236.22" y2="55.88" width="0.1524" layer="91"/>
 <label x="213.36" y="55.88" size="1.778" layer="95"/>
-<pinref part="U1" gate="A" pin="RF-"/>
+<pinref part="MIX" gate="A" pin="RF-"/>
 <pinref part="L3" gate="A" pin="1"/>
 <wire x1="236.22" y1="55.88" x2="251.46" y2="55.88" width="0.1524" layer="91"/>
 <junction x="236.22" y="55.88"/>
@@ -17885,12 +17885,12 @@ W = angled&lt;p&gt;
 </net>
 <net name="LO_FILTERED" class="1">
 <segment>
-<pinref part="BPF_LO" gate="A" pin="I/O_2"/>
+<pinref part="BPF2" gate="A" pin="I/O_2"/>
 <wire x1="208.28" y1="119.38" x2="228.6" y2="119.38" width="0.1524" layer="91"/>
 <label x="190.5" y="20.32" size="1.778" layer="95"/>
 <wire x1="228.6" y1="119.38" x2="299.72" y2="119.38" width="0.1524" layer="91"/>
 <wire x1="299.72" y1="119.38" x2="299.72" y2="55.88" width="0.1524" layer="91"/>
-<pinref part="U1" gate="A" pin="LO+"/>
+<pinref part="MIX" gate="A" pin="LO+"/>
 <wire x1="299.72" y1="55.88" x2="287.02" y2="55.88" width="0.1524" layer="91"/>
 </segment>
 </net>
@@ -17907,7 +17907,7 @@ W = angled&lt;p&gt;
 <wire x1="63.5" y1="60.96" x2="66.04" y2="60.96" width="0.1524" layer="91"/>
 <junction x="63.5" y="60.96"/>
 <label x="63.5" y="76.2" size="1.778" layer="95"/>
-<pinref part="LNA_RF" gate="A" pin="VPOS"/>
+<pinref part="LNA" gate="A" pin="VPOS"/>
 <wire x1="63.5" y1="60.96" x2="63.5" y2="38.1" width="0.1524" layer="91"/>
 <wire x1="63.5" y1="38.1" x2="81.28" y2="38.1" width="0.1524" layer="91"/>
 </segment>
@@ -17940,15 +17940,15 @@ W = angled&lt;p&gt;
 <label x="10.16" y="99.06" size="1.778" layer="95"/>
 </segment>
 <segment>
-<pinref part="U1" gate="A" pin="VCC1"/>
+<pinref part="MIX" gate="A" pin="VCC1"/>
 <wire x1="251.46" y1="48.26" x2="248.92" y2="48.26" width="0.1524" layer="91"/>
 <wire x1="248.92" y1="48.26" x2="248.92" y2="45.72" width="0.1524" layer="91"/>
-<pinref part="U1" gate="A" pin="VCC2"/>
+<pinref part="MIX" gate="A" pin="VCC2"/>
 <wire x1="248.92" y1="45.72" x2="251.46" y2="45.72" width="0.1524" layer="91"/>
 <wire x1="248.92" y1="48.26" x2="241.3" y2="48.26" width="0.1524" layer="91"/>
 <junction x="248.92" y="48.26"/>
 <label x="233.68" y="48.26" size="1.778" layer="95"/>
-<pinref part="U1" gate="A" pin="EN"/>
+<pinref part="MIX" gate="A" pin="EN"/>
 <wire x1="251.46" y1="50.8" x2="248.92" y2="50.8" width="0.1524" layer="91"/>
 <wire x1="248.92" y1="50.8" x2="248.92" y2="48.26" width="0.1524" layer="91"/>
 <pinref part="C5" gate="G$1" pin="1"/>
@@ -17977,13 +17977,13 @@ W = angled&lt;p&gt;
 <segment>
 <pinref part="R3" gate="G$1" pin="1"/>
 <wire x1="76.2" y1="60.96" x2="78.74" y2="60.96" width="0.1524" layer="91"/>
-<pinref part="LNA_RF" gate="A" pin="VBIAS"/>
+<pinref part="LNA" gate="A" pin="VBIAS"/>
 <wire x1="78.74" y1="60.96" x2="81.28" y2="60.96" width="0.1524" layer="91"/>
 </segment>
 </net>
 <net name="N$5" class="1">
 <segment>
-<pinref part="LNA_RF" gate="A" pin="RFIN"/>
+<pinref part="LNA" gate="A" pin="RFIN"/>
 <wire x1="81.28" y1="55.88" x2="81.28" y2="45.72" width="0.1524" layer="91"/>
 <wire x1="81.28" y1="45.72" x2="33.02" y2="45.72" width="0.1524" layer="91"/>
 <pinref part="L1" gate="A" pin="P$2"/>
@@ -18002,38 +18002,44 @@ W = angled&lt;p&gt;
 </net>
 <net name="N$4" class="0">
 <segment>
-<pinref part="U1" gate="A" pin="IF-"/>
+<pinref part="MIX" gate="A" pin="IF-"/>
 <wire x1="287.02" y1="43.18" x2="299.72" y2="43.18" width="0.1524" layer="91"/>
 <wire x1="299.72" y1="43.18" x2="299.72" y2="40.64" width="0.1524" layer="91"/>
-<pinref part="U$1" gate="G$1" pin="SECONDARY_3"/>
-<wire x1="299.72" y1="40.64" x2="307.34" y2="40.64" width="0.1524" layer="91"/>
-</segment>
-</net>
-<net name="N$6" class="0">
-<segment>
-<pinref part="U1" gate="A" pin="IF+"/>
-<wire x1="287.02" y1="45.72" x2="299.72" y2="45.72" width="0.1524" layer="91"/>
-<wire x1="299.72" y1="45.72" x2="299.72" y2="50.8" width="0.1524" layer="91"/>
+<wire x1="299.72" y1="43.18" x2="299.72" y2="50.8" width="0.1524" layer="91"/>
+<junction x="299.72" y="43.18"/>
 <pinref part="U$1" gate="G$1" pin="SECONDARY_1"/>
 <wire x1="299.72" y1="50.8" x2="307.34" y2="50.8" width="0.1524" layer="91"/>
 </segment>
 </net>
-<net name="N$3" class="0">
+<net name="IF_P" class="0">
+<segment>
+<pinref part="MIX" gate="A" pin="IF+"/>
+<wire x1="287.02" y1="45.72" x2="299.72" y2="45.72" width="0.1524" layer="91"/>
+<wire x1="299.72" y1="45.72" x2="302.26" y2="45.72" width="0.1524" layer="91"/>
+<pinref part="U$1" gate="G$1" pin="SECONDARY_3"/>
+<wire x1="302.26" y1="45.72" x2="302.26" y2="40.64" width="0.1524" layer="91"/>
+<wire x1="302.26" y1="40.64" x2="307.34" y2="40.64" width="0.1524" layer="91"/>
+<label x="292.1" y="48.26" size="1.778" layer="95"/>
+</segment>
+</net>
+<net name="IF+" class="0">
 <segment>
 <pinref part="U$1" gate="G$1" pin="PRIMARY_5"/>
 <wire x1="322.58" y1="50.8" x2="342.9" y2="50.8" width="0.1524" layer="91"/>
 <wire x1="342.9" y1="50.8" x2="342.9" y2="48.26" width="0.1524" layer="91"/>
 <pinref part="IF" gate="G$1" pin="1"/>
 <wire x1="342.9" y1="48.26" x2="347.98" y2="48.26" width="0.1524" layer="91"/>
+<label x="330.2" y="50.8" size="1.778" layer="95"/>
 </segment>
 </net>
-<net name="N$7" class="0">
+<net name="IF-" class="0">
 <segment>
 <pinref part="U$1" gate="G$1" pin="PRIMARY_4"/>
 <wire x1="322.58" y1="40.64" x2="342.9" y2="40.64" width="0.1524" layer="91"/>
 <wire x1="342.9" y1="40.64" x2="342.9" y2="43.18" width="0.1524" layer="91"/>
 <pinref part="IF" gate="G$1" pin="2"/>
 <wire x1="342.9" y1="43.18" x2="347.98" y2="43.18" width="0.1524" layer="91"/>
+<label x="330.2" y="40.64" size="1.778" layer="95"/>
 </segment>
 </net>
 </nets>

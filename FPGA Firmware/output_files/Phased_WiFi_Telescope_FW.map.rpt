@@ -1,5 +1,5 @@
 Analysis & Synthesis report for Phased_WiFi_Telescope_FW
-Mon Aug 06 14:03:51 2018
+Wed Aug 08 23:23:00 2018
 Quartus Prime Version 17.1.0 Build 590 10/25/2017 SJ Lite Edition
 
 
@@ -42,7 +42,7 @@ refer to the applicable agreement for further details.
 +----------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                     ;
 +------------------------------------+---------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Mon Aug 06 14:03:51 2018       ;
+; Analysis & Synthesis Status        ; Successful - Wed Aug 08 23:23:00 2018       ;
 ; Quartus Prime Version              ; 17.1.0 Build 590 10/25/2017 SJ Lite Edition ;
 ; Revision Name                      ; Phased_WiFi_Telescope_FW                    ;
 ; Top-level Entity Name              ; wifi_tele_phy                               ;
@@ -51,7 +51,7 @@ refer to the applicable agreement for further details.
 ;     Total combinational functions  ; 0                                           ;
 ;     Dedicated logic registers      ; 0                                           ;
 ; Total registers                    ; 0                                           ;
-; Total pins                         ; 10                                          ;
+; Total pins                         ; 12                                          ;
 ; Total virtual pins                 ; 0                                           ;
 ; Total memory bits                  ; 0                                           ;
 ; Embedded Multiplier 9-bit elements ; 0                                           ;
@@ -172,35 +172,35 @@ refer to the applicable agreement for further details.
 +----------------------------------+-----------------+-----------------+----------------------------------------------------------------------------------------------------------------------------+---------+
 
 
-+--------------------------------------------------------------+
-; Analysis & Synthesis Resource Usage Summary                  ;
-+---------------------------------------------+----------------+
-; Resource                                    ; Usage          ;
-+---------------------------------------------+----------------+
-;                                             ;                ;
-; Total combinational functions               ; 0              ;
-; Logic element usage by number of LUT inputs ;                ;
-;     -- 4 input functions                    ; 0              ;
-;     -- 3 input functions                    ; 0              ;
-;     -- <=2 input functions                  ; 0              ;
-;                                             ;                ;
-; Logic elements by mode                      ;                ;
-;     -- normal mode                          ; 0              ;
-;     -- arithmetic mode                      ; 0              ;
-;                                             ;                ;
-; Total registers                             ; 0              ;
-;     -- Dedicated logic registers            ; 0              ;
-;     -- I/O registers                        ; 0              ;
-;                                             ;                ;
-; I/O pins                                    ; 10             ;
-;                                             ;                ;
-; Embedded Multiplier 9-bit elements          ; 0              ;
-;                                             ;                ;
-; Maximum fan-out node                        ; hmcad1511_fclk ;
-; Maximum fan-out                             ; 1              ;
-; Total fan-out                               ; 10             ;
-; Average fan-out                             ; 0.50           ;
-+---------------------------------------------+----------------+
++----------------------------------------------------------+
+; Analysis & Synthesis Resource Usage Summary              ;
++---------------------------------------------+------------+
+; Resource                                    ; Usage      ;
++---------------------------------------------+------------+
+;                                             ;            ;
+; Total combinational functions               ; 0          ;
+; Logic element usage by number of LUT inputs ;            ;
+;     -- 4 input functions                    ; 0          ;
+;     -- 3 input functions                    ; 0          ;
+;     -- <=2 input functions                  ; 0          ;
+;                                             ;            ;
+; Logic elements by mode                      ;            ;
+;     -- normal mode                          ; 0          ;
+;     -- arithmetic mode                      ; 0          ;
+;                                             ;            ;
+; Total registers                             ; 0          ;
+;     -- Dedicated logic registers            ; 0          ;
+;     -- I/O registers                        ; 0          ;
+;                                             ;            ;
+; I/O pins                                    ; 12         ;
+;                                             ;            ;
+; Embedded Multiplier 9-bit elements          ; 0          ;
+;                                             ;            ;
+; Maximum fan-out node                        ; C10_clk50M ;
+; Maximum fan-out                             ; 1          ;
+; Total fan-out                               ; 12         ;
+; Average fan-out                             ; 0.50       ;
++---------------------------------------------+------------+
 
 
 +------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
@@ -208,7 +208,7 @@ refer to the applicable agreement for further details.
 +----------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+---------------------+---------------+--------------+
 ; Compilation Hierarchy Node ; Combinational ALUTs ; Dedicated Logic Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; Full Hierarchy Name ; Entity Name   ; Library Name ;
 +----------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+---------------------+---------------+--------------+
-; |wifi_tele_phy             ; 0 (0)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 10   ; 0            ; |wifi_tele_phy      ; wifi_tele_phy ; work         ;
+; |wifi_tele_phy             ; 0 (0)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 12   ; 0            ; |wifi_tele_phy      ; wifi_tele_phy ; work         ;
 +----------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+---------------------+---------------+--------------+
 Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
 
@@ -230,14 +230,17 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 
 +-----------------------------------------------------+
 ; Post-Synthesis Netlist Statistics for Top Partition ;
-+-------------------+---------------------------------+
-; Type              ; Count                           ;
-+-------------------+---------------------------------+
-; boundary_port     ; 10                              ;
-;                   ;                                 ;
-; Max LUT depth     ; 0.00                            ;
-; Average LUT depth ; 0.00                            ;
-+-------------------+---------------------------------+
++-----------------------+-----------------------------+
+; Type                  ; Count                       ;
++-----------------------+-----------------------------+
+; boundary_port         ; 12                          ;
+; cycloneiii_lcell_comb ; 1                           ;
+;     normal            ; 1                           ;
+;         0 data inputs ; 1                           ;
+;                       ;                             ;
+; Max LUT depth         ; 0.00                        ;
+; Average LUT depth     ; 0.00                        ;
++-----------------------+-----------------------------+
 
 
 +-------------------------------+
@@ -255,8 +258,9 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 17.1.0 Build 590 10/25/2017 SJ Lite Edition
-    Info: Processing started: Mon Aug 06 14:03:33 2018
+    Info: Processing started: Wed Aug 08 23:22:39 2018
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off Phased_WiFi_Telescope_FW -c Phased_WiFi_Telescope_FW
+Info (16303): High Performance Effort optimization mode selected -- timing performance will be prioritized at the potential cost of increased compilation time
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 4 of the 4 processors detected
 Info (12021): Found 2 design units, including 1 entities, in source file ethernet/synthesis/ethernet.vhd
@@ -527,39 +531,182 @@ Info (12021): Found 4 design units, including 2 entities, in source file lvds_gl
     Info (12023): Found entity 1: lvds_glue_iobuf_in_t1j File: C:/Users/alist/OneDrive/Electrickery/Phased Array Radio Telescope/Phased-Array-WiFi-Camera/FPGA Firmware/lvds_glue.vhd Line: 46
     Info (12023): Found entity 2: lvds_glue File: C:/Users/alist/OneDrive/Electrickery/Phased Array Radio Telescope/Phased-Array-WiFi-Camera/FPGA Firmware/lvds_glue.vhd Line: 100
 Info (12021): Found 2 design units, including 1 entities, in source file wifi_tele_phy.vhd
-    Info (12022): Found design unit 1: wifi_tele_phy-arch File: C:/Users/alist/OneDrive/Electrickery/Phased Array Radio Telescope/Phased-Array-WiFi-Camera/FPGA Firmware/wifi_tele_phy.vhd Line: 32
+    Info (12022): Found design unit 1: wifi_tele_phy-arch File: C:/Users/alist/OneDrive/Electrickery/Phased Array Radio Telescope/Phased-Array-WiFi-Camera/FPGA Firmware/wifi_tele_phy.vhd Line: 39
     Info (12023): Found entity 1: wifi_tele_phy File: C:/Users/alist/OneDrive/Electrickery/Phased Array Radio Telescope/Phased-Array-WiFi-Camera/FPGA Firmware/wifi_tele_phy.vhd Line: 4
 Info (12021): Found 2 design units, including 1 entities, in source file wifi_tele_logic.vhd
     Info (12022): Found design unit 1: wifi_tele_logic-arch File: C:/Users/alist/OneDrive/Electrickery/Phased Array Radio Telescope/Phased-Array-WiFi-Camera/FPGA Firmware/wifi_tele_logic.vhd Line: 6
     Info (12023): Found entity 1: wifi_tele_logic File: C:/Users/alist/OneDrive/Electrickery/Phased Array Radio Telescope/Phased-Array-WiFi-Camera/FPGA Firmware/wifi_tele_logic.vhd Line: 1
 Info (12127): Elaborating entity "wifi_tele_phy" for the top level hierarchy
-Warning (12158): Entity "wifi_tele_phy" contains only dangling pins
+Warning (10541): VHDL Signal Declaration warning at wifi_tele_phy.vhd(15): used implicit default value for signal "sample_pll_out" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations. File: C:/Users/alist/OneDrive/Electrickery/Phased Array Radio Telescope/Phased-Array-WiFi-Camera/FPGA Firmware/wifi_tele_phy.vhd Line: 15
 Warning (12189): Intel FPGA IP Evaluation Mode (Simulation-Only) feature is turned on for all cores in the design
     Warning (12191): Some cores in this design do not support the Intel FPGA IP Evaluation Mode feature
         Warning (12192): "Triple-Speed Ethernet" does not support the Intel FPGA IP Evaluation Mode feature
+Warning (13024): Output pins are stuck at VCC or GND
+    Warning (13410): Pin "sample_pll_out" is stuck at GND File: C:/Users/alist/OneDrive/Electrickery/Phased Array Radio Telescope/Phased-Array-WiFi-Camera/FPGA Firmware/wifi_tele_phy.vhd Line: 15
+Info (128000): Starting physical synthesis optimizations for speed
+Info (332104): Reading SDC File: 'ethernet/synthesis/submodules/altera_eth_tse_mac.sdc'
+Warning (332174): Ignored filter at altera_eth_tse_mac.sdc(30): *|q could not be matched with a pin File: C:/Users/alist/OneDrive/Electrickery/Phased Array Radio Telescope/Phased-Array-WiFi-Camera/FPGA Firmware/ethernet/synthesis/submodules/altera_eth_tse_mac.sdc Line: 30
+Warning (332174): Ignored filter at altera_eth_tse_mac.sdc(30): *altera_eth_tse_std_synchronizer:*|altera_std_synchronizer_nocut:*|din_s1 could not be matched with a register File: C:/Users/alist/OneDrive/Electrickery/Phased Array Radio Telescope/Phased-Array-WiFi-Camera/FPGA Firmware/ethernet/synthesis/submodules/altera_eth_tse_mac.sdc Line: 30
+Warning (332049): Ignored set_net_delay at altera_eth_tse_mac.sdc(30): argument -from with value [get_pins -compatibility_mode {*|q}] contains zero elements File: C:/Users/alist/OneDrive/Electrickery/Phased Array Radio Telescope/Phased-Array-WiFi-Camera/FPGA Firmware/ethernet/synthesis/submodules/altera_eth_tse_mac.sdc Line: 30
+    Info (332050): set_net_delay -from [get_pins -compatibility_mode ${from_reg}|q] -to [get_registers ${to_reg}] -max $max_net_delay File: C:/Users/alist/OneDrive/Electrickery/Phased Array Radio Telescope/Phased-Array-WiFi-Camera/FPGA Firmware/ethernet/synthesis/submodules/altera_eth_tse_mac.sdc Line: 30
+Warning (332174): Ignored filter at altera_eth_tse_mac.sdc(37): * could not be matched with a register File: C:/Users/alist/OneDrive/Electrickery/Phased Array Radio Telescope/Phased-Array-WiFi-Camera/FPGA Firmware/ethernet/synthesis/submodules/altera_eth_tse_mac.sdc Line: 37
+Warning (332049): Ignored set_max_delay at altera_eth_tse_mac.sdc(37): Argument <from> is an empty collection File: C:/Users/alist/OneDrive/Electrickery/Phased Array Radio Telescope/Phased-Array-WiFi-Camera/FPGA Firmware/ethernet/synthesis/submodules/altera_eth_tse_mac.sdc Line: 37
+    Info (332050): set_max_delay -from [get_registers ${from_reg}] -to [get_registers ${to_reg}] 8ns File: C:/Users/alist/OneDrive/Electrickery/Phased Array Radio Telescope/Phased-Array-WiFi-Camera/FPGA Firmware/ethernet/synthesis/submodules/altera_eth_tse_mac.sdc Line: 37
+Warning (332049): Ignored set_max_delay at altera_eth_tse_mac.sdc(37): Argument <to> is an empty collection File: C:/Users/alist/OneDrive/Electrickery/Phased Array Radio Telescope/Phased-Array-WiFi-Camera/FPGA Firmware/ethernet/synthesis/submodules/altera_eth_tse_mac.sdc Line: 37
+Warning (332049): Ignored set_min_delay at altera_eth_tse_mac.sdc(38): Argument <from> is an empty collection File: C:/Users/alist/OneDrive/Electrickery/Phased Array Radio Telescope/Phased-Array-WiFi-Camera/FPGA Firmware/ethernet/synthesis/submodules/altera_eth_tse_mac.sdc Line: 38
+    Info (332050): set_min_delay -from [get_registers ${from_reg}] -to [get_registers ${to_reg}] -100ns File: C:/Users/alist/OneDrive/Electrickery/Phased Array Radio Telescope/Phased-Array-WiFi-Camera/FPGA Firmware/ethernet/synthesis/submodules/altera_eth_tse_mac.sdc Line: 38
+Warning (332049): Ignored set_min_delay at altera_eth_tse_mac.sdc(38): Argument <to> is an empty collection File: C:/Users/alist/OneDrive/Electrickery/Phased Array Radio Telescope/Phased-Array-WiFi-Camera/FPGA Firmware/ethernet/synthesis/submodules/altera_eth_tse_mac.sdc Line: 38
+Warning (332174): Ignored filter at altera_eth_tse_mac.sdc(178): *|altera_tse_register_map:U_REG|command_config[9] could not be matched with a register File: C:/Users/alist/OneDrive/Electrickery/Phased Array Radio Telescope/Phased-Array-WiFi-Camera/FPGA Firmware/ethernet/synthesis/submodules/altera_eth_tse_mac.sdc Line: 178
+Warning (332174): Ignored filter at altera_eth_tse_mac.sdc(178): *|altera_tse_mac_tx:U_TX|* could not be matched with a register File: C:/Users/alist/OneDrive/Electrickery/Phased Array Radio Telescope/Phased-Array-WiFi-Camera/FPGA Firmware/ethernet/synthesis/submodules/altera_eth_tse_mac.sdc Line: 178
+Warning (332049): Ignored set_false_path at altera_eth_tse_mac.sdc(178): Argument <from> is an empty collection File: C:/Users/alist/OneDrive/Electrickery/Phased Array Radio Telescope/Phased-Array-WiFi-Camera/FPGA Firmware/ethernet/synthesis/submodules/altera_eth_tse_mac.sdc Line: 178
+    Info (332050): set_false_path -from [get_registers {*|altera_tse_register_map:U_REG|command_config[9]}] -to [get_registers {*|altera_tse_mac_tx:U_TX|*}] File: C:/Users/alist/OneDrive/Electrickery/Phased Array Radio Telescope/Phased-Array-WiFi-Camera/FPGA Firmware/ethernet/synthesis/submodules/altera_eth_tse_mac.sdc Line: 178
+Warning (332049): Ignored set_false_path at altera_eth_tse_mac.sdc(178): Argument <to> is an empty collection File: C:/Users/alist/OneDrive/Electrickery/Phased Array Radio Telescope/Phased-Array-WiFi-Camera/FPGA Firmware/ethernet/synthesis/submodules/altera_eth_tse_mac.sdc Line: 178
+Warning (332174): Ignored filter at altera_eth_tse_mac.sdc(179): *|altera_tse_register_map:U_REG|mac_0[*] could not be matched with a register File: C:/Users/alist/OneDrive/Electrickery/Phased Array Radio Telescope/Phased-Array-WiFi-Camera/FPGA Firmware/ethernet/synthesis/submodules/altera_eth_tse_mac.sdc Line: 179
+Warning (332049): Ignored set_false_path at altera_eth_tse_mac.sdc(179): Argument <from> is an empty collection File: C:/Users/alist/OneDrive/Electrickery/Phased Array Radio Telescope/Phased-Array-WiFi-Camera/FPGA Firmware/ethernet/synthesis/submodules/altera_eth_tse_mac.sdc Line: 179
+    Info (332050): set_false_path -from [get_registers {*|altera_tse_register_map:U_REG|mac_0[*]}] -to [get_registers {*|altera_tse_mac_tx:U_TX|*}] File: C:/Users/alist/OneDrive/Electrickery/Phased Array Radio Telescope/Phased-Array-WiFi-Camera/FPGA Firmware/ethernet/synthesis/submodules/altera_eth_tse_mac.sdc Line: 179
+Warning (332049): Ignored set_false_path at altera_eth_tse_mac.sdc(179): Argument <to> is an empty collection File: C:/Users/alist/OneDrive/Electrickery/Phased Array Radio Telescope/Phased-Array-WiFi-Camera/FPGA Firmware/ethernet/synthesis/submodules/altera_eth_tse_mac.sdc Line: 179
+Warning (332174): Ignored filter at altera_eth_tse_mac.sdc(180): *|altera_tse_register_map:U_REG|mac_1[*] could not be matched with a register File: C:/Users/alist/OneDrive/Electrickery/Phased Array Radio Telescope/Phased-Array-WiFi-Camera/FPGA Firmware/ethernet/synthesis/submodules/altera_eth_tse_mac.sdc Line: 180
+Warning (332049): Ignored set_false_path at altera_eth_tse_mac.sdc(180): Argument <from> is an empty collection File: C:/Users/alist/OneDrive/Electrickery/Phased Array Radio Telescope/Phased-Array-WiFi-Camera/FPGA Firmware/ethernet/synthesis/submodules/altera_eth_tse_mac.sdc Line: 180
+    Info (332050): set_false_path -from [get_registers {*|altera_tse_register_map:U_REG|mac_1[*]}] -to [get_registers {*|altera_tse_mac_tx:U_TX|*}] File: C:/Users/alist/OneDrive/Electrickery/Phased Array Radio Telescope/Phased-Array-WiFi-Camera/FPGA Firmware/ethernet/synthesis/submodules/altera_eth_tse_mac.sdc Line: 180
+Warning (332049): Ignored set_false_path at altera_eth_tse_mac.sdc(180): Argument <to> is an empty collection File: C:/Users/alist/OneDrive/Electrickery/Phased Array Radio Telescope/Phased-Array-WiFi-Camera/FPGA Firmware/ethernet/synthesis/submodules/altera_eth_tse_mac.sdc Line: 180
+Warning (332174): Ignored filter at altera_eth_tse_mac.sdc(182): *|altera_tse_mac_rx:U_RX|* could not be matched with a register File: C:/Users/alist/OneDrive/Electrickery/Phased Array Radio Telescope/Phased-Array-WiFi-Camera/FPGA Firmware/ethernet/synthesis/submodules/altera_eth_tse_mac.sdc Line: 182
+Warning (332049): Ignored set_false_path at altera_eth_tse_mac.sdc(182): Argument <from> is an empty collection File: C:/Users/alist/OneDrive/Electrickery/Phased Array Radio Telescope/Phased-Array-WiFi-Camera/FPGA Firmware/ethernet/synthesis/submodules/altera_eth_tse_mac.sdc Line: 182
+    Info (332050): set_false_path -from [get_registers {*|altera_tse_register_map:U_REG|mac_0[*]}] -to [get_registers {*|altera_tse_mac_rx:U_RX|*}] File: C:/Users/alist/OneDrive/Electrickery/Phased Array Radio Telescope/Phased-Array-WiFi-Camera/FPGA Firmware/ethernet/synthesis/submodules/altera_eth_tse_mac.sdc Line: 182
+Warning (332049): Ignored set_false_path at altera_eth_tse_mac.sdc(182): Argument <to> is an empty collection File: C:/Users/alist/OneDrive/Electrickery/Phased Array Radio Telescope/Phased-Array-WiFi-Camera/FPGA Firmware/ethernet/synthesis/submodules/altera_eth_tse_mac.sdc Line: 182
+Warning (332049): Ignored set_false_path at altera_eth_tse_mac.sdc(183): Argument <from> is an empty collection File: C:/Users/alist/OneDrive/Electrickery/Phased Array Radio Telescope/Phased-Array-WiFi-Camera/FPGA Firmware/ethernet/synthesis/submodules/altera_eth_tse_mac.sdc Line: 183
+    Info (332050): set_false_path -from [get_registers {*|altera_tse_register_map:U_REG|mac_1[*]}] -to [get_registers {*|altera_tse_mac_rx:U_RX|*}] File: C:/Users/alist/OneDrive/Electrickery/Phased Array Radio Telescope/Phased-Array-WiFi-Camera/FPGA Firmware/ethernet/synthesis/submodules/altera_eth_tse_mac.sdc Line: 183
+Warning (332049): Ignored set_false_path at altera_eth_tse_mac.sdc(183): Argument <to> is an empty collection File: C:/Users/alist/OneDrive/Electrickery/Phased Array Radio Telescope/Phased-Array-WiFi-Camera/FPGA Firmware/ethernet/synthesis/submodules/altera_eth_tse_mac.sdc Line: 183
+Warning (332174): Ignored filter at altera_eth_tse_mac.sdc(184): *|altera_tse_register_map:U_REG|frm_length[*] could not be matched with a register File: C:/Users/alist/OneDrive/Electrickery/Phased Array Radio Telescope/Phased-Array-WiFi-Camera/FPGA Firmware/ethernet/synthesis/submodules/altera_eth_tse_mac.sdc Line: 184
+Warning (332049): Ignored set_false_path at altera_eth_tse_mac.sdc(184): Argument <from> is an empty collection File: C:/Users/alist/OneDrive/Electrickery/Phased Array Radio Telescope/Phased-Array-WiFi-Camera/FPGA Firmware/ethernet/synthesis/submodules/altera_eth_tse_mac.sdc Line: 184
+    Info (332050): set_false_path -from [get_registers {*|altera_tse_register_map:U_REG|frm_length[*]}] -to [get_registers {*|altera_tse_mac_rx:U_RX|*}] File: C:/Users/alist/OneDrive/Electrickery/Phased Array Radio Telescope/Phased-Array-WiFi-Camera/FPGA Firmware/ethernet/synthesis/submodules/altera_eth_tse_mac.sdc Line: 184
+Warning (332049): Ignored set_false_path at altera_eth_tse_mac.sdc(184): Argument <to> is an empty collection File: C:/Users/alist/OneDrive/Electrickery/Phased Array Radio Telescope/Phased-Array-WiFi-Camera/FPGA Firmware/ethernet/synthesis/submodules/altera_eth_tse_mac.sdc Line: 184
+Warning (332174): Ignored filter at altera_eth_tse_mac.sdc(204): *|altera_tse_mac_rx:*|pause_quant_val* could not be matched with a register File: C:/Users/alist/OneDrive/Electrickery/Phased Array Radio Telescope/Phased-Array-WiFi-Camera/FPGA Firmware/ethernet/synthesis/submodules/altera_eth_tse_mac.sdc Line: 204
+Warning (332174): Ignored filter at altera_eth_tse_mac.sdc(204): *|altera_tse_mac_tx:*|pause_latch* could not be matched with a register File: C:/Users/alist/OneDrive/Electrickery/Phased Array Radio Telescope/Phased-Array-WiFi-Camera/FPGA Firmware/ethernet/synthesis/submodules/altera_eth_tse_mac.sdc Line: 204
+Warning (332049): Ignored set_false_path at altera_eth_tse_mac.sdc(204): Argument <from> is an empty collection File: C:/Users/alist/OneDrive/Electrickery/Phased Array Radio Telescope/Phased-Array-WiFi-Camera/FPGA Firmware/ethernet/synthesis/submodules/altera_eth_tse_mac.sdc Line: 204
+    Info (332050): set_false_path -from [get_registers *|altera_tse_mac_rx:*|pause_quant_val*] -to [get_registers *|altera_tse_mac_tx:*|pause_latch*] File: C:/Users/alist/OneDrive/Electrickery/Phased Array Radio Telescope/Phased-Array-WiFi-Camera/FPGA Firmware/ethernet/synthesis/submodules/altera_eth_tse_mac.sdc Line: 204
+Warning (332049): Ignored set_false_path at altera_eth_tse_mac.sdc(204): Argument <to> is an empty collection File: C:/Users/alist/OneDrive/Electrickery/Phased Array Radio Telescope/Phased-Array-WiFi-Camera/FPGA Firmware/ethernet/synthesis/submodules/altera_eth_tse_mac.sdc Line: 204
+Warning (332174): Ignored filter at altera_eth_tse_mac.sdc(205): *|altera_tse_register_map:U_REG|pause_quant_reg* could not be matched with a register File: C:/Users/alist/OneDrive/Electrickery/Phased Array Radio Telescope/Phased-Array-WiFi-Camera/FPGA Firmware/ethernet/synthesis/submodules/altera_eth_tse_mac.sdc Line: 205
+Warning (332049): Ignored set_false_path at altera_eth_tse_mac.sdc(205): Argument <from> is an empty collection File: C:/Users/alist/OneDrive/Electrickery/Phased Array Radio Telescope/Phased-Array-WiFi-Camera/FPGA Firmware/ethernet/synthesis/submodules/altera_eth_tse_mac.sdc Line: 205
+    Info (332050): set_false_path -from [get_registers {*|altera_tse_register_map:U_REG|pause_quant_reg*}] -to [get_registers {*|altera_tse_mac_tx:U_TX|*}] File: C:/Users/alist/OneDrive/Electrickery/Phased Array Radio Telescope/Phased-Array-WiFi-Camera/FPGA Firmware/ethernet/synthesis/submodules/altera_eth_tse_mac.sdc Line: 205
+Warning (332049): Ignored set_false_path at altera_eth_tse_mac.sdc(205): Argument <to> is an empty collection File: C:/Users/alist/OneDrive/Electrickery/Phased Array Radio Telescope/Phased-Array-WiFi-Camera/FPGA Firmware/ethernet/synthesis/submodules/altera_eth_tse_mac.sdc Line: 205
+Warning (332049): Ignored set_false_path at altera_eth_tse_mac.sdc(206): Argument <from> is an empty collection File: C:/Users/alist/OneDrive/Electrickery/Phased Array Radio Telescope/Phased-Array-WiFi-Camera/FPGA Firmware/ethernet/synthesis/submodules/altera_eth_tse_mac.sdc Line: 206
+    Info (332050): set_false_path -from [get_registers {*|altera_tse_register_map:U_REG|pause_quant_reg*}] -to [get_registers {*|altera_tse_mac_tx:U_TX|*}] File: C:/Users/alist/OneDrive/Electrickery/Phased Array Radio Telescope/Phased-Array-WiFi-Camera/FPGA Firmware/ethernet/synthesis/submodules/altera_eth_tse_mac.sdc Line: 206
+Warning (332049): Ignored set_false_path at altera_eth_tse_mac.sdc(206): Argument <to> is an empty collection File: C:/Users/alist/OneDrive/Electrickery/Phased Array Radio Telescope/Phased-Array-WiFi-Camera/FPGA Firmware/ethernet/synthesis/submodules/altera_eth_tse_mac.sdc Line: 206
+Warning (332174): Ignored filter at altera_eth_tse_mac.sdc(207): *|altera_tse_register_map:U_REG|holdoff_quant* could not be matched with a register File: C:/Users/alist/OneDrive/Electrickery/Phased Array Radio Telescope/Phased-Array-WiFi-Camera/FPGA Firmware/ethernet/synthesis/submodules/altera_eth_tse_mac.sdc Line: 207
+Warning (332049): Ignored set_false_path at altera_eth_tse_mac.sdc(207): Argument <from> is an empty collection File: C:/Users/alist/OneDrive/Electrickery/Phased Array Radio Telescope/Phased-Array-WiFi-Camera/FPGA Firmware/ethernet/synthesis/submodules/altera_eth_tse_mac.sdc Line: 207
+    Info (332050): set_false_path -from [get_registers {*|altera_tse_register_map:U_REG|holdoff_quant*}] -to [get_registers {*|altera_tse_mac_tx:U_TX|*}] File: C:/Users/alist/OneDrive/Electrickery/Phased Array Radio Telescope/Phased-Array-WiFi-Camera/FPGA Firmware/ethernet/synthesis/submodules/altera_eth_tse_mac.sdc Line: 207
+Warning (332049): Ignored set_false_path at altera_eth_tse_mac.sdc(207): Argument <to> is an empty collection File: C:/Users/alist/OneDrive/Electrickery/Phased Array Radio Telescope/Phased-Array-WiFi-Camera/FPGA Firmware/ethernet/synthesis/submodules/altera_eth_tse_mac.sdc Line: 207
+Warning (332174): Ignored filter at altera_eth_tse_mac.sdc(212): *|altera_tse_magic_detection:U_MAGIC|* could not be matched with a register File: C:/Users/alist/OneDrive/Electrickery/Phased Array Radio Telescope/Phased-Array-WiFi-Camera/FPGA Firmware/ethernet/synthesis/submodules/altera_eth_tse_mac.sdc Line: 212
+Warning (332049): Ignored set_false_path at altera_eth_tse_mac.sdc(212): Argument <from> is an empty collection File: C:/Users/alist/OneDrive/Electrickery/Phased Array Radio Telescope/Phased-Array-WiFi-Camera/FPGA Firmware/ethernet/synthesis/submodules/altera_eth_tse_mac.sdc Line: 212
+    Info (332050): set_false_path -from [get_registers {*|altera_tse_register_map:U_REG|mac_0[*]}] -to [get_registers {*|altera_tse_magic_detection:U_MAGIC|*}] File: C:/Users/alist/OneDrive/Electrickery/Phased Array Radio Telescope/Phased-Array-WiFi-Camera/FPGA Firmware/ethernet/synthesis/submodules/altera_eth_tse_mac.sdc Line: 212
+Warning (332049): Ignored set_false_path at altera_eth_tse_mac.sdc(212): Argument <to> is an empty collection File: C:/Users/alist/OneDrive/Electrickery/Phased Array Radio Telescope/Phased-Array-WiFi-Camera/FPGA Firmware/ethernet/synthesis/submodules/altera_eth_tse_mac.sdc Line: 212
+Warning (332049): Ignored set_false_path at altera_eth_tse_mac.sdc(213): Argument <from> is an empty collection File: C:/Users/alist/OneDrive/Electrickery/Phased Array Radio Telescope/Phased-Array-WiFi-Camera/FPGA Firmware/ethernet/synthesis/submodules/altera_eth_tse_mac.sdc Line: 213
+    Info (332050): set_false_path -from [get_registers {*|altera_tse_register_map:U_REG|mac_1[*]}] -to [get_registers {*|altera_tse_magic_detection:U_MAGIC|*}] File: C:/Users/alist/OneDrive/Electrickery/Phased Array Radio Telescope/Phased-Array-WiFi-Camera/FPGA Firmware/ethernet/synthesis/submodules/altera_eth_tse_mac.sdc Line: 213
+Warning (332049): Ignored set_false_path at altera_eth_tse_mac.sdc(213): Argument <to> is an empty collection File: C:/Users/alist/OneDrive/Electrickery/Phased Array Radio Telescope/Phased-Array-WiFi-Camera/FPGA Firmware/ethernet/synthesis/submodules/altera_eth_tse_mac.sdc Line: 213
+Warning (332174): Ignored filter at altera_eth_tse_mac.sdc(53): *altera_tse_a_fifo_opt_1246:TX_DATA|altera_tse_gray_cnt:U_RD|g_out[*]|q could not be matched with a pin File: C:/Users/alist/OneDrive/Electrickery/Phased Array Radio Telescope/Phased-Array-WiFi-Camera/FPGA Firmware/ethernet/synthesis/submodules/altera_eth_tse_mac.sdc Line: 53
+Warning (332174): Ignored filter at altera_eth_tse_mac.sdc(53): *altera_tse_a_fifo_opt_1246:TX_DATA|altera_eth_tse_std_synchronizer_bundle:U_SYNC_1|altera_eth_tse_std_synchronizer:*|altera_std_synchronizer_nocut:*|din_s1* could not be matched with a register File: C:/Users/alist/OneDrive/Electrickery/Phased Array Radio Telescope/Phased-Array-WiFi-Camera/FPGA Firmware/ethernet/synthesis/submodules/altera_eth_tse_mac.sdc Line: 53
+Warning (332049): Ignored set_net_delay at altera_eth_tse_mac.sdc(53): argument -from with value [get_pins -compatibility_mode {*altera_tse_a_fifo_opt_1246:TX_DATA|altera_tse_gray_cnt:U_RD|g_out[*]|q}] contains zero elements File: C:/Users/alist/OneDrive/Electrickery/Phased Array Radio Telescope/Phased-Array-WiFi-Camera/FPGA Firmware/ethernet/synthesis/submodules/altera_eth_tse_mac.sdc Line: 53
+    Info (332050): set_net_delay -from [get_pins -compatibility_mode *${from_path}|${from_reg}[*]|q] -to [get_registers *${to_path}|${to_reg}*] -max $max_net_delay File: C:/Users/alist/OneDrive/Electrickery/Phased Array Radio Telescope/Phased-Array-WiFi-Camera/FPGA Firmware/ethernet/synthesis/submodules/altera_eth_tse_mac.sdc Line: 53
+Warning (332174): Ignored filter at altera_eth_tse_mac.sdc(83): *altera_tse_a_fifo_opt_1246:TX_DATA|altera_tse_gray_cnt:U_RD|g_out[*] could not be matched with a register File: C:/Users/alist/OneDrive/Electrickery/Phased Array Radio Telescope/Phased-Array-WiFi-Camera/FPGA Firmware/ethernet/synthesis/submodules/altera_eth_tse_mac.sdc Line: 83
+Warning (332049): Ignored set_max_delay at altera_eth_tse_mac.sdc(83): Argument <from> is an empty collection File: C:/Users/alist/OneDrive/Electrickery/Phased Array Radio Telescope/Phased-Array-WiFi-Camera/FPGA Firmware/ethernet/synthesis/submodules/altera_eth_tse_mac.sdc Line: 83
+    Info (332050): set_max_delay -from [get_registers *${from_path}|${from_reg}[*]] -to [get_registers *${to_path}|${to_reg}*] 8ns File: C:/Users/alist/OneDrive/Electrickery/Phased Array Radio Telescope/Phased-Array-WiFi-Camera/FPGA Firmware/ethernet/synthesis/submodules/altera_eth_tse_mac.sdc Line: 83
+Warning (332049): Ignored set_max_delay at altera_eth_tse_mac.sdc(83): Argument <to> is an empty collection File: C:/Users/alist/OneDrive/Electrickery/Phased Array Radio Telescope/Phased-Array-WiFi-Camera/FPGA Firmware/ethernet/synthesis/submodules/altera_eth_tse_mac.sdc Line: 83
+Warning (332049): Ignored set_min_delay at altera_eth_tse_mac.sdc(84): Argument <from> is an empty collection File: C:/Users/alist/OneDrive/Electrickery/Phased Array Radio Telescope/Phased-Array-WiFi-Camera/FPGA Firmware/ethernet/synthesis/submodules/altera_eth_tse_mac.sdc Line: 84
+    Info (332050): set_min_delay -from [get_registers *${from_path}|${from_reg}[*]] -to [get_registers *${to_path}|${to_reg}*] -100ns File: C:/Users/alist/OneDrive/Electrickery/Phased Array Radio Telescope/Phased-Array-WiFi-Camera/FPGA Firmware/ethernet/synthesis/submodules/altera_eth_tse_mac.sdc Line: 84
+Warning (332049): Ignored set_min_delay at altera_eth_tse_mac.sdc(84): Argument <to> is an empty collection File: C:/Users/alist/OneDrive/Electrickery/Phased Array Radio Telescope/Phased-Array-WiFi-Camera/FPGA Firmware/ethernet/synthesis/submodules/altera_eth_tse_mac.sdc Line: 84
+Warning (332174): Ignored filter at altera_eth_tse_mac.sdc(53): *altera_tse_a_fifo_opt_1246:TX_DATA|altera_tse_gray_cnt:U_WRT|g_out[*]|q could not be matched with a pin File: C:/Users/alist/OneDrive/Electrickery/Phased Array Radio Telescope/Phased-Array-WiFi-Camera/FPGA Firmware/ethernet/synthesis/submodules/altera_eth_tse_mac.sdc Line: 53
+Warning (332174): Ignored filter at altera_eth_tse_mac.sdc(53): *altera_tse_a_fifo_opt_1246:TX_DATA|altera_eth_tse_std_synchronizer_bundle:U_SYNC_3|altera_eth_tse_std_synchronizer:*|altera_std_synchronizer_nocut:*|din_s1* could not be matched with a register File: C:/Users/alist/OneDrive/Electrickery/Phased Array Radio Telescope/Phased-Array-WiFi-Camera/FPGA Firmware/ethernet/synthesis/submodules/altera_eth_tse_mac.sdc Line: 53
+Warning (332049): Ignored set_net_delay at altera_eth_tse_mac.sdc(53): argument -from with value [get_pins -compatibility_mode {*altera_tse_a_fifo_opt_1246:TX_DATA|altera_tse_gray_cnt:U_WRT|g_out[*]|q}] contains zero elements File: C:/Users/alist/OneDrive/Electrickery/Phased Array Radio Telescope/Phased-Array-WiFi-Camera/FPGA Firmware/ethernet/synthesis/submodules/altera_eth_tse_mac.sdc Line: 53
+    Info (332050): set_net_delay -from [get_pins -compatibility_mode *${from_path}|${from_reg}[*]|q] -to [get_registers *${to_path}|${to_reg}*] -max $max_net_delay File: C:/Users/alist/OneDrive/Electrickery/Phased Array Radio Telescope/Phased-Array-WiFi-Camera/FPGA Firmware/ethernet/synthesis/submodules/altera_eth_tse_mac.sdc Line: 53
+Warning (332174): Ignored filter at altera_eth_tse_mac.sdc(83): *altera_tse_a_fifo_opt_1246:TX_DATA|altera_tse_gray_cnt:U_WRT|g_out[*] could not be matched with a register File: C:/Users/alist/OneDrive/Electrickery/Phased Array Radio Telescope/Phased-Array-WiFi-Camera/FPGA Firmware/ethernet/synthesis/submodules/altera_eth_tse_mac.sdc Line: 83
+Warning (332049): Ignored set_max_delay at altera_eth_tse_mac.sdc(83): Argument <from> is an empty collection File: C:/Users/alist/OneDrive/Electrickery/Phased Array Radio Telescope/Phased-Array-WiFi-Camera/FPGA Firmware/ethernet/synthesis/submodules/altera_eth_tse_mac.sdc Line: 83
+    Info (332050): set_max_delay -from [get_registers *${from_path}|${from_reg}[*]] -to [get_registers *${to_path}|${to_reg}*] 8ns File: C:/Users/alist/OneDrive/Electrickery/Phased Array Radio Telescope/Phased-Array-WiFi-Camera/FPGA Firmware/ethernet/synthesis/submodules/altera_eth_tse_mac.sdc Line: 83
+Warning (332049): Ignored set_max_delay at altera_eth_tse_mac.sdc(83): Argument <to> is an empty collection File: C:/Users/alist/OneDrive/Electrickery/Phased Array Radio Telescope/Phased-Array-WiFi-Camera/FPGA Firmware/ethernet/synthesis/submodules/altera_eth_tse_mac.sdc Line: 83
+Warning (332049): Ignored set_min_delay at altera_eth_tse_mac.sdc(84): Argument <from> is an empty collection File: C:/Users/alist/OneDrive/Electrickery/Phased Array Radio Telescope/Phased-Array-WiFi-Camera/FPGA Firmware/ethernet/synthesis/submodules/altera_eth_tse_mac.sdc Line: 84
+    Info (332050): set_min_delay -from [get_registers *${from_path}|${from_reg}[*]] -to [get_registers *${to_path}|${to_reg}*] -100ns File: C:/Users/alist/OneDrive/Electrickery/Phased Array Radio Telescope/Phased-Array-WiFi-Camera/FPGA Firmware/ethernet/synthesis/submodules/altera_eth_tse_mac.sdc Line: 84
+Warning (332049): Ignored set_min_delay at altera_eth_tse_mac.sdc(84): Argument <to> is an empty collection File: C:/Users/alist/OneDrive/Electrickery/Phased Array Radio Telescope/Phased-Array-WiFi-Camera/FPGA Firmware/ethernet/synthesis/submodules/altera_eth_tse_mac.sdc Line: 84
+Warning (332174): Ignored filter at altera_eth_tse_mac.sdc(53): *altera_tse_a_fifo_opt_1246:RX_DATA|altera_tse_gray_cnt:U_RD|g_out[*]|q could not be matched with a pin File: C:/Users/alist/OneDrive/Electrickery/Phased Array Radio Telescope/Phased-Array-WiFi-Camera/FPGA Firmware/ethernet/synthesis/submodules/altera_eth_tse_mac.sdc Line: 53
+Warning (332174): Ignored filter at altera_eth_tse_mac.sdc(53): *altera_tse_a_fifo_opt_1246:RX_DATA|altera_eth_tse_std_synchronizer_bundle:U_SYNC_1|altera_eth_tse_std_synchronizer:*|altera_std_synchronizer_nocut:*|din_s1* could not be matched with a register File: C:/Users/alist/OneDrive/Electrickery/Phased Array Radio Telescope/Phased-Array-WiFi-Camera/FPGA Firmware/ethernet/synthesis/submodules/altera_eth_tse_mac.sdc Line: 53
+Warning (332049): Ignored set_net_delay at altera_eth_tse_mac.sdc(53): argument -from with value [get_pins -compatibility_mode {*altera_tse_a_fifo_opt_1246:RX_DATA|altera_tse_gray_cnt:U_RD|g_out[*]|q}] contains zero elements File: C:/Users/alist/OneDrive/Electrickery/Phased Array Radio Telescope/Phased-Array-WiFi-Camera/FPGA Firmware/ethernet/synthesis/submodules/altera_eth_tse_mac.sdc Line: 53
+    Info (332050): set_net_delay -from [get_pins -compatibility_mode *${from_path}|${from_reg}[*]|q] -to [get_registers *${to_path}|${to_reg}*] -max $max_net_delay File: C:/Users/alist/OneDrive/Electrickery/Phased Array Radio Telescope/Phased-Array-WiFi-Camera/FPGA Firmware/ethernet/synthesis/submodules/altera_eth_tse_mac.sdc Line: 53
+Warning (332174): Ignored filter at altera_eth_tse_mac.sdc(83): *altera_tse_a_fifo_opt_1246:RX_DATA|altera_tse_gray_cnt:U_RD|g_out[*] could not be matched with a register File: C:/Users/alist/OneDrive/Electrickery/Phased Array Radio Telescope/Phased-Array-WiFi-Camera/FPGA Firmware/ethernet/synthesis/submodules/altera_eth_tse_mac.sdc Line: 83
+Warning (332049): Ignored set_max_delay at altera_eth_tse_mac.sdc(83): Argument <from> is an empty collection File: C:/Users/alist/OneDrive/Electrickery/Phased Array Radio Telescope/Phased-Array-WiFi-Camera/FPGA Firmware/ethernet/synthesis/submodules/altera_eth_tse_mac.sdc Line: 83
+    Info (332050): set_max_delay -from [get_registers *${from_path}|${from_reg}[*]] -to [get_registers *${to_path}|${to_reg}*] 8ns File: C:/Users/alist/OneDrive/Electrickery/Phased Array Radio Telescope/Phased-Array-WiFi-Camera/FPGA Firmware/ethernet/synthesis/submodules/altera_eth_tse_mac.sdc Line: 83
+Warning (332049): Ignored set_max_delay at altera_eth_tse_mac.sdc(83): Argument <to> is an empty collection File: C:/Users/alist/OneDrive/Electrickery/Phased Array Radio Telescope/Phased-Array-WiFi-Camera/FPGA Firmware/ethernet/synthesis/submodules/altera_eth_tse_mac.sdc Line: 83
+Warning (332049): Ignored set_min_delay at altera_eth_tse_mac.sdc(84): Argument <from> is an empty collection File: C:/Users/alist/OneDrive/Electrickery/Phased Array Radio Telescope/Phased-Array-WiFi-Camera/FPGA Firmware/ethernet/synthesis/submodules/altera_eth_tse_mac.sdc Line: 84
+    Info (332050): set_min_delay -from [get_registers *${from_path}|${from_reg}[*]] -to [get_registers *${to_path}|${to_reg}*] -100ns File: C:/Users/alist/OneDrive/Electrickery/Phased Array Radio Telescope/Phased-Array-WiFi-Camera/FPGA Firmware/ethernet/synthesis/submodules/altera_eth_tse_mac.sdc Line: 84
+Warning (332049): Ignored set_min_delay at altera_eth_tse_mac.sdc(84): Argument <to> is an empty collection File: C:/Users/alist/OneDrive/Electrickery/Phased Array Radio Telescope/Phased-Array-WiFi-Camera/FPGA Firmware/ethernet/synthesis/submodules/altera_eth_tse_mac.sdc Line: 84
+Warning (332174): Ignored filter at altera_eth_tse_mac.sdc(53): *altera_tse_a_fifo_opt_1246:RX_DATA|altera_tse_gray_cnt:U_WRT|g_out[*]|q could not be matched with a pin File: C:/Users/alist/OneDrive/Electrickery/Phased Array Radio Telescope/Phased-Array-WiFi-Camera/FPGA Firmware/ethernet/synthesis/submodules/altera_eth_tse_mac.sdc Line: 53
+Warning (332174): Ignored filter at altera_eth_tse_mac.sdc(53): *altera_tse_a_fifo_opt_1246:RX_DATA|altera_eth_tse_std_synchronizer_bundle:U_SYNC_3|altera_eth_tse_std_synchronizer:*|altera_std_synchronizer_nocut:*|din_s1* could not be matched with a register File: C:/Users/alist/OneDrive/Electrickery/Phased Array Radio Telescope/Phased-Array-WiFi-Camera/FPGA Firmware/ethernet/synthesis/submodules/altera_eth_tse_mac.sdc Line: 53
+Warning (332049): Ignored set_net_delay at altera_eth_tse_mac.sdc(53): argument -from with value [get_pins -compatibility_mode {*altera_tse_a_fifo_opt_1246:RX_DATA|altera_tse_gray_cnt:U_WRT|g_out[*]|q}] contains zero elements File: C:/Users/alist/OneDrive/Electrickery/Phased Array Radio Telescope/Phased-Array-WiFi-Camera/FPGA Firmware/ethernet/synthesis/submodules/altera_eth_tse_mac.sdc Line: 53
+    Info (332050): set_net_delay -from [get_pins -compatibility_mode *${from_path}|${from_reg}[*]|q] -to [get_registers *${to_path}|${to_reg}*] -max $max_net_delay File: C:/Users/alist/OneDrive/Electrickery/Phased Array Radio Telescope/Phased-Array-WiFi-Camera/FPGA Firmware/ethernet/synthesis/submodules/altera_eth_tse_mac.sdc Line: 53
+Warning (332174): Ignored filter at altera_eth_tse_mac.sdc(83): *altera_tse_a_fifo_opt_1246:RX_DATA|altera_tse_gray_cnt:U_WRT|g_out[*] could not be matched with a register File: C:/Users/alist/OneDrive/Electrickery/Phased Array Radio Telescope/Phased-Array-WiFi-Camera/FPGA Firmware/ethernet/synthesis/submodules/altera_eth_tse_mac.sdc Line: 83
+Warning (332049): Ignored set_max_delay at altera_eth_tse_mac.sdc(83): Argument <from> is an empty collection File: C:/Users/alist/OneDrive/Electrickery/Phased Array Radio Telescope/Phased-Array-WiFi-Camera/FPGA Firmware/ethernet/synthesis/submodules/altera_eth_tse_mac.sdc Line: 83
+    Info (332050): set_max_delay -from [get_registers *${from_path}|${from_reg}[*]] -to [get_registers *${to_path}|${to_reg}*] 8ns File: C:/Users/alist/OneDrive/Electrickery/Phased Array Radio Telescope/Phased-Array-WiFi-Camera/FPGA Firmware/ethernet/synthesis/submodules/altera_eth_tse_mac.sdc Line: 83
+Warning (332049): Ignored set_max_delay at altera_eth_tse_mac.sdc(83): Argument <to> is an empty collection File: C:/Users/alist/OneDrive/Electrickery/Phased Array Radio Telescope/Phased-Array-WiFi-Camera/FPGA Firmware/ethernet/synthesis/submodules/altera_eth_tse_mac.sdc Line: 83
+Warning (332049): Ignored set_min_delay at altera_eth_tse_mac.sdc(84): Argument <from> is an empty collection File: C:/Users/alist/OneDrive/Electrickery/Phased Array Radio Telescope/Phased-Array-WiFi-Camera/FPGA Firmware/ethernet/synthesis/submodules/altera_eth_tse_mac.sdc Line: 84
+    Info (332050): set_min_delay -from [get_registers *${from_path}|${from_reg}[*]] -to [get_registers *${to_path}|${to_reg}*] -100ns File: C:/Users/alist/OneDrive/Electrickery/Phased Array Radio Telescope/Phased-Array-WiFi-Camera/FPGA Firmware/ethernet/synthesis/submodules/altera_eth_tse_mac.sdc Line: 84
+Warning (332049): Ignored set_min_delay at altera_eth_tse_mac.sdc(84): Argument <to> is an empty collection File: C:/Users/alist/OneDrive/Electrickery/Phased Array Radio Telescope/Phased-Array-WiFi-Camera/FPGA Firmware/ethernet/synthesis/submodules/altera_eth_tse_mac.sdc Line: 84
+Warning (332174): Ignored filter at altera_eth_tse_mac.sdc(53): *altera_tse_a_fifo_13:TX_STATUS|altera_tse_gray_cnt:U_WRT|g_out[*]|q could not be matched with a pin File: C:/Users/alist/OneDrive/Electrickery/Phased Array Radio Telescope/Phased-Array-WiFi-Camera/FPGA Firmware/ethernet/synthesis/submodules/altera_eth_tse_mac.sdc Line: 53
+Warning (332174): Ignored filter at altera_eth_tse_mac.sdc(53): *altera_tse_a_fifo_13:TX_STATUS|altera_eth_tse_std_synchronizer_bundle:U_SYNC_2|altera_eth_tse_std_synchronizer:*|altera_std_synchronizer_nocut:*|din_s1* could not be matched with a register File: C:/Users/alist/OneDrive/Electrickery/Phased Array Radio Telescope/Phased-Array-WiFi-Camera/FPGA Firmware/ethernet/synthesis/submodules/altera_eth_tse_mac.sdc Line: 53
+Warning (332049): Ignored set_net_delay at altera_eth_tse_mac.sdc(53): argument -from with value [get_pins -compatibility_mode {*altera_tse_a_fifo_13:TX_STATUS|altera_tse_gray_cnt:U_WRT|g_out[*]|q}] contains zero elements File: C:/Users/alist/OneDrive/Electrickery/Phased Array Radio Telescope/Phased-Array-WiFi-Camera/FPGA Firmware/ethernet/synthesis/submodules/altera_eth_tse_mac.sdc Line: 53
+    Info (332050): set_net_delay -from [get_pins -compatibility_mode *${from_path}|${from_reg}[*]|q] -to [get_registers *${to_path}|${to_reg}*] -max $max_net_delay File: C:/Users/alist/OneDrive/Electrickery/Phased Array Radio Telescope/Phased-Array-WiFi-Camera/FPGA Firmware/ethernet/synthesis/submodules/altera_eth_tse_mac.sdc Line: 53
+Warning (332174): Ignored filter at altera_eth_tse_mac.sdc(83): *altera_tse_a_fifo_13:TX_STATUS|altera_tse_gray_cnt:U_WRT|g_out[*] could not be matched with a register File: C:/Users/alist/OneDrive/Electrickery/Phased Array Radio Telescope/Phased-Array-WiFi-Camera/FPGA Firmware/ethernet/synthesis/submodules/altera_eth_tse_mac.sdc Line: 83
+Warning (332049): Ignored set_max_delay at altera_eth_tse_mac.sdc(83): Argument <from> is an empty collection File: C:/Users/alist/OneDrive/Electrickery/Phased Array Radio Telescope/Phased-Array-WiFi-Camera/FPGA Firmware/ethernet/synthesis/submodules/altera_eth_tse_mac.sdc Line: 83
+    Info (332050): set_max_delay -from [get_registers *${from_path}|${from_reg}[*]] -to [get_registers *${to_path}|${to_reg}*] 8ns File: C:/Users/alist/OneDrive/Electrickery/Phased Array Radio Telescope/Phased-Array-WiFi-Camera/FPGA Firmware/ethernet/synthesis/submodules/altera_eth_tse_mac.sdc Line: 83
+Warning (332049): Ignored set_max_delay at altera_eth_tse_mac.sdc(83): Argument <to> is an empty collection File: C:/Users/alist/OneDrive/Electrickery/Phased Array Radio Telescope/Phased-Array-WiFi-Camera/FPGA Firmware/ethernet/synthesis/submodules/altera_eth_tse_mac.sdc Line: 83
+Warning (332049): Ignored set_min_delay at altera_eth_tse_mac.sdc(84): Argument <from> is an empty collection File: C:/Users/alist/OneDrive/Electrickery/Phased Array Radio Telescope/Phased-Array-WiFi-Camera/FPGA Firmware/ethernet/synthesis/submodules/altera_eth_tse_mac.sdc Line: 84
+    Info (332050): set_min_delay -from [get_registers *${from_path}|${from_reg}[*]] -to [get_registers *${to_path}|${to_reg}*] -100ns File: C:/Users/alist/OneDrive/Electrickery/Phased Array Radio Telescope/Phased-Array-WiFi-Camera/FPGA Firmware/ethernet/synthesis/submodules/altera_eth_tse_mac.sdc Line: 84
+Warning (332049): Ignored set_min_delay at altera_eth_tse_mac.sdc(84): Argument <to> is an empty collection File: C:/Users/alist/OneDrive/Electrickery/Phased Array Radio Telescope/Phased-Array-WiFi-Camera/FPGA Firmware/ethernet/synthesis/submodules/altera_eth_tse_mac.sdc Line: 84
+Warning (332174): Ignored filter at altera_eth_tse_mac.sdc(53): *altera_tse_a_fifo_34:RX_STATUS|wr_g_ptr_reg[*]|q could not be matched with a pin File: C:/Users/alist/OneDrive/Electrickery/Phased Array Radio Telescope/Phased-Array-WiFi-Camera/FPGA Firmware/ethernet/synthesis/submodules/altera_eth_tse_mac.sdc Line: 53
+Warning (332174): Ignored filter at altera_eth_tse_mac.sdc(53): *altera_tse_a_fifo_34:RX_STATUS|altera_eth_tse_std_synchronizer_bundle:U_SYNC_WR_G_PTR|altera_eth_tse_std_synchronizer:*|altera_std_synchronizer_nocut:*|din_s1* could not be matched with a register File: C:/Users/alist/OneDrive/Electrickery/Phased Array Radio Telescope/Phased-Array-WiFi-Camera/FPGA Firmware/ethernet/synthesis/submodules/altera_eth_tse_mac.sdc Line: 53
+Warning (332049): Ignored set_net_delay at altera_eth_tse_mac.sdc(53): argument -from with value [get_pins -compatibility_mode {*altera_tse_a_fifo_34:RX_STATUS|wr_g_ptr_reg[*]|q}] contains zero elements File: C:/Users/alist/OneDrive/Electrickery/Phased Array Radio Telescope/Phased-Array-WiFi-Camera/FPGA Firmware/ethernet/synthesis/submodules/altera_eth_tse_mac.sdc Line: 53
+    Info (332050): set_net_delay -from [get_pins -compatibility_mode *${from_path}|${from_reg}[*]|q] -to [get_registers *${to_path}|${to_reg}*] -max $max_net_delay File: C:/Users/alist/OneDrive/Electrickery/Phased Array Radio Telescope/Phased-Array-WiFi-Camera/FPGA Firmware/ethernet/synthesis/submodules/altera_eth_tse_mac.sdc Line: 53
+Warning (332174): Ignored filter at altera_eth_tse_mac.sdc(83): *altera_tse_a_fifo_34:RX_STATUS|wr_g_ptr_reg[*] could not be matched with a register File: C:/Users/alist/OneDrive/Electrickery/Phased Array Radio Telescope/Phased-Array-WiFi-Camera/FPGA Firmware/ethernet/synthesis/submodules/altera_eth_tse_mac.sdc Line: 83
+Warning (332049): Ignored set_max_delay at altera_eth_tse_mac.sdc(83): Argument <from> is an empty collection File: C:/Users/alist/OneDrive/Electrickery/Phased Array Radio Telescope/Phased-Array-WiFi-Camera/FPGA Firmware/ethernet/synthesis/submodules/altera_eth_tse_mac.sdc Line: 83
+    Info (332050): set_max_delay -from [get_registers *${from_path}|${from_reg}[*]] -to [get_registers *${to_path}|${to_reg}*] 8ns File: C:/Users/alist/OneDrive/Electrickery/Phased Array Radio Telescope/Phased-Array-WiFi-Camera/FPGA Firmware/ethernet/synthesis/submodules/altera_eth_tse_mac.sdc Line: 83
+Warning (332049): Ignored set_max_delay at altera_eth_tse_mac.sdc(83): Argument <to> is an empty collection File: C:/Users/alist/OneDrive/Electrickery/Phased Array Radio Telescope/Phased-Array-WiFi-Camera/FPGA Firmware/ethernet/synthesis/submodules/altera_eth_tse_mac.sdc Line: 83
+Warning (332049): Ignored set_min_delay at altera_eth_tse_mac.sdc(84): Argument <from> is an empty collection File: C:/Users/alist/OneDrive/Electrickery/Phased Array Radio Telescope/Phased-Array-WiFi-Camera/FPGA Firmware/ethernet/synthesis/submodules/altera_eth_tse_mac.sdc Line: 84
+    Info (332050): set_min_delay -from [get_registers *${from_path}|${from_reg}[*]] -to [get_registers *${to_path}|${to_reg}*] -100ns File: C:/Users/alist/OneDrive/Electrickery/Phased Array Radio Telescope/Phased-Array-WiFi-Camera/FPGA Firmware/ethernet/synthesis/submodules/altera_eth_tse_mac.sdc Line: 84
+Warning (332049): Ignored set_min_delay at altera_eth_tse_mac.sdc(84): Argument <to> is an empty collection File: C:/Users/alist/OneDrive/Electrickery/Phased Array Radio Telescope/Phased-Array-WiFi-Camera/FPGA Firmware/ethernet/synthesis/submodules/altera_eth_tse_mac.sdc Line: 84
+Info (332144): No user constrained base clocks found in the design
+Info (332096): The command derive_clocks did not find any clocks to derive.  No clocks were created or changed.
+Warning (332068): No clocks defined in design.
+Info (332143): No user constrained clock uncertainty found in the design. Calling "derive_clock_uncertainty"
+Info (332154): The derive_clock_uncertainty command did not apply clock uncertainty to any clock-to-clock transfers.
+Info (332128): Timing requirements not specified -- optimizing circuit to achieve the following default global requirements
+    Info (332127): Assuming a default timing requirement
+Info (332159): No clocks to report
+Warning (332068): No clocks defined in design.
+Info (128002): Starting physical synthesis algorithm register retiming
+Info (128003): Physical synthesis algorithm register retiming complete: estimated slack improvement of 0 ps
+Info (128002): Starting physical synthesis algorithm combinational resynthesis using boolean division
+Info (128003): Physical synthesis algorithm combinational resynthesis using boolean division complete: estimated slack improvement of 0 ps
+Info (128001): Physical synthesis optimizations for speed complete: elapsed time is 00:00:00
 Warning (20013): Ignored 51 assignments for entity "altera_eth_tse_mac" -- entity does not exist in design
 Warning (20013): Ignored 31 assignments for entity "ethernet" -- entity does not exist in design
 Warning (20013): Ignored 48 assignments for entity "ethernet_eth_tse_0" -- entity does not exist in design
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
-Warning (21074): Design contains 10 input pin(s) that do not drive logic
-    Warning (15610): No output dependent on input pin "hmcad1511_fclk" File: C:/Users/alist/OneDrive/Electrickery/Phased Array Radio Telescope/Phased-Array-WiFi-Camera/FPGA Firmware/wifi_tele_phy.vhd Line: 11
-    Warning (15610): No output dependent on input pin "hmcad1511_lclk" File: C:/Users/alist/OneDrive/Electrickery/Phased Array Radio Telescope/Phased-Array-WiFi-Camera/FPGA Firmware/wifi_tele_phy.vhd Line: 12
-    Warning (15610): No output dependent on input pin "hmcad1511_d1a" File: C:/Users/alist/OneDrive/Electrickery/Phased Array Radio Telescope/Phased-Array-WiFi-Camera/FPGA Firmware/wifi_tele_phy.vhd Line: 14
-    Warning (15610): No output dependent on input pin "hmcad1511_d1b" File: C:/Users/alist/OneDrive/Electrickery/Phased Array Radio Telescope/Phased-Array-WiFi-Camera/FPGA Firmware/wifi_tele_phy.vhd Line: 15
-    Warning (15610): No output dependent on input pin "hmcad1511_d2a" File: C:/Users/alist/OneDrive/Electrickery/Phased Array Radio Telescope/Phased-Array-WiFi-Camera/FPGA Firmware/wifi_tele_phy.vhd Line: 17
-    Warning (15610): No output dependent on input pin "hmcad1511_d2b" File: C:/Users/alist/OneDrive/Electrickery/Phased Array Radio Telescope/Phased-Array-WiFi-Camera/FPGA Firmware/wifi_tele_phy.vhd Line: 18
-    Warning (15610): No output dependent on input pin "hmcad1511_d3a" File: C:/Users/alist/OneDrive/Electrickery/Phased Array Radio Telescope/Phased-Array-WiFi-Camera/FPGA Firmware/wifi_tele_phy.vhd Line: 20
-    Warning (15610): No output dependent on input pin "hmcad1511_d3b" File: C:/Users/alist/OneDrive/Electrickery/Phased Array Radio Telescope/Phased-Array-WiFi-Camera/FPGA Firmware/wifi_tele_phy.vhd Line: 21
-    Warning (15610): No output dependent on input pin "hmcad1511_d4a" File: C:/Users/alist/OneDrive/Electrickery/Phased Array Radio Telescope/Phased-Array-WiFi-Camera/FPGA Firmware/wifi_tele_phy.vhd Line: 23
-    Warning (15610): No output dependent on input pin "hmcad1511_d4b" File: C:/Users/alist/OneDrive/Electrickery/Phased Array Radio Telescope/Phased-Array-WiFi-Camera/FPGA Firmware/wifi_tele_phy.vhd Line: 24
-Info (21057): Implemented 10 device resources after synthesis - the final resource count might be different
-    Info (21058): Implemented 10 input pins
-    Info (21059): Implemented 0 output pins
-Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 19 warnings
-    Info: Peak virtual memory: 4845 megabytes
-    Info: Processing ended: Mon Aug 06 14:03:51 2018
-    Info: Elapsed time: 00:00:18
-    Info: Total CPU time (on all processors): 00:00:27
+Warning (21074): Design contains 11 input pin(s) that do not drive logic
+    Warning (15610): No output dependent on input pin "C10_clk50M" File: C:/Users/alist/OneDrive/Electrickery/Phased Array Radio Telescope/Phased-Array-WiFi-Camera/FPGA Firmware/wifi_tele_phy.vhd Line: 9
+    Warning (15610): No output dependent on input pin "hmcad1511_fclk" File: C:/Users/alist/OneDrive/Electrickery/Phased Array Radio Telescope/Phased-Array-WiFi-Camera/FPGA Firmware/wifi_tele_phy.vhd Line: 18
+    Warning (15610): No output dependent on input pin "hmcad1511_lclk" File: C:/Users/alist/OneDrive/Electrickery/Phased Array Radio Telescope/Phased-Array-WiFi-Camera/FPGA Firmware/wifi_tele_phy.vhd Line: 19
+    Warning (15610): No output dependent on input pin "hmcad1511_d1a" File: C:/Users/alist/OneDrive/Electrickery/Phased Array Radio Telescope/Phased-Array-WiFi-Camera/FPGA Firmware/wifi_tele_phy.vhd Line: 21
+    Warning (15610): No output dependent on input pin "hmcad1511_d1b" File: C:/Users/alist/OneDrive/Electrickery/Phased Array Radio Telescope/Phased-Array-WiFi-Camera/FPGA Firmware/wifi_tele_phy.vhd Line: 22
+    Warning (15610): No output dependent on input pin "hmcad1511_d2a" File: C:/Users/alist/OneDrive/Electrickery/Phased Array Radio Telescope/Phased-Array-WiFi-Camera/FPGA Firmware/wifi_tele_phy.vhd Line: 24
+    Warning (15610): No output dependent on input pin "hmcad1511_d2b" File: C:/Users/alist/OneDrive/Electrickery/Phased Array Radio Telescope/Phased-Array-WiFi-Camera/FPGA Firmware/wifi_tele_phy.vhd Line: 25
+    Warning (15610): No output dependent on input pin "hmcad1511_d3a" File: C:/Users/alist/OneDrive/Electrickery/Phased Array Radio Telescope/Phased-Array-WiFi-Camera/FPGA Firmware/wifi_tele_phy.vhd Line: 27
+    Warning (15610): No output dependent on input pin "hmcad1511_d3b" File: C:/Users/alist/OneDrive/Electrickery/Phased Array Radio Telescope/Phased-Array-WiFi-Camera/FPGA Firmware/wifi_tele_phy.vhd Line: 28
+    Warning (15610): No output dependent on input pin "hmcad1511_d4a" File: C:/Users/alist/OneDrive/Electrickery/Phased Array Radio Telescope/Phased-Array-WiFi-Camera/FPGA Firmware/wifi_tele_phy.vhd Line: 30
+    Warning (15610): No output dependent on input pin "hmcad1511_d4b" File: C:/Users/alist/OneDrive/Electrickery/Phased Array Radio Telescope/Phased-Array-WiFi-Camera/FPGA Firmware/wifi_tele_phy.vhd Line: 31
+Info (21057): Implemented 12 device resources after synthesis - the final resource count might be different
+    Info (21058): Implemented 11 input pins
+    Info (21059): Implemented 1 output pins
+Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 115 warnings
+    Info: Peak virtual memory: 4846 megabytes
+    Info: Processing ended: Wed Aug 08 23:23:00 2018
+    Info: Elapsed time: 00:00:21
+    Info: Total CPU time (on all processors): 00:00:28
 
 

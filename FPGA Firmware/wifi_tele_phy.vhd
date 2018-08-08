@@ -8,7 +8,13 @@ entity wifi_tele_phy is
 		--
 		C10_clk50M : in std_logic;
 	
+	
+	
+	
 		--HMC AD1511 diff pairs
+		sample_pll_out : out std_logic;
+		
+		
 		hmcad1511_fclk : in std_logic;
 		hmcad1511_lclk : in std_logic;
 	

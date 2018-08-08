@@ -1,4 +1,6 @@
 |wifi_tele_phy
+C10_clk50M => ~NO_FANOUT~
+sample_pll_out <= comb.DB_MAX_OUTPUT_PORT_TYPE
 hmcad1511_fclk => ~NO_FANOUT~
 hmcad1511_lclk => ~NO_FANOUT~
 hmcad1511_d1a => ~NO_FANOUT~
