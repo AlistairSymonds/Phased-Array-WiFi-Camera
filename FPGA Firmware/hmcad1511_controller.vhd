@@ -18,11 +18,6 @@ entity hmcad1511_controller is
 		ch3 : out unsigned(7 downto 0);
 		ch4 : out unsigned(7 downto 0);
 		
-		--SPI Outputs
-		csn : out std_logic;
-		sdata : out std_logic;
-		sclk : out std_logic;
-		resetn : out std_logic;
 		
 		
 		--LVDS Inputs

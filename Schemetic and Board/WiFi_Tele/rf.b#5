@@ -2357,6 +2357,12 @@ Note, that not all DRC settings must be set by the manufacturer. Several can be 
 <signal name="N$6">
 <via x="20.75" y="15.5" extent="1-16" drill="0.35"/>
 </signal>
+<signal name="N$7">
+<via x="20.75" y="17.25" extent="1-16" drill="0.35"/>
+</signal>
+<signal name="N$8">
+<via x="20.75" y="18" extent="1-16" drill="0.35"/>
+</signal>
 </signals>
 <mfgpreviewcolors>
 <mfgpreviewcolor name="soldermaskcolor" color="0xC8008000"/>

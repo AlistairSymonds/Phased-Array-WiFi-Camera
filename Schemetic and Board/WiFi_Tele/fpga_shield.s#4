@@ -18311,6 +18311,16 @@ W = angled&lt;p&gt;
 <part name="SUPPLY45" library="supply2" library_urn="urn:adsk.eagle:library:372" deviceset="GND" device=""/>
 <part name="R27" library="rcl" library_urn="urn:adsk.eagle:library:334" deviceset="R-US_" device="R0805" package3d_urn="urn:adsk.eagle:package:23553/2" value="2000"/>
 <part name="R28" library="rcl" library_urn="urn:adsk.eagle:library:334" deviceset="R-US_" device="R0805" package3d_urn="urn:adsk.eagle:package:23553/2" value="2000"/>
+<part name="SUPPLY46" library="supply2" library_urn="urn:adsk.eagle:library:372" deviceset="GND" device=""/>
+<part name="SUPPLY47" library="supply2" library_urn="urn:adsk.eagle:library:372" deviceset="GND" device=""/>
+<part name="C36" library="rcl" library_urn="urn:adsk.eagle:library:334" deviceset="C-EU" device="C0805" package3d_urn="urn:adsk.eagle:package:23617/2" value="0.1uF"/>
+<part name="C37" library="rcl" library_urn="urn:adsk.eagle:library:334" deviceset="C-EU" device="C0805" package3d_urn="urn:adsk.eagle:package:23617/2" value="0.1uF"/>
+<part name="C38" library="rcl" library_urn="urn:adsk.eagle:library:334" deviceset="C-EU" device="C0805" package3d_urn="urn:adsk.eagle:package:23617/2" value="0.1uF"/>
+<part name="C39" library="rcl" library_urn="urn:adsk.eagle:library:334" deviceset="C-EU" device="C0805" package3d_urn="urn:adsk.eagle:package:23617/2" value="0.1uF"/>
+<part name="SUPPLY48" library="supply2" library_urn="urn:adsk.eagle:library:372" deviceset="GND" device=""/>
+<part name="SUPPLY49" library="supply2" library_urn="urn:adsk.eagle:library:372" deviceset="GND" device=""/>
+<part name="SUPPLY50" library="supply2" library_urn="urn:adsk.eagle:library:372" deviceset="GND" device=""/>
+<part name="SUPPLY51" library="supply2" library_urn="urn:adsk.eagle:library:372" deviceset="GND" device=""/>
 </parts>
 <sheets>
 <sheet>
@@ -18492,6 +18502,16 @@ W = angled&lt;p&gt;
 <instance part="SUPPLY45" gate="GND" x="180.34" y="91.44"/>
 <instance part="R27" gate="G$1" x="154.94" y="5.08"/>
 <instance part="R28" gate="G$1" x="345.44" y="5.08"/>
+<instance part="SUPPLY46" gate="GND" x="162.56" y="5.08" rot="R90"/>
+<instance part="SUPPLY47" gate="GND" x="353.06" y="5.08" rot="R90"/>
+<instance part="C36" gate="G$1" x="170.18" y="-2.54" rot="R90"/>
+<instance part="C37" gate="G$1" x="172.72" y="-7.62" rot="R90"/>
+<instance part="C38" gate="G$1" x="172.72" y="-25.4" rot="R90"/>
+<instance part="C39" gate="G$1" x="177.8" y="-30.48" rot="R90"/>
+<instance part="SUPPLY48" gate="GND" x="185.42" y="-30.48" rot="R90"/>
+<instance part="SUPPLY49" gate="GND" x="180.34" y="-25.4" rot="R90"/>
+<instance part="SUPPLY50" gate="GND" x="180.34" y="-7.62" rot="R90"/>
+<instance part="SUPPLY51" gate="GND" x="177.8" y="-2.54" rot="R90"/>
 </instances>
 <busses>
 </busses>
@@ -19089,6 +19109,30 @@ W = angled&lt;p&gt;
 <wire x1="170.18" y1="93.98" x2="170.18" y2="96.52" width="0.1524" layer="91"/>
 <pinref part="SUPPLY45" gate="GND" pin="GND"/>
 </segment>
+<segment>
+<pinref part="R27" gate="G$1" pin="2"/>
+<pinref part="SUPPLY46" gate="GND" pin="GND"/>
+</segment>
+<segment>
+<pinref part="R28" gate="G$1" pin="2"/>
+<pinref part="SUPPLY47" gate="GND" pin="GND"/>
+</segment>
+<segment>
+<pinref part="C39" gate="G$1" pin="2"/>
+<pinref part="SUPPLY48" gate="GND" pin="GND"/>
+</segment>
+<segment>
+<pinref part="C38" gate="G$1" pin="2"/>
+<pinref part="SUPPLY49" gate="GND" pin="GND"/>
+</segment>
+<segment>
+<pinref part="C37" gate="G$1" pin="2"/>
+<pinref part="SUPPLY50" gate="GND" pin="GND"/>
+</segment>
+<segment>
+<pinref part="C36" gate="G$1" pin="2"/>
+<pinref part="SUPPLY51" gate="GND" pin="GND"/>
+</segment>
 </net>
 <net name="5V_GPIO" class="0">
 <segment>
@@ -19511,21 +19555,29 @@ W = angled&lt;p&gt;
 <pinref part="AMP_1" gate="A" pin="5VA+"/>
 <wire x1="149.86" y1="-2.54" x2="154.94" y2="-2.54" width="0.1524" layer="91"/>
 <label x="154.94" y="-2.54" size="1.778" layer="95"/>
+<pinref part="C36" gate="G$1" pin="1"/>
+<wire x1="154.94" y1="-2.54" x2="167.64" y2="-2.54" width="0.1524" layer="91"/>
 </segment>
 <segment>
 <pinref part="AMP_1" gate="A" pin="5VB+"/>
 <wire x1="149.86" y1="-7.62" x2="154.94" y2="-7.62" width="0.1524" layer="91"/>
 <label x="154.94" y="-7.62" size="1.778" layer="95"/>
+<pinref part="C37" gate="G$1" pin="1"/>
+<wire x1="154.94" y1="-7.62" x2="170.18" y2="-7.62" width="0.1524" layer="91"/>
 </segment>
 <segment>
 <pinref part="AMP_1" gate="A" pin="5VC+"/>
 <wire x1="149.86" y1="-25.4" x2="154.94" y2="-25.4" width="0.1524" layer="91"/>
 <label x="154.94" y="-25.4" size="1.778" layer="95"/>
+<pinref part="C38" gate="G$1" pin="1"/>
+<wire x1="154.94" y1="-25.4" x2="170.18" y2="-25.4" width="0.1524" layer="91"/>
 </segment>
 <segment>
 <pinref part="AMP_1" gate="A" pin="5VD+"/>
 <wire x1="149.86" y1="-30.48" x2="154.94" y2="-30.48" width="0.1524" layer="91"/>
 <label x="154.94" y="-30.48" size="1.778" layer="95"/>
+<pinref part="C39" gate="G$1" pin="1"/>
+<wire x1="154.94" y1="-30.48" x2="175.26" y2="-30.48" width="0.1524" layer="91"/>
 </segment>
 <segment>
 <pinref part="VCO_TUNE" gate="G$1" pin="VDD"/>

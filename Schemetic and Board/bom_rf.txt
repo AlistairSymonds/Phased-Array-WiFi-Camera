@@ -1,0 +1,32 @@
+Partlist
+
+Exported from rf.brd at 10/08/2018 2:51 PM
+
+EAGLE Version 9.1.2 Copyright (c) 1988-2018 Autodesk, Inc.
+
+Assembly variant: 
+
+Part     Value                  Package        Library                    Position (mm)         Orientation
+
+ANT      5-1814832-1            TE_5-1814832-1 5-1814832-1                (5.5 16.11)           R0
+BPF1     2450BP18C100C          SMD            Johanson BPF 2450BP18C100C (24.44 16.11)         R0
+BPF2     2450BP18C100C          SMD            Johanson BPF 2450BP18C100C (35.97 24.97)         R270
+C1       220p                   C0805K         rcl                        (31.76 31.44)         R180
+C2       220p                   C0805K         rcl                        (31.76 35.88)         R180
+C3       0.1u                   C0805          rcl                        (40.77 36.65)         R0
+C4       1000uF                 153CLV-1010    rcl                        (7.5 29.75)           R0
+C5       0.01uF                 C0805          rcl                        (36 11)               R270
+C6       3.3uF                  C0805          rcl                        (41 11.25)            R270
+C8       100nF                  C0805          rcl                        (23.48 25.47)         R180
+C9       1nF                    C0805          rcl                        (23.41 21.17)         R180
+C10      0.75pF                 C0805          rcl                        (36.91 27.78)         R0
+C11      0.75pF                 C0805          rcl                        (12.24 15.15)         R270
+IF       5-1814832-1            TE_5-1814832-1 5-1814832-1                (51.03 17.17)         R0
+L1       1nH                    INDC1607X61    Passives                   (16.06 16.08)         R0
+L3       4.7nH                  INDC2518X180   Passives                   (31 15)               R270
+LNA      ADL5523ACPZ-R7CP_8_2-M CP_8_2-M       ADL5523ACPZ-R7             (20.71 15.85)         R0
+MIX      LT5522EUF              QFN-16_UF      LT5522                     (36.31 16.45)         R0
+R3       1.33k                  R0805          rcl                        (18.02 20.52)         R90
+SV1                             FE05-1         con-lsta                   (20.64 36.36)         R0
+U$1      ETC4-1-2TR             SM-22          ETC4-1-2TR                 (45.5 15)             R90
+VCO1     MAX2750EUA21-0036K-M   21-0036K-M     MAX2750EUA+                (35.69 33.72)         R270
