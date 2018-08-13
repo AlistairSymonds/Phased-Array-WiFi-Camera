@@ -1,15 +1,698 @@
 |wifi_tele_phy
-C10_clk50M => ~NO_FANOUT~
-sample_pll_out <= comb.DB_MAX_OUTPUT_PORT_TYPE
-hmcad1511_fclk => ~NO_FANOUT~
-hmcad1511_lclk => ~NO_FANOUT~
-hmcad1511_d1a => ~NO_FANOUT~
-hmcad1511_d1b => ~NO_FANOUT~
-hmcad1511_d2a => ~NO_FANOUT~
-hmcad1511_d2b => ~NO_FANOUT~
-hmcad1511_d3a => ~NO_FANOUT~
-hmcad1511_d3b => ~NO_FANOUT~
-hmcad1511_d4a => ~NO_FANOUT~
-hmcad1511_d4b => ~NO_FANOUT~
+C10_clk50M => hmcad1511_controller:adc.clk
+C10_clk50M => pll_controller:pll.inclk0
+adc_cs << adc_cs.DB_MAX_OUTPUT_PORT_TYPE
+vga_cs << vga_cs.DB_MAX_OUTPUT_PORT_TYPE
+dac_cs << dac_cs.DB_MAX_OUTPUT_PORT_TYPE
+mosi << mosi.DB_MAX_OUTPUT_PORT_TYPE
+sclk << comb.DB_MAX_OUTPUT_PORT_TYPE
+sample_pll_out << pll_controller:pll.c0
+hmcad1511_fclk => hmcad1511_controller:adc.fclk
+hmcad1511_lclk => hmcad1511_controller:adc.lclk
+hmcad1511_d1a => hmcad1511_controller:adc.d1[1]
+hmcad1511_d1b => hmcad1511_controller:adc.d1[0]
+hmcad1511_d2a => hmcad1511_controller:adc.d2[1]
+hmcad1511_d2b => hmcad1511_controller:adc.d2[0]
+hmcad1511_d3a => hmcad1511_controller:adc.d3[1]
+hmcad1511_d3b => hmcad1511_controller:adc.d3[0]
+hmcad1511_d4a => hmcad1511_controller:adc.d4[1]
+hmcad1511_d4b => hmcad1511_controller:adc.d4[0]
+
+
+|wifi_tele_phy|hmcad1511_controller:adc
+clk => ~NO_FANOUT~
+ch1[0] <= ch1[0]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+ch1[1] <= ch1[1]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+ch1[2] <= ch1[2]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+ch1[3] <= ch1[3]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+ch1[4] <= ch1[4]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+ch1[5] <= ch1[5]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+ch1[6] <= ch1[6]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+ch1[7] <= ch1[7]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+ch2[0] <= ch2[0]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+ch2[1] <= ch2[1]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+ch2[2] <= ch2[2]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+ch2[3] <= ch2[3]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+ch2[4] <= ch2[4]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+ch2[5] <= ch2[5]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+ch2[6] <= ch2[6]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+ch2[7] <= ch2[7]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+ch3[0] <= ch3[0]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+ch3[1] <= ch3[1]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+ch3[2] <= ch3[2]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+ch3[3] <= ch3[3]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+ch3[4] <= ch3[4]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+ch3[5] <= ch3[5]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+ch3[6] <= ch3[6]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+ch3[7] <= ch3[7]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+ch4[0] <= ch4[0]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+ch4[1] <= ch4[1]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+ch4[2] <= ch4[2]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+ch4[3] <= ch4[3]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+ch4[4] <= ch4[4]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+ch4[5] <= ch4[5]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+ch4[6] <= ch4[6]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+ch4[7] <= ch4[7]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+fclk => ch4[0]~reg0.CLK
+fclk => ch4[1]~reg0.CLK
+fclk => ch4[2]~reg0.CLK
+fclk => ch4[3]~reg0.CLK
+fclk => ch4[4]~reg0.CLK
+fclk => ch4[5]~reg0.CLK
+fclk => ch4[6]~reg0.CLK
+fclk => ch4[7]~reg0.CLK
+fclk => ch3[0]~reg0.CLK
+fclk => ch3[1]~reg0.CLK
+fclk => ch3[2]~reg0.CLK
+fclk => ch3[3]~reg0.CLK
+fclk => ch3[4]~reg0.CLK
+fclk => ch3[5]~reg0.CLK
+fclk => ch3[6]~reg0.CLK
+fclk => ch3[7]~reg0.CLK
+fclk => ch2[0]~reg0.CLK
+fclk => ch2[1]~reg0.CLK
+fclk => ch2[2]~reg0.CLK
+fclk => ch2[3]~reg0.CLK
+fclk => ch2[4]~reg0.CLK
+fclk => ch2[5]~reg0.CLK
+fclk => ch2[6]~reg0.CLK
+fclk => ch2[7]~reg0.CLK
+fclk => ch1[0]~reg0.CLK
+fclk => ch1[1]~reg0.CLK
+fclk => ch1[2]~reg0.CLK
+fclk => ch1[3]~reg0.CLK
+fclk => ch1[4]~reg0.CLK
+fclk => ch1[5]~reg0.CLK
+fclk => ch1[6]~reg0.CLK
+fclk => ch1[7]~reg0.CLK
+lclk => adc_lvds:d1lvds.rx_inclock
+lclk => adc_lvds:d2lvds.rx_inclock
+lclk => adc_lvds:d3lvds.rx_inclock
+lclk => adc_lvds:d4lvds.rx_inclock
+d1[0] => adc_lvds:d1lvds.rx_in[0]
+d1[1] => adc_lvds:d1lvds.rx_in[1]
+d2[0] => adc_lvds:d2lvds.rx_in[0]
+d2[1] => adc_lvds:d2lvds.rx_in[1]
+d3[0] => adc_lvds:d3lvds.rx_in[0]
+d3[1] => adc_lvds:d3lvds.rx_in[1]
+d4[0] => adc_lvds:d4lvds.rx_in[0]
+d4[1] => adc_lvds:d4lvds.rx_in[1]
+
+
+|wifi_tele_phy|hmcad1511_controller:adc|adc_lvds:d1lvds
+rx_in[0] => altlvds_rx:ALTLVDS_RX_component.rx_in[0]
+rx_in[1] => altlvds_rx:ALTLVDS_RX_component.rx_in[1]
+rx_inclock => altlvds_rx:ALTLVDS_RX_component.rx_inclock
+rx_out[0] <= altlvds_rx:ALTLVDS_RX_component.rx_out[0]
+rx_out[1] <= altlvds_rx:ALTLVDS_RX_component.rx_out[1]
+rx_out[2] <= altlvds_rx:ALTLVDS_RX_component.rx_out[2]
+rx_out[3] <= altlvds_rx:ALTLVDS_RX_component.rx_out[3]
+rx_out[4] <= altlvds_rx:ALTLVDS_RX_component.rx_out[4]
+rx_out[5] <= altlvds_rx:ALTLVDS_RX_component.rx_out[5]
+rx_out[6] <= altlvds_rx:ALTLVDS_RX_component.rx_out[6]
+rx_out[7] <= altlvds_rx:ALTLVDS_RX_component.rx_out[7]
+
+
+|wifi_tele_phy|hmcad1511_controller:adc|adc_lvds:d1lvds|altlvds_rx:ALTLVDS_RX_component
+rx_in[0] => adc_lvds_lvds_rx:auto_generated.rx_in[0]
+rx_in[1] => adc_lvds_lvds_rx:auto_generated.rx_in[1]
+rx_inclock => adc_lvds_lvds_rx:auto_generated.rx_inclock
+rx_syncclock => ~NO_FANOUT~
+rx_dpaclock => ~NO_FANOUT~
+rx_readclock => ~NO_FANOUT~
+rx_enable => ~NO_FANOUT~
+rx_deskew => ~NO_FANOUT~
+rx_pll_enable => ~NO_FANOUT~
+rx_data_align => ~NO_FANOUT~
+rx_data_align_reset => ~NO_FANOUT~
+rx_reset[0] => ~NO_FANOUT~
+rx_reset[1] => ~NO_FANOUT~
+rx_dpll_reset[0] => ~NO_FANOUT~
+rx_dpll_reset[1] => ~NO_FANOUT~
+rx_dpll_hold[0] => ~NO_FANOUT~
+rx_dpll_hold[1] => ~NO_FANOUT~
+rx_dpll_enable[0] => ~NO_FANOUT~
+rx_dpll_enable[1] => ~NO_FANOUT~
+rx_fifo_reset[0] => ~NO_FANOUT~
+rx_fifo_reset[1] => ~NO_FANOUT~
+rx_channel_data_align[0] => ~NO_FANOUT~
+rx_channel_data_align[1] => ~NO_FANOUT~
+rx_cda_reset[0] => ~NO_FANOUT~
+rx_cda_reset[1] => ~NO_FANOUT~
+rx_coreclk[0] => ~NO_FANOUT~
+rx_coreclk[1] => ~NO_FANOUT~
+pll_areset => ~NO_FANOUT~
+rx_data_reset => ~NO_FANOUT~
+pll_phasedone => ~NO_FANOUT~
+rx_dpa_lock_reset[0] => ~NO_FANOUT~
+rx_dpa_lock_reset[1] => ~NO_FANOUT~
+dpa_pll_recal => ~NO_FANOUT~
+rx_out[0] <= adc_lvds_lvds_rx:auto_generated.rx_out[0]
+rx_out[1] <= adc_lvds_lvds_rx:auto_generated.rx_out[1]
+rx_out[2] <= adc_lvds_lvds_rx:auto_generated.rx_out[2]
+rx_out[3] <= adc_lvds_lvds_rx:auto_generated.rx_out[3]
+rx_out[4] <= adc_lvds_lvds_rx:auto_generated.rx_out[4]
+rx_out[5] <= adc_lvds_lvds_rx:auto_generated.rx_out[5]
+rx_out[6] <= adc_lvds_lvds_rx:auto_generated.rx_out[6]
+rx_out[7] <= adc_lvds_lvds_rx:auto_generated.rx_out[7]
+rx_outclock <= <GND>
+rx_locked <= <GND>
+rx_dpa_locked[0] <= <GND>
+rx_dpa_locked[1] <= <GND>
+rx_cda_max[0] <= <GND>
+rx_cda_max[1] <= <GND>
+rx_divfwdclk[0] <= <GND>
+rx_divfwdclk[1] <= <GND>
+dpa_pll_cal_busy <= <GND>
+pll_phaseupdown <= <GND>
+pll_phasestep <= <GND>
+pll_phasecounterselect[0] <= <GND>
+pll_phasecounterselect[1] <= <GND>
+pll_phasecounterselect[2] <= <GND>
+pll_phasecounterselect[3] <= <GND>
+pll_scanclk <= <GND>
+
+
+|wifi_tele_phy|hmcad1511_controller:adc|adc_lvds:d1lvds|altlvds_rx:ALTLVDS_RX_component|adc_lvds_lvds_rx:auto_generated
+rx_in[0] => rx_in[0].IN1
+rx_in[1] => rx_in[1].IN1
+rx_inclock => fast_clock.IN3
+rx_out[0] <= h_shiftreg2a[0].DB_MAX_OUTPUT_PORT_TYPE
+rx_out[1] <= l_shiftreg1a[0].DB_MAX_OUTPUT_PORT_TYPE
+rx_out[2] <= h_shiftreg2a[1].DB_MAX_OUTPUT_PORT_TYPE
+rx_out[3] <= l_shiftreg1a[1].DB_MAX_OUTPUT_PORT_TYPE
+rx_out[4] <= h_shiftreg4a[0].DB_MAX_OUTPUT_PORT_TYPE
+rx_out[5] <= l_shiftreg3a[0].DB_MAX_OUTPUT_PORT_TYPE
+rx_out[6] <= h_shiftreg4a[1].DB_MAX_OUTPUT_PORT_TYPE
+rx_out[7] <= l_shiftreg3a[1].DB_MAX_OUTPUT_PORT_TYPE
+
+
+|wifi_tele_phy|hmcad1511_controller:adc|adc_lvds:d1lvds|altlvds_rx:ALTLVDS_RX_component|adc_lvds_lvds_rx:auto_generated|adc_lvds_lvds_ddio_in:ddio_in
+clock => ddio_h_reg[0].CLK
+clock => ddio_h_reg[1].CLK
+clock => dataout_l_reg[0].CLK
+clock => dataout_l_reg[1].CLK
+clock => dataout_h_reg[0].CLK
+clock => dataout_h_reg[1].CLK
+clock => ddio_l_reg[0].CLK
+clock => ddio_l_reg[1].CLK
+clock => dataout_l_latch[0].CLK
+clock => dataout_l_latch[1].CLK
+datain[0] => ddio_l_reg[0].DATAIN
+datain[0] => ddio_h_reg[0].DATAIN
+datain[1] => ddio_l_reg[1].DATAIN
+datain[1] => ddio_h_reg[1].DATAIN
+dataout_h[0] <= dataout_l_reg[0].DB_MAX_OUTPUT_PORT_TYPE
+dataout_h[1] <= dataout_l_reg[1].DB_MAX_OUTPUT_PORT_TYPE
+dataout_l[0] <= dataout_h_reg[0].DB_MAX_OUTPUT_PORT_TYPE
+dataout_l[1] <= dataout_h_reg[1].DB_MAX_OUTPUT_PORT_TYPE
+
+
+|wifi_tele_phy|hmcad1511_controller:adc|adc_lvds:d1lvds|altlvds_rx:ALTLVDS_RX_component|adc_lvds_lvds_rx:auto_generated|adc_lvds_dffpipe:h_dffpipe
+clock => dffe5a[0].CLK
+clock => dffe5a[1].CLK
+d[0] => dffe5a[0].DATAIN
+d[1] => dffe5a[1].DATAIN
+q[0] <= dffe5a[0].DB_MAX_OUTPUT_PORT_TYPE
+q[1] <= dffe5a[1].DB_MAX_OUTPUT_PORT_TYPE
+
+
+|wifi_tele_phy|hmcad1511_controller:adc|adc_lvds:d1lvds|altlvds_rx:ALTLVDS_RX_component|adc_lvds_lvds_rx:auto_generated|adc_lvds_dffpipe:l_dffpipe
+clock => dffe5a[0].CLK
+clock => dffe5a[1].CLK
+d[0] => dffe5a[0].DATAIN
+d[1] => dffe5a[1].DATAIN
+q[0] <= dffe5a[0].DB_MAX_OUTPUT_PORT_TYPE
+q[1] <= dffe5a[1].DB_MAX_OUTPUT_PORT_TYPE
+
+
+|wifi_tele_phy|hmcad1511_controller:adc|adc_lvds:d2lvds
+rx_in[0] => altlvds_rx:ALTLVDS_RX_component.rx_in[0]
+rx_in[1] => altlvds_rx:ALTLVDS_RX_component.rx_in[1]
+rx_inclock => altlvds_rx:ALTLVDS_RX_component.rx_inclock
+rx_out[0] <= altlvds_rx:ALTLVDS_RX_component.rx_out[0]
+rx_out[1] <= altlvds_rx:ALTLVDS_RX_component.rx_out[1]
+rx_out[2] <= altlvds_rx:ALTLVDS_RX_component.rx_out[2]
+rx_out[3] <= altlvds_rx:ALTLVDS_RX_component.rx_out[3]
+rx_out[4] <= altlvds_rx:ALTLVDS_RX_component.rx_out[4]
+rx_out[5] <= altlvds_rx:ALTLVDS_RX_component.rx_out[5]
+rx_out[6] <= altlvds_rx:ALTLVDS_RX_component.rx_out[6]
+rx_out[7] <= altlvds_rx:ALTLVDS_RX_component.rx_out[7]
+
+
+|wifi_tele_phy|hmcad1511_controller:adc|adc_lvds:d2lvds|altlvds_rx:ALTLVDS_RX_component
+rx_in[0] => adc_lvds_lvds_rx:auto_generated.rx_in[0]
+rx_in[1] => adc_lvds_lvds_rx:auto_generated.rx_in[1]
+rx_inclock => adc_lvds_lvds_rx:auto_generated.rx_inclock
+rx_syncclock => ~NO_FANOUT~
+rx_dpaclock => ~NO_FANOUT~
+rx_readclock => ~NO_FANOUT~
+rx_enable => ~NO_FANOUT~
+rx_deskew => ~NO_FANOUT~
+rx_pll_enable => ~NO_FANOUT~
+rx_data_align => ~NO_FANOUT~
+rx_data_align_reset => ~NO_FANOUT~
+rx_reset[0] => ~NO_FANOUT~
+rx_reset[1] => ~NO_FANOUT~
+rx_dpll_reset[0] => ~NO_FANOUT~
+rx_dpll_reset[1] => ~NO_FANOUT~
+rx_dpll_hold[0] => ~NO_FANOUT~
+rx_dpll_hold[1] => ~NO_FANOUT~
+rx_dpll_enable[0] => ~NO_FANOUT~
+rx_dpll_enable[1] => ~NO_FANOUT~
+rx_fifo_reset[0] => ~NO_FANOUT~
+rx_fifo_reset[1] => ~NO_FANOUT~
+rx_channel_data_align[0] => ~NO_FANOUT~
+rx_channel_data_align[1] => ~NO_FANOUT~
+rx_cda_reset[0] => ~NO_FANOUT~
+rx_cda_reset[1] => ~NO_FANOUT~
+rx_coreclk[0] => ~NO_FANOUT~
+rx_coreclk[1] => ~NO_FANOUT~
+pll_areset => ~NO_FANOUT~
+rx_data_reset => ~NO_FANOUT~
+pll_phasedone => ~NO_FANOUT~
+rx_dpa_lock_reset[0] => ~NO_FANOUT~
+rx_dpa_lock_reset[1] => ~NO_FANOUT~
+dpa_pll_recal => ~NO_FANOUT~
+rx_out[0] <= adc_lvds_lvds_rx:auto_generated.rx_out[0]
+rx_out[1] <= adc_lvds_lvds_rx:auto_generated.rx_out[1]
+rx_out[2] <= adc_lvds_lvds_rx:auto_generated.rx_out[2]
+rx_out[3] <= adc_lvds_lvds_rx:auto_generated.rx_out[3]
+rx_out[4] <= adc_lvds_lvds_rx:auto_generated.rx_out[4]
+rx_out[5] <= adc_lvds_lvds_rx:auto_generated.rx_out[5]
+rx_out[6] <= adc_lvds_lvds_rx:auto_generated.rx_out[6]
+rx_out[7] <= adc_lvds_lvds_rx:auto_generated.rx_out[7]
+rx_outclock <= <GND>
+rx_locked <= <GND>
+rx_dpa_locked[0] <= <GND>
+rx_dpa_locked[1] <= <GND>
+rx_cda_max[0] <= <GND>
+rx_cda_max[1] <= <GND>
+rx_divfwdclk[0] <= <GND>
+rx_divfwdclk[1] <= <GND>
+dpa_pll_cal_busy <= <GND>
+pll_phaseupdown <= <GND>
+pll_phasestep <= <GND>
+pll_phasecounterselect[0] <= <GND>
+pll_phasecounterselect[1] <= <GND>
+pll_phasecounterselect[2] <= <GND>
+pll_phasecounterselect[3] <= <GND>
+pll_scanclk <= <GND>
+
+
+|wifi_tele_phy|hmcad1511_controller:adc|adc_lvds:d2lvds|altlvds_rx:ALTLVDS_RX_component|adc_lvds_lvds_rx:auto_generated
+rx_in[0] => rx_in[0].IN1
+rx_in[1] => rx_in[1].IN1
+rx_inclock => fast_clock.IN3
+rx_out[0] <= h_shiftreg2a[0].DB_MAX_OUTPUT_PORT_TYPE
+rx_out[1] <= l_shiftreg1a[0].DB_MAX_OUTPUT_PORT_TYPE
+rx_out[2] <= h_shiftreg2a[1].DB_MAX_OUTPUT_PORT_TYPE
+rx_out[3] <= l_shiftreg1a[1].DB_MAX_OUTPUT_PORT_TYPE
+rx_out[4] <= h_shiftreg4a[0].DB_MAX_OUTPUT_PORT_TYPE
+rx_out[5] <= l_shiftreg3a[0].DB_MAX_OUTPUT_PORT_TYPE
+rx_out[6] <= h_shiftreg4a[1].DB_MAX_OUTPUT_PORT_TYPE
+rx_out[7] <= l_shiftreg3a[1].DB_MAX_OUTPUT_PORT_TYPE
+
+
+|wifi_tele_phy|hmcad1511_controller:adc|adc_lvds:d2lvds|altlvds_rx:ALTLVDS_RX_component|adc_lvds_lvds_rx:auto_generated|adc_lvds_lvds_ddio_in:ddio_in
+clock => ddio_h_reg[0].CLK
+clock => ddio_h_reg[1].CLK
+clock => dataout_l_reg[0].CLK
+clock => dataout_l_reg[1].CLK
+clock => dataout_h_reg[0].CLK
+clock => dataout_h_reg[1].CLK
+clock => ddio_l_reg[0].CLK
+clock => ddio_l_reg[1].CLK
+clock => dataout_l_latch[0].CLK
+clock => dataout_l_latch[1].CLK
+datain[0] => ddio_l_reg[0].DATAIN
+datain[0] => ddio_h_reg[0].DATAIN
+datain[1] => ddio_l_reg[1].DATAIN
+datain[1] => ddio_h_reg[1].DATAIN
+dataout_h[0] <= dataout_l_reg[0].DB_MAX_OUTPUT_PORT_TYPE
+dataout_h[1] <= dataout_l_reg[1].DB_MAX_OUTPUT_PORT_TYPE
+dataout_l[0] <= dataout_h_reg[0].DB_MAX_OUTPUT_PORT_TYPE
+dataout_l[1] <= dataout_h_reg[1].DB_MAX_OUTPUT_PORT_TYPE
+
+
+|wifi_tele_phy|hmcad1511_controller:adc|adc_lvds:d2lvds|altlvds_rx:ALTLVDS_RX_component|adc_lvds_lvds_rx:auto_generated|adc_lvds_dffpipe:h_dffpipe
+clock => dffe5a[0].CLK
+clock => dffe5a[1].CLK
+d[0] => dffe5a[0].DATAIN
+d[1] => dffe5a[1].DATAIN
+q[0] <= dffe5a[0].DB_MAX_OUTPUT_PORT_TYPE
+q[1] <= dffe5a[1].DB_MAX_OUTPUT_PORT_TYPE
+
+
+|wifi_tele_phy|hmcad1511_controller:adc|adc_lvds:d2lvds|altlvds_rx:ALTLVDS_RX_component|adc_lvds_lvds_rx:auto_generated|adc_lvds_dffpipe:l_dffpipe
+clock => dffe5a[0].CLK
+clock => dffe5a[1].CLK
+d[0] => dffe5a[0].DATAIN
+d[1] => dffe5a[1].DATAIN
+q[0] <= dffe5a[0].DB_MAX_OUTPUT_PORT_TYPE
+q[1] <= dffe5a[1].DB_MAX_OUTPUT_PORT_TYPE
+
+
+|wifi_tele_phy|hmcad1511_controller:adc|adc_lvds:d3lvds
+rx_in[0] => altlvds_rx:ALTLVDS_RX_component.rx_in[0]
+rx_in[1] => altlvds_rx:ALTLVDS_RX_component.rx_in[1]
+rx_inclock => altlvds_rx:ALTLVDS_RX_component.rx_inclock
+rx_out[0] <= altlvds_rx:ALTLVDS_RX_component.rx_out[0]
+rx_out[1] <= altlvds_rx:ALTLVDS_RX_component.rx_out[1]
+rx_out[2] <= altlvds_rx:ALTLVDS_RX_component.rx_out[2]
+rx_out[3] <= altlvds_rx:ALTLVDS_RX_component.rx_out[3]
+rx_out[4] <= altlvds_rx:ALTLVDS_RX_component.rx_out[4]
+rx_out[5] <= altlvds_rx:ALTLVDS_RX_component.rx_out[5]
+rx_out[6] <= altlvds_rx:ALTLVDS_RX_component.rx_out[6]
+rx_out[7] <= altlvds_rx:ALTLVDS_RX_component.rx_out[7]
+
+
+|wifi_tele_phy|hmcad1511_controller:adc|adc_lvds:d3lvds|altlvds_rx:ALTLVDS_RX_component
+rx_in[0] => adc_lvds_lvds_rx:auto_generated.rx_in[0]
+rx_in[1] => adc_lvds_lvds_rx:auto_generated.rx_in[1]
+rx_inclock => adc_lvds_lvds_rx:auto_generated.rx_inclock
+rx_syncclock => ~NO_FANOUT~
+rx_dpaclock => ~NO_FANOUT~
+rx_readclock => ~NO_FANOUT~
+rx_enable => ~NO_FANOUT~
+rx_deskew => ~NO_FANOUT~
+rx_pll_enable => ~NO_FANOUT~
+rx_data_align => ~NO_FANOUT~
+rx_data_align_reset => ~NO_FANOUT~
+rx_reset[0] => ~NO_FANOUT~
+rx_reset[1] => ~NO_FANOUT~
+rx_dpll_reset[0] => ~NO_FANOUT~
+rx_dpll_reset[1] => ~NO_FANOUT~
+rx_dpll_hold[0] => ~NO_FANOUT~
+rx_dpll_hold[1] => ~NO_FANOUT~
+rx_dpll_enable[0] => ~NO_FANOUT~
+rx_dpll_enable[1] => ~NO_FANOUT~
+rx_fifo_reset[0] => ~NO_FANOUT~
+rx_fifo_reset[1] => ~NO_FANOUT~
+rx_channel_data_align[0] => ~NO_FANOUT~
+rx_channel_data_align[1] => ~NO_FANOUT~
+rx_cda_reset[0] => ~NO_FANOUT~
+rx_cda_reset[1] => ~NO_FANOUT~
+rx_coreclk[0] => ~NO_FANOUT~
+rx_coreclk[1] => ~NO_FANOUT~
+pll_areset => ~NO_FANOUT~
+rx_data_reset => ~NO_FANOUT~
+pll_phasedone => ~NO_FANOUT~
+rx_dpa_lock_reset[0] => ~NO_FANOUT~
+rx_dpa_lock_reset[1] => ~NO_FANOUT~
+dpa_pll_recal => ~NO_FANOUT~
+rx_out[0] <= adc_lvds_lvds_rx:auto_generated.rx_out[0]
+rx_out[1] <= adc_lvds_lvds_rx:auto_generated.rx_out[1]
+rx_out[2] <= adc_lvds_lvds_rx:auto_generated.rx_out[2]
+rx_out[3] <= adc_lvds_lvds_rx:auto_generated.rx_out[3]
+rx_out[4] <= adc_lvds_lvds_rx:auto_generated.rx_out[4]
+rx_out[5] <= adc_lvds_lvds_rx:auto_generated.rx_out[5]
+rx_out[6] <= adc_lvds_lvds_rx:auto_generated.rx_out[6]
+rx_out[7] <= adc_lvds_lvds_rx:auto_generated.rx_out[7]
+rx_outclock <= <GND>
+rx_locked <= <GND>
+rx_dpa_locked[0] <= <GND>
+rx_dpa_locked[1] <= <GND>
+rx_cda_max[0] <= <GND>
+rx_cda_max[1] <= <GND>
+rx_divfwdclk[0] <= <GND>
+rx_divfwdclk[1] <= <GND>
+dpa_pll_cal_busy <= <GND>
+pll_phaseupdown <= <GND>
+pll_phasestep <= <GND>
+pll_phasecounterselect[0] <= <GND>
+pll_phasecounterselect[1] <= <GND>
+pll_phasecounterselect[2] <= <GND>
+pll_phasecounterselect[3] <= <GND>
+pll_scanclk <= <GND>
+
+
+|wifi_tele_phy|hmcad1511_controller:adc|adc_lvds:d3lvds|altlvds_rx:ALTLVDS_RX_component|adc_lvds_lvds_rx:auto_generated
+rx_in[0] => rx_in[0].IN1
+rx_in[1] => rx_in[1].IN1
+rx_inclock => fast_clock.IN3
+rx_out[0] <= h_shiftreg2a[0].DB_MAX_OUTPUT_PORT_TYPE
+rx_out[1] <= l_shiftreg1a[0].DB_MAX_OUTPUT_PORT_TYPE
+rx_out[2] <= h_shiftreg2a[1].DB_MAX_OUTPUT_PORT_TYPE
+rx_out[3] <= l_shiftreg1a[1].DB_MAX_OUTPUT_PORT_TYPE
+rx_out[4] <= h_shiftreg4a[0].DB_MAX_OUTPUT_PORT_TYPE
+rx_out[5] <= l_shiftreg3a[0].DB_MAX_OUTPUT_PORT_TYPE
+rx_out[6] <= h_shiftreg4a[1].DB_MAX_OUTPUT_PORT_TYPE
+rx_out[7] <= l_shiftreg3a[1].DB_MAX_OUTPUT_PORT_TYPE
+
+
+|wifi_tele_phy|hmcad1511_controller:adc|adc_lvds:d3lvds|altlvds_rx:ALTLVDS_RX_component|adc_lvds_lvds_rx:auto_generated|adc_lvds_lvds_ddio_in:ddio_in
+clock => ddio_h_reg[0].CLK
+clock => ddio_h_reg[1].CLK
+clock => dataout_l_reg[0].CLK
+clock => dataout_l_reg[1].CLK
+clock => dataout_h_reg[0].CLK
+clock => dataout_h_reg[1].CLK
+clock => ddio_l_reg[0].CLK
+clock => ddio_l_reg[1].CLK
+clock => dataout_l_latch[0].CLK
+clock => dataout_l_latch[1].CLK
+datain[0] => ddio_l_reg[0].DATAIN
+datain[0] => ddio_h_reg[0].DATAIN
+datain[1] => ddio_l_reg[1].DATAIN
+datain[1] => ddio_h_reg[1].DATAIN
+dataout_h[0] <= dataout_l_reg[0].DB_MAX_OUTPUT_PORT_TYPE
+dataout_h[1] <= dataout_l_reg[1].DB_MAX_OUTPUT_PORT_TYPE
+dataout_l[0] <= dataout_h_reg[0].DB_MAX_OUTPUT_PORT_TYPE
+dataout_l[1] <= dataout_h_reg[1].DB_MAX_OUTPUT_PORT_TYPE
+
+
+|wifi_tele_phy|hmcad1511_controller:adc|adc_lvds:d3lvds|altlvds_rx:ALTLVDS_RX_component|adc_lvds_lvds_rx:auto_generated|adc_lvds_dffpipe:h_dffpipe
+clock => dffe5a[0].CLK
+clock => dffe5a[1].CLK
+d[0] => dffe5a[0].DATAIN
+d[1] => dffe5a[1].DATAIN
+q[0] <= dffe5a[0].DB_MAX_OUTPUT_PORT_TYPE
+q[1] <= dffe5a[1].DB_MAX_OUTPUT_PORT_TYPE
+
+
+|wifi_tele_phy|hmcad1511_controller:adc|adc_lvds:d3lvds|altlvds_rx:ALTLVDS_RX_component|adc_lvds_lvds_rx:auto_generated|adc_lvds_dffpipe:l_dffpipe
+clock => dffe5a[0].CLK
+clock => dffe5a[1].CLK
+d[0] => dffe5a[0].DATAIN
+d[1] => dffe5a[1].DATAIN
+q[0] <= dffe5a[0].DB_MAX_OUTPUT_PORT_TYPE
+q[1] <= dffe5a[1].DB_MAX_OUTPUT_PORT_TYPE
+
+
+|wifi_tele_phy|hmcad1511_controller:adc|adc_lvds:d4lvds
+rx_in[0] => altlvds_rx:ALTLVDS_RX_component.rx_in[0]
+rx_in[1] => altlvds_rx:ALTLVDS_RX_component.rx_in[1]
+rx_inclock => altlvds_rx:ALTLVDS_RX_component.rx_inclock
+rx_out[0] <= altlvds_rx:ALTLVDS_RX_component.rx_out[0]
+rx_out[1] <= altlvds_rx:ALTLVDS_RX_component.rx_out[1]
+rx_out[2] <= altlvds_rx:ALTLVDS_RX_component.rx_out[2]
+rx_out[3] <= altlvds_rx:ALTLVDS_RX_component.rx_out[3]
+rx_out[4] <= altlvds_rx:ALTLVDS_RX_component.rx_out[4]
+rx_out[5] <= altlvds_rx:ALTLVDS_RX_component.rx_out[5]
+rx_out[6] <= altlvds_rx:ALTLVDS_RX_component.rx_out[6]
+rx_out[7] <= altlvds_rx:ALTLVDS_RX_component.rx_out[7]
+
+
+|wifi_tele_phy|hmcad1511_controller:adc|adc_lvds:d4lvds|altlvds_rx:ALTLVDS_RX_component
+rx_in[0] => adc_lvds_lvds_rx:auto_generated.rx_in[0]
+rx_in[1] => adc_lvds_lvds_rx:auto_generated.rx_in[1]
+rx_inclock => adc_lvds_lvds_rx:auto_generated.rx_inclock
+rx_syncclock => ~NO_FANOUT~
+rx_dpaclock => ~NO_FANOUT~
+rx_readclock => ~NO_FANOUT~
+rx_enable => ~NO_FANOUT~
+rx_deskew => ~NO_FANOUT~
+rx_pll_enable => ~NO_FANOUT~
+rx_data_align => ~NO_FANOUT~
+rx_data_align_reset => ~NO_FANOUT~
+rx_reset[0] => ~NO_FANOUT~
+rx_reset[1] => ~NO_FANOUT~
+rx_dpll_reset[0] => ~NO_FANOUT~
+rx_dpll_reset[1] => ~NO_FANOUT~
+rx_dpll_hold[0] => ~NO_FANOUT~
+rx_dpll_hold[1] => ~NO_FANOUT~
+rx_dpll_enable[0] => ~NO_FANOUT~
+rx_dpll_enable[1] => ~NO_FANOUT~
+rx_fifo_reset[0] => ~NO_FANOUT~
+rx_fifo_reset[1] => ~NO_FANOUT~
+rx_channel_data_align[0] => ~NO_FANOUT~
+rx_channel_data_align[1] => ~NO_FANOUT~
+rx_cda_reset[0] => ~NO_FANOUT~
+rx_cda_reset[1] => ~NO_FANOUT~
+rx_coreclk[0] => ~NO_FANOUT~
+rx_coreclk[1] => ~NO_FANOUT~
+pll_areset => ~NO_FANOUT~
+rx_data_reset => ~NO_FANOUT~
+pll_phasedone => ~NO_FANOUT~
+rx_dpa_lock_reset[0] => ~NO_FANOUT~
+rx_dpa_lock_reset[1] => ~NO_FANOUT~
+dpa_pll_recal => ~NO_FANOUT~
+rx_out[0] <= adc_lvds_lvds_rx:auto_generated.rx_out[0]
+rx_out[1] <= adc_lvds_lvds_rx:auto_generated.rx_out[1]
+rx_out[2] <= adc_lvds_lvds_rx:auto_generated.rx_out[2]
+rx_out[3] <= adc_lvds_lvds_rx:auto_generated.rx_out[3]
+rx_out[4] <= adc_lvds_lvds_rx:auto_generated.rx_out[4]
+rx_out[5] <= adc_lvds_lvds_rx:auto_generated.rx_out[5]
+rx_out[6] <= adc_lvds_lvds_rx:auto_generated.rx_out[6]
+rx_out[7] <= adc_lvds_lvds_rx:auto_generated.rx_out[7]
+rx_outclock <= <GND>
+rx_locked <= <GND>
+rx_dpa_locked[0] <= <GND>
+rx_dpa_locked[1] <= <GND>
+rx_cda_max[0] <= <GND>
+rx_cda_max[1] <= <GND>
+rx_divfwdclk[0] <= <GND>
+rx_divfwdclk[1] <= <GND>
+dpa_pll_cal_busy <= <GND>
+pll_phaseupdown <= <GND>
+pll_phasestep <= <GND>
+pll_phasecounterselect[0] <= <GND>
+pll_phasecounterselect[1] <= <GND>
+pll_phasecounterselect[2] <= <GND>
+pll_phasecounterselect[3] <= <GND>
+pll_scanclk <= <GND>
+
+
+|wifi_tele_phy|hmcad1511_controller:adc|adc_lvds:d4lvds|altlvds_rx:ALTLVDS_RX_component|adc_lvds_lvds_rx:auto_generated
+rx_in[0] => rx_in[0].IN1
+rx_in[1] => rx_in[1].IN1
+rx_inclock => fast_clock.IN3
+rx_out[0] <= h_shiftreg2a[0].DB_MAX_OUTPUT_PORT_TYPE
+rx_out[1] <= l_shiftreg1a[0].DB_MAX_OUTPUT_PORT_TYPE
+rx_out[2] <= h_shiftreg2a[1].DB_MAX_OUTPUT_PORT_TYPE
+rx_out[3] <= l_shiftreg1a[1].DB_MAX_OUTPUT_PORT_TYPE
+rx_out[4] <= h_shiftreg4a[0].DB_MAX_OUTPUT_PORT_TYPE
+rx_out[5] <= l_shiftreg3a[0].DB_MAX_OUTPUT_PORT_TYPE
+rx_out[6] <= h_shiftreg4a[1].DB_MAX_OUTPUT_PORT_TYPE
+rx_out[7] <= l_shiftreg3a[1].DB_MAX_OUTPUT_PORT_TYPE
+
+
+|wifi_tele_phy|hmcad1511_controller:adc|adc_lvds:d4lvds|altlvds_rx:ALTLVDS_RX_component|adc_lvds_lvds_rx:auto_generated|adc_lvds_lvds_ddio_in:ddio_in
+clock => ddio_h_reg[0].CLK
+clock => ddio_h_reg[1].CLK
+clock => dataout_l_reg[0].CLK
+clock => dataout_l_reg[1].CLK
+clock => dataout_h_reg[0].CLK
+clock => dataout_h_reg[1].CLK
+clock => ddio_l_reg[0].CLK
+clock => ddio_l_reg[1].CLK
+clock => dataout_l_latch[0].CLK
+clock => dataout_l_latch[1].CLK
+datain[0] => ddio_l_reg[0].DATAIN
+datain[0] => ddio_h_reg[0].DATAIN
+datain[1] => ddio_l_reg[1].DATAIN
+datain[1] => ddio_h_reg[1].DATAIN
+dataout_h[0] <= dataout_l_reg[0].DB_MAX_OUTPUT_PORT_TYPE
+dataout_h[1] <= dataout_l_reg[1].DB_MAX_OUTPUT_PORT_TYPE
+dataout_l[0] <= dataout_h_reg[0].DB_MAX_OUTPUT_PORT_TYPE
+dataout_l[1] <= dataout_h_reg[1].DB_MAX_OUTPUT_PORT_TYPE
+
+
+|wifi_tele_phy|hmcad1511_controller:adc|adc_lvds:d4lvds|altlvds_rx:ALTLVDS_RX_component|adc_lvds_lvds_rx:auto_generated|adc_lvds_dffpipe:h_dffpipe
+clock => dffe5a[0].CLK
+clock => dffe5a[1].CLK
+d[0] => dffe5a[0].DATAIN
+d[1] => dffe5a[1].DATAIN
+q[0] <= dffe5a[0].DB_MAX_OUTPUT_PORT_TYPE
+q[1] <= dffe5a[1].DB_MAX_OUTPUT_PORT_TYPE
+
+
+|wifi_tele_phy|hmcad1511_controller:adc|adc_lvds:d4lvds|altlvds_rx:ALTLVDS_RX_component|adc_lvds_lvds_rx:auto_generated|adc_lvds_dffpipe:l_dffpipe
+clock => dffe5a[0].CLK
+clock => dffe5a[1].CLK
+d[0] => dffe5a[0].DATAIN
+d[1] => dffe5a[1].DATAIN
+q[0] <= dffe5a[0].DB_MAX_OUTPUT_PORT_TYPE
+q[1] <= dffe5a[1].DB_MAX_OUTPUT_PORT_TYPE
+
+
+|wifi_tele_phy|pll_controller:pll
+configupdate => altpll:altpll_component.configupdate
+inclk0 => altpll:altpll_component.inclk[0]
+scanclk => altpll:altpll_component.scanclk
+scanclkena => altpll:altpll_component.scanclkena
+scandata => altpll:altpll_component.scandata
+c0 <= altpll:altpll_component.clk[0]
+locked <= altpll:altpll_component.locked
+scandataout <= altpll:altpll_component.scandataout
+scandone <= altpll:altpll_component.scandone
+
+
+|wifi_tele_phy|pll_controller:pll|altpll:altpll_component
+inclk[0] => pll_controller_altpll:auto_generated.inclk[0]
+inclk[1] => pll_controller_altpll:auto_generated.inclk[1]
+fbin => ~NO_FANOUT~
+pllena => ~NO_FANOUT~
+clkswitch => ~NO_FANOUT~
+areset => ~NO_FANOUT~
+pfdena => ~NO_FANOUT~
+clkena[0] => ~NO_FANOUT~
+clkena[1] => ~NO_FANOUT~
+clkena[2] => ~NO_FANOUT~
+clkena[3] => ~NO_FANOUT~
+clkena[4] => ~NO_FANOUT~
+clkena[5] => ~NO_FANOUT~
+extclkena[0] => ~NO_FANOUT~
+extclkena[1] => ~NO_FANOUT~
+extclkena[2] => ~NO_FANOUT~
+extclkena[3] => ~NO_FANOUT~
+scanclk => pll_controller_altpll:auto_generated.scanclk
+scanclkena => pll_controller_altpll:auto_generated.scanclkena
+scanaclr => ~NO_FANOUT~
+scanread => ~NO_FANOUT~
+scanwrite => ~NO_FANOUT~
+scandata => pll_controller_altpll:auto_generated.scandata
+phasecounterselect[0] => ~NO_FANOUT~
+phasecounterselect[1] => ~NO_FANOUT~
+phasecounterselect[2] => ~NO_FANOUT~
+phasecounterselect[3] => ~NO_FANOUT~
+phaseupdown => ~NO_FANOUT~
+phasestep => ~NO_FANOUT~
+configupdate => pll_controller_altpll:auto_generated.configupdate
+fbmimicbidir <> <GND>
+clk[0] <= clk[0].DB_MAX_OUTPUT_PORT_TYPE
+clk[1] <= clk[1].DB_MAX_OUTPUT_PORT_TYPE
+clk[2] <= clk[2].DB_MAX_OUTPUT_PORT_TYPE
+clk[3] <= clk[3].DB_MAX_OUTPUT_PORT_TYPE
+clk[4] <= clk[4].DB_MAX_OUTPUT_PORT_TYPE
+extclk[0] <= <GND>
+extclk[1] <= <GND>
+extclk[2] <= <GND>
+extclk[3] <= <GND>
+clkbad[0] <= <GND>
+clkbad[1] <= <GND>
+enable1 <= <GND>
+enable0 <= <GND>
+activeclock <= <GND>
+clkloss <= <GND>
+locked <= pll_controller_altpll:auto_generated.locked
+scandataout <= pll_controller_altpll:auto_generated.scandataout
+scandone <= pll_controller_altpll:auto_generated.scandone
+sclkout0 <= <GND>
+sclkout1 <= <GND>
+phasedone <= <GND>
+vcooverrange <= <GND>
+vcounderrange <= <GND>
+fbout <= <GND>
+fref <= <GND>
+icdrclk <= <GND>
+
+
+|wifi_tele_phy|pll_controller:pll|altpll:altpll_component|pll_controller_altpll:auto_generated
+clk[0] <= pll1.CLK
+clk[1] <= pll1.CLK1
+clk[2] <= pll1.CLK2
+clk[3] <= pll1.CLK3
+clk[4] <= pll1.CLK4
+configupdate => pll1.CONFIGUPDATE
+inclk[0] => pll1.CLK
+inclk[1] => pll1.CLK1
+locked <= pll1.LOCKED
+scanclk => pll1.SCANCLK
+scanclkena => pll1.SCANCLKENA
+scandata => pll1.SCANDATA
+scandataout <= pll1.SCANDATAOUT
+scandone <= pll1.SCANDONE
 
 

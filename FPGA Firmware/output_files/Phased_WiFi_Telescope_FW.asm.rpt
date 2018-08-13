@@ -1,5 +1,5 @@
 Assembler report for Phased_WiFi_Telescope_FW
-Mon Aug 06 14:30:34 2018
+Sun Aug 12 22:12:16 2018
 Quartus Prime Version 17.1.0 Build 590 10/25/2017 SJ Lite Edition
 
 
@@ -37,7 +37,7 @@ refer to the applicable agreement for further details.
 +---------------------------------------------------------------+
 ; Assembler Summary                                             ;
 +-----------------------+---------------------------------------+
-; Assembler Status      ; Successful - Mon Aug 06 14:30:34 2018 ;
+; Assembler Status      ; Successful - Sun Aug 12 22:12:16 2018 ;
 ; Revision Name         ; Phased_WiFi_Telescope_FW              ;
 ; Top-level Entity Name ; wifi_tele_phy                         ;
 ; Family                ; Cyclone 10 LP                         ;
@@ -45,37 +45,11 @@ refer to the applicable agreement for further details.
 +-----------------------+---------------------------------------+
 
 
-+---------------------------------------------------------------------------------------------------------------+
-; Assembler Settings                                                                                            ;
-+-----------------------------------------------------------------------------+----------------+----------------+
-; Option                                                                      ; Setting        ; Default Value  ;
-+-----------------------------------------------------------------------------+----------------+----------------+
-; Use smart compilation                                                       ; Off            ; Off            ;
-; Enable parallel Assembler and TimeQuest Timing Analyzer during compilation  ; On             ; On             ;
-; Enable compact report table                                                 ; Off            ; Off            ;
-; Generate compressed bitstreams                                              ; On             ; On             ;
-; Compression mode                                                            ; Off            ; Off            ;
-; Clock source for configuration device                                       ; Internal       ; Internal       ;
-; Clock frequency of the configuration device                                 ; 10 MHZ         ; 10 MHz         ;
-; Divide clock frequency by                                                   ; 1              ; 1              ;
-; Auto user code                                                              ; On             ; On             ;
-; Use configuration device                                                    ; Off            ; Off            ;
-; Configuration device                                                        ; Auto           ; Auto           ;
-; Voltage output format                                                       ; Auto discovery ; Auto discovery ;
-; Configuration device auto user code                                         ; Off            ; Off            ;
-; Generate Tabular Text File (.ttf) For Target Device                         ; Off            ; Off            ;
-; Generate Raw Binary File (.rbf) For Target Device                           ; Off            ; Off            ;
-; Generate Hexadecimal (Intel-Format) Output File (.hexout) for Target Device ; Off            ; Off            ;
-; Hexadecimal Output File start address                                       ; 0              ; 0              ;
-; Hexadecimal Output File count direction                                     ; Up             ; Up             ;
-; Release clears before tri-states                                            ; Off            ; Off            ;
-; Auto-restart configuration after error                                      ; On             ; On             ;
-; Enable OCT_DONE                                                             ; Off            ; Off            ;
-; Generate Serial Vector Format File (.svf) for Target Device                 ; Off            ; Off            ;
-; Generate a JEDEC STAPL Format File (.jam) for Target Device                 ; Off            ; Off            ;
-; Generate a compressed Jam STAPL Byte Code 2.0 File (.jbc) for Target Device ; Off            ; Off            ;
-; Generate a compressed Jam STAPL Byte Code 2.0 File (.jbc) for Target Device ; On             ; On             ;
-+-----------------------------------------------------------------------------+----------------+----------------+
++----------------------------------+
+; Assembler Settings               ;
++--------+---------+---------------+
+; Option ; Setting ; Default Value ;
++--------+---------+---------------+
 
 
 +----------------------------------------------------------------------------------------------------------------------------------------------------+
@@ -92,8 +66,8 @@ refer to the applicable agreement for further details.
 +----------------+-------------------------------------------------------------------------------------------------------------------------------------------------------------+
 ; Option         ; Setting                                                                                                                                                     ;
 +----------------+-------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; JTAG usercode  ; 0x00134DCA                                                                                                                                                  ;
-; Checksum       ; 0x00134DCA                                                                                                                                                  ;
+; JTAG usercode  ; 0x00136970                                                                                                                                                  ;
+; Checksum       ; 0x00136970                                                                                                                                                  ;
 +----------------+-------------------------------------------------------------------------------------------------------------------------------------------------------------+
 
 
@@ -103,18 +77,15 @@ refer to the applicable agreement for further details.
 Info: *******************************************************************
 Info: Running Quartus Prime Assembler
     Info: Version 17.1.0 Build 590 10/25/2017 SJ Lite Edition
-    Info: Processing started: Mon Aug 06 14:30:32 2018
-Info: Command: quartus_asm --read_settings_files=on --write_settings_files=off Phased_WiFi_Telescope_FW -c Phased_WiFi_Telescope_FW
-Warning (20013): Ignored 51 assignments for entity "altera_eth_tse_mac" -- entity does not exist in design
-Warning (20013): Ignored 31 assignments for entity "ethernet" -- entity does not exist in design
-Warning (20013): Ignored 48 assignments for entity "ethernet_eth_tse_0" -- entity does not exist in design
+    Info: Processing started: Sun Aug 12 22:12:15 2018
+Info: Command: quartus_asm --read_settings_files=off --write_settings_files=off Phased_WiFi_Telescope_FW -c Phased_WiFi_Telescope_FW
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (115031): Writing out detailed assembly data for power analysis
 Info (115030): Assembler is generating device programming files
-Info: Quartus Prime Assembler was successful. 0 errors, 4 warnings
-    Info: Peak virtual memory: 4695 megabytes
-    Info: Processing ended: Mon Aug 06 14:30:34 2018
-    Info: Elapsed time: 00:00:02
+Info: Quartus Prime Assembler was successful. 0 errors, 1 warning
+    Info: Peak virtual memory: 4693 megabytes
+    Info: Processing ended: Sun Aug 12 22:12:16 2018
+    Info: Elapsed time: 00:00:01
     Info: Total CPU time (on all processors): 00:00:01
 
 

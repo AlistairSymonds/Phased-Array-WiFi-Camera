@@ -1,0 +1,7 @@
+entity intruction_decoder is
+	port(
+		clk : in std_logic
+		
+	);
+
+end entity

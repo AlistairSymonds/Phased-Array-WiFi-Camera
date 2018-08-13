@@ -3,11 +3,15 @@
  <debug showDebugMenu="0" />
  <systemtable filter="All Interfaces">
   <columns>
-   <connections preferredWidth="31" />
+   <connections preferredWidth="191" />
    <irq preferredWidth="34" />
+   <name preferredWidth="306" />
+   <description preferredWidth="383" />
+   <inputclock preferredWidth="183" />
   </columns>
  </systemtable>
- <library expandedCategories="Library,Project" />
+ <library
+   expandedCategories="Project,Library/Memory Interfaces and Controllers,Library/Qsys Interconnect/Memory-Mapped,Library/University Program,Library/Interface Protocols/Serial,Library/University Program/Memory,Library/Interface Protocols/Ethernet,Library/Interface Protocols,Library,Library/Qsys Interconnect" />
  <window width="3840" height="2100" x="0" y="0" />
  <hdlexample language="VHDL" />
  <generation synthesis="VHDL" greybox="0" simulation="VHDL" path="_PROJECT_NAME_" />
