@@ -35,8 +35,8 @@
 //CPOL: 0
 //CPHA: 0
 //LSBFIRST: 0
-//EXTRADELAY: 0
-//TARGETSSDELAY: 0
+//EXTRADELAY: 1
+//TARGETSSDELAY: 0.0001
 
 module WiPhase_top_level_spi (
                                // inputs:
@@ -97,6 +97,7 @@ reg              data_rd_strobe;
 reg     [ 15: 0] data_to_cpu;
 reg              data_wr_strobe;
 wire             dataavailable;
+reg     [  3: 0] delayCounter;
 wire             ds_MISO;
 wire             enableSS;
 wire             endofpacket;
@@ -129,7 +130,6 @@ reg     [ 15: 0] spi_slave_select_holding_reg;
 reg     [ 15: 0] spi_slave_select_reg;
 wire    [ 10: 0] spi_status;
 reg     [  4: 0] state;
-reg              stateZero;
 wire             status_wr_strobe;
 reg              transmitting;
 reg              tx_holding_primed;
@@ -298,26 +298,35 @@ wire             write_tx_holding;
     end
 
 
-  // 'state' counts from 0 to 17.
+  // Extra-delay counter.
   always @(posedge clk or negedge reset_n)
     begin
       if (reset_n == 0)
+          delayCounter <= 9;
+      else 
         begin
-          state <= 0;
-          stateZero <= 1;
-        end
-      else if (transmitting & slowclock)
-        begin
-          stateZero <= state == 17;
-          if (state == 17)
-              state <= 0;
-          else 
-            state <= state + 1;
+          if (write_shift_reg)
+              delayCounter <= 9;
+          if (transmitting & slowclock & (delayCounter != 0))
+              delayCounter <= delayCounter - 1;
         end
     end
 
 
-  assign enableSS = transmitting & ~stateZero;
+  // 'state' counts from 0 to 17.
+  always @(posedge clk or negedge reset_n)
+    begin
+      if (reset_n == 0)
+          state <= 0;
+      else if (transmitting & slowclock & (delayCounter == 0))
+          if (state == 17)
+              state <= 0;
+          else 
+            state <= state + 1;
+    end
+
+
+  assign enableSS = transmitting & (delayCounter != 9);
   assign MOSI = shift_reg[7];
   assign SS_n = (enableSS | SSO_reg) ? ~spi_slave_select_reg : {3 {1'b1} };
   assign SCLK = SCLK_reg;
@@ -383,7 +392,7 @@ wire             write_tx_holding;
               ROE <= 0;
               TOE <= 0;
             end
-          if (slowclock)
+          if (slowclock && (delayCounter == 0))
             begin
               if (state == 17)
                 begin

@@ -32,11 +32,11 @@ entity WiPhase_phys is
 		ENET_RG_TXD3 : out std_logic;
 	
 		--spi lines
-		adc_cs : out std_logic;
-		vga_cs : out std_logic;
-		dac_cs : out std_logic;
-		mosi : out std_logic;
-		sclk : out std_logic;
+		spi_adc_cs_pin : out std_logic;
+		spi_vga_cs_pin : out std_logic;
+		spi_dac_cs_pin : out std_logic;
+		spi_mosi_pin : out std_logic;
+		spi_sclk_pin : out std_logic;
 	
 		--
 		USER_LED : out std_logic_vector(3 downto 0);
@@ -67,17 +67,13 @@ end entity;
 
 architecture arch of WiPhase_phys is
 
-	component WiPhase_top_level is
+		component WiPhase_top_level is
 		port (
 			enet_clk_125m_i_clk               : in  std_logic                     := 'X';             -- clk
 			mac_mdio_connection_mdc           : out std_logic;                                        -- mdc
 			mac_mdio_connection_mdio_in       : in  std_logic                     := 'X';             -- mdio_in
 			mac_mdio_connection_mdio_out      : out std_logic;                                        -- mdio_out
 			mac_mdio_connection_mdio_oen      : out std_logic;                                        -- mdio_oen
-			mac_misc_connection_xon_gen       : in  std_logic                     := 'X';             -- xon_gen
-			mac_misc_connection_xoff_gen      : in  std_logic                     := 'X';             -- xoff_gen
-			mac_misc_connection_magic_wakeup  : out std_logic;                                        -- magic_wakeup
-			mac_misc_connection_magic_sleep_n : in  std_logic                     := 'X';             -- magic_sleep_n
 			mac_misc_connection_ff_tx_crc_fwd : in  std_logic                     := 'X';             -- ff_tx_crc_fwd
 			mac_misc_connection_ff_tx_septy   : out std_logic;                                        -- ff_tx_septy
 			mac_misc_connection_tx_ff_uflow   : out std_logic;                                        -- tx_ff_uflow
@@ -106,14 +102,15 @@ architecture arch of WiPhase_phys is
 			spi_signals_o_MISO                : in  std_logic                     := 'X';             -- MISO
 			spi_signals_o_MOSI                : out std_logic;                                        -- MOSI
 			spi_signals_o_SCLK                : out std_logic;                                        -- SCLK
-			spi_signals_o_SS_n                : out std_logic_vector(2 downto 0);                     -- SS_n
-			pio_test_std_logic_vector         : out std_logic_vector(7 downto 0)                      -- std_logic_vector
+			spi_signals_o_SS_n                : out std_logic_vector(2 downto 0)                      -- SS_n
 		);
 	end component WiPhase_top_level;
 
 	signal sample_pll_sig : std_logic;
 	signal enet_rgmii_txd_sig : std_logic_vector(3 downto 0);
 	signal leds_sig : std_logic_vector(7 downto 0);
+	
+	signal spi_ss_sig : std_logic_vector(2 downto 0);
 	
 	signal temp : std_logic;
 	component clock_divider is
@@ -137,8 +134,15 @@ architecture arch of WiPhase_phys is
 			rgmii_connection_rgmii_out => enet_rgmii_txd_sig,
 			pll_inclk_clk => C10_CLK50M,
 			pll_out_clk => sample_pll_sig,
-			pio_test_std_logic_vector   => leds_sig
+			
+			
+			spi_signals_o_MOSI => spi_mosi_pin,
+			spi_signals_o_SCLK => spi_sclk_pin,
+			spi_signals_o_SS_n =>  spi_ss_sig
 		);
+	spi_adc_cs_pin <= spi_ss_sig(0);
+	spi_vga_cs_pin <= spi_ss_sig(1);
+	spi_dac_cs_pin <= spi_ss_sig(2);
 	
 	ENET_RG_TXD0 <= enet_rgmii_txd_sig(0);
 	ENET_RG_TXD1 <= enet_rgmii_txd_sig(1);

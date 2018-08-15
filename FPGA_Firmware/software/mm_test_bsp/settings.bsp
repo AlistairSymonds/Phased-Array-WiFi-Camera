@@ -2,8 +2,8 @@
 <sch:Settings xmlns:sch="http://www.altera.com/embeddedsw/bsp/schema">
         <BspType>hal</BspType>
         <BspVersion>default</BspVersion>
-        <BspGeneratedTimeStamp>15/08/2018 3:42:49 PM</BspGeneratedTimeStamp>
-        <BspGeneratedUnixTimeStamp>1534311769598</BspGeneratedUnixTimeStamp>
+        <BspGeneratedTimeStamp>15/08/2018 11:26:33 PM</BspGeneratedTimeStamp>
+        <BspGeneratedUnixTimeStamp>1534339593051</BspGeneratedUnixTimeStamp>
         <BspGeneratedLocation>C:\Users\alist\OneDrive\Electrickery\Phased-Array-Radio-Telescope\Phased-Array-WiFi-Camera\FPGA_Firmware\software\mm_test_bsp</BspGeneratedLocation>
         <BspSettingsFile>settings.bsp</BspSettingsFile>
         <SopcDesignFile>..\..\WiPhase_top_level.sopcinfo</SopcDesignFile>
@@ -935,10 +935,10 @@
                 <Group xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/>
         </Setting>
         <MemoryMap>
-                <slaveDescriptor>mm_pio_test_0</slaveDescriptor>
-                <addressRange>0x00000000 - 0x00000003</addressRange>
-                <addressSpan>4</addressSpan>
-                <attributes/>
+                <slaveDescriptor>timer</slaveDescriptor>
+                <addressRange>0x00000000 - 0x0000001F</addressRange>
+                <addressSpan>32</addressSpan>
+                <attributes>timer</attributes>
         </MemoryMap>
         <MemoryMap>
                 <slaveDescriptor>ram_onchip</slaveDescriptor>

@@ -5,10 +5,6 @@
 			mac_mdio_connection_mdio_in       : in  std_logic                     := 'X';             -- mdio_in
 			mac_mdio_connection_mdio_out      : out std_logic;                                        -- mdio_out
 			mac_mdio_connection_mdio_oen      : out std_logic;                                        -- mdio_oen
-			mac_misc_connection_xon_gen       : in  std_logic                     := 'X';             -- xon_gen
-			mac_misc_connection_xoff_gen      : in  std_logic                     := 'X';             -- xoff_gen
-			mac_misc_connection_magic_wakeup  : out std_logic;                                        -- magic_wakeup
-			mac_misc_connection_magic_sleep_n : in  std_logic                     := 'X';             -- magic_sleep_n
 			mac_misc_connection_ff_tx_crc_fwd : in  std_logic                     := 'X';             -- ff_tx_crc_fwd
 			mac_misc_connection_ff_tx_septy   : out std_logic;                                        -- ff_tx_septy
 			mac_misc_connection_tx_ff_uflow   : out std_logic;                                        -- tx_ff_uflow
@@ -25,7 +21,6 @@
 			mac_status_ena_10                 : out std_logic;                                        -- ena_10
 			mclk_i_clk                        : in  std_logic                     := 'X';             -- clk
 			mclk_reset_reset_n                : in  std_logic                     := 'X';             -- reset_n
-			pio_test_std_logic_vector         : out std_logic_vector(7 downto 0);                     -- std_logic_vector
 			pll_inclk_clk                     : in  std_logic                     := 'X';             -- clk
 			pll_out_clk                       : out std_logic;                                        -- clk
 			rgmii_connection_rgmii_in         : in  std_logic_vector(3 downto 0)  := (others => 'X'); -- rgmii_in

@@ -4,3 +4,6 @@
 1534159133843	Delete resource 'test_bsp'
 1534160242511	Delete resource 'test'
 1534160254960	Delete resource 'test_bsp'
+1534338181966	Delete resource 'mm_slave_test_bsp'
+1534338187002	Delete resource 'ocram_boot'
+1534338192043	Delete resource 'ocram_boot_bsp'

@@ -1,10 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <simPackage>
  <file
-   path="simulation/submodules/WiPhase_top_level_mm_interconnect_0_avalon_st_adapter_001_error_adapter_0.sv"
-   type="SYSTEM_VERILOG"
-   library="error_adapter_0" />
- <file
    path="simulation/submodules/WiPhase_top_level_mm_interconnect_0_avalon_st_adapter_error_adapter_0.sv"
    type="SYSTEM_VERILOG"
    library="error_adapter_0" />
@@ -61,25 +57,9 @@
    type="SYSTEM_VERILOG"
    library="data_format_adapter_0" />
  <file
-   path="simulation/submodules/WiPhase_top_level_mm_interconnect_0_avalon_st_adapter_001.vhd"
-   type="VHDL"
-   library="avalon_st_adapter_001" />
- <file
    path="simulation/submodules/WiPhase_top_level_mm_interconnect_0_avalon_st_adapter.vhd"
    type="VHDL"
    library="avalon_st_adapter" />
- <file
-   path="simulation/submodules/altera_merlin_width_adapter.sv"
-   type="SYSTEM_VERILOG"
-   library="mm_pio_test_0_avalon_slave_rsp_width_adapter" />
- <file
-   path="simulation/submodules/altera_merlin_address_alignment.sv"
-   type="SYSTEM_VERILOG"
-   library="mm_pio_test_0_avalon_slave_rsp_width_adapter" />
- <file
-   path="simulation/submodules/altera_merlin_burst_uncompressor.sv"
-   type="SYSTEM_VERILOG"
-   library="mm_pio_test_0_avalon_slave_rsp_width_adapter" />
  <file
    path="simulation/submodules/WiPhase_top_level_mm_interconnect_0_rsp_mux_001.sv"
    type="SYSTEM_VERILOG"
@@ -97,21 +77,21 @@
    type="SYSTEM_VERILOG"
    library="rsp_mux" />
  <file
-   path="simulation/submodules/WiPhase_top_level_mm_interconnect_0_rsp_demux_004.sv"
+   path="simulation/submodules/WiPhase_top_level_mm_interconnect_0_rsp_demux_003.sv"
    type="SYSTEM_VERILOG"
-   library="rsp_demux_004" />
+   library="rsp_demux_003" />
  <file
    path="simulation/submodules/WiPhase_top_level_mm_interconnect_0_rsp_demux.sv"
    type="SYSTEM_VERILOG"
    library="rsp_demux" />
  <file
-   path="simulation/submodules/WiPhase_top_level_mm_interconnect_0_cmd_mux_004.sv"
+   path="simulation/submodules/WiPhase_top_level_mm_interconnect_0_cmd_mux_003.sv"
    type="SYSTEM_VERILOG"
-   library="cmd_mux_004" />
+   library="cmd_mux_003" />
  <file
    path="simulation/submodules/altera_merlin_arbitrator.sv"
    type="SYSTEM_VERILOG"
-   library="cmd_mux_004" />
+   library="cmd_mux_003" />
  <file
    path="simulation/submodules/WiPhase_top_level_mm_interconnect_0_cmd_mux.sv"
    type="SYSTEM_VERILOG"
@@ -129,46 +109,6 @@
    type="SYSTEM_VERILOG"
    library="cmd_demux" />
  <file
-   path="simulation/submodules/altera_merlin_burst_adapter.sv"
-   type="SYSTEM_VERILOG"
-   library="mm_pio_test_0_avalon_slave_burst_adapter" />
- <file
-   path="simulation/submodules/altera_merlin_burst_adapter_uncmpr.sv"
-   type="SYSTEM_VERILOG"
-   library="mm_pio_test_0_avalon_slave_burst_adapter" />
- <file
-   path="simulation/submodules/altera_merlin_burst_adapter_13_1.sv"
-   type="SYSTEM_VERILOG"
-   library="mm_pio_test_0_avalon_slave_burst_adapter" />
- <file
-   path="simulation/submodules/altera_merlin_burst_adapter_new.sv"
-   type="SYSTEM_VERILOG"
-   library="mm_pio_test_0_avalon_slave_burst_adapter" />
- <file
-   path="simulation/submodules/altera_incr_burst_converter.sv"
-   type="SYSTEM_VERILOG"
-   library="mm_pio_test_0_avalon_slave_burst_adapter" />
- <file
-   path="simulation/submodules/altera_wrap_burst_converter.sv"
-   type="SYSTEM_VERILOG"
-   library="mm_pio_test_0_avalon_slave_burst_adapter" />
- <file
-   path="simulation/submodules/altera_default_burst_converter.sv"
-   type="SYSTEM_VERILOG"
-   library="mm_pio_test_0_avalon_slave_burst_adapter" />
- <file
-   path="simulation/submodules/altera_merlin_address_alignment.sv"
-   type="SYSTEM_VERILOG"
-   library="mm_pio_test_0_avalon_slave_burst_adapter" />
- <file
-   path="simulation/submodules/altera_avalon_st_pipeline_stage.sv"
-   type="SYSTEM_VERILOG"
-   library="mm_pio_test_0_avalon_slave_burst_adapter" />
- <file
-   path="simulation/submodules/altera_avalon_st_pipeline_base.v"
-   type="SYSTEM_VERILOG"
-   library="mm_pio_test_0_avalon_slave_burst_adapter" />
- <file
    path="simulation/submodules/altera_merlin_traffic_limiter.sv"
    type="SYSTEM_VERILOG"
    library="cpu_v2_data_master_limiter" />
@@ -185,13 +125,9 @@
    type="SYSTEM_VERILOG"
    library="cpu_v2_data_master_limiter" />
  <file
-   path="simulation/submodules/WiPhase_top_level_mm_interconnect_0_router_006.sv"
+   path="simulation/submodules/WiPhase_top_level_mm_interconnect_0_router_005.sv"
    type="SYSTEM_VERILOG"
-   library="router_006" />
- <file
-   path="simulation/submodules/WiPhase_top_level_mm_interconnect_0_router_003.sv"
-   type="SYSTEM_VERILOG"
-   library="router_003" />
+   library="router_005" />
  <file
    path="simulation/submodules/WiPhase_top_level_mm_interconnect_0_router_002.sv"
    type="SYSTEM_VERILOG"
@@ -1473,6 +1409,10 @@
    type="VERILOG"
    library="mm_interconnect_0" />
  <file
+   path="simulation/submodules/WiPhase_top_level_timer.v"
+   type="VERILOG"
+   library="timer" />
+ <file
    path="simulation/submodules/WiPhase_top_level_sysid.v"
    type="VERILOG"
    library="sysid" />
@@ -1492,10 +1432,6 @@
    path="simulation/submodules/WiPhase_top_level_ram_onchip.v"
    type="VERILOG"
    library="ram_onchip" />
- <file
-   path="simulation/submodules/cyclone_10_lp_eval_leds.vhd"
-   type="VHDL"
-   library="mm_pio_test_0" />
  <file
    path="simulation/submodules/WiPhase_top_level_jtag_uart.v"
    type="VERILOG"

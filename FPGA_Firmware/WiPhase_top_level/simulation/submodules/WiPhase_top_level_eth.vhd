@@ -49,11 +49,7 @@ entity WiPhase_top_level_eth is
 		mdio_in       : in  std_logic                     := '0';             --                              .mdio_in
 		mdio_out      : out std_logic;                                        --                              .mdio_out
 		mdio_oen      : out std_logic;                                        --                              .mdio_oen
-		xon_gen       : in  std_logic                     := '0';             --           mac_misc_connection.xon_gen
-		xoff_gen      : in  std_logic                     := '0';             --                              .xoff_gen
-		magic_wakeup  : out std_logic;                                        --                              .magic_wakeup
-		magic_sleep_n : in  std_logic                     := '0';             --                              .magic_sleep_n
-		ff_tx_crc_fwd : in  std_logic                     := '0';             --                              .ff_tx_crc_fwd
+		ff_tx_crc_fwd : in  std_logic                     := '0';             --           mac_misc_connection.ff_tx_crc_fwd
 		ff_tx_septy   : out std_logic;                                        --                              .ff_tx_septy
 		tx_ff_uflow   : out std_logic;                                        --                              .tx_ff_uflow
 		ff_tx_a_full  : out std_logic;                                        --                              .ff_tx_a_full
@@ -133,10 +129,6 @@ architecture rtl of WiPhase_top_level_eth is
 			ff_tx_rdy       : out std_logic;                                        -- ready
 			ff_tx_sop       : in  std_logic                     := 'X';             -- startofpacket
 			ff_tx_wren      : in  std_logic                     := 'X';             -- valid
-			xon_gen         : in  std_logic                     := 'X';             -- export
-			xoff_gen        : in  std_logic                     := 'X';             -- export
-			magic_wakeup    : out std_logic;                                        -- export
-			magic_sleep_n   : in  std_logic                     := 'X';             -- export
 			ff_tx_crc_fwd   : in  std_logic                     := 'X';             -- export
 			ff_tx_septy     : out std_logic;                                        -- export
 			tx_ff_uflow     : out std_logic;                                        -- export
@@ -161,8 +153,12 @@ architecture rtl of WiPhase_top_level_eth is
 			ena_10          : out std_logic;                                        -- ena_10
 			tx_clk          : in  std_logic                     := 'X';             -- clk
 			rx_clk          : in  std_logic                     := 'X';             -- clk
+			magic_sleep_n   : in  std_logic                     := 'X';             -- export
 			rx_clkena       : in  std_logic                     := 'X';             -- rx_clkena
 			tx_clkena       : in  std_logic                     := 'X';             -- tx_clkena
+			xon_gen         : in  std_logic                     := 'X';             -- export
+			xoff_gen        : in  std_logic                     := 'X';             -- export
+			magic_wakeup    : out std_logic;                                        -- export
 			mac_eccstatus   : out std_logic_vector(1 downto 0);                     -- mac_eccstatus
 			gm_rx_d         : in  std_logic_vector(7 downto 0)  := (others => 'X'); -- gmii_rx_d
 			gm_rx_dv        : in  std_logic                     := 'X';             -- gmii_rx_dv
@@ -211,7 +207,7 @@ begin
 			SYNCHRONIZER_DEPTH       => 3,
 			ENABLE_MAC_TX_VLAN       => false,
 			RESET_LEVEL              => 1,
-			STAT_CNT_ENA             => true,
+			STAT_CNT_ENA             => false,
 			CUST_VERSION             => 0,
 			CRC32S1L2_EXTERN         => false,
 			MBIT_ONLY                => true,
@@ -220,13 +216,13 @@ begin
 			CRC32GENDELAY            => 6,
 			EG_FIFO                  => 2048,
 			REDUCED_INTERFACE_ENA    => true,
-			ENABLE_MAGIC_DETECT      => true,
+			ENABLE_MAGIC_DETECT      => false,
 			ENABLE_MDIO              => true,
 			ENABLE_MAC_TXADDR_SET    => true,
 			RAM_TYPE                 => "AUTO",
 			CRC32CHECK16BIT          => 0,
 			ENABLE_LGTH_CHECK        => true,
-			ENABLE_MAC_FLOW_CTRL     => true,
+			ENABLE_MAC_FLOW_CTRL     => false,
 			ENABLE_SHIFT16           => true,
 			USE_SYNC_RESET           => true,
 			REDUCED_CONTROL          => false,
@@ -235,8 +231,8 @@ begin
 			ENABLE_GMII_LOOPBACK     => false,
 			GBIT_ONLY                => true,
 			ENA_HASH                 => false,
-			ENABLE_EXTENDED_STAT_REG => true,
-			ENABLE_HD_LOGIC          => true
+			ENABLE_EXTENDED_STAT_REG => false,
+			ENABLE_HD_LOGIC          => false
 		)
 		port map (
 			clk             => clk,           -- control_port_clock_connection.clk
@@ -263,11 +259,7 @@ begin
 			ff_tx_rdy       => ff_tx_rdy,     --                              .ready
 			ff_tx_sop       => ff_tx_sop,     --                              .startofpacket
 			ff_tx_wren      => ff_tx_wren,    --                              .valid
-			xon_gen         => xon_gen,       --           mac_misc_connection.export
-			xoff_gen        => xoff_gen,      --                              .export
-			magic_wakeup    => magic_wakeup,  --                              .export
-			magic_sleep_n   => magic_sleep_n, --                              .export
-			ff_tx_crc_fwd   => ff_tx_crc_fwd, --                              .export
+			ff_tx_crc_fwd   => ff_tx_crc_fwd, --           mac_misc_connection.export
 			ff_tx_septy     => ff_tx_septy,   --                              .export
 			tx_ff_uflow     => tx_ff_uflow,   --                              .export
 			ff_tx_a_full    => ff_tx_a_full,  --                              .export
@@ -291,8 +283,12 @@ begin
 			ena_10          => ena_10,        --                              .ena_10
 			tx_clk          => tx_clk,        --   pcs_mac_tx_clock_connection.clk
 			rx_clk          => rx_clk,        --   pcs_mac_rx_clock_connection.clk
+			magic_sleep_n   => '1',           --                   (terminated)
 			rx_clkena       => '1',           --                   (terminated)
 			tx_clkena       => '1',           --                   (terminated)
+			xon_gen         => '0',           --                   (terminated)
+			xoff_gen        => '0',           --                   (terminated)
+			magic_wakeup    => open,          --                   (terminated)
 			mac_eccstatus   => open,          --                   (terminated)
 			gm_rx_d         => "00000000",    --                   (terminated)
 			gm_rx_dv        => '0',           --                   (terminated)

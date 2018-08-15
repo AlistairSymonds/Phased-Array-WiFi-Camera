@@ -19,16 +19,30 @@ entity cyclone_10_lp_eval_leds is
 		mm_write_data           : in  std_logic_vector(7 downto 0) := (others => '0'); --             .writedata
 		mm_write                : in  std_logic                    := '0';             --             .write
 		avalon_slave_chipselect : in  std_logic                    := '0';             --             .chipselect
+		avalon_slave_read 		: in  std_logic                    := '0';
+		avalon_slave_readdata	: out  std_logic_vector(7 downto 0) := (others => '0');
 		reset                   : in  std_logic                    := '0';             --   reset_sink.reset
 		Q                       : out std_logic_vector(7 downto 0)                     --  led_conduit.std_logic_vector
 	);
 end entity cyclone_10_lp_eval_leds;
 
 architecture rtl of cyclone_10_lp_eval_leds is
+	signal data : std_logic_vector(7 downto 0);
+
 begin
 
-	-- TODO: Auto-generated HDL template
+	process(clk)
+	begin
+		if(rising_edge(clk)) then
+			if(avalon_slave_chipselect = '1' and mm_write = '1') then
+				data <= mm_write_data;
+			end if;
 
-	Q <= "00000000";
+			
+			avalon_slave_readdata <= data;
+			
 
+		end if;
+	end process;
+	
 end architecture rtl; -- of cyclone_10_lp_eval_leds

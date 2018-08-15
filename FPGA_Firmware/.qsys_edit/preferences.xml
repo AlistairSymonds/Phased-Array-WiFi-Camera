@@ -10,8 +10,8 @@
    <inputclock preferredWidth="307" />
   </columns>
  </systemtable>
- <library expandedCategories="Project,Library" />
- <window width="3000" height="1920" x="0" y="0" />
+ <library expandedCategories="Library,Project" />
+ <window width="3862" height="2122" x="-11" y="-11" />
  <hdlexample language="VHDL" />
  <generation synthesis="VHDL" greybox="0" simulation="VHDL" path="_PROJECT_NAME_" />
 </preferences>

@@ -179,14 +179,6 @@
          type = "String";
       }
    }
-   element mm_pio_test_0
-   {
-      datum _sortIndex
-      {
-         value = "11";
-         type = "int";
-      }
-   }
    element ram_onchip
    {
       datum _sortIndex
@@ -256,6 +248,22 @@
          type = "String";
       }
    }
+   element timer
+   {
+      datum _sortIndex
+      {
+         value = "11";
+         type = "int";
+      }
+   }
+   element timer.irq
+   {
+      datum _tags
+      {
+         value = "";
+         type = "String";
+      }
+   }
 }
 ]]></parameter>
  <parameter name="clockCrossingAdapter" value="HANDSHAKE" />
@@ -302,11 +310,6 @@
    name="mclk_reset"
    internal="C10_Clk50M.clk_in_reset"
    type="reset"
-   dir="end" />
- <interface
-   name="pio_test"
-   internal="mm_pio_test_0.led_conduit"
-   type="conduit"
    dir="end" />
  <interface name="pll_inclk" internal="sample_pll.inclk0" type="clock" dir="end" />
  <interface name="pll_out" internal="sample_pll.c0" type="clock" dir="start" />
@@ -363,7 +366,7 @@
   <parameter name="dataAddrWidth" value="17" />
   <parameter name="dataMasterHighPerformanceAddrWidth" value="1" />
   <parameter name="dataMasterHighPerformanceMapParam" value="" />
-  <parameter name="dataSlaveMapParam"><![CDATA[<address-map><slave name='mm_pio_test_0.avalon_slave' start='0x0' end='0x4' type='mm_pio_test.avalon_slave' /><slave name='cpu_v2.debug_mem_slave' start='0x800' end='0x1000' type='altera_nios2_gen2.debug_mem_slave' /><slave name='ram_onchip.s1' start='0x8000' end='0xD000' type='altera_avalon_onchip_memory2.s1' /><slave name='eth.control_port' start='0x10800' end='0x10C00' type='altera_eth_tse.control_port' /><slave name='spi.spi_control_port' start='0x10C00' end='0x10C20' type='altera_avalon_spi.spi_control_port' /><slave name='sample_pll.pll_slave' start='0x10C20' end='0x10C30' type='altpll.pll_slave' /><slave name='sysid.control_slave' start='0x10C30' end='0x10C38' type='altera_avalon_sysid_qsys.control_slave' /><slave name='jtag_uart.avalon_jtag_slave' start='0x10C38' end='0x10C40' type='altera_avalon_jtag_uart.avalon_jtag_slave' /></address-map>]]></parameter>
+  <parameter name="dataSlaveMapParam"><![CDATA[<address-map><slave name='timer.s1' start='0x0' end='0x20' type='altera_avalon_timer.s1' /><slave name='cpu_v2.debug_mem_slave' start='0x800' end='0x1000' type='altera_nios2_gen2.debug_mem_slave' /><slave name='ram_onchip.s1' start='0x8000' end='0xD000' type='altera_avalon_onchip_memory2.s1' /><slave name='eth.control_port' start='0x10800' end='0x10C00' type='altera_eth_tse.control_port' /><slave name='spi.spi_control_port' start='0x10C00' end='0x10C20' type='altera_avalon_spi.spi_control_port' /><slave name='sample_pll.pll_slave' start='0x10C20' end='0x10C30' type='altpll.pll_slave' /><slave name='sysid.control_slave' start='0x10C30' end='0x10C38' type='altera_avalon_sysid_qsys.control_slave' /><slave name='jtag_uart.avalon_jtag_slave' start='0x10C38' end='0x10C40' type='altera_avalon_jtag_uart.avalon_jtag_slave' /></address-map>]]></parameter>
   <parameter name="data_master_high_performance_paddr_base" value="0" />
   <parameter name="data_master_high_performance_paddr_size" value="0" />
   <parameter name="data_master_paddr_base" value="0" />
@@ -409,7 +412,7 @@
   <parameter name="instruction_master_high_performance_paddr_size" value="0" />
   <parameter name="instruction_master_paddr_base" value="0" />
   <parameter name="instruction_master_paddr_size" value="0" />
-  <parameter name="internalIrqMaskSystemInfo" value="3" />
+  <parameter name="internalIrqMaskSystemInfo" value="22" />
   <parameter name="io_regionbase" value="0" />
   <parameter name="io_regionsize" value="0" />
   <parameter name="master_addr_map" value="false" />
@@ -543,10 +546,10 @@
   <parameter name="enable_ecc" value="false" />
   <parameter name="enable_ena" value="32" />
   <parameter name="enable_gmii_loopback" value="false" />
-  <parameter name="enable_hd_logic" value="true" />
-  <parameter name="enable_mac_flow_ctrl" value="true" />
+  <parameter name="enable_hd_logic" value="false" />
+  <parameter name="enable_mac_flow_ctrl" value="false" />
   <parameter name="enable_mac_vlan" value="false" />
-  <parameter name="enable_magic_detect" value="true" />
+  <parameter name="enable_magic_detect" value="false" />
   <parameter name="enable_ptp_1step" value="false" />
   <parameter name="enable_sgmii" value="false" />
   <parameter name="enable_shift16" value="true" />
@@ -554,7 +557,7 @@
   <parameter name="enable_timestamping" value="false" />
   <parameter name="enable_use_internal_fifo" value="true" />
   <parameter name="export_pwrdn" value="false" />
-  <parameter name="ext_stat_cnt_ena" value="true" />
+  <parameter name="ext_stat_cnt_ena" value="false" />
   <parameter name="ifGMII" value="RGMII" />
   <parameter name="ing_addr" value="11" />
   <parameter name="max_channels" value="1" />
@@ -566,7 +569,7 @@
   <parameter name="phyip_pll_type" value="CMU" />
   <parameter name="phyip_pma_bonding_mode" value="x1" />
   <parameter name="starting_channel_number" value="0" />
-  <parameter name="stat_cnt_ena" value="true" />
+  <parameter name="stat_cnt_ena" value="false" />
   <parameter name="transceiver_type" value="NONE" />
   <parameter name="tstamp_fp_width" value="4" />
   <parameter name="useMDIO" value="true" />
@@ -592,7 +595,6 @@
   <parameter name="writeBufferDepth" value="64" />
   <parameter name="writeIRQThreshold" value="8" />
  </module>
- <module name="mm_pio_test_0" kind="mm_pio_test" version="1.0" enabled="1" />
  <module
    name="ram_onchip"
    kind="altera_avalon_onchip_memory2"
@@ -799,14 +801,14 @@
   <parameter name="dataWidth" value="8" />
   <parameter name="disableAvalonFlowControl" value="false" />
   <parameter name="inputClockRate" value="50000000" />
-  <parameter name="insertDelayBetweenSlaveSelectAndSClk" value="false" />
+  <parameter name="insertDelayBetweenSlaveSelectAndSClk" value="true" />
   <parameter name="insertSync" value="false" />
   <parameter name="lsbOrderedFirst" value="false" />
   <parameter name="masterSPI" value="true" />
   <parameter name="numberOfSlaves" value="3" />
   <parameter name="syncRegDepth" value="2" />
   <parameter name="targetClockRate" value="50000" />
-  <parameter name="targetSlaveSelectToSClkDelay" value="0.0" />
+  <parameter name="targetSlaveSelectToSClkDelay" value="100000.0" />
  </module>
  <module
    name="sysid"
@@ -815,6 +817,18 @@
    enabled="1">
   <parameter name="id" value="305419896" />
  </module>
+ <module name="timer" kind="altera_avalon_timer" version="17.1" enabled="1">
+  <parameter name="alwaysRun" value="false" />
+  <parameter name="counterSize" value="32" />
+  <parameter name="fixedPeriod" value="false" />
+  <parameter name="period" value="1" />
+  <parameter name="periodUnits" value="MSEC" />
+  <parameter name="resetOutput" value="false" />
+  <parameter name="snapshot" value="true" />
+  <parameter name="systemFrequency" value="50000000" />
+  <parameter name="timeoutPulseOutput" value="false" />
+  <parameter name="watchdogPulse" value="2" />
+ </module>
  <connection
    kind="avalon"
    version="17.1"
@@ -822,15 +836,6 @@
    end="jtag_uart.avalon_jtag_slave">
   <parameter name="arbitrationPriority" value="1" />
   <parameter name="baseAddress" value="0x00010c38" />
-  <parameter name="defaultConnection" value="false" />
- </connection>
- <connection
-   kind="avalon"
-   version="17.1"
-   start="cpu_v2.data_master"
-   end="mm_pio_test_0.avalon_slave">
-  <parameter name="arbitrationPriority" value="1" />
-  <parameter name="baseAddress" value="0x0000" />
   <parameter name="defaultConnection" value="false" />
  </connection>
  <connection
@@ -876,6 +881,15 @@
    end="ram_onchip.s1">
   <parameter name="arbitrationPriority" value="1" />
   <parameter name="baseAddress" value="0x8000" />
+  <parameter name="defaultConnection" value="false" />
+ </connection>
+ <connection
+   kind="avalon"
+   version="17.1"
+   start="cpu_v2.data_master"
+   end="timer.s1">
+  <parameter name="arbitrationPriority" value="1" />
+  <parameter name="baseAddress" value="0x0000" />
   <parameter name="defaultConnection" value="false" />
  </connection>
  <connection
@@ -933,11 +947,7 @@
    start="C10_Clk50M.clk"
    end="Debug_ST_Sink_0.clk" />
  <connection kind="clock" version="17.1" start="C10_Clk50M.clk" end="cpu_v2.clk" />
- <connection
-   kind="clock"
-   version="17.1"
-   start="C10_Clk50M.clk"
-   end="mm_pio_test_0.clk" />
+ <connection kind="clock" version="17.1" start="C10_Clk50M.clk" end="timer.clk" />
  <connection
    kind="clock"
    version="17.1"
@@ -969,13 +979,16 @@
    start="C10_Clk50M.clk"
    end="eth.transmit_clock_connection" />
  <connection kind="interrupt" version="17.1" start="cpu_v2.irq" end="spi.irq">
-  <parameter name="irqNumber" value="0" />
+  <parameter name="irqNumber" value="2" />
  </connection>
  <connection
    kind="interrupt"
    version="17.1"
    start="cpu_v2.irq"
    end="jtag_uart.irq">
+  <parameter name="irqNumber" value="4" />
+ </connection>
+ <connection kind="interrupt" version="17.1" start="cpu_v2.irq" end="timer.irq">
   <parameter name="irqNumber" value="1" />
  </connection>
  <connection
@@ -1022,17 +1035,17 @@
    kind="reset"
    version="17.1"
    start="C10_Clk50M.clk_reset"
+   end="timer.reset" />
+ <connection
+   kind="reset"
+   version="17.1"
+   start="C10_Clk50M.clk_reset"
    end="ram_onchip.reset1" />
  <connection
    kind="reset"
    version="17.1"
    start="C10_Clk50M.clk_reset"
    end="eth.reset_connection" />
- <connection
-   kind="reset"
-   version="17.1"
-   start="C10_Clk50M.clk_reset"
-   end="mm_pio_test_0.reset_sink" />
  <interconnectRequirement for="$system" name="qsys_mm.clockCrossingAdapter" value="HANDSHAKE" />
  <interconnectRequirement for="$system" name="qsys_mm.enableEccProtection" value="FALSE" />
  <interconnectRequirement for="$system" name="qsys_mm.insertDefaultSlave" value="FALSE" />

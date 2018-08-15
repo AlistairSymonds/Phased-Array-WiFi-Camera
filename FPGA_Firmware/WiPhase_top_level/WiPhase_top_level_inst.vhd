@@ -5,10 +5,6 @@
 			mac_mdio_connection_mdio_in       : in  std_logic                     := 'X';             -- mdio_in
 			mac_mdio_connection_mdio_out      : out std_logic;                                        -- mdio_out
 			mac_mdio_connection_mdio_oen      : out std_logic;                                        -- mdio_oen
-			mac_misc_connection_xon_gen       : in  std_logic                     := 'X';             -- xon_gen
-			mac_misc_connection_xoff_gen      : in  std_logic                     := 'X';             -- xoff_gen
-			mac_misc_connection_magic_wakeup  : out std_logic;                                        -- magic_wakeup
-			mac_misc_connection_magic_sleep_n : in  std_logic                     := 'X';             -- magic_sleep_n
 			mac_misc_connection_ff_tx_crc_fwd : in  std_logic                     := 'X';             -- ff_tx_crc_fwd
 			mac_misc_connection_ff_tx_septy   : out std_logic;                                        -- ff_tx_septy
 			mac_misc_connection_tx_ff_uflow   : out std_logic;                                        -- tx_ff_uflow
@@ -37,8 +33,7 @@
 			spi_signals_o_MISO                : in  std_logic                     := 'X';             -- MISO
 			spi_signals_o_MOSI                : out std_logic;                                        -- MOSI
 			spi_signals_o_SCLK                : out std_logic;                                        -- SCLK
-			spi_signals_o_SS_n                : out std_logic_vector(2 downto 0);                     -- SS_n
-			pio_test_std_logic_vector         : out std_logic_vector(7 downto 0)                      -- std_logic_vector
+			spi_signals_o_SS_n                : out std_logic_vector(2 downto 0)                      -- SS_n
 		);
 	end component WiPhase_top_level;
 
@@ -49,11 +44,7 @@
 			mac_mdio_connection_mdio_in       => CONNECTED_TO_mac_mdio_connection_mdio_in,       --                          .mdio_in
 			mac_mdio_connection_mdio_out      => CONNECTED_TO_mac_mdio_connection_mdio_out,      --                          .mdio_out
 			mac_mdio_connection_mdio_oen      => CONNECTED_TO_mac_mdio_connection_mdio_oen,      --                          .mdio_oen
-			mac_misc_connection_xon_gen       => CONNECTED_TO_mac_misc_connection_xon_gen,       --       mac_misc_connection.xon_gen
-			mac_misc_connection_xoff_gen      => CONNECTED_TO_mac_misc_connection_xoff_gen,      --                          .xoff_gen
-			mac_misc_connection_magic_wakeup  => CONNECTED_TO_mac_misc_connection_magic_wakeup,  --                          .magic_wakeup
-			mac_misc_connection_magic_sleep_n => CONNECTED_TO_mac_misc_connection_magic_sleep_n, --                          .magic_sleep_n
-			mac_misc_connection_ff_tx_crc_fwd => CONNECTED_TO_mac_misc_connection_ff_tx_crc_fwd, --                          .ff_tx_crc_fwd
+			mac_misc_connection_ff_tx_crc_fwd => CONNECTED_TO_mac_misc_connection_ff_tx_crc_fwd, --       mac_misc_connection.ff_tx_crc_fwd
 			mac_misc_connection_ff_tx_septy   => CONNECTED_TO_mac_misc_connection_ff_tx_septy,   --                          .ff_tx_septy
 			mac_misc_connection_tx_ff_uflow   => CONNECTED_TO_mac_misc_connection_tx_ff_uflow,   --                          .tx_ff_uflow
 			mac_misc_connection_ff_tx_a_full  => CONNECTED_TO_mac_misc_connection_ff_tx_a_full,  --                          .ff_tx_a_full
@@ -81,7 +72,6 @@
 			spi_signals_o_MISO                => CONNECTED_TO_spi_signals_o_MISO,                --             spi_signals_o.MISO
 			spi_signals_o_MOSI                => CONNECTED_TO_spi_signals_o_MOSI,                --                          .MOSI
 			spi_signals_o_SCLK                => CONNECTED_TO_spi_signals_o_SCLK,                --                          .SCLK
-			spi_signals_o_SS_n                => CONNECTED_TO_spi_signals_o_SS_n,                --                          .SS_n
-			pio_test_std_logic_vector         => CONNECTED_TO_pio_test_std_logic_vector          --                  pio_test.std_logic_vector
+			spi_signals_o_SS_n                => CONNECTED_TO_spi_signals_o_SS_n                 --                          .SS_n
 		);
 

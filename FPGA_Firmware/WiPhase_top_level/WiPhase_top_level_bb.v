@@ -5,10 +5,6 @@ module WiPhase_top_level (
 	mac_mdio_connection_mdio_in,
 	mac_mdio_connection_mdio_out,
 	mac_mdio_connection_mdio_oen,
-	mac_misc_connection_xon_gen,
-	mac_misc_connection_xoff_gen,
-	mac_misc_connection_magic_wakeup,
-	mac_misc_connection_magic_sleep_n,
 	mac_misc_connection_ff_tx_crc_fwd,
 	mac_misc_connection_ff_tx_septy,
 	mac_misc_connection_tx_ff_uflow,
@@ -37,18 +33,13 @@ module WiPhase_top_level (
 	spi_signals_o_MISO,
 	spi_signals_o_MOSI,
 	spi_signals_o_SCLK,
-	spi_signals_o_SS_n,
-	pio_test_std_logic_vector);	
+	spi_signals_o_SS_n);	
 
 	input		enet_clk_125m_i_clk;
 	output		mac_mdio_connection_mdc;
 	input		mac_mdio_connection_mdio_in;
 	output		mac_mdio_connection_mdio_out;
 	output		mac_mdio_connection_mdio_oen;
-	input		mac_misc_connection_xon_gen;
-	input		mac_misc_connection_xoff_gen;
-	output		mac_misc_connection_magic_wakeup;
-	input		mac_misc_connection_magic_sleep_n;
 	input		mac_misc_connection_ff_tx_crc_fwd;
 	output		mac_misc_connection_ff_tx_septy;
 	output		mac_misc_connection_tx_ff_uflow;
@@ -78,5 +69,4 @@ module WiPhase_top_level (
 	output		spi_signals_o_MOSI;
 	output		spi_signals_o_SCLK;
 	output	[2:0]	spi_signals_o_SS_n;
-	output	[7:0]	pio_test_std_logic_vector;
 endmodule

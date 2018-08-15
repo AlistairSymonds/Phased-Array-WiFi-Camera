@@ -4,11 +4,7 @@
 		.mac_mdio_connection_mdio_in       (<connected-to-mac_mdio_connection_mdio_in>),       //                          .mdio_in
 		.mac_mdio_connection_mdio_out      (<connected-to-mac_mdio_connection_mdio_out>),      //                          .mdio_out
 		.mac_mdio_connection_mdio_oen      (<connected-to-mac_mdio_connection_mdio_oen>),      //                          .mdio_oen
-		.mac_misc_connection_xon_gen       (<connected-to-mac_misc_connection_xon_gen>),       //       mac_misc_connection.xon_gen
-		.mac_misc_connection_xoff_gen      (<connected-to-mac_misc_connection_xoff_gen>),      //                          .xoff_gen
-		.mac_misc_connection_magic_wakeup  (<connected-to-mac_misc_connection_magic_wakeup>),  //                          .magic_wakeup
-		.mac_misc_connection_magic_sleep_n (<connected-to-mac_misc_connection_magic_sleep_n>), //                          .magic_sleep_n
-		.mac_misc_connection_ff_tx_crc_fwd (<connected-to-mac_misc_connection_ff_tx_crc_fwd>), //                          .ff_tx_crc_fwd
+		.mac_misc_connection_ff_tx_crc_fwd (<connected-to-mac_misc_connection_ff_tx_crc_fwd>), //       mac_misc_connection.ff_tx_crc_fwd
 		.mac_misc_connection_ff_tx_septy   (<connected-to-mac_misc_connection_ff_tx_septy>),   //                          .ff_tx_septy
 		.mac_misc_connection_tx_ff_uflow   (<connected-to-mac_misc_connection_tx_ff_uflow>),   //                          .tx_ff_uflow
 		.mac_misc_connection_ff_tx_a_full  (<connected-to-mac_misc_connection_ff_tx_a_full>),  //                          .ff_tx_a_full
@@ -36,7 +32,6 @@
 		.spi_signals_o_MISO                (<connected-to-spi_signals_o_MISO>),                //             spi_signals_o.MISO
 		.spi_signals_o_MOSI                (<connected-to-spi_signals_o_MOSI>),                //                          .MOSI
 		.spi_signals_o_SCLK                (<connected-to-spi_signals_o_SCLK>),                //                          .SCLK
-		.spi_signals_o_SS_n                (<connected-to-spi_signals_o_SS_n>),                //                          .SS_n
-		.pio_test_std_logic_vector         (<connected-to-pio_test_std_logic_vector>)          //                  pio_test.std_logic_vector
+		.spi_signals_o_SS_n                (<connected-to-spi_signals_o_SS_n>)                 //                          .SS_n
 	);
 

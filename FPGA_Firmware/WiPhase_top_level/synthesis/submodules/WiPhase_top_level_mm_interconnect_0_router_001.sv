@@ -47,7 +47,7 @@ module WiPhase_top_level_mm_interconnect_0_router_001_default_decode
      parameter DEFAULT_CHANNEL = 1,
                DEFAULT_WR_CHANNEL = -1,
                DEFAULT_RD_CHANNEL = -1,
-               DEFAULT_DESTID = 4 
+               DEFAULT_DESTID = 3 
    )
   (output [79 - 77 : 0] default_destination_id,
    output [8-1 : 0] default_wr_channel,
@@ -198,7 +198,7 @@ module WiPhase_top_level_mm_interconnect_0_router_001
     // ( 0x8000 .. 0x10000 )
     if ( {address[RG:PAD1],{PAD1{1'b0}}} == 16'h8000   ) begin
             src_channel = 8'b10;
-            src_data[PKT_DEST_ID_H:PKT_DEST_ID_L] = 4;
+            src_data[PKT_DEST_ID_H:PKT_DEST_ID_L] = 3;
     end
 
 end

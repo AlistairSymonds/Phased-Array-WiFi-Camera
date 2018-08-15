@@ -45,11 +45,7 @@ module WiPhase_top_level_eth (
 		input  wire        mdio_in,       //                              .mdio_in
 		output wire        mdio_out,      //                              .mdio_out
 		output wire        mdio_oen,      //                              .mdio_oen
-		input  wire        xon_gen,       //           mac_misc_connection.xon_gen
-		input  wire        xoff_gen,      //                              .xoff_gen
-		output wire        magic_wakeup,  //                              .magic_wakeup
-		input  wire        magic_sleep_n, //                              .magic_sleep_n
-		input  wire        ff_tx_crc_fwd, //                              .ff_tx_crc_fwd
+		input  wire        ff_tx_crc_fwd, //           mac_misc_connection.ff_tx_crc_fwd
 		output wire        ff_tx_septy,   //                              .ff_tx_septy
 		output wire        tx_ff_uflow,   //                              .tx_ff_uflow
 		output wire        ff_tx_a_full,  //                              .ff_tx_a_full
@@ -74,7 +70,7 @@ module WiPhase_top_level_eth (
 		.SYNCHRONIZER_DEPTH       (3),
 		.ENABLE_MAC_TX_VLAN       (0),
 		.RESET_LEVEL              (1),
-		.STAT_CNT_ENA             (1),
+		.STAT_CNT_ENA             (0),
 		.CUST_VERSION             (0),
 		.CRC32S1L2_EXTERN         (0),
 		.MBIT_ONLY                (1),
@@ -83,13 +79,13 @@ module WiPhase_top_level_eth (
 		.CRC32GENDELAY            (6),
 		.EG_FIFO                  (2048),
 		.REDUCED_INTERFACE_ENA    (1),
-		.ENABLE_MAGIC_DETECT      (1),
+		.ENABLE_MAGIC_DETECT      (0),
 		.ENABLE_MDIO              (1),
 		.ENABLE_MAC_TXADDR_SET    (1),
 		.RAM_TYPE                 ("AUTO"),
 		.CRC32CHECK16BIT          (0),
 		.ENABLE_LGTH_CHECK        (1),
-		.ENABLE_MAC_FLOW_CTRL     (1),
+		.ENABLE_MAC_FLOW_CTRL     (0),
 		.ENABLE_SHIFT16           (1),
 		.USE_SYNC_RESET           (1),
 		.REDUCED_CONTROL          (0),
@@ -98,8 +94,8 @@ module WiPhase_top_level_eth (
 		.ENABLE_GMII_LOOPBACK     (0),
 		.GBIT_ONLY                (1),
 		.ENA_HASH                 (0),
-		.ENABLE_EXTENDED_STAT_REG (1),
-		.ENABLE_HD_LOGIC          (1)
+		.ENABLE_EXTENDED_STAT_REG (0),
+		.ENABLE_HD_LOGIC          (0)
 	) i_tse_mac (
 		.clk             (clk),           // control_port_clock_connection.clk
 		.reset           (reset),         //              reset_connection.reset
@@ -125,11 +121,7 @@ module WiPhase_top_level_eth (
 		.ff_tx_rdy       (ff_tx_rdy),     //                              .ready
 		.ff_tx_sop       (ff_tx_sop),     //                              .startofpacket
 		.ff_tx_wren      (ff_tx_wren),    //                              .valid
-		.xon_gen         (xon_gen),       //           mac_misc_connection.export
-		.xoff_gen        (xoff_gen),      //                              .export
-		.magic_wakeup    (magic_wakeup),  //                              .export
-		.magic_sleep_n   (magic_sleep_n), //                              .export
-		.ff_tx_crc_fwd   (ff_tx_crc_fwd), //                              .export
+		.ff_tx_crc_fwd   (ff_tx_crc_fwd), //           mac_misc_connection.export
 		.ff_tx_septy     (ff_tx_septy),   //                              .export
 		.tx_ff_uflow     (tx_ff_uflow),   //                              .export
 		.ff_tx_a_full    (ff_tx_a_full),  //                              .export
@@ -153,8 +145,12 @@ module WiPhase_top_level_eth (
 		.ena_10          (ena_10),        //                              .ena_10
 		.tx_clk          (tx_clk),        //   pcs_mac_tx_clock_connection.clk
 		.rx_clk          (rx_clk),        //   pcs_mac_rx_clock_connection.clk
+		.magic_sleep_n   (1'b1),          //                   (terminated)
 		.rx_clkena       (1'b1),          //                   (terminated)
 		.tx_clkena       (1'b1),          //                   (terminated)
+		.xon_gen         (1'b0),          //                   (terminated)
+		.xoff_gen        (1'b0),          //                   (terminated)
+		.magic_wakeup    (),              //                   (terminated)
 		.mac_eccstatus   (),              //                   (terminated)
 		.gm_rx_d         (8'b00000000),   //                   (terminated)
 		.gm_rx_dv        (1'b0),          //                   (terminated)

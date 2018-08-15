@@ -20,6 +20,26 @@
 					"strict" : false
 				},
 				{
+					"name" : "spi_adc_cs_pin",
+					"strict" : false
+				},
+				{
+					"name" : "spi_vga_cs_pin",
+					"strict" : false
+				},
+				{
+					"name" : "spi_dac_cs_pin",
+					"strict" : false
+				},
+				{
+					"name" : "spi_mosi_pin",
+					"strict" : false
+				},
+				{
+					"name" : "spi_sclk_pin",
+					"strict" : false
+				},
+				{
 					"name" : "USER_LED[2]",
 					"strict" : false
 				},

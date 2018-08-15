@@ -4,7 +4,7 @@
  * Machine generated for CPU 'cpu_v2' in SOPC Builder design 'WiPhase_top_level'
  * SOPC Builder design path: ../../WiPhase_top_level.sopcinfo
  *
- * Generated: Wed Aug 15 15:42:51 EST 2018
+ * Generated: Wed Aug 15 23:26:33 EST 2018
  */
 
 /*
@@ -145,10 +145,10 @@
 #define __ALTERA_AVALON_ONCHIP_MEMORY2
 #define __ALTERA_AVALON_SPI
 #define __ALTERA_AVALON_SYSID_QSYS
+#define __ALTERA_AVALON_TIMER
 #define __ALTERA_ETH_TSE
 #define __ALTERA_NIOS2_GEN2
 #define __ALTPLL
-#define __MM_PIO_TEST
 
 
 /*
@@ -234,7 +234,7 @@
 
 #define ALT_MODULE_CLASS_jtag_uart altera_avalon_jtag_uart
 #define JTAG_UART_BASE 0x10c38
-#define JTAG_UART_IRQ 1
+#define JTAG_UART_IRQ 4
 #define JTAG_UART_IRQ_INTERRUPT_CONTROLLER_ID 0
 #define JTAG_UART_NAME "/dev/jtag_uart"
 #define JTAG_UART_READ_DEPTH 64
@@ -243,20 +243,6 @@
 #define JTAG_UART_TYPE "altera_avalon_jtag_uart"
 #define JTAG_UART_WRITE_DEPTH 64
 #define JTAG_UART_WRITE_THRESHOLD 8
-
-
-/*
- * mm_pio_test_0 configuration
- *
- */
-
-#define ALT_MODULE_CLASS_mm_pio_test_0 mm_pio_test
-#define MM_PIO_TEST_0_BASE 0x0
-#define MM_PIO_TEST_0_IRQ -1
-#define MM_PIO_TEST_0_IRQ_INTERRUPT_CONTROLLER_ID -1
-#define MM_PIO_TEST_0_NAME "/dev/mm_pio_test_0"
-#define MM_PIO_TEST_0_SPAN 4
-#define MM_PIO_TEST_0_TYPE "mm_pio_test"
 
 
 /*
@@ -317,9 +303,9 @@
 #define SPI_DATAWIDTH 16
 #define SPI_DELAYMULT "1.0E-9"
 #define SPI_DELAYUNITS "ns"
-#define SPI_EXTRADELAY 0
+#define SPI_EXTRADELAY 1
 #define SPI_INSERT_SYNC 0
-#define SPI_IRQ 0
+#define SPI_IRQ 2
 #define SPI_IRQ_INTERRUPT_CONTROLLER_ID 0
 #define SPI_ISMASTER 1
 #define SPI_LSBFIRST 0
@@ -329,7 +315,7 @@
 #define SPI_SPAN 32
 #define SPI_SYNC_REG_DEPTH 2
 #define SPI_TARGETCLOCK 50000u
-#define SPI_TARGETSSDELAY "0.0"
+#define SPI_TARGETSSDELAY "100000.0"
 #define SPI_TYPE "altera_avalon_spi"
 
 
@@ -345,7 +331,33 @@
 #define SYSID_IRQ_INTERRUPT_CONTROLLER_ID -1
 #define SYSID_NAME "/dev/sysid"
 #define SYSID_SPAN 8
-#define SYSID_TIMESTAMP 1534309784
+#define SYSID_TIMESTAMP 1534339154
 #define SYSID_TYPE "altera_avalon_sysid_qsys"
+
+
+/*
+ * timer configuration
+ *
+ */
+
+#define ALT_MODULE_CLASS_timer altera_avalon_timer
+#define TIMER_ALWAYS_RUN 0
+#define TIMER_BASE 0x0
+#define TIMER_COUNTER_SIZE 32
+#define TIMER_FIXED_PERIOD 0
+#define TIMER_FREQ 50000000
+#define TIMER_IRQ 1
+#define TIMER_IRQ_INTERRUPT_CONTROLLER_ID 0
+#define TIMER_LOAD_VALUE 49999
+#define TIMER_MULT 0.001
+#define TIMER_NAME "/dev/timer"
+#define TIMER_PERIOD 1
+#define TIMER_PERIOD_UNITS "ms"
+#define TIMER_RESET_OUTPUT 0
+#define TIMER_SNAPSHOT 1
+#define TIMER_SPAN 32
+#define TIMER_TICKS_PER_SEC 1000
+#define TIMER_TIMEOUT_PULSE_OUTPUT 0
+#define TIMER_TYPE "altera_avalon_timer"
 
 #endif /* __SYSTEM_H_ */

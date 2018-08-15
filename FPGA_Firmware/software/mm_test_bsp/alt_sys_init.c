@@ -4,7 +4,7 @@
  * Machine generated for CPU 'cpu_v2' in SOPC Builder design 'WiPhase_top_level'
  * SOPC Builder design path: ../../WiPhase_top_level.sopcinfo
  *
- * Generated: Wed Aug 15 14:29:20 EST 2018
+ * Generated: Wed Aug 15 22:58:37 EST 2018
  */
 
 /*
@@ -62,6 +62,7 @@
 #include "altera_avalon_jtag_uart.h"
 #include "altera_avalon_spi.h"
 #include "altera_avalon_sysid_qsys.h"
+#include "altera_avalon_timer.h"
 #include "altera_eth_tse.h"
 
 /*
@@ -72,6 +73,7 @@ ALTERA_NIOS2_GEN2_IRQ_INSTANCE ( CPU_V2, cpu_v2);
 ALTERA_AVALON_JTAG_UART_INSTANCE ( JTAG_UART, jtag_uart);
 ALTERA_AVALON_SPI_INSTANCE ( SPI, spi);
 ALTERA_AVALON_SYSID_QSYS_INSTANCE ( SYSID, sysid);
+ALTERA_AVALON_TIMER_INSTANCE ( TIMER, timer);
 ALTERA_ETH_TSE_INSTANCE ( ETH, eth);
 
 /*
@@ -95,6 +97,7 @@ void alt_irq_init ( const void* base )
 
 void alt_sys_init( void )
 {
+    ALTERA_AVALON_TIMER_INIT ( TIMER, timer);
     ALTERA_AVALON_JTAG_UART_INIT ( JTAG_UART, jtag_uart);
     ALTERA_AVALON_SPI_INIT ( SPI, spi);
     ALTERA_AVALON_SYSID_QSYS_INIT ( SYSID, sysid);

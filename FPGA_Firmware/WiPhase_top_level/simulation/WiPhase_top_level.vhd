@@ -13,11 +13,7 @@ entity WiPhase_top_level is
 		mac_mdio_connection_mdio_in       : in  std_logic                     := '0';             --                          .mdio_in
 		mac_mdio_connection_mdio_out      : out std_logic;                                        --                          .mdio_out
 		mac_mdio_connection_mdio_oen      : out std_logic;                                        --                          .mdio_oen
-		mac_misc_connection_xon_gen       : in  std_logic                     := '0';             --       mac_misc_connection.xon_gen
-		mac_misc_connection_xoff_gen      : in  std_logic                     := '0';             --                          .xoff_gen
-		mac_misc_connection_magic_wakeup  : out std_logic;                                        --                          .magic_wakeup
-		mac_misc_connection_magic_sleep_n : in  std_logic                     := '0';             --                          .magic_sleep_n
-		mac_misc_connection_ff_tx_crc_fwd : in  std_logic                     := '0';             --                          .ff_tx_crc_fwd
+		mac_misc_connection_ff_tx_crc_fwd : in  std_logic                     := '0';             --       mac_misc_connection.ff_tx_crc_fwd
 		mac_misc_connection_ff_tx_septy   : out std_logic;                                        --                          .ff_tx_septy
 		mac_misc_connection_tx_ff_uflow   : out std_logic;                                        --                          .tx_ff_uflow
 		mac_misc_connection_ff_tx_a_full  : out std_logic;                                        --                          .ff_tx_a_full
@@ -33,7 +29,6 @@ entity WiPhase_top_level is
 		mac_status_ena_10                 : out std_logic;                                        --                          .ena_10
 		mclk_i_clk                        : in  std_logic                     := '0';             --                    mclk_i.clk
 		mclk_reset_reset_n                : in  std_logic                     := '0';             --                mclk_reset.reset_n
-		pio_test_std_logic_vector         : out std_logic_vector(7 downto 0);                     --                  pio_test.std_logic_vector
 		pll_inclk_clk                     : in  std_logic                     := '0';             --                 pll_inclk.clk
 		pll_out_clk                       : out std_logic;                                        --                   pll_out.clk
 		rgmii_connection_rgmii_in         : in  std_logic_vector(3 downto 0)  := (others => '0'); --          rgmii_connection.rgmii_in
@@ -142,10 +137,6 @@ architecture rtl of WiPhase_top_level is
 			mdio_in       : in  std_logic                     := 'X';             -- mdio_in
 			mdio_out      : out std_logic;                                        -- mdio_out
 			mdio_oen      : out std_logic;                                        -- mdio_oen
-			xon_gen       : in  std_logic                     := 'X';             -- xon_gen
-			xoff_gen      : in  std_logic                     := 'X';             -- xoff_gen
-			magic_wakeup  : out std_logic;                                        -- magic_wakeup
-			magic_sleep_n : in  std_logic                     := 'X';             -- magic_sleep_n
 			ff_tx_crc_fwd : in  std_logic                     := 'X';             -- ff_tx_crc_fwd
 			ff_tx_septy   : out std_logic;                                        -- ff_tx_septy
 			tx_ff_uflow   : out std_logic;                                        -- tx_ff_uflow
@@ -173,18 +164,6 @@ architecture rtl of WiPhase_top_level is
 			av_irq         : out std_logic                                         -- irq
 		);
 	end component WiPhase_top_level_jtag_uart;
-
-	component cyclone_10_lp_eval_leds is
-		port (
-			clk                     : in  std_logic                    := 'X';             -- clk
-			avalon_slave_address    : in  std_logic_vector(1 downto 0) := (others => 'X'); -- address
-			mm_write_data           : in  std_logic_vector(7 downto 0) := (others => 'X'); -- writedata
-			mm_write                : in  std_logic                    := 'X';             -- write
-			avalon_slave_chipselect : in  std_logic                    := 'X';             -- chipselect
-			reset                   : in  std_logic                    := 'X';             -- reset
-			Q                       : out std_logic_vector(7 downto 0)                     -- std_logic_vector
-		);
-	end component cyclone_10_lp_eval_leds;
 
 	component WiPhase_top_level_ram_onchip is
 		port (
@@ -245,6 +224,19 @@ architecture rtl of WiPhase_top_level is
 		);
 	end component WiPhase_top_level_sysid;
 
+	component WiPhase_top_level_timer is
+		port (
+			clk        : in  std_logic                     := 'X';             -- clk
+			reset_n    : in  std_logic                     := 'X';             -- reset_n
+			address    : in  std_logic_vector(2 downto 0)  := (others => 'X'); -- address
+			writedata  : in  std_logic_vector(15 downto 0) := (others => 'X'); -- writedata
+			readdata   : out std_logic_vector(15 downto 0);                    -- readdata
+			chipselect : in  std_logic                     := 'X';             -- chipselect
+			write_n    : in  std_logic                     := 'X';             -- write_n
+			irq        : out std_logic                                         -- irq
+		);
+	end component WiPhase_top_level_timer;
+
 	component WiPhase_top_level_mm_interconnect_0 is
 		port (
 			C10_Clk50M_clk_clk                       : in  std_logic                     := 'X';             -- clk
@@ -284,10 +276,6 @@ architecture rtl of WiPhase_top_level is
 			jtag_uart_avalon_jtag_slave_writedata    : out std_logic_vector(31 downto 0);                    -- writedata
 			jtag_uart_avalon_jtag_slave_waitrequest  : in  std_logic                     := 'X';             -- waitrequest
 			jtag_uart_avalon_jtag_slave_chipselect   : out std_logic;                                        -- chipselect
-			mm_pio_test_0_avalon_slave_address       : out std_logic_vector(1 downto 0);                     -- address
-			mm_pio_test_0_avalon_slave_write         : out std_logic;                                        -- write
-			mm_pio_test_0_avalon_slave_writedata     : out std_logic_vector(7 downto 0);                     -- writedata
-			mm_pio_test_0_avalon_slave_chipselect    : out std_logic;                                        -- chipselect
 			ram_onchip_s1_address                    : out std_logic_vector(12 downto 0);                    -- address
 			ram_onchip_s1_write                      : out std_logic;                                        -- write
 			ram_onchip_s1_readdata                   : in  std_logic_vector(31 downto 0) := (others => 'X'); -- readdata
@@ -307,7 +295,12 @@ architecture rtl of WiPhase_top_level is
 			spi_spi_control_port_writedata           : out std_logic_vector(15 downto 0);                    -- writedata
 			spi_spi_control_port_chipselect          : out std_logic;                                        -- chipselect
 			sysid_control_slave_address              : out std_logic_vector(0 downto 0);                     -- address
-			sysid_control_slave_readdata             : in  std_logic_vector(31 downto 0) := (others => 'X')  -- readdata
+			sysid_control_slave_readdata             : in  std_logic_vector(31 downto 0) := (others => 'X'); -- readdata
+			timer_s1_address                         : out std_logic_vector(2 downto 0);                     -- address
+			timer_s1_write                           : out std_logic;                                        -- write
+			timer_s1_readdata                        : in  std_logic_vector(15 downto 0) := (others => 'X'); -- readdata
+			timer_s1_writedata                       : out std_logic_vector(15 downto 0);                    -- writedata
+			timer_s1_chipselect                      : out std_logic                                         -- chipselect
 		);
 	end component WiPhase_top_level_mm_interconnect_0;
 
@@ -317,6 +310,7 @@ architecture rtl of WiPhase_top_level is
 			reset         : in  std_logic                     := 'X'; -- reset
 			receiver0_irq : in  std_logic                     := 'X'; -- irq
 			receiver1_irq : in  std_logic                     := 'X'; -- irq
+			receiver2_irq : in  std_logic                     := 'X'; -- irq
 			sender_irq    : out std_logic_vector(31 downto 0)         -- irq
 		);
 	end component WiPhase_top_level_irq_mapper;
@@ -478,10 +472,6 @@ architecture rtl of WiPhase_top_level is
 	signal mm_interconnect_0_jtag_uart_avalon_jtag_slave_read            : std_logic;                     -- mm_interconnect_0:jtag_uart_avalon_jtag_slave_read -> mm_interconnect_0_jtag_uart_avalon_jtag_slave_read:in
 	signal mm_interconnect_0_jtag_uart_avalon_jtag_slave_write           : std_logic;                     -- mm_interconnect_0:jtag_uart_avalon_jtag_slave_write -> mm_interconnect_0_jtag_uart_avalon_jtag_slave_write:in
 	signal mm_interconnect_0_jtag_uart_avalon_jtag_slave_writedata       : std_logic_vector(31 downto 0); -- mm_interconnect_0:jtag_uart_avalon_jtag_slave_writedata -> jtag_uart:av_writedata
-	signal mm_interconnect_0_mm_pio_test_0_avalon_slave_chipselect       : std_logic;                     -- mm_interconnect_0:mm_pio_test_0_avalon_slave_chipselect -> mm_pio_test_0:avalon_slave_chipselect
-	signal mm_interconnect_0_mm_pio_test_0_avalon_slave_address          : std_logic_vector(1 downto 0);  -- mm_interconnect_0:mm_pio_test_0_avalon_slave_address -> mm_pio_test_0:avalon_slave_address
-	signal mm_interconnect_0_mm_pio_test_0_avalon_slave_write            : std_logic;                     -- mm_interconnect_0:mm_pio_test_0_avalon_slave_write -> mm_pio_test_0:mm_write
-	signal mm_interconnect_0_mm_pio_test_0_avalon_slave_writedata        : std_logic_vector(7 downto 0);  -- mm_interconnect_0:mm_pio_test_0_avalon_slave_writedata -> mm_pio_test_0:mm_write_data
 	signal mm_interconnect_0_eth_control_port_readdata                   : std_logic_vector(31 downto 0); -- eth:reg_data_out -> mm_interconnect_0:eth_control_port_readdata
 	signal mm_interconnect_0_eth_control_port_waitrequest                : std_logic;                     -- eth:reg_busy -> mm_interconnect_0:eth_control_port_waitrequest
 	signal mm_interconnect_0_eth_control_port_address                    : std_logic_vector(7 downto 0);  -- mm_interconnect_0:eth_control_port_address -> eth:reg_addr
@@ -510,6 +500,11 @@ architecture rtl of WiPhase_top_level is
 	signal mm_interconnect_0_ram_onchip_s1_write                         : std_logic;                     -- mm_interconnect_0:ram_onchip_s1_write -> ram_onchip:write
 	signal mm_interconnect_0_ram_onchip_s1_writedata                     : std_logic_vector(31 downto 0); -- mm_interconnect_0:ram_onchip_s1_writedata -> ram_onchip:writedata
 	signal mm_interconnect_0_ram_onchip_s1_clken                         : std_logic;                     -- mm_interconnect_0:ram_onchip_s1_clken -> ram_onchip:clken
+	signal mm_interconnect_0_timer_s1_chipselect                         : std_logic;                     -- mm_interconnect_0:timer_s1_chipselect -> timer:chipselect
+	signal mm_interconnect_0_timer_s1_readdata                           : std_logic_vector(15 downto 0); -- timer:readdata -> mm_interconnect_0:timer_s1_readdata
+	signal mm_interconnect_0_timer_s1_address                            : std_logic_vector(2 downto 0);  -- mm_interconnect_0:timer_s1_address -> timer:address
+	signal mm_interconnect_0_timer_s1_write                              : std_logic;                     -- mm_interconnect_0:timer_s1_write -> mm_interconnect_0_timer_s1_write:in
+	signal mm_interconnect_0_timer_s1_writedata                          : std_logic_vector(15 downto 0); -- mm_interconnect_0:timer_s1_writedata -> timer:writedata
 	signal mm_interconnect_0_spi_spi_control_port_chipselect             : std_logic;                     -- mm_interconnect_0:spi_spi_control_port_chipselect -> spi:spi_select
 	signal mm_interconnect_0_spi_spi_control_port_readdata               : std_logic_vector(15 downto 0); -- spi:data_to_cpu -> mm_interconnect_0:spi_spi_control_port_readdata
 	signal mm_interconnect_0_spi_spi_control_port_address                : std_logic_vector(2 downto 0);  -- mm_interconnect_0:spi_spi_control_port_address -> spi:mem_addr
@@ -518,6 +513,7 @@ architecture rtl of WiPhase_top_level is
 	signal mm_interconnect_0_spi_spi_control_port_writedata              : std_logic_vector(15 downto 0); -- mm_interconnect_0:spi_spi_control_port_writedata -> spi:data_from_cpu
 	signal irq_mapper_receiver0_irq                                      : std_logic;                     -- spi:irq -> irq_mapper:receiver0_irq
 	signal irq_mapper_receiver1_irq                                      : std_logic;                     -- jtag_uart:av_irq -> irq_mapper:receiver1_irq
+	signal irq_mapper_receiver2_irq                                      : std_logic;                     -- timer:irq -> irq_mapper:receiver2_irq
 	signal cpu_v2_irq_irq                                                : std_logic_vector(31 downto 0); -- irq_mapper:sender_irq -> cpu_v2:irq
 	signal debug_st_source_0_avalon_streaming_source_data                : std_logic_vector(7 downto 0);  -- Debug_ST_Source_0:avalon_streaming_source_data -> avalon_st_adapter:in_0_data
 	signal debug_st_source_0_avalon_streaming_source_startofpacket       : std_logic;                     -- Debug_ST_Source_0:avalon_streaming_source_startofpacket -> avalon_st_adapter:in_0_startofpacket
@@ -539,14 +535,15 @@ architecture rtl of WiPhase_top_level is
 	signal avalon_st_adapter_001_out_0_data                              : std_logic_vector(7 downto 0);  -- avalon_st_adapter_001:out_0_data -> Debug_ST_Sink_0:ST_sink_connection_data
 	signal avalon_st_adapter_001_out_0_startofpacket                     : std_logic;                     -- avalon_st_adapter_001:out_0_startofpacket -> Debug_ST_Sink_0:ST_sink_connection_startofpacket
 	signal avalon_st_adapter_001_out_0_endofpacket                       : std_logic;                     -- avalon_st_adapter_001:out_0_endofpacket -> Debug_ST_Sink_0:ST_sink_connection_endofpacket
-	signal rst_controller_reset_out_reset                                : std_logic;                     -- rst_controller:reset_out -> [avalon_st_adapter:in_rst_0_reset, avalon_st_adapter_001:in_rst_0_reset, eth:reset, irq_mapper:reset, mm_interconnect_0:cpu_v2_reset_reset_bridge_in_reset_reset, mm_pio_test_0:reset, ram_onchip:reset, rst_controller_reset_out_reset:in, rst_translator:in_reset, sample_pll:reset]
+	signal rst_controller_reset_out_reset                                : std_logic;                     -- rst_controller:reset_out -> [avalon_st_adapter:in_rst_0_reset, avalon_st_adapter_001:in_rst_0_reset, eth:reset, irq_mapper:reset, mm_interconnect_0:cpu_v2_reset_reset_bridge_in_reset_reset, ram_onchip:reset, rst_controller_reset_out_reset:in, rst_translator:in_reset, sample_pll:reset]
 	signal rst_controller_reset_out_reset_req                            : std_logic;                     -- rst_controller:reset_req -> [cpu_v2:reset_req, ram_onchip:reset_req, rst_translator:reset_req_in]
 	signal mclk_reset_reset_n_ports_inv                                  : std_logic;                     -- mclk_reset_reset_n:inv -> rst_controller:reset_in0
 	signal mm_interconnect_0_jtag_uart_avalon_jtag_slave_read_ports_inv  : std_logic;                     -- mm_interconnect_0_jtag_uart_avalon_jtag_slave_read:inv -> jtag_uart:av_read_n
 	signal mm_interconnect_0_jtag_uart_avalon_jtag_slave_write_ports_inv : std_logic;                     -- mm_interconnect_0_jtag_uart_avalon_jtag_slave_write:inv -> jtag_uart:av_write_n
+	signal mm_interconnect_0_timer_s1_write_ports_inv                    : std_logic;                     -- mm_interconnect_0_timer_s1_write:inv -> timer:write_n
 	signal mm_interconnect_0_spi_spi_control_port_read_ports_inv         : std_logic;                     -- mm_interconnect_0_spi_spi_control_port_read:inv -> spi:read_n
 	signal mm_interconnect_0_spi_spi_control_port_write_ports_inv        : std_logic;                     -- mm_interconnect_0_spi_spi_control_port_write:inv -> spi:write_n
-	signal rst_controller_reset_out_reset_ports_inv                      : std_logic;                     -- rst_controller_reset_out_reset:inv -> [cpu_v2:reset_n, jtag_uart:rst_n, spi:reset_n, sysid:reset_n]
+	signal rst_controller_reset_out_reset_ports_inv                      : std_logic;                     -- rst_controller_reset_out_reset:inv -> [cpu_v2:reset_n, jtag_uart:rst_n, spi:reset_n, sysid:reset_n, timer:reset_n]
 
 begin
 
@@ -638,11 +635,7 @@ begin
 			mdio_in       => mac_mdio_connection_mdio_in,                    --                              .mdio_in
 			mdio_out      => mac_mdio_connection_mdio_out,                   --                              .mdio_out
 			mdio_oen      => mac_mdio_connection_mdio_oen,                   --                              .mdio_oen
-			xon_gen       => mac_misc_connection_xon_gen,                    --           mac_misc_connection.xon_gen
-			xoff_gen      => mac_misc_connection_xoff_gen,                   --                              .xoff_gen
-			magic_wakeup  => mac_misc_connection_magic_wakeup,               --                              .magic_wakeup
-			magic_sleep_n => mac_misc_connection_magic_sleep_n,              --                              .magic_sleep_n
-			ff_tx_crc_fwd => mac_misc_connection_ff_tx_crc_fwd,              --                              .ff_tx_crc_fwd
+			ff_tx_crc_fwd => mac_misc_connection_ff_tx_crc_fwd,              --           mac_misc_connection.ff_tx_crc_fwd
 			ff_tx_septy   => mac_misc_connection_ff_tx_septy,                --                              .ff_tx_septy
 			tx_ff_uflow   => mac_misc_connection_tx_ff_uflow,                --                              .tx_ff_uflow
 			ff_tx_a_full  => mac_misc_connection_ff_tx_a_full,               --                              .ff_tx_a_full
@@ -666,17 +659,6 @@ begin
 			av_writedata   => mm_interconnect_0_jtag_uart_avalon_jtag_slave_writedata,       --                  .writedata
 			av_waitrequest => mm_interconnect_0_jtag_uart_avalon_jtag_slave_waitrequest,     --                  .waitrequest
 			av_irq         => irq_mapper_receiver1_irq                                       --               irq.irq
-		);
-
-	mm_pio_test_0 : component cyclone_10_lp_eval_leds
-		port map (
-			clk                     => mclk_i_clk,                                              --          clk.clk
-			avalon_slave_address    => mm_interconnect_0_mm_pio_test_0_avalon_slave_address,    -- avalon_slave.address
-			mm_write_data           => mm_interconnect_0_mm_pio_test_0_avalon_slave_writedata,  --             .writedata
-			mm_write                => mm_interconnect_0_mm_pio_test_0_avalon_slave_write,      --             .write
-			avalon_slave_chipselect => mm_interconnect_0_mm_pio_test_0_avalon_slave_chipselect, --             .chipselect
-			reset                   => rst_controller_reset_out_reset,                          --   reset_sink.reset
-			Q                       => pio_test_std_logic_vector                                --  led_conduit.std_logic_vector
 		);
 
 	ram_onchip : component WiPhase_top_level_ram_onchip
@@ -734,6 +716,18 @@ begin
 			address  => mm_interconnect_0_sysid_control_slave_address(0)  --              .address
 		);
 
+	timer : component WiPhase_top_level_timer
+		port map (
+			clk        => mclk_i_clk,                                 --   clk.clk
+			reset_n    => rst_controller_reset_out_reset_ports_inv,   -- reset.reset_n
+			address    => mm_interconnect_0_timer_s1_address,         --    s1.address
+			writedata  => mm_interconnect_0_timer_s1_writedata,       --      .writedata
+			readdata   => mm_interconnect_0_timer_s1_readdata,        --      .readdata
+			chipselect => mm_interconnect_0_timer_s1_chipselect,      --      .chipselect
+			write_n    => mm_interconnect_0_timer_s1_write_ports_inv, --      .write_n
+			irq        => irq_mapper_receiver2_irq                    --   irq.irq
+		);
+
 	mm_interconnect_0 : component WiPhase_top_level_mm_interconnect_0
 		port map (
 			C10_Clk50M_clk_clk                       => mclk_i_clk,                                                --                     C10_Clk50M_clk.clk
@@ -773,10 +767,6 @@ begin
 			jtag_uart_avalon_jtag_slave_writedata    => mm_interconnect_0_jtag_uart_avalon_jtag_slave_writedata,   --                                   .writedata
 			jtag_uart_avalon_jtag_slave_waitrequest  => mm_interconnect_0_jtag_uart_avalon_jtag_slave_waitrequest, --                                   .waitrequest
 			jtag_uart_avalon_jtag_slave_chipselect   => mm_interconnect_0_jtag_uart_avalon_jtag_slave_chipselect,  --                                   .chipselect
-			mm_pio_test_0_avalon_slave_address       => mm_interconnect_0_mm_pio_test_0_avalon_slave_address,      --         mm_pio_test_0_avalon_slave.address
-			mm_pio_test_0_avalon_slave_write         => mm_interconnect_0_mm_pio_test_0_avalon_slave_write,        --                                   .write
-			mm_pio_test_0_avalon_slave_writedata     => mm_interconnect_0_mm_pio_test_0_avalon_slave_writedata,    --                                   .writedata
-			mm_pio_test_0_avalon_slave_chipselect    => mm_interconnect_0_mm_pio_test_0_avalon_slave_chipselect,   --                                   .chipselect
 			ram_onchip_s1_address                    => mm_interconnect_0_ram_onchip_s1_address,                   --                      ram_onchip_s1.address
 			ram_onchip_s1_write                      => mm_interconnect_0_ram_onchip_s1_write,                     --                                   .write
 			ram_onchip_s1_readdata                   => mm_interconnect_0_ram_onchip_s1_readdata,                  --                                   .readdata
@@ -796,7 +786,12 @@ begin
 			spi_spi_control_port_writedata           => mm_interconnect_0_spi_spi_control_port_writedata,          --                                   .writedata
 			spi_spi_control_port_chipselect          => mm_interconnect_0_spi_spi_control_port_chipselect,         --                                   .chipselect
 			sysid_control_slave_address              => mm_interconnect_0_sysid_control_slave_address,             --                sysid_control_slave.address
-			sysid_control_slave_readdata             => mm_interconnect_0_sysid_control_slave_readdata             --                                   .readdata
+			sysid_control_slave_readdata             => mm_interconnect_0_sysid_control_slave_readdata,            --                                   .readdata
+			timer_s1_address                         => mm_interconnect_0_timer_s1_address,                        --                           timer_s1.address
+			timer_s1_write                           => mm_interconnect_0_timer_s1_write,                          --                                   .write
+			timer_s1_readdata                        => mm_interconnect_0_timer_s1_readdata,                       --                                   .readdata
+			timer_s1_writedata                       => mm_interconnect_0_timer_s1_writedata,                      --                                   .writedata
+			timer_s1_chipselect                      => mm_interconnect_0_timer_s1_chipselect                      --                                   .chipselect
 		);
 
 	irq_mapper : component WiPhase_top_level_irq_mapper
@@ -805,6 +800,7 @@ begin
 			reset         => rst_controller_reset_out_reset, -- clk_reset.reset
 			receiver0_irq => irq_mapper_receiver0_irq,       -- receiver0.irq
 			receiver1_irq => irq_mapper_receiver1_irq,       -- receiver1.irq
+			receiver2_irq => irq_mapper_receiver2_irq,       -- receiver2.irq
 			sender_irq    => cpu_v2_irq_irq                  --    sender.irq
 		);
 
@@ -946,6 +942,8 @@ begin
 	mm_interconnect_0_jtag_uart_avalon_jtag_slave_read_ports_inv <= not mm_interconnect_0_jtag_uart_avalon_jtag_slave_read;
 
 	mm_interconnect_0_jtag_uart_avalon_jtag_slave_write_ports_inv <= not mm_interconnect_0_jtag_uart_avalon_jtag_slave_write;
+
+	mm_interconnect_0_timer_s1_write_ports_inv <= not mm_interconnect_0_timer_s1_write;
 
 	mm_interconnect_0_spi_spi_control_port_read_ports_inv <= not mm_interconnect_0_spi_spi_control_port_read;
 

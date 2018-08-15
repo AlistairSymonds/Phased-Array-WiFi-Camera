@@ -15,16 +15,22 @@
  */
 
 #include <stdio.h>
+#include <stdint.h>
 #include "system.h"
+#include "altera_avalon_spi.h"
 
 int main()
 {
   printf("Hello from Nios II!\n");
 
-  uint * custom_pio = MM_PIO_TEST_0_BASE;
-  *(custom_pio) = 0x00;
-  printf("Custom's value is now %x \n", *(custom_pio));
-  *(custom_pio) = 0x01;
-  printf("Custom's value is now %x \n", *(custom_pio));
+  uint8_t spi_data_rx;
+  uint8_t data[3];
+  data[0] = 0xAB;
+  data[1] = 0xAF;
+  data[2] = 0x4D;
+
+  alt_avalon_spi_command(SPI_BASE,0,3,&data,0,&spi_data_rx,0);
+
+
   return 0;
 }
