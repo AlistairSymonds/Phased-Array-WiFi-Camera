@@ -1,0 +1,51 @@
+16:19:27 **** Incremental Build of configuration Nios II for project mm_test ****
+make all 
+Info: Building ../mm_test_bsp/
+C:/intelFPGA_lite/17.1/nios2eds/bin/gnu/H-x86_64-mingw32/bin/make --no-print-directory -C ../mm_test_bsp/
+[BSP build complete]
+[mm_test build complete]
+16:19:43 **** Build of configuration Nios II for project mm_test ****
+make all 
+Info: Building ../mm_test_bsp/
+C:/intelFPGA_lite/17.1/nios2eds/bin/gnu/H-x86_64-mingw32/bin/make --no-print-directory -C ../mm_test_bsp/
+[BSP build complete]
+[mm_test build complete]
+16:19:45 **** Incremental Build of configuration Nios II for project mm_test ****
+make all 
+Info: Building ../mm_test_bsp/
+C:/intelFPGA_lite/17.1/nios2eds/bin/gnu/H-x86_64-mingw32/bin/make --no-print-directory -C ../mm_test_bsp/
+[BSP build complete]
+[mm_test build complete]
+16:34:34 **** Build of configuration Nios II for project mm_test ****
+make all 
+Info: Building ../mm_test_bsp/
+C:/intelFPGA_lite/17.1/nios2eds/bin/gnu/H-x86_64-mingw32/bin/make --no-print-directory -C ../mm_test_bsp/
+[BSP build complete]
+[mm_test build complete]
+16:34:36 **** Incremental Build of configuration Nios II for project mm_test ****
+make all 
+Info: Building ../mm_test_bsp/
+C:/intelFPGA_lite/17.1/nios2eds/bin/gnu/H-x86_64-mingw32/bin/make --no-print-directory -C ../mm_test_bsp/
+[BSP build complete]
+[mm_test build complete]
+16:34:56 **** Build of configuration Nios II for project mm_test ****
+make all 
+Info: Building ../mm_test_bsp/
+C:/intelFPGA_lite/17.1/nios2eds/bin/gnu/H-x86_64-mingw32/bin/make --no-print-directory -C ../mm_test_bsp/
+[BSP build complete]
+Info: Compiling hello_world.c to obj/default/hello_world.o
+nios2-elf-gcc -xc -MP -MMD -c -I../mm_test_bsp//drivers/inc -I../mm_test_bsp//HAL/inc -I../mm_test_bsp/ -I../mm_test_bsp//drivers/inc  -pipe -D__hal__ -DALT_NO_INSTRUCTION_EMULATION -DALT_USE_SMALL_DRIVERS -DSMALL_C_LIB -DALTERA_TRIPLE_SPEED_MAC -DALT_SINGLE_THREADED -DALTERA_AUTONEG_TIMEOUT_THRESHOLD=2500 -DALTERA_CHECKLINK_TIMEOUT_THRESHOLD=10000 -DALTERA_NOMDIO_TIMEOUT_THRESHOLD=1000000    -O0 -g -Wall   -mno-hw-div -mhw-mul -mno-hw-mulx -mgpopt=global  -o obj/default/hello_world.o hello_world.c
+Info: Linking mm_test.elf
+nios2-elf-g++  -T'../mm_test_bsp//linker.x' -msys-crt0='../mm_test_bsp//obj/HAL/src/crt0.o' -msys-lib=hal_bsp -L../mm_test_bsp/  -msmallc  -Wl,-Map=mm_test.map   -O0 -g -Wall   -mno-hw-div -mhw-mul -mno-hw-mulx -mgpopt=global  -o mm_test.elf obj/default/hello_world.o -lm -msys-lib=m
+nios2-elf-insert mm_test.elf --thread_model hal --cpu_name cpu_v2 --qsys true --simulation_enabled false --id 305419896 --sidp 0x10c30 --timestamp 1534309784 --stderr_dev jtag_uart --stdin_dev jtag_uart --stdout_dev jtag_uart --sopc_system_name WiPhase_top_level --quartus_project_dir "C:/Users/alist/OneDrive/Electrickery/Phased-Array-Radio-Telescope/Phased-Array-WiFi-Camera/FPGA_Firmware" --jdi ../..//output_files/Phased_WiFi_Telescope_FW.jdi --sopcinfo C:/Users/alist/OneDrive/Electrickery/Phased-Array-Radio-Telescope/Phased-Array-WiFi-Camera/FPGA_Firmware/software/mm_test_bsp/../../WiPhase_top_level.sopcinfo
+Info: (mm_test.elf) 8472 Bytes program size (code + initialized data).
+Info:               11 KBytes free for stack + heap.
+Info: Creating mm_test.objdump
+nios2-elf-objdump --disassemble --syms --all-header --source mm_test.elf >mm_test.objdump
+[mm_test build complete]
+16:35:08 **** Incremental Build of configuration Nios II for project mm_test ****
+make all 
+Info: Building ../mm_test_bsp/
+C:/intelFPGA_lite/17.1/nios2eds/bin/gnu/H-x86_64-mingw32/bin/make --no-print-directory -C ../mm_test_bsp/
+[BSP build complete]
+[mm_test build complete]

@@ -1,7 +1,0 @@
-entity adc_spi is
-	port(
-		clk : in std_logic;
-		
-		clk_div : in unsigned(7 downto 0);
-		sclk
-

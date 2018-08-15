@@ -1,0 +1,9 @@
+14:03:32 **** Incremental Build of configuration Nios II for project mm_slave_test ****
+make all 
+Info: Building ../mm_slave_test_bsp/
+C:/intelFPGA_lite/17.1/nios2eds/bin/gnu/H-x86_64-mingw32/bin/make --no-print-directory -C ../mm_slave_test_bsp/
+[BSP build complete]
+[mm_slave_test build complete]
+
+14:03:34 Build Finished (took 1s.489ms)
+

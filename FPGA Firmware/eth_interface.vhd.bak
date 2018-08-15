@@ -1,7 +1,0 @@
-entity eth_interface is
-	port(
-		clk : in std_logic;
-		enet_clk_125M : in std_logic;
-		
-	
-	);

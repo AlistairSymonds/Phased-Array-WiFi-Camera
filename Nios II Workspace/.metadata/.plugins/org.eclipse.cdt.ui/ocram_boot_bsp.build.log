@@ -1,0 +1,6 @@
+21:44:13 **** Clean-only build of configuration Nios II for project ocram_boot_bsp ****
+make clean 
+[BSP clean complete]
+
+21:44:13 Build Finished (took 493ms)
+

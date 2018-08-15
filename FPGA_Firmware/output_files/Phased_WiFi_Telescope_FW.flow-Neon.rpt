@@ -1,0 +1,152 @@
+Flow report for Phased_WiFi_Telescope_FW
+Wed Aug 15 12:20:05 2018
+Quartus Prime Version 17.1.0 Build 590 10/25/2017 SJ Lite Edition
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. Legal Notice
+  2. Flow Summary
+  3. Flow Settings
+  4. Flow Non-Default Global Settings
+  5. Flow Elapsed Time
+  6. Flow OS Summary
+  7. Flow Log
+  8. Flow Messages
+  9. Flow Suppressed Messages
+
+
+
+----------------
+; Legal Notice ;
+----------------
+Copyright (C) 2017  Intel Corporation. All rights reserved.
+Your use of Intel Corporation's design tools, logic functions 
+and other software and tools, and its AMPP partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Intel Program License 
+Subscription Agreement, the Intel Quartus Prime License Agreement,
+the Intel FPGA IP License Agreement, or other applicable license
+agreement, including, without limitation, that your use is for
+the sole purpose of programming logic devices manufactured by
+Intel and sold by Intel or its authorized distributors.  Please
+refer to the applicable agreement for further details.
+
+
+
++----------------------------------------------------------------------------------+
+; Flow Summary                                                                     ;
++------------------------------------+---------------------------------------------+
+; Flow Status                        ; Flow Failed - Wed Aug 15 12:20:05 2018      ;
+; Quartus Prime Version              ; 17.1.0 Build 590 10/25/2017 SJ Lite Edition ;
+; Revision Name                      ; Phased_WiFi_Telescope_FW                    ;
+; Top-level Entity Name              ; WiPhase_phys                                ;
+; Family                             ; Cyclone 10 LP                               ;
+; Device                             ; 10CL025YU256C8G                             ;
+; Timing Models                      ; Final                                       ;
+; Total logic elements               ; N/A until Partition Merge                   ;
+;     Total combinational functions  ; N/A until Partition Merge                   ;
+;     Dedicated logic registers      ; N/A until Partition Merge                   ;
+; Total registers                    ; N/A until Partition Merge                   ;
+; Total pins                         ; N/A until Partition Merge                   ;
+; Total virtual pins                 ; N/A until Partition Merge                   ;
+; Total memory bits                  ; N/A until Partition Merge                   ;
+; Embedded Multiplier 9-bit elements ; N/A until Partition Merge                   ;
+; Total PLLs                         ; N/A until Partition Merge                   ;
++------------------------------------+---------------------------------------------+
+
+
++----------------------------------------------+
+; Flow Settings                                ;
++-------------------+--------------------------+
+; Option            ; Setting                  ;
++-------------------+--------------------------+
+; Start date & time ; 08/15/2018 12:19:39      ;
+; Main task         ; Compilation              ;
+; Revision Name     ; Phased_WiFi_Telescope_FW ;
++-------------------+--------------------------+
+
+
++------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Flow Non-Default Global Settings                                                                                                                     ;
++--------------------------------------+----------------------------------------------+--------------------------+--------------+----------------------+
+; Assignment Name                      ; Value                                        ; Default Value            ; Entity Name  ; Section Id           ;
++--------------------------------------+----------------------------------------------+--------------------------+--------------+----------------------+
+; COMPILER_SIGNATURE_ID                ; 209472096115460.153429957809244              ; --                       ; --           ; --                   ;
+; EDA_DESIGN_INSTANCE_NAME             ; NA                                           ; --                       ; --           ; adc_spi              ;
+; EDA_DESIGN_INSTANCE_NAME             ; NA                                           ; --                       ; --           ; hmcad1511_controller ;
+; EDA_NATIVELINK_SIMULATION_TEST_BENCH ; adc_spi                                      ; --                       ; --           ; eda_simulation       ;
+; EDA_OUTPUT_DATA_FORMAT               ; Vhdl                                         ; --                       ; --           ; eda_simulation       ;
+; EDA_SIMULATION_TOOL                  ; ModelSim-Altera (VHDL)                       ; <None>                   ; --           ; --                   ;
+; EDA_TEST_BENCH_ENABLE_STATUS         ; TEST_BENCH_MODE                              ; --                       ; --           ; eda_simulation       ;
+; EDA_TEST_BENCH_FILE                  ; simulation/modelsim/adc_spi.vht              ; --                       ; --           ; adc_spi              ;
+; EDA_TEST_BENCH_FILE                  ; simulation/modelsim/hmcad1511_controller.vht ; --                       ; --           ; hmcad1511_controller ;
+; EDA_TEST_BENCH_MODULE_NAME           ; adc_spi_vhd_tst                              ; --                       ; --           ; adc_spi              ;
+; EDA_TEST_BENCH_MODULE_NAME           ; hmcad1511_controller_vhd_tst                 ; --                       ; --           ; hmcad1511_controller ;
+; EDA_TEST_BENCH_NAME                  ; hmcad1511_controller                         ; --                       ; --           ; eda_simulation       ;
+; EDA_TEST_BENCH_NAME                  ; adc_spi                                      ; --                       ; --           ; eda_simulation       ;
+; EDA_TEST_BENCH_RUN_SIM_FOR           ; 1000 ns                                      ; --                       ; --           ; adc_spi              ;
+; EDA_TEST_BENCH_RUN_SIM_FOR           ; 100 ns                                       ; --                       ; --           ; hmcad1511_controller ;
+; EDA_TIME_SCALE                       ; 1 ps                                         ; --                       ; --           ; eda_simulation       ;
+; ENABLE_DRC_SETTINGS                  ; On                                           ; Off                      ; --           ; --                   ;
+; FITTER_EFFORT                        ; Standard Fit                                 ; Auto Fit                 ; --           ; --                   ;
+; MAX_CORE_JUNCTION_TEMP               ; 85                                           ; --                       ; --           ; --                   ;
+; MIN_CORE_JUNCTION_TEMP               ; 0                                            ; --                       ; --           ; --                   ;
+; MISC_FILE                            ; adc_lvds.bsf                                 ; --                       ; --           ; --                   ;
+; MISC_FILE                            ; adc_lvds_inst.vhd                            ; --                       ; --           ; --                   ;
+; MISC_FILE                            ; adc_lvds.inc                                 ; --                       ; --           ; --                   ;
+; MISC_FILE                            ; adc_lvds.cmp                                 ; --                       ; --           ; --                   ;
+; MISC_FILE                            ; adc_lvds.ppf                                 ; --                       ; --           ; --                   ;
+; MISC_FILE                            ; lvds_glue.cmp                                ; --                       ; --           ; --                   ;
+; MISC_FILE                            ; pll_controller.cmp                           ; --                       ; --           ; --                   ;
+; MISC_FILE                            ; pll_controller.ppf                           ; --                       ; --           ; --                   ;
+; OPTIMIZATION_MODE                    ; High Performance Effort                      ; Balanced                 ; --           ; --                   ;
+; OUTPUT_IO_TIMING_FAR_END_VMEAS       ; Half Signal Swing                            ; --                       ; --           ; --                   ;
+; OUTPUT_IO_TIMING_FAR_END_VMEAS       ; Half Signal Swing                            ; --                       ; --           ; --                   ;
+; OUTPUT_IO_TIMING_NEAR_END_VMEAS      ; Half Vccio                                   ; --                       ; --           ; --                   ;
+; OUTPUT_IO_TIMING_NEAR_END_VMEAS      ; Half Vccio                                   ; --                       ; --           ; --                   ;
+; PARTITION_COLOR                      ; -- (Not supported for targeted family)       ; --                       ; WiPhase_phys ; Top                  ;
+; PARTITION_FITTER_PRESERVATION_LEVEL  ; -- (Not supported for targeted family)       ; --                       ; WiPhase_phys ; Top                  ;
+; PARTITION_NETLIST_TYPE               ; -- (Not supported for targeted family)       ; --                       ; WiPhase_phys ; Top                  ;
+; PHYSICAL_SYNTHESIS_COMBO_LOGIC       ; On                                           ; Off                      ; --           ; --                   ;
+; PHYSICAL_SYNTHESIS_REGISTER_RETIMING ; On                                           ; Off                      ; --           ; --                   ;
+; PLACEMENT_EFFORT_MULTIPLIER          ; 4.0                                          ; 1.0                      ; --           ; --                   ;
+; POWER_BOARD_THERMAL_MODEL            ; None (CONSERVATIVE)                          ; --                       ; --           ; --                   ;
+; POWER_PRESET_COOLING_SOLUTION        ; 23 MM HEAT SINK WITH 200 LFPM AIRFLOW        ; --                       ; --           ; --                   ;
+; PROJECT_OUTPUT_DIRECTORY             ; output_files                                 ; --                       ; --           ; --                   ;
+; ROUTER_TIMING_OPTIMIZATION_LEVEL     ; MAXIMUM                                      ; Normal                   ; --           ; --                   ;
+; TOP_LEVEL_ENTITY                     ; WiPhase_phys                                 ; Phased_WiFi_Telescope_FW ; --           ; --                   ;
+; VHDL_INPUT_VERSION                   ; VHDL_2008                                    ; VHDL_1993                ; --           ; --                   ;
+; VHDL_SHOW_LMF_MAPPING_MESSAGES       ; Off                                          ; --                       ; --           ; --                   ;
++--------------------------------------+----------------------------------------------+--------------------------+--------------+----------------------+
+
+
++--------------------------------------------------------------------------------------------------------------------------+
+; Flow Elapsed Time                                                                                                        ;
++----------------------+--------------+-------------------------+---------------------+------------------------------------+
+; Module Name          ; Elapsed Time ; Average Processors Used ; Peak Virtual Memory ; Total CPU Time (on all processors) ;
++----------------------+--------------+-------------------------+---------------------+------------------------------------+
+; Analysis & Synthesis ; 00:00:28     ; 1.0                     ; 4806 MB             ; 00:00:47                           ;
+; Total                ; 00:00:28     ; --                      ; --                  ; 00:00:47                           ;
++----------------------+--------------+-------------------------+---------------------+------------------------------------+
+
+
++------------------------------------------------------------------------------------+
+; Flow OS Summary                                                                    ;
++----------------------+------------------+------------+------------+----------------+
+; Module Name          ; Machine Hostname ; OS Name    ; OS Version ; Processor type ;
++----------------------+------------------+------------+------------+----------------+
+; Analysis & Synthesis ; Neon             ; Windows 10 ; 10.0       ; x86_64         ;
++----------------------+------------------+------------+------------+----------------+
+
+
+------------
+; Flow Log ;
+------------
+quartus_map --read_settings_files=on --write_settings_files=off Phased_WiFi_Telescope_FW -c Phased_WiFi_Telescope_FW
+
+
+
