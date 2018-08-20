@@ -2,7 +2,7 @@ set_global_assignment -entity "WiPhase_top_level" -library "WiPhase_top_level" -
 set_global_assignment -entity "WiPhase_top_level" -library "WiPhase_top_level" -name IP_TOOL_VERSION "17.1"
 set_global_assignment -entity "WiPhase_top_level" -library "WiPhase_top_level" -name IP_TOOL_ENV "Qsys"
 set_global_assignment -library "WiPhase_top_level" -name SOPCINFO_FILE [file join $::quartus(qip_path) "../../WiPhase_top_level.sopcinfo"]
-set_global_assignment -entity "WiPhase_top_level" -library "WiPhase_top_level" -name SLD_INFO "QSYS_NAME WiPhase_top_level HAS_SOPCINFO 1 GENERATION_ID 1534736125"
+set_global_assignment -entity "WiPhase_top_level" -library "WiPhase_top_level" -name SLD_INFO "QSYS_NAME WiPhase_top_level HAS_SOPCINFO 1 GENERATION_ID 1534766112"
 set_global_assignment -library "WiPhase_top_level" -name MISC_FILE [file join $::quartus(qip_path) "../WiPhase_top_level.cmp"]
 set_global_assignment -library "WiPhase_top_level" -name SLD_FILE [file join $::quartus(qip_path) "WiPhase_top_level.regmap"]
 set_global_assignment -library "WiPhase_top_level" -name SLD_FILE [file join $::quartus(qip_path) "WiPhase_top_level.debuginfo"]
@@ -16,13 +16,10 @@ set_global_assignment -entity "WiPhase_top_level" -library "WiPhase_top_level" -
 set_global_assignment -entity "WiPhase_top_level" -library "WiPhase_top_level" -name IP_COMPONENT_REPORT_HIERARCHY "On"
 set_global_assignment -entity "WiPhase_top_level" -library "WiPhase_top_level" -name IP_COMPONENT_INTERNAL "Off"
 set_global_assignment -entity "WiPhase_top_level" -library "WiPhase_top_level" -name IP_COMPONENT_VERSION "MS4w"
-set_global_assignment -entity "WiPhase_top_level" -library "WiPhase_top_level" -name IP_COMPONENT_PARAMETER "QVVUT19HRU5FUkFUSU9OX0lE::MTUzNDczNjEyNQ==::QXV0byBHRU5FUkFUSU9OX0lE"
+set_global_assignment -entity "WiPhase_top_level" -library "WiPhase_top_level" -name IP_COMPONENT_PARAMETER "QVVUT19HRU5FUkFUSU9OX0lE::MTUzNDc2NjExMg==::QXV0byBHRU5FUkFUSU9OX0lE"
 set_global_assignment -entity "WiPhase_top_level" -library "WiPhase_top_level" -name IP_COMPONENT_PARAMETER "QVVUT19ERVZJQ0VfRkFNSUxZ::Q3ljbG9uZSAxMCBMUA==::QXV0byBERVZJQ0VfRkFNSUxZ"
 set_global_assignment -entity "WiPhase_top_level" -library "WiPhase_top_level" -name IP_COMPONENT_PARAMETER "QVVUT19ERVZJQ0U=::MTBDTDAyNVlVMjU2QzhH::QXV0byBERVZJQ0U="
 set_global_assignment -entity "WiPhase_top_level" -library "WiPhase_top_level" -name IP_COMPONENT_PARAMETER "QVVUT19ERVZJQ0VfU1BFRURHUkFERQ==::OA==::QXV0byBERVZJQ0VfU1BFRURHUkFERQ=="
-set_global_assignment -entity "WiPhase_top_level" -library "WiPhase_top_level" -name IP_COMPONENT_PARAMETER "QVVUT19FTkVUX0NMS18xMjVNX0lfQ0xPQ0tfUkFURQ==::LTE=::QXV0byBDTE9DS19SQVRF"
-set_global_assignment -entity "WiPhase_top_level" -library "WiPhase_top_level" -name IP_COMPONENT_PARAMETER "QVVUT19FTkVUX0NMS18xMjVNX0lfQ0xPQ0tfRE9NQUlO::LTE=::QXV0byBDTE9DS19ET01BSU4="
-set_global_assignment -entity "WiPhase_top_level" -library "WiPhase_top_level" -name IP_COMPONENT_PARAMETER "QVVUT19FTkVUX0NMS18xMjVNX0lfUkVTRVRfRE9NQUlO::LTE=::QXV0byBSRVNFVF9ET01BSU4="
 set_global_assignment -entity "WiPhase_top_level" -library "WiPhase_top_level" -name IP_COMPONENT_PARAMETER "QVVUT19NQ0xLX0lfQ0xPQ0tfUkFURQ==::LTE=::QXV0byBDTE9DS19SQVRF"
 set_global_assignment -entity "WiPhase_top_level" -library "WiPhase_top_level" -name IP_COMPONENT_PARAMETER "QVVUT19NQ0xLX0lfQ0xPQ0tfRE9NQUlO::LTE=::QXV0byBDTE9DS19ET01BSU4="
 set_global_assignment -entity "WiPhase_top_level" -library "WiPhase_top_level" -name IP_COMPONENT_PARAMETER "QVVUT19NQ0xLX0lfUkVTRVRfRE9NQUlO::LTE=::QXV0byBSRVNFVF9ET01BSU4="
@@ -32,6 +29,9 @@ set_global_assignment -entity "WiPhase_top_level" -library "WiPhase_top_level" -
 set_global_assignment -entity "WiPhase_top_level" -library "WiPhase_top_level" -name IP_COMPONENT_PARAMETER "QVVUT19SR01JSV9SWF9DTEtfQ0xPQ0tfUkFURQ==::LTE=::QXV0byBDTE9DS19SQVRF"
 set_global_assignment -entity "WiPhase_top_level" -library "WiPhase_top_level" -name IP_COMPONENT_PARAMETER "QVVUT19SR01JSV9SWF9DTEtfQ0xPQ0tfRE9NQUlO::LTE=::QXV0byBDTE9DS19ET01BSU4="
 set_global_assignment -entity "WiPhase_top_level" -library "WiPhase_top_level" -name IP_COMPONENT_PARAMETER "QVVUT19SR01JSV9SWF9DTEtfUkVTRVRfRE9NQUlO::LTE=::QXV0byBSRVNFVF9ET01BSU4="
+set_global_assignment -entity "WiPhase_top_level" -library "WiPhase_top_level" -name IP_COMPONENT_PARAMETER "QVVUT19SR01JSV9UWF9DTEtfQ0xPQ0tfUkFURQ==::LTE=::QXV0byBDTE9DS19SQVRF"
+set_global_assignment -entity "WiPhase_top_level" -library "WiPhase_top_level" -name IP_COMPONENT_PARAMETER "QVVUT19SR01JSV9UWF9DTEtfQ0xPQ0tfRE9NQUlO::LTE=::QXV0byBDTE9DS19ET01BSU4="
+set_global_assignment -entity "WiPhase_top_level" -library "WiPhase_top_level" -name IP_COMPONENT_PARAMETER "QVVUT19SR01JSV9UWF9DTEtfUkVTRVRfRE9NQUlO::LTE=::QXV0byBSRVNFVF9ET01BSU4="
 set_global_assignment -entity "altera_reset_controller" -library "WiPhase_top_level" -name IP_COMPONENT_NAME "YWx0ZXJhX3Jlc2V0X2NvbnRyb2xsZXI="
 set_global_assignment -entity "altera_reset_controller" -library "WiPhase_top_level" -name IP_COMPONENT_DISPLAY_NAME "TWVybGluIFJlc2V0IENvbnRyb2xsZXI="
 set_global_assignment -entity "altera_reset_controller" -library "WiPhase_top_level" -name IP_COMPONENT_REPORT_HIERARCHY "Off"

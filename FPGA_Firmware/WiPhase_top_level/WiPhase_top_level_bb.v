@@ -1,6 +1,5 @@
 
 module WiPhase_top_level (
-	enet_clk_125m_i_clk,
 	mac_mdio_connection_mdc,
 	mac_mdio_connection_mdio_in,
 	mac_mdio_connection_mdio_out,
@@ -33,9 +32,9 @@ module WiPhase_top_level (
 	spi_signals_o_MISO,
 	spi_signals_o_MOSI,
 	spi_signals_o_SCLK,
-	spi_signals_o_SS_n);	
+	spi_signals_o_SS_n,
+	rgmii_tx_clk_clk);	
 
-	input		enet_clk_125m_i_clk;
 	output		mac_mdio_connection_mdc;
 	input		mac_mdio_connection_mdio_in;
 	output		mac_mdio_connection_mdio_out;
@@ -69,4 +68,5 @@ module WiPhase_top_level (
 	output		spi_signals_o_MOSI;
 	output		spi_signals_o_SCLK;
 	output	[2:0]	spi_signals_o_SS_n;
+	input		rgmii_tx_clk_clk;
 endmodule

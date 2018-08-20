@@ -1,6 +1,5 @@
 	component WiPhase_top_level is
 		port (
-			enet_clk_125m_i_clk               : in  std_logic                     := 'X';             -- clk
 			mac_mdio_connection_mdc           : out std_logic;                                        -- mdc
 			mac_mdio_connection_mdio_in       : in  std_logic                     := 'X';             -- mdio_in
 			mac_mdio_connection_mdio_out      : out std_logic;                                        -- mdio_out
@@ -33,13 +32,13 @@
 			spi_signals_o_MISO                : in  std_logic                     := 'X';             -- MISO
 			spi_signals_o_MOSI                : out std_logic;                                        -- MOSI
 			spi_signals_o_SCLK                : out std_logic;                                        -- SCLK
-			spi_signals_o_SS_n                : out std_logic_vector(2 downto 0)                      -- SS_n
+			spi_signals_o_SS_n                : out std_logic_vector(2 downto 0);                     -- SS_n
+			rgmii_tx_clk_clk                  : in  std_logic                     := 'X'              -- clk
 		);
 	end component WiPhase_top_level;
 
 	u0 : component WiPhase_top_level
 		port map (
-			enet_clk_125m_i_clk               => CONNECTED_TO_enet_clk_125m_i_clk,               --           enet_clk_125m_i.clk
 			mac_mdio_connection_mdc           => CONNECTED_TO_mac_mdio_connection_mdc,           --       mac_mdio_connection.mdc
 			mac_mdio_connection_mdio_in       => CONNECTED_TO_mac_mdio_connection_mdio_in,       --                          .mdio_in
 			mac_mdio_connection_mdio_out      => CONNECTED_TO_mac_mdio_connection_mdio_out,      --                          .mdio_out
@@ -72,6 +71,7 @@
 			spi_signals_o_MISO                => CONNECTED_TO_spi_signals_o_MISO,                --             spi_signals_o.MISO
 			spi_signals_o_MOSI                => CONNECTED_TO_spi_signals_o_MOSI,                --                          .MOSI
 			spi_signals_o_SCLK                => CONNECTED_TO_spi_signals_o_SCLK,                --                          .SCLK
-			spi_signals_o_SS_n                => CONNECTED_TO_spi_signals_o_SS_n                 --                          .SS_n
+			spi_signals_o_SS_n                => CONNECTED_TO_spi_signals_o_SS_n,                --                          .SS_n
+			rgmii_tx_clk_clk                  => CONNECTED_TO_rgmii_tx_clk_clk                   --              rgmii_tx_clk.clk
 		);
 

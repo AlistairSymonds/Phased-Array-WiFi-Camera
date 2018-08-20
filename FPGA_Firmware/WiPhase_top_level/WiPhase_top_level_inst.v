@@ -1,5 +1,4 @@
 	WiPhase_top_level u0 (
-		.enet_clk_125m_i_clk               (<connected-to-enet_clk_125m_i_clk>),               //           enet_clk_125m_i.clk
 		.mac_mdio_connection_mdc           (<connected-to-mac_mdio_connection_mdc>),           //       mac_mdio_connection.mdc
 		.mac_mdio_connection_mdio_in       (<connected-to-mac_mdio_connection_mdio_in>),       //                          .mdio_in
 		.mac_mdio_connection_mdio_out      (<connected-to-mac_mdio_connection_mdio_out>),      //                          .mdio_out
@@ -32,6 +31,7 @@
 		.spi_signals_o_MISO                (<connected-to-spi_signals_o_MISO>),                //             spi_signals_o.MISO
 		.spi_signals_o_MOSI                (<connected-to-spi_signals_o_MOSI>),                //                          .MOSI
 		.spi_signals_o_SCLK                (<connected-to-spi_signals_o_SCLK>),                //                          .SCLK
-		.spi_signals_o_SS_n                (<connected-to-spi_signals_o_SS_n>)                 //                          .SS_n
+		.spi_signals_o_SS_n                (<connected-to-spi_signals_o_SS_n>),                //                          .SS_n
+		.rgmii_tx_clk_clk                  (<connected-to-rgmii_tx_clk_clk>)                   //              rgmii_tx_clk.clk
 	);
 

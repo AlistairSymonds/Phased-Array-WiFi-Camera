@@ -1,12 +1,12 @@
-# system info WiPhase_top_level on 2018.08.20.13:35:22
+# system info WiPhase_top_level on 2018.08.20.21:55:08
 system_info:
 name,value
 DEVICE,10CL025YU256C8G
 DEVICE_FAMILY,Cyclone 10 LP
-GENERATION_ID,1534736107
+GENERATION_ID,1534766091
 #
 #
-# Files generated for WiPhase_top_level on 2018.08.20.13:35:22
+# Files generated for WiPhase_top_level on 2018.08.20.21:55:08
 files:
 filepath,kind,attributes,module,is_top
 simulation/WiPhase_top_level.vhd,VHDL,,WiPhase_top_level,true

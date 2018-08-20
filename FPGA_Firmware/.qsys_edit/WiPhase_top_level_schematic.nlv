@@ -1,41 +1,41 @@
 # # File gsaved with Nlview version 6.3.8  2013-12-19 bk=1.2992 VDI=34 GEI=35
 # 
-preplace inst WiPhase_top_level.ram_onchip -pg 1 -lvl 8 -y 950
-preplace inst WiPhase_top_level.cpu_v2 -pg 1 -lvl 5 -y 470
-preplace inst WiPhase_top_level.sysid -pg 1 -lvl 8 -y 760
-preplace inst WiPhase_top_level.Debug_ST_Source_0 -pg 1 -lvl 7 -y 840
-preplace inst WiPhase_top_level.spi -pg 1 -lvl 8 -y 320
-preplace inst WiPhase_top_level.jtag_uart -pg 1 -lvl 8 -y 520
+preplace inst WiPhase_top_level.ram_onchip -pg 1 -lvl 9 -y 900
+preplace inst WiPhase_top_level.cpu_v2 -pg 1 -lvl 5 -y 440
+preplace inst WiPhase_top_level.sysid -pg 1 -lvl 9 -y 710
+preplace inst WiPhase_top_level.spi -pg 1 -lvl 9 -y 270
+preplace inst WiPhase_top_level.jtag_uart -pg 1 -lvl 9 -y 550
 preplace inst WiPhase_top_level -pg 1 -lvl 1 -y 40 -regy -20
-preplace inst WiPhase_top_level.sample_pll -pg 1 -lvl 10 -y 320
+preplace inst WiPhase_top_level.test_pattern_st_gen -pg 1 -lvl 6 -y 350
+preplace inst WiPhase_top_level.sample_pll -pg 1 -lvl 11 -y 270
 preplace inst WiPhase_top_level.cpu_v2.cpu -pg 1
-preplace inst WiPhase_top_level.enet_clk_125M -pg 1 -lvl 9 -y 660
-preplace inst WiPhase_top_level.Debug_ST_Sink_0 -pg 1 -lvl 7 -y 720
-preplace inst WiPhase_top_level.C10_Clk50M -pg 1 -lvl 1 -y 800
-preplace inst WiPhase_top_level.timer -pg 1 -lvl 6 -y 80
+preplace inst WiPhase_top_level.enet_clk_125M -pg 1 -lvl 10 -y 610
+preplace inst WiPhase_top_level.Debug_ST_Sink_0 -pg 1 -lvl 8 -y 670
+preplace inst WiPhase_top_level.C10_Clk50M -pg 1 -lvl 1 -y 750
+preplace inst WiPhase_top_level.timer -pg 1 -lvl 7 -y 30
 preplace inst WiPhase_top_level.eth.i_tse_mac -pg 1
-preplace inst WiPhase_top_level.eth -pg 1 -lvl 6 -y 270
+preplace inst WiPhase_top_level.eth -pg 1 -lvl 7 -y 160
 preplace inst WiPhase_top_level.cpu_v2.clock_bridge -pg 1
 preplace inst WiPhase_top_level.cpu_v2.reset_bridge -pg 1
-preplace netloc FAN_OUT<net_container>WiPhase_top_level</net_container>(SLAVE)spi.irq,(MASTER)cpu_v2.irq,(SLAVE)jtag_uart.irq,(SLAVE)timer.irq) 1 5 3 2360 230 NJ 330 3340
-preplace netloc POINT_TO_POINT<net_container>WiPhase_top_level</net_container>(SLAVE)eth.pcs_mac_tx_clock_connection,(MASTER)enet_clk_125M.clk) 1 5 5 2580 650 NJ 650 NJ 650 NJ 650 3870
-preplace netloc EXPORT<net_container>WiPhase_top_level</net_container>(SLAVE)WiPhase_top_level.sample_pll_areset_conduit,(SLAVE)sample_pll.areset_conduit) 1 0 10 NJ 410 NJ 410 NJ 410 NJ 410 NJ 410 NJ 570 NJ 470 NJ 470 NJ 470 NJ
-preplace netloc EXPORT<net_container>WiPhase_top_level</net_container>(SLAVE)eth.mac_status_connection,(SLAVE)WiPhase_top_level.mac_status) 1 0 6 NJ 350 NJ 350 NJ 350 NJ 350 NJ 350 NJ
-preplace netloc EXPORT<net_container>WiPhase_top_level</net_container>(SLAVE)sample_pll.locked_conduit,(SLAVE)WiPhase_top_level.sample_pll_locked_conduit) 1 0 10 NJ 110 NJ 110 NJ 110 NJ 110 NJ 110 NJ 30 NJ 230 NJ 230 NJ 230 NJ
-preplace netloc EXPORT<net_container>WiPhase_top_level</net_container>(SLAVE)WiPhase_top_level.enet_clk_125m_i,(SLAVE)enet_clk_125M.clk_in) 1 0 9 NJ 670 NJ 670 NJ 670 NJ 670 NJ 670 NJ 670 NJ 670 NJ 670 NJ
-preplace netloc EXPORT<net_container>WiPhase_top_level</net_container>(SLAVE)C10_Clk50M.clk_in,(SLAVE)WiPhase_top_level.mclk_i) 1 0 1 NJ
-preplace netloc EXPORT<net_container>WiPhase_top_level</net_container>(SLAVE)WiPhase_top_level.mac_misc_connection,(SLAVE)eth.mac_misc_connection) 1 0 6 NJ 310 NJ 310 NJ 310 NJ 310 NJ 310 NJ
-preplace netloc INTERCONNECT<net_container>WiPhase_top_level</net_container>(SLAVE)spi.spi_control_port,(SLAVE)sample_pll.pll_slave,(SLAVE)sysid.control_slave,(MASTER)cpu_v2.data_master,(SLAVE)jtag_uart.avalon_jtag_slave,(SLAVE)eth.control_port,(SLAVE)timer.s1,(SLAVE)cpu_v2.debug_mem_slave,(MASTER)cpu_v2.instruction_master,(SLAVE)ram_onchip.s1) 1 4 6 1680 610 2520 210 NJ 310 3320 450 NJ 450 3870
-preplace netloc EXPORT<net_container>WiPhase_top_level</net_container>(SLAVE)spi.external,(SLAVE)WiPhase_top_level.spi_signals_o) 1 0 8 NJ 390 NJ 390 NJ 390 NJ 390 NJ 390 NJ 550 NJ 350 NJ
-preplace netloc EXPORT<net_container>WiPhase_top_level</net_container>(MASTER)sample_pll.c0,(MASTER)WiPhase_top_level.pll_out) 1 10 1 N
-preplace netloc FAN_OUT<net_container>WiPhase_top_level</net_container>(SLAVE)jtag_uart.reset,(SLAVE)ram_onchip.reset1,(SLAVE)Debug_ST_Source_0.reset,(SLAVE)eth.reset_connection,(SLAVE)Debug_ST_Sink_0.reset,(SLAVE)enet_clk_125M.clk_in_reset,(SLAVE)spi.reset,(SLAVE)cpu_v2.reset,(SLAVE)timer.reset,(SLAVE)sysid.reset,(MASTER)C10_Clk50M.clk_reset,(SLAVE)sample_pll.inclk_interface_reset) 1 1 9 NJ 830 NJ 830 NJ 830 1660 650 2560 770 2930 810 3380 850 3610 730 3910
-preplace netloc EXPORT<net_container>WiPhase_top_level</net_container>(SLAVE)eth.pcs_mac_rx_clock_connection,(SLAVE)WiPhase_top_level.rgmii_rx_clk) 1 0 6 NJ 370 NJ 370 NJ 370 NJ 370 NJ 370 NJ
-preplace netloc FAN_OUT<net_container>WiPhase_top_level</net_container>(SLAVE)spi.clk,(SLAVE)sysid.clk,(SLAVE)Debug_ST_Sink_0.clk,(SLAVE)eth.receive_clock_connection,(SLAVE)eth.control_port_clock_connection,(SLAVE)ram_onchip.clk1,(SLAVE)sample_pll.inclk_interface,(SLAVE)timer.clk,(MASTER)C10_Clk50M.clk,(SLAVE)eth.transmit_clock_connection,(SLAVE)Debug_ST_Source_0.clk,(SLAVE)jtag_uart.clk,(SLAVE)cpu_v2.clk) 1 1 9 NJ 810 NJ 810 NJ 810 1640 630 2540 710 2970 710 3360 310 NJ 310 3870
-preplace netloc EXPORT<net_container>WiPhase_top_level</net_container>(SLAVE)WiPhase_top_level.rgmii_connection,(SLAVE)eth.mac_rgmii_connection) 1 0 6 NJ 330 NJ 330 NJ 330 NJ 330 NJ 330 NJ
+preplace netloc EXPORT<net_container>WiPhase_top_level</net_container>(SLAVE)eth.mac_misc_connection,(SLAVE)WiPhase_top_level.mac_misc_connection) 1 0 7 NJ 220 NJ 220 NJ 220 NJ 220 NJ 220 NJ 220 NJ
+preplace netloc FAN_OUT<net_container>WiPhase_top_level</net_container>(SLAVE)eth.reset_connection,(SLAVE)timer.reset,(SLAVE)spi.reset,(SLAVE)jtag_uart.reset,(SLAVE)Debug_ST_Sink_0.reset,(SLAVE)cpu_v2.reset,(SLAVE)test_pattern_st_gen.reset,(SLAVE)ram_onchip.reset1,(MASTER)C10_Clk50M.clk_reset,(SLAVE)sample_pll.inclk_interface_reset,(SLAVE)sysid.reset,(SLAVE)enet_clk_125M.clk_in_reset) 1 1 10 NJ 780 NJ 780 NJ 780 1660 600 2540 480 3130 700 3500 640 3800 700 4010 600 4270
+preplace netloc POINT_TO_POINT<net_container>WiPhase_top_level</net_container>(SLAVE)eth.transmit,(MASTER)test_pattern_st_gen.out) 1 6 1 3030
+preplace netloc EXPORT<net_container>WiPhase_top_level</net_container>(SLAVE)enet_clk_125M.clk_in,(SLAVE)WiPhase_top_level.enet_clk_125m_i) 1 0 10 NJ 660 NJ 660 NJ 660 NJ 660 NJ 660 NJ 660 NJ 660 NJ 660 NJ 660 NJ
+preplace netloc POINT_TO_POINT<net_container>WiPhase_top_level</net_container>(MASTER)enet_clk_125M.clk,(SLAVE)eth.pcs_mac_tx_clock_connection) 1 6 5 3170 760 NJ 760 NJ 680 NJ 680 4250
+preplace netloc EXPORT<net_container>WiPhase_top_level</net_container>(SLAVE)WiPhase_top_level.sample_pll_locked_conduit,(SLAVE)sample_pll.locked_conduit) 1 0 11 NJ 340 NJ 340 NJ 340 NJ 340 NJ 340 NJ 320 NJ 460 NJ 260 NJ 260 NJ 360 NJ
+preplace netloc EXPORT<net_container>WiPhase_top_level</net_container>(SLAVE)WiPhase_top_level.sample_pll_areset_conduit,(SLAVE)sample_pll.areset_conduit) 1 0 11 NJ 380 NJ 380 NJ 380 NJ 380 NJ 380 NJ 520 NJ 540 NJ 540 NJ 540 NJ 540 4230
+preplace netloc EXPORT<net_container>WiPhase_top_level</net_container>(SLAVE)eth.mac_status_connection,(SLAVE)WiPhase_top_level.mac_status) 1 0 7 NJ 280 NJ 280 NJ 280 NJ 280 NJ 280 NJ 260 NJ
+preplace netloc FAN_OUT<net_container>WiPhase_top_level</net_container>(SLAVE)jtag_uart.irq,(SLAVE)timer.irq,(MASTER)cpu_v2.irq,(SLAVE)spi.irq) 1 5 4 NJ 500 2990 500 NJ 500 3840
+preplace netloc EXPORT<net_container>WiPhase_top_level</net_container>(SLAVE)WiPhase_top_level.pll_inclk,(SLAVE)sample_pll.inclk0) 1 0 11 NJ 320 NJ 320 NJ 320 NJ 320 NJ 320 NJ 300 NJ 440 NJ 240 NJ 240 NJ 340 NJ
+preplace netloc POINT_TO_POINT<net_container>WiPhase_top_level</net_container>(MASTER)eth.receive,(SLAVE)Debug_ST_Sink_0.ST_sink_connection) 1 7 1 3540
+preplace netloc EXPORT<net_container>WiPhase_top_level</net_container>(SLAVE)WiPhase_top_level.spi_signals_o,(SLAVE)spi.external) 1 0 9 NJ 360 NJ 360 NJ 360 NJ 360 NJ 360 NJ 340 NJ 480 NJ 300 NJ
+preplace netloc EXPORT<net_container>WiPhase_top_level</net_container>(MASTER)sample_pll.c0,(MASTER)WiPhase_top_level.pll_out) 1 11 1 N
+preplace netloc EXPORT<net_container>WiPhase_top_level</net_container>(SLAVE)eth.mac_mdio_connection,(SLAVE)WiPhase_top_level.mac_mdio_connection) 1 0 7 NJ 200 NJ 200 NJ 200 NJ 200 NJ 200 NJ 200 NJ
+preplace netloc EXPORT<net_container>WiPhase_top_level</net_container>(SLAVE)WiPhase_top_level.mclk_i,(SLAVE)C10_Clk50M.clk_in) 1 0 1 NJ
+preplace netloc FAN_OUT<net_container>WiPhase_top_level</net_container>(SLAVE)Debug_ST_Sink_0.clk,(MASTER)C10_Clk50M.clk,(SLAVE)ram_onchip.clk1,(SLAVE)sysid.clk,(SLAVE)sample_pll.inclk_interface,(SLAVE)timer.clk,(SLAVE)eth.transmit_clock_connection,(SLAVE)test_pattern_st_gen.clk,(SLAVE)eth.receive_clock_connection,(SLAVE)spi.clk,(SLAVE)jtag_uart.clk,(SLAVE)eth.control_port_clock_connection,(SLAVE)cpu_v2.clk) 1 1 10 NJ 760 NJ 760 NJ 760 1640 400 2460 180 3110 680 3520 620 3760 220 NJ 220 4270
+preplace netloc EXPORT<net_container>WiPhase_top_level</net_container>(SLAVE)WiPhase_top_level.rgmii_rx_clk,(SLAVE)eth.pcs_mac_rx_clock_connection) 1 0 7 NJ 300 NJ 300 NJ 300 NJ 300 NJ 300 NJ 280 NJ
+preplace netloc EXPORT<net_container>WiPhase_top_level</net_container>(SLAVE)WiPhase_top_level.rgmii_connection,(SLAVE)eth.mac_rgmii_connection) 1 0 7 NJ 260 NJ 260 NJ 260 NJ 260 NJ 260 NJ 240 NJ
 preplace netloc EXPORT<net_container>WiPhase_top_level</net_container>(SLAVE)C10_Clk50M.clk_in_reset,(SLAVE)WiPhase_top_level.mclk_reset) 1 0 1 NJ
-preplace netloc EXPORT<net_container>WiPhase_top_level</net_container>(SLAVE)WiPhase_top_level.mac_mdio_connection,(SLAVE)eth.mac_mdio_connection) 1 0 6 NJ 290 NJ 290 NJ 290 NJ 290 NJ 290 NJ
-preplace netloc EXPORT<net_container>WiPhase_top_level</net_container>(SLAVE)sample_pll.inclk0,(SLAVE)WiPhase_top_level.pll_inclk) 1 0 10 NJ 430 NJ 430 NJ 430 NJ 430 NJ 430 NJ 590 NJ 490 NJ 490 NJ 490 NJ
-preplace netloc POINT_TO_POINT<net_container>WiPhase_top_level</net_container>(SLAVE)Debug_ST_Sink_0.ST_sink_connection,(MASTER)eth.receive) 1 6 1 2930
-preplace netloc POINT_TO_POINT<net_container>WiPhase_top_level</net_container>(SLAVE)eth.transmit,(MASTER)Debug_ST_Source_0.avalon_streaming_source) 1 5 3 2600 610 NJ 610 3300
-levelinfo -pg 1 0 170 4230
-levelinfo -hier WiPhase_top_level 180 210 520 1220 1620 2100 2800 3100 3470 3680 3960 4150
+preplace netloc INTERCONNECT<net_container>WiPhase_top_level</net_container>(SLAVE)ram_onchip.s1,(SLAVE)cpu_v2.debug_mem_slave,(SLAVE)spi.spi_control_port,(MASTER)cpu_v2.data_master,(MASTER)cpu_v2.instruction_master,(SLAVE)test_pattern_st_gen.csr,(SLAVE)jtag_uart.avalon_jtag_slave,(SLAVE)sysid.control_slave,(SLAVE)eth.control_port,(SLAVE)timer.s1,(SLAVE)test_pattern_st_gen.command,(SLAVE)sample_pll.pll_slave) 1 4 7 1680 580 2500 460 3150 520 NJ 520 3820 400 NJ 400 4250
+levelinfo -pg 1 0 170 4570
+levelinfo -hier WiPhase_top_level 180 210 520 1220 1620 2100 2800 3370 3610 3870 4060 4300 4490

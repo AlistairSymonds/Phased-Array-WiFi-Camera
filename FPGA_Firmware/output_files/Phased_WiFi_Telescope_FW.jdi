@@ -1,6 +1,6 @@
 <sld_project_info>
   <project>
-    <hash md5_digest_80b="ccd610aefd30549044b3"/>
+    <hash md5_digest_80b="176879806c9b3cf0966c"/>
   </project>
   <file_info>
     <file device="10CL025YU256C8G" path="Phased_WiFi_Telescope_FW_time_limited.sof" usercode="0xFFFFFFFF"/>
@@ -100,7 +100,7 @@
     </sld_info>
     <sld_info hpath="WiPhase_top_level:u1" name="u1">
       <assignment_values>
-        <assignment_value text="QSYS_NAME WiPhase_top_level HAS_SOPCINFO 1 GENERATION_ID 1534736125"/>
+        <assignment_value text="QSYS_NAME WiPhase_top_level HAS_SOPCINFO 1 GENERATION_ID 1534766112"/>
       </assignment_values>
       <parameters/>
     </sld_info>

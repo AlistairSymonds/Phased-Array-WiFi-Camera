@@ -1,6 +1,5 @@
 	component WiPhase_top_level is
 		port (
-			enet_clk_125m_i_clk               : in  std_logic                     := 'X';             -- clk
 			mac_mdio_connection_mdc           : out std_logic;                                        -- mdc
 			mac_mdio_connection_mdio_in       : in  std_logic                     := 'X';             -- mdio_in
 			mac_mdio_connection_mdio_out      : out std_logic;                                        -- mdio_out
@@ -28,6 +27,7 @@
 			rgmii_connection_rx_control       : in  std_logic                     := 'X';             -- rx_control
 			rgmii_connection_tx_control       : out std_logic;                                        -- tx_control
 			rgmii_rx_clk_clk                  : in  std_logic                     := 'X';             -- clk
+			rgmii_tx_clk_clk                  : in  std_logic                     := 'X';             -- clk
 			sample_pll_areset_conduit_export  : in  std_logic                     := 'X';             -- export
 			sample_pll_locked_conduit_export  : out std_logic;                                        -- export
 			spi_signals_o_MISO                : in  std_logic                     := 'X';             -- MISO

@@ -8,6 +8,10 @@
 					"strict" : false
 				},
 				{
+					"name" : "ENET_RG_TXCLK",
+					"strict" : false
+				},
+				{
 					"name" : "ENET_RG_TXD0",
 					"strict" : false
 				},
@@ -52,11 +56,11 @@
 					"strict" : false
 				},
 				{
-					"name" : "C10_CLK50M",
+					"name" : "ENET_CLK_125M",
 					"strict" : false
 				},
 				{
-					"name" : "ENET_CLK_125M",
+					"name" : "C10_CLK50M",
 					"strict" : false
 				},
 				{

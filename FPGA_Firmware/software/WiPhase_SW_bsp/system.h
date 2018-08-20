@@ -4,7 +4,7 @@
  * Machine generated for CPU 'cpu_v2' in SOPC Builder design 'WiPhase_top_level'
  * SOPC Builder design path: ../../WiPhase_top_level.sopcinfo
  *
- * Generated: Mon Aug 20 16:06:50 EST 2018
+ * Generated: Mon Aug 20 22:40:47 EST 2018
  */
 
 /*
@@ -324,7 +324,7 @@
 #define SYSID_IRQ_INTERRUPT_CONTROLLER_ID -1
 #define SYSID_NAME "/dev/sysid"
 #define SYSID_SPAN 8
-#define SYSID_TIMESTAMP 1534736125
+#define SYSID_TIMESTAMP 1534766112
 #define SYSID_TYPE "altera_avalon_sysid_qsys"
 
 

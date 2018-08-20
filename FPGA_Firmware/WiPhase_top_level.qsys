@@ -21,7 +21,7 @@
    {
       datum _sortIndex
       {
-         value = "4";
+         value = "3";
          type = "int";
       }
    }
@@ -109,7 +109,7 @@
    {
       datum _sortIndex
       {
-         value = "9";
+         value = "8";
          type = "int";
       }
    }
@@ -119,19 +119,6 @@
       {
          value = "67584";
          type = "String";
-      }
-   }
-   element enet_clk_125M
-   {
-      datum _sortIndex
-      {
-         value = "3";
-         type = "int";
-      }
-      datum sopceditor_expanded
-      {
-         value = "1";
-         type = "boolean";
       }
    }
    element eth
@@ -159,7 +146,7 @@
    {
       datum _sortIndex
       {
-         value = "7";
+         value = "6";
          type = "int";
       }
    }
@@ -196,7 +183,7 @@
    {
       datum _sortIndex
       {
-         value = "6";
+         value = "5";
          type = "int";
       }
    }
@@ -212,7 +199,7 @@
    {
       datum _sortIndex
       {
-         value = "5";
+         value = "4";
          type = "int";
       }
    }
@@ -228,7 +215,7 @@
    {
       datum _sortIndex
       {
-         value = "8";
+         value = "7";
          type = "int";
       }
    }
@@ -244,7 +231,7 @@
    {
       datum _sortIndex
       {
-         value = "11";
+         value = "10";
          type = "int";
       }
    }
@@ -268,7 +255,7 @@
    {
       datum _sortIndex
       {
-         value = "10";
+         value = "9";
          type = "int";
       }
    }
@@ -310,11 +297,6 @@
  <parameter name="useTestBenchNamingPattern" value="false" />
  <instanceScript></instanceScript>
  <interface
-   name="enet_clk_125m_i"
-   internal="enet_clk_125M.clk_in"
-   type="clock"
-   dir="end" />
- <interface
    name="mac_mdio_connection"
    internal="eth.mac_mdio_connection"
    type="conduit"
@@ -348,6 +330,11 @@
    type="clock"
    dir="end" />
  <interface
+   name="rgmii_tx_clk"
+   internal="eth.pcs_mac_tx_clock_connection"
+   type="clock"
+   dir="end" />
+ <interface
    name="sample_pll_areset_conduit"
    internal="sample_pll.areset_conduit"
    type="conduit"
@@ -366,8 +353,8 @@
  </module>
  <module name="Debug_ST_Sink_0" kind="Debug_ST_Sink" version="1.0" enabled="1" />
  <module name="cpu_v2" kind="altera_nios2_gen2" version="17.1" enabled="1">
-  <parameter name="AUTO_CLK_CLOCK_DOMAIN" value="2" />
-  <parameter name="AUTO_CLK_RESET_DOMAIN" value="2" />
+  <parameter name="AUTO_CLK_CLOCK_DOMAIN" value="1" />
+  <parameter name="AUTO_CLK_RESET_DOMAIN" value="1" />
   <parameter name="AUTO_DEVICE" value="10CL025YU256C8G" />
   <parameter name="AUTO_DEVICE_SPEEDGRADE" value="8" />
   <parameter name="bht_ramBlockType" value="Automatic" />
@@ -542,12 +529,6 @@
   <parameter name="tmr_enabled" value="false" />
   <parameter name="tracefilename" value="" />
   <parameter name="userDefinedSettings" value="" />
- </module>
- <module name="enet_clk_125M" kind="clock_source" version="17.1" enabled="1">
-  <parameter name="clockFrequency" value="125000000" />
-  <parameter name="clockFrequencyKnown" value="true" />
-  <parameter name="inputClockFrequency" value="0" />
-  <parameter name="resetSynchronousEdges" value="NONE" />
  </module>
  <module name="eth" kind="altera_eth_tse" version="17.1" enabled="1">
   <parameter name="AUTO_DEVICE" value="10CL025YU256C8G" />
@@ -1023,11 +1004,6 @@
  <connection
    kind="clock"
    version="17.1"
-   start="enet_clk_125M.clk"
-   end="eth.pcs_mac_tx_clock_connection" />
- <connection
-   kind="clock"
-   version="17.1"
    start="C10_Clk50M.clk"
    end="eth.receive_clock_connection" />
  <connection
@@ -1048,11 +1024,6 @@
  <connection kind="interrupt" version="17.1" start="cpu_v2.irq" end="timer.irq">
   <parameter name="irqNumber" value="1" />
  </connection>
- <connection
-   kind="reset"
-   version="17.1"
-   start="C10_Clk50M.clk_reset"
-   end="enet_clk_125M.clk_in_reset" />
  <connection
    kind="reset"
    version="17.1"

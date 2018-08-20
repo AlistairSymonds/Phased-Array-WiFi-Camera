@@ -8,7 +8,6 @@ use IEEE.numeric_std.all;
 
 entity WiPhase_top_level is
 	port (
-		enet_clk_125m_i_clk               : in  std_logic                     := '0';             --           enet_clk_125m_i.clk
 		mac_mdio_connection_mdc           : out std_logic;                                        --       mac_mdio_connection.mdc
 		mac_mdio_connection_mdio_in       : in  std_logic                     := '0';             --                          .mdio_in
 		mac_mdio_connection_mdio_out      : out std_logic;                                        --                          .mdio_out
@@ -36,6 +35,7 @@ entity WiPhase_top_level is
 		rgmii_connection_rx_control       : in  std_logic                     := '0';             --                          .rx_control
 		rgmii_connection_tx_control       : out std_logic;                                        --                          .tx_control
 		rgmii_rx_clk_clk                  : in  std_logic                     := '0';             --              rgmii_rx_clk.clk
+		rgmii_tx_clk_clk                  : in  std_logic                     := '0';             --              rgmii_tx_clk.clk
 		sample_pll_areset_conduit_export  : in  std_logic                     := '0';             -- sample_pll_areset_conduit.export
 		sample_pll_locked_conduit_export  : out std_logic;                                        -- sample_pll_locked_conduit.export
 		spi_signals_o_MISO                : in  std_logic                     := '0';             --             spi_signals_o.MISO
@@ -632,7 +632,7 @@ begin
 			reg_data_in   => mm_interconnect_0_eth_control_port_writedata,   --                              .writedata
 			reg_wr        => mm_interconnect_0_eth_control_port_write,       --                              .write
 			reg_busy      => mm_interconnect_0_eth_control_port_waitrequest, --                              .waitrequest
-			tx_clk        => enet_clk_125m_i_clk,                            --   pcs_mac_tx_clock_connection.clk
+			tx_clk        => rgmii_tx_clk_clk,                               --   pcs_mac_tx_clock_connection.clk
 			rx_clk        => rgmii_rx_clk_clk,                               --   pcs_mac_rx_clock_connection.clk
 			set_10        => mac_status_set_10,                              --         mac_status_connection.set_10
 			set_1000      => mac_status_set_1000,                            --                              .set_1000

@@ -5873,3 +5873,128 @@ Command-line arguments:  -os win32 -ws win32 -arch x86_64 -product org.eclipse.e
 
 !ENTRY org.eclipse.core.resources 2 10035 2018-08-20 17:20:21.982
 !MESSAGE The workspace exited with unsaved changes in the previous session; refreshing workspace to recover changes.
+!SESSION 2018-08-20 18:48:49.750 -----------------------------------------------
+eclipse.buildId=4.5.2.M20160212-1500
+java.version=1.8.0_05
+java.vendor=Oracle Corporation
+BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=en_AU
+Framework arguments:  -product org.eclipse.epp.package.cpp.product -pluginCustomization C:/intelfpga_lite/17.1/nios2eds/bin/eclipse_nios2/plugin_customization.ini
+Command-line arguments:  -os win32 -ws win32 -arch x86_64 -product org.eclipse.epp.package.cpp.product -pluginCustomization C:/intelfpga_lite/17.1/nios2eds/bin/eclipse_nios2/plugin_customization.ini
+
+!ENTRY org.eclipse.core.resources 2 10035 2018-08-20 18:48:50.676
+!MESSAGE The workspace exited with unsaved changes in the previous session; refreshing workspace to recover changes.
+
+!ENTRY com.altera.sbtgui.launch 1 0 2018-08-20 18:55:55.060
+!MESSAGE Executing: [C:/intelfpga_lite/17.1/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=Cyclone 10 LP Evaluation Kit on localhost [USB-1]' --device=1 --instance=0 --sidp=0x11468 --id=0x12345678 --timestamp=1534736125 /cygdrive/c/Users/alist/OneDrive/Electrickery/Phased-Array-Radio-Telescope/Phased-Array-WiFi-Camera/FPGA_Firmware/software/WiPhase_SW/WiPhase_SW.elf]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2018-08-20 18:55:56.881
+!MESSAGE Executing: [C:/intelfpga_lite/17.1/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=Cyclone 10 LP Evaluation Kit on localhost [USB-1]' --device=1 --instance=0 --tcpport=auto --sidp=0x11468 --id=0x12345678 --timestamp=1534736125]
+
+!ENTRY org.eclipse.jface 2 0 2018-08-20 19:02:05.954
+!MESSAGE Keybinding conflicts occurred.  They may interfere with normal accelerator operation.
+!SUBENTRY 1 org.eclipse.jface 2 0 2018-08-20 19:02:05.954
+!MESSAGE A conflict occurred for CTRL+G:
+Binding(CTRL+G,
+	ParameterizedCommand(Command(org.eclipse.cdt.ui.search.finddecl,Declaration,
+		Searches for declarations of the selected element in the workspace,
+		Category(org.eclipse.cdt.ui.category.source,Source,Source commands,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@4d5e60,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.cdt.ui.cEditorScope,,,system)
+Binding(CTRL+G,
+	ParameterizedCommand(Command(org.eclipse.debug.ui.command.gotoaddress,Go to Address,
+		Go to Address,
+		Category(org.eclipse.debug.ui.category.run,Run/Debug,Run/Debug command category,true),
+		org.eclipse.debug.internal.ui.memory.provisional.AbstractAsyncTableRendering$25@511f3350,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.debug.ui.memory.abstractasynctablerendering,,,system)
+
+!ENTRY org.eclipse.cdt.debug.mi.core 4 42 2018-08-20 19:25:36.699
+!MESSAGE Internal Error
+!STACK 0
+org.eclipse.cdt.debug.mi.core.cdi.MI2CDIException: Inferior terminated[]
+	at org.eclipse.cdt.debug.mi.core.cdi.SharedLibraryManager.getMIShareds(SharedLibraryManager.java:123)
+	at org.eclipse.cdt.debug.mi.core.cdi.SharedLibraryManager.updateState(SharedLibraryManager.java:189)
+	at org.eclipse.cdt.debug.mi.core.cdi.SharedLibraryManager.update(SharedLibraryManager.java:137)
+	at org.eclipse.cdt.debug.mi.core.cdi.EventManager.processSuspendedEvent(EventManager.java:329)
+	at org.eclipse.cdt.debug.mi.core.cdi.EventManager.update(EventManager.java:101)
+	at java.util.Observable.notifyObservers(Unknown Source)
+	at org.eclipse.cdt.debug.mi.core.MISession.notifyObservers(MISession.java:797)
+	at org.eclipse.cdt.debug.mi.core.EventThread.run(EventThread.java:47)
+
+!ENTRY com.altera.sbtgui.launch 1 0 2018-08-20 19:26:01.372
+!MESSAGE Executing: [C:/intelfpga_lite/17.1/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=Cyclone 10 LP Evaluation Kit on localhost [USB-1]' --device=1 --instance=0 --stop --sidp=0x11468 --id=0x12345678 --timestamp=1534736125]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2018-08-20 19:26:03.055
+!MESSAGE Executing: [C:/intelfpga_lite/17.1/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=Cyclone 10 LP Evaluation Kit on localhost [USB-1]' --device=1 --instance=0 --go --sidp=0x11468 --id=0x12345678 --timestamp=1534736125 /cygdrive/c/Users/alist/OneDrive/Electrickery/Phased-Array-Radio-Telescope/Phased-Array-WiFi-Camera/FPGA_Firmware/software/WiPhase_SW/WiPhase_SW.elf]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2018-08-20 19:27:01.922
+!MESSAGE Terminated Launch with connection: 10Cyclone 10 LP Evaluation Kit on localhost [USB-1]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2018-08-20 19:27:02.224
+!MESSAGE Executing: [C:/intelfpga_lite/17.1/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=Cyclone 10 LP Evaluation Kit on localhost [USB-1]' --device=1 --instance=0 --stop --sidp=0x11468 --id=0x12345678 --timestamp=1534736125]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2018-08-20 19:27:03.919
+!MESSAGE Executing: [C:/intelfpga_lite/17.1/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=Cyclone 10 LP Evaluation Kit on localhost [USB-1]' --device=1 --instance=0 --go --sidp=0x11468 --id=0x12345678 --timestamp=1534736125 /cygdrive/c/Users/alist/OneDrive/Electrickery/Phased-Array-Radio-Telescope/Phased-Array-WiFi-Camera/FPGA_Firmware/software/WiPhase_SW/WiPhase_SW.elf]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2018-08-20 19:27:19.672
+!MESSAGE Terminated Launch with connection: 10Cyclone 10 LP Evaluation Kit on localhost [USB-1]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2018-08-20 19:27:19.957
+!MESSAGE Executing: [C:/intelfpga_lite/17.1/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=Cyclone 10 LP Evaluation Kit on localhost [USB-1]' --device=1 --instance=0 --sidp=0x11468 --id=0x12345678 --timestamp=1534736125 /cygdrive/c/Users/alist/OneDrive/Electrickery/Phased-Array-Radio-Telescope/Phased-Array-WiFi-Camera/FPGA_Firmware/software/WiPhase_SW/WiPhase_SW.elf]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2018-08-20 19:27:21.851
+!MESSAGE Executing: [C:/intelfpga_lite/17.1/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=Cyclone 10 LP Evaluation Kit on localhost [USB-1]' --device=1 --instance=0 --tcpport=auto --sidp=0x11468 --id=0x12345678 --timestamp=1534736125]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2018-08-20 21:22:11.323
+!MESSAGE Executing: [C:/intelfpga_lite/17.1/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=Cyclone 10 LP Evaluation Kit on localhost [USB-1]' --device=1 --instance=0 --stop --sidp=0x11468 --id=0x12345678 --timestamp=1534736125]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2018-08-20 21:22:12.980
+!MESSAGE Executing: [C:/intelfpga_lite/17.1/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=Cyclone 10 LP Evaluation Kit on localhost [USB-1]' --device=1 --instance=0 --go --sidp=0x11468 --id=0x12345678 --timestamp=1534736125 /cygdrive/c/Users/alist/OneDrive/Electrickery/Phased-Array-Radio-Telescope/Phased-Array-WiFi-Camera/FPGA_Firmware/software/WiPhase_SW/WiPhase_SW.elf]
+!SESSION 2018-08-20 21:30:12.692 -----------------------------------------------
+eclipse.buildId=4.5.2.M20160212-1500
+java.version=1.8.0_05
+java.vendor=Oracle Corporation
+BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=en_AU
+Framework arguments:  -product org.eclipse.epp.package.cpp.product -pluginCustomization C:/intelfpga_lite/17.1/nios2eds/bin/eclipse_nios2/plugin_customization.ini
+Command-line arguments:  -os win32 -ws win32 -arch x86_64 -product org.eclipse.epp.package.cpp.product -pluginCustomization C:/intelfpga_lite/17.1/nios2eds/bin/eclipse_nios2/plugin_customization.ini
+
+!ENTRY org.eclipse.core.resources 2 10035 2018-08-20 21:30:13.557
+!MESSAGE The workspace exited with unsaved changes in the previous session; refreshing workspace to recover changes.
+
+!ENTRY com.altera.sbtgui.launch 1 0 2018-08-20 21:33:30.816
+!MESSAGE Executing: [C:/intelfpga_lite/17.1/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=Cyclone 10 LP Evaluation Kit on localhost [USB-1]' --device=1 --instance=0 --stop --sidp=0x11468 --id=0x12345678 --timestamp=1534736125]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2018-08-20 21:33:32.435
+!MESSAGE Executing: [C:/intelfpga_lite/17.1/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=Cyclone 10 LP Evaluation Kit on localhost [USB-1]' --device=1 --instance=0 --go --sidp=0x11468 --id=0x12345678 --timestamp=1534736125 /cygdrive/c/Users/alist/OneDrive/Electrickery/Phased-Array-Radio-Telescope/Phased-Array-WiFi-Camera/FPGA_Firmware/software/WiPhase_SW/WiPhase_SW.elf]
+!SESSION 2018-08-20 22:20:48.783 -----------------------------------------------
+eclipse.buildId=4.5.2.M20160212-1500
+java.version=1.8.0_05
+java.vendor=Oracle Corporation
+BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=en_AU
+Framework arguments:  -product org.eclipse.epp.package.cpp.product -pluginCustomization C:/intelfpga_lite/17.1/nios2eds/bin/eclipse_nios2/plugin_customization.ini
+Command-line arguments:  -os win32 -ws win32 -arch x86_64 -product org.eclipse.epp.package.cpp.product -pluginCustomization C:/intelfpga_lite/17.1/nios2eds/bin/eclipse_nios2/plugin_customization.ini
+
+!ENTRY com.altera.sbtgui.launch 1 0 2018-08-20 22:41:09.325
+!MESSAGE Executing: [C:/intelfpga_lite/17.1/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=Cyclone 10 LP Evaluation Kit on localhost [USB-1]' --device=1 --instance=0 --stop --sidp=0x11468 --id=0x12345678 --timestamp=1534766112]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2018-08-20 22:41:11.033
+!MESSAGE Executing: [C:/intelfpga_lite/17.1/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=Cyclone 10 LP Evaluation Kit on localhost [USB-1]' --device=1 --instance=0 --go --sidp=0x11468 --id=0x12345678 --timestamp=1534766112 /cygdrive/c/Users/alist/OneDrive/Electrickery/Phased-Array-Radio-Telescope/Phased-Array-WiFi-Camera/FPGA_Firmware/software/WiPhase_SW/WiPhase_SW.elf]
+!SESSION 2018-08-20 22:52:52.599 -----------------------------------------------
+eclipse.buildId=4.5.2.M20160212-1500
+java.version=1.8.0_05
+java.vendor=Oracle Corporation
+BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=en_AU
+Framework arguments:  -product org.eclipse.epp.package.cpp.product -pluginCustomization C:/intelfpga_lite/17.1/nios2eds/bin/eclipse_nios2/plugin_customization.ini
+Command-line arguments:  -os win32 -ws win32 -arch x86_64 -product org.eclipse.epp.package.cpp.product -pluginCustomization C:/intelfpga_lite/17.1/nios2eds/bin/eclipse_nios2/plugin_customization.ini
+
+!ENTRY org.eclipse.core.resources 2 10035 2018-08-20 22:52:53.528
+!MESSAGE The workspace exited with unsaved changes in the previous session; refreshing workspace to recover changes.
+
+!ENTRY com.altera.sbtgui.launch 1 0 2018-08-20 22:53:31.538
+!MESSAGE Executing: [C:/intelfpga_lite/17.1/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=Cyclone 10 LP Evaluation Kit on localhost [USB-1]' --device=1 --instance=0 --sidp=0x11468 --id=0x12345678 --timestamp=1534766112 /cygdrive/c/Users/alist/OneDrive/Electrickery/Phased-Array-Radio-Telescope/Phased-Array-WiFi-Camera/FPGA_Firmware/software/WiPhase_SW/WiPhase_SW.elf]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2018-08-20 22:53:33.343
+!MESSAGE Executing: [C:/intelfpga_lite/17.1/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=Cyclone 10 LP Evaluation Kit on localhost [USB-1]' --device=1 --instance=0 --tcpport=auto --sidp=0x11468 --id=0x12345678 --timestamp=1534766112]

@@ -67,9 +67,8 @@ end entity;
 
 architecture arch of WiPhase_phys is
 
-		component WiPhase_top_level is
+component WiPhase_top_level is
 		port (
-			enet_clk_125m_i_clk               : in  std_logic                     := 'X';             -- clk
 			mac_mdio_connection_mdc           : out std_logic;                                        -- mdc
 			mac_mdio_connection_mdio_in       : in  std_logic                     := 'X';             -- mdio_in
 			mac_mdio_connection_mdio_out      : out std_logic;                                        -- mdio_out
@@ -102,22 +101,25 @@ architecture arch of WiPhase_phys is
 			spi_signals_o_MISO                : in  std_logic                     := 'X';             -- MISO
 			spi_signals_o_MOSI                : out std_logic;                                        -- MOSI
 			spi_signals_o_SCLK                : out std_logic;                                        -- SCLK
-			spi_signals_o_SS_n                : out std_logic_vector(2 downto 0)                      -- SS_n
+			spi_signals_o_SS_n                : out std_logic_vector(2 downto 0);                     -- SS_n
+			rgmii_tx_clk_clk                  : in  std_logic                     := 'X'              -- clk
 		);
 	end component WiPhase_top_level;
-
+	
 	signal sample_pll_sig : std_logic;
 	
 	
 	signal mdio_clk_sig, mdio_in_sig, mdio_out_sig, mdio_oen_sig : std_logic;
 	signal ENET_MDIO_OUT, ENET_MDIO_IN : std_logic;
 	
+	signal enet_rgmii_txclk_sig : std_logic;
 	signal enet_rgmii_rxclk_sig : std_logic;
 	signal enet_rgmii_tx_ctl_sig : std_logic;
 	signal enet_rgmii_rx_ctl_sig : std_logic;
 	signal enet_rgmii_txd_sig : std_logic_vector(3 downto 0);
 	signal enet_rgmii_rxd_sig : std_logic_vector(3 downto 0);
-
+	
+	
 	signal leds_sig : std_logic_vector(7 downto 0);
 	
 	signal spi_ss_sig : std_logic_vector(2 downto 0);
@@ -140,7 +142,6 @@ architecture arch of WiPhase_phys is
 			mclk_reset_reset_n => '1',
 			mclk_i_clk => C10_CLK50M,
 			
-			enet_clk_125M_i_clk => ENET_CLK_125M,
 			
 			mac_mdio_connection_mdc => mdio_clk_sig,
 			mac_mdio_connection_mdio_in => mdio_in_sig,
@@ -150,6 +151,7 @@ architecture arch of WiPhase_phys is
 			rgmii_connection_rgmii_out => enet_rgmii_txd_sig,
 			rgmii_connection_rgmii_in => enet_rgmii_rxd_sig,
 			rgmii_rx_clk_clk => enet_rgmii_rxclk_sig,
+			rgmii_tx_clk_clk => enet_rgmii_txclk_sig,
 			rgmii_connection_rx_control => enet_rgmii_rx_ctl_sig,
 			rgmii_connection_tx_control => enet_rgmii_tx_ctl_sig,
 			
@@ -162,6 +164,10 @@ architecture arch of WiPhase_phys is
 			spi_signals_o_SCLK => spi_sclk_pin,
 			spi_signals_o_SS_n =>  spi_ss_sig
 		);
+		
+	enet_rgmii_txclk_sig <= ENET_CLK_125M;
+	ENET_RG_TXCLK <= enet_rgmii_txclk_sig;
+
 		
 		
 	--connecting to the outside world

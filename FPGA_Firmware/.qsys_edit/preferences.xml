@@ -3,7 +3,7 @@
  <debug showDebugMenu="0" />
  <systemtable filter="All Interfaces">
   <columns>
-   <connections preferredWidth="223" />
+   <connections preferredWidth="191" />
    <irq preferredWidth="34" />
    <name preferredWidth="405" />
    <description preferredWidth="383" />
@@ -11,8 +11,8 @@
   </columns>
  </systemtable>
  <library
-   expandedCategories="Library/University Program,Library/DSP,Library,Project,Library/DSP/Video and Image Processing,Library/Basic Functions/Simulation; Debug and Verification,Library/University Program/Audio &amp; Video,Library/Basic Functions,Library/Basic Functions/Simulation; Debug and Verification/Verification,Library/University Program/Audio &amp; Video/Video" />
- <window width="3862" height="2122" x="-11" y="-11" />
+   expandedCategories="Library/Interface Protocols/Ethernet/10G to 1G Multi-rate Ethernet,Library/Interface Protocols,Library/Interface Protocols/Ethernet/Reference Design Components,Library/Interface Protocols/Ethernet,Project,Library,Library/Interface Protocols/Ethernet/1G Multi-rate Ethernet" />
+ <window width="3840" height="2100" x="0" y="0" />
  <hdlexample language="VHDL" />
  <generation synthesis="VHDL" greybox="0" simulation="VHDL" path="_PROJECT_NAME_" />
 </preferences>

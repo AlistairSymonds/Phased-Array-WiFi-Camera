@@ -12,7 +12,7 @@
 # or its authorized distributors. Please refer to the applicable 
 # agreement for further details.
 
-# ACDS 17.1 590 win32 2018.08.20.13:35:23
+# ACDS 17.1 590 win32 2018.08.20.21:55:09
 
 # ----------------------------------------
 # ncsim - auto-generated simulation script
@@ -106,7 +106,7 @@
 # within the Quartus project, and generate a unified
 # script which supports all the Altera IP within the design.
 # ----------------------------------------
-# ACDS 17.1 590 win32 2018.08.20.13:35:23
+# ACDS 17.1 590 win32 2018.08.20.21:55:09
 # ----------------------------------------
 # initialize variables
 TOP_LEVEL_NAME="WiPhase_top_level"
