@@ -49,7 +49,7 @@ module WiPhase_top_level_sysid (
 
   wire    [ 31: 0] readdata;
   //control_slave, which is an e_avalon_slave
-  assign readdata = address ? 1534339108 : 305419896;
+  assign readdata = address ? 1534736107 : 305419896;
 
 endmodule
 

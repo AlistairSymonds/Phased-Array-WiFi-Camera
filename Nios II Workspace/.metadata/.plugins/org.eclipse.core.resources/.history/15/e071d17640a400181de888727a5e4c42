@@ -1,0 +1,5 @@
+#include "eth_init.h"
+
+
+int init_eth(uint8_t* mac);
+

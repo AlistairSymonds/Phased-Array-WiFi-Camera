@@ -2,8 +2,8 @@
 <sch:Settings xmlns:sch="http://www.altera.com/embeddedsw/bsp/schema">
         <BspType>hal</BspType>
         <BspVersion>default</BspVersion>
-        <BspGeneratedTimeStamp>15/08/2018 11:26:33 PM</BspGeneratedTimeStamp>
-        <BspGeneratedUnixTimeStamp>1534339593051</BspGeneratedUnixTimeStamp>
+        <BspGeneratedTimeStamp>20/08/2018 1:16:01 PM</BspGeneratedTimeStamp>
+        <BspGeneratedUnixTimeStamp>1534734961966</BspGeneratedUnixTimeStamp>
         <BspGeneratedLocation>C:\Users\alist\OneDrive\Electrickery\Phased-Array-Radio-Telescope\Phased-Array-WiFi-Camera\FPGA_Firmware\software\mm_test_bsp</BspGeneratedLocation>
         <BspSettingsFile>settings.bsp</BspSettingsFile>
         <SopcDesignFile>..\..\WiPhase_top_level.sopcinfo</SopcDesignFile>

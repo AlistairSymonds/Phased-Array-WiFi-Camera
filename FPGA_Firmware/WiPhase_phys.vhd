@@ -107,7 +107,17 @@ architecture arch of WiPhase_phys is
 	end component WiPhase_top_level;
 
 	signal sample_pll_sig : std_logic;
+	
+	
+	signal mdio_clk_sig, mdio_in_sig, mdio_out_sig, mdio_oen_sig : std_logic;
+	signal ENET_MDIO_OUT, ENET_MDIO_IN : std_logic;
+	
+	signal enet_rgmii_rxclk_sig : std_logic;
+	signal enet_rgmii_tx_ctl_sig : std_logic;
+	signal enet_rgmii_rx_ctl_sig : std_logic;
 	signal enet_rgmii_txd_sig : std_logic_vector(3 downto 0);
+	signal enet_rgmii_rxd_sig : std_logic_vector(3 downto 0);
+
 	signal leds_sig : std_logic_vector(7 downto 0);
 	
 	signal spi_ss_sig : std_logic_vector(2 downto 0);
@@ -131,7 +141,19 @@ architecture arch of WiPhase_phys is
 			mclk_i_clk => C10_CLK50M,
 			
 			enet_clk_125M_i_clk => ENET_CLK_125M,
+			
+			mac_mdio_connection_mdc => mdio_clk_sig,
+			mac_mdio_connection_mdio_in => mdio_in_sig,
+			mac_mdio_connection_mdio_out => mdio_out_sig,
+			mac_mdio_connection_mdio_oen => mdio_oen_sig,
+			
 			rgmii_connection_rgmii_out => enet_rgmii_txd_sig,
+			rgmii_connection_rgmii_in => enet_rgmii_rxd_sig,
+			rgmii_rx_clk_clk => enet_rgmii_rxclk_sig,
+			rgmii_connection_rx_control => enet_rgmii_rx_ctl_sig,
+			rgmii_connection_tx_control => enet_rgmii_tx_ctl_sig,
+			
+			
 			pll_inclk_clk => C10_CLK50M,
 			pll_out_clk => sample_pll_sig,
 			
@@ -140,6 +162,9 @@ architecture arch of WiPhase_phys is
 			spi_signals_o_SCLK => spi_sclk_pin,
 			spi_signals_o_SS_n =>  spi_ss_sig
 		);
+		
+		
+	--connecting to the outside world
 	spi_adc_cs_pin <= spi_ss_sig(0);
 	spi_vga_cs_pin <= spi_ss_sig(1);
 	spi_dac_cs_pin <= spi_ss_sig(2);
@@ -148,6 +173,27 @@ architecture arch of WiPhase_phys is
 	ENET_RG_TXD1 <= enet_rgmii_txd_sig(1);
 	ENET_RG_TXD2 <= enet_rgmii_txd_sig(2);
 	ENET_RG_TXD3 <= enet_rgmii_txd_sig(3);
+	
+	enet_rgmii_rxclk_sig <= ENET_RG_RXCLK;
+	enet_rgmii_rxd_sig(0) <= ENET_RG_RXD0;
+	enet_rgmii_rxd_sig(1) <= ENET_RG_RXD1;
+	enet_rgmii_rxd_sig(2) <= ENET_RG_RXD2;
+	enet_rgmii_rxd_sig(3) <= ENET_RG_RXD3;
+	enet_rgmii_rx_ctl_sig <= ENET_RG_RXCTL;
+	
+	process(mdio_oen_sig, ENET_MDIO_OUT)
+	begin
+		if(mdio_oen_sig = '0') then
+			ENET_MDIO <= ENET_MDIO_OUT;
+		else
+			ENET_MDIO <= 'Z';
+		end if;	
+	end process;
+	
+	ENET_MDIO_OUT <= mdio_out_sig;
+	ENET_MDC <= mdio_clk_sig;
+	mdio_in_sig <= ENET_MDIO_IN;
+	ENET_MDIO_IN <= ENET_MDIO;
 	
 	USER_LED(3) <= leds_sig(0);
 	sample_pll_out <= sample_pll_sig;

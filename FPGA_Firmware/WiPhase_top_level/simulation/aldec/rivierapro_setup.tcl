@@ -12,7 +12,7 @@
 # or its authorized distributors. Please refer to the applicable 
 # agreement for further details.
 
-# ACDS 17.1 590 win32 2018.08.15.23:19:12
+# ACDS 17.1 590 win32 2018.08.20.13:35:23
 # ----------------------------------------
 # Auto-generated simulation script rivierapro_setup.tcl
 # ----------------------------------------
@@ -152,21 +152,6 @@ if { [ string match "Active" $Aldec ] } {
 # Copy ROM/RAM files to simulation directory
 alias file_copy {
   echo "\[exec\] file_copy"
-  file copy -force $QSYS_SIMDIR/submodules/WiPhase_top_level_cpu_v2_cpu_dc_tag_ram.dat ./
-  file copy -force $QSYS_SIMDIR/submodules/WiPhase_top_level_cpu_v2_cpu_dc_tag_ram.hex ./
-  file copy -force $QSYS_SIMDIR/submodules/WiPhase_top_level_cpu_v2_cpu_dc_tag_ram.mif ./
-  file copy -force $QSYS_SIMDIR/submodules/WiPhase_top_level_cpu_v2_cpu_ic_tag_ram.dat ./
-  file copy -force $QSYS_SIMDIR/submodules/WiPhase_top_level_cpu_v2_cpu_ic_tag_ram.hex ./
-  file copy -force $QSYS_SIMDIR/submodules/WiPhase_top_level_cpu_v2_cpu_ic_tag_ram.mif ./
-  file copy -force $QSYS_SIMDIR/submodules/WiPhase_top_level_cpu_v2_cpu_ociram_default_contents.dat ./
-  file copy -force $QSYS_SIMDIR/submodules/WiPhase_top_level_cpu_v2_cpu_ociram_default_contents.hex ./
-  file copy -force $QSYS_SIMDIR/submodules/WiPhase_top_level_cpu_v2_cpu_ociram_default_contents.mif ./
-  file copy -force $QSYS_SIMDIR/submodules/WiPhase_top_level_cpu_v2_cpu_rf_ram_a.dat ./
-  file copy -force $QSYS_SIMDIR/submodules/WiPhase_top_level_cpu_v2_cpu_rf_ram_a.hex ./
-  file copy -force $QSYS_SIMDIR/submodules/WiPhase_top_level_cpu_v2_cpu_rf_ram_a.mif ./
-  file copy -force $QSYS_SIMDIR/submodules/WiPhase_top_level_cpu_v2_cpu_rf_ram_b.dat ./
-  file copy -force $QSYS_SIMDIR/submodules/WiPhase_top_level_cpu_v2_cpu_rf_ram_b.hex ./
-  file copy -force $QSYS_SIMDIR/submodules/WiPhase_top_level_cpu_v2_cpu_rf_ram_b.mif ./
   file copy -force $QSYS_SIMDIR/submodules/WiPhase_top_level_ram_onchip.hex ./
 }
 
@@ -200,84 +185,22 @@ ensure_lib                  ./libraries/altera_lnsim
 vmap       altera_lnsim     ./libraries/altera_lnsim    
 ensure_lib                  ./libraries/cyclone10lp     
 vmap       cyclone10lp      ./libraries/cyclone10lp     
-ensure_lib                                            ./libraries/error_adapter_0                           
-vmap       error_adapter_0                            ./libraries/error_adapter_0                           
-ensure_lib                                            ./libraries/timing_adapter_1                          
-vmap       timing_adapter_1                           ./libraries/timing_adapter_1                          
-ensure_lib                                            ./libraries/timing_adapter_0                          
-vmap       timing_adapter_0                           ./libraries/timing_adapter_0                          
-ensure_lib                                            ./libraries/data_format_adapter_0                     
-vmap       data_format_adapter_0                      ./libraries/data_format_adapter_0                     
-ensure_lib                                            ./libraries/avalon_st_adapter                         
-vmap       avalon_st_adapter                          ./libraries/avalon_st_adapter                         
-ensure_lib                                            ./libraries/rsp_mux_001                               
-vmap       rsp_mux_001                                ./libraries/rsp_mux_001                               
-ensure_lib                                            ./libraries/rsp_mux                                   
-vmap       rsp_mux                                    ./libraries/rsp_mux                                   
-ensure_lib                                            ./libraries/rsp_demux_003                             
-vmap       rsp_demux_003                              ./libraries/rsp_demux_003                             
-ensure_lib                                            ./libraries/rsp_demux                                 
-vmap       rsp_demux                                  ./libraries/rsp_demux                                 
-ensure_lib                                            ./libraries/cmd_mux_003                               
-vmap       cmd_mux_003                                ./libraries/cmd_mux_003                               
-ensure_lib                                            ./libraries/cmd_mux                                   
-vmap       cmd_mux                                    ./libraries/cmd_mux                                   
-ensure_lib                                            ./libraries/cmd_demux_001                             
-vmap       cmd_demux_001                              ./libraries/cmd_demux_001                             
-ensure_lib                                            ./libraries/cmd_demux                                 
-vmap       cmd_demux                                  ./libraries/cmd_demux                                 
-ensure_lib                                            ./libraries/cpu_v2_data_master_limiter                
-vmap       cpu_v2_data_master_limiter                 ./libraries/cpu_v2_data_master_limiter                
-ensure_lib                                            ./libraries/router_005                                
-vmap       router_005                                 ./libraries/router_005                                
-ensure_lib                                            ./libraries/router_002                                
-vmap       router_002                                 ./libraries/router_002                                
-ensure_lib                                            ./libraries/router_001                                
-vmap       router_001                                 ./libraries/router_001                                
-ensure_lib                                            ./libraries/router                                    
-vmap       router                                     ./libraries/router                                    
-ensure_lib                                            ./libraries/jtag_uart_avalon_jtag_slave_agent_rsp_fifo
-vmap       jtag_uart_avalon_jtag_slave_agent_rsp_fifo ./libraries/jtag_uart_avalon_jtag_slave_agent_rsp_fifo
-ensure_lib                                            ./libraries/jtag_uart_avalon_jtag_slave_agent         
-vmap       jtag_uart_avalon_jtag_slave_agent          ./libraries/jtag_uart_avalon_jtag_slave_agent         
-ensure_lib                                            ./libraries/cpu_v2_data_master_agent                  
-vmap       cpu_v2_data_master_agent                   ./libraries/cpu_v2_data_master_agent                  
-ensure_lib                                            ./libraries/jtag_uart_avalon_jtag_slave_translator    
-vmap       jtag_uart_avalon_jtag_slave_translator     ./libraries/jtag_uart_avalon_jtag_slave_translator    
-ensure_lib                                            ./libraries/cpu_v2_data_master_translator             
-vmap       cpu_v2_data_master_translator              ./libraries/cpu_v2_data_master_translator             
-ensure_lib                                            ./libraries/i_tse_mac                                 
-vmap       i_tse_mac                                  ./libraries/i_tse_mac                                 
-ensure_lib                                            ./libraries/cpu                                       
-vmap       cpu                                        ./libraries/cpu                                       
-ensure_lib                                            ./libraries/rst_controller                            
-vmap       rst_controller                             ./libraries/rst_controller                            
-ensure_lib                                            ./libraries/avalon_st_adapter_001                     
-vmap       avalon_st_adapter_001                      ./libraries/avalon_st_adapter_001                     
-ensure_lib                                            ./libraries/irq_mapper                                
-vmap       irq_mapper                                 ./libraries/irq_mapper                                
-ensure_lib                                            ./libraries/mm_interconnect_0                         
-vmap       mm_interconnect_0                          ./libraries/mm_interconnect_0                         
-ensure_lib                                            ./libraries/timer                                     
-vmap       timer                                      ./libraries/timer                                     
-ensure_lib                                            ./libraries/sysid                                     
-vmap       sysid                                      ./libraries/sysid                                     
-ensure_lib                                            ./libraries/spi                                       
-vmap       spi                                        ./libraries/spi                                       
-ensure_lib                                            ./libraries/sample_pll                                
-vmap       sample_pll                                 ./libraries/sample_pll                                
-ensure_lib                                            ./libraries/ram_onchip                                
-vmap       ram_onchip                                 ./libraries/ram_onchip                                
-ensure_lib                                            ./libraries/jtag_uart                                 
-vmap       jtag_uart                                  ./libraries/jtag_uart                                 
-ensure_lib                                            ./libraries/eth                                       
-vmap       eth                                        ./libraries/eth                                       
-ensure_lib                                            ./libraries/cpu_v2                                    
-vmap       cpu_v2                                     ./libraries/cpu_v2                                    
-ensure_lib                                            ./libraries/Debug_ST_Source_0                         
-vmap       Debug_ST_Source_0                          ./libraries/Debug_ST_Source_0                         
-ensure_lib                                            ./libraries/Debug_ST_Sink_0                           
-vmap       Debug_ST_Sink_0                            ./libraries/Debug_ST_Sink_0                           
+ensure_lib                 ./libraries/sysid          
+vmap       sysid           ./libraries/sysid          
+ensure_lib                 ./libraries/spi            
+vmap       spi             ./libraries/spi            
+ensure_lib                 ./libraries/sample_pll     
+vmap       sample_pll      ./libraries/sample_pll     
+ensure_lib                 ./libraries/ram_onchip     
+vmap       ram_onchip      ./libraries/ram_onchip     
+ensure_lib                 ./libraries/jtag_uart      
+vmap       jtag_uart       ./libraries/jtag_uart      
+ensure_lib                 ./libraries/eth            
+vmap       eth             ./libraries/eth            
+ensure_lib                 ./libraries/cpu_v2         
+vmap       cpu_v2          ./libraries/cpu_v2         
+ensure_lib                 ./libraries/Debug_ST_Sink_0
+vmap       Debug_ST_Sink_0 ./libraries/Debug_ST_Sink_0
 
 # ----------------------------------------
 # Compile device library files
@@ -311,197 +234,29 @@ alias dev_com {
 # Compile the design files in correct order
 alias com {
   echo "\[exec\] com"
-  eval  vlog  $USER_DEFINED_VERILOG_COMPILE_OPTIONS $USER_DEFINED_COMPILE_OPTIONS      "$QSYS_SIMDIR/submodules/WiPhase_top_level_mm_interconnect_0_avalon_st_adapter_error_adapter_0.sv"   -work error_adapter_0                           
-  eval  vlog  $USER_DEFINED_VERILOG_COMPILE_OPTIONS $USER_DEFINED_COMPILE_OPTIONS      "$QSYS_SIMDIR/submodules/WiPhase_top_level_avalon_st_adapter_001_timing_adapter_1.sv"                -work timing_adapter_1                          
-  eval  vlog  $USER_DEFINED_VERILOG_COMPILE_OPTIONS $USER_DEFINED_COMPILE_OPTIONS      "$QSYS_SIMDIR/submodules/WiPhase_top_level_avalon_st_adapter_001_timing_adapter_0.sv"                -work timing_adapter_0                          
-  eval  vlog  $USER_DEFINED_VERILOG_COMPILE_OPTIONS $USER_DEFINED_COMPILE_OPTIONS      "$QSYS_SIMDIR/submodules/WiPhase_top_level_avalon_st_adapter_001_timing_adapter_0_fifo.sv"           -work timing_adapter_0                          
-  eval  vlog  $USER_DEFINED_VERILOG_COMPILE_OPTIONS $USER_DEFINED_COMPILE_OPTIONS      "$QSYS_SIMDIR/submodules/WiPhase_top_level_avalon_st_adapter_001_error_adapter_0.sv"                 -work error_adapter_0                           
-  eval  vlog  $USER_DEFINED_VERILOG_COMPILE_OPTIONS $USER_DEFINED_COMPILE_OPTIONS      "$QSYS_SIMDIR/submodules/WiPhase_top_level_avalon_st_adapter_001_data_format_adapter_0.sv"           -work data_format_adapter_0                     
-  eval  vlog  $USER_DEFINED_VERILOG_COMPILE_OPTIONS $USER_DEFINED_COMPILE_OPTIONS      "$QSYS_SIMDIR/submodules/WiPhase_top_level_avalon_st_adapter_001_data_format_adapter_0_state_ram.sv" -work data_format_adapter_0                     
-  eval  vlog  $USER_DEFINED_VERILOG_COMPILE_OPTIONS $USER_DEFINED_COMPILE_OPTIONS      "$QSYS_SIMDIR/submodules/WiPhase_top_level_avalon_st_adapter_001_data_format_adapter_0_data_ram.sv"  -work data_format_adapter_0                     
-  eval  vlog  $USER_DEFINED_VERILOG_COMPILE_OPTIONS $USER_DEFINED_COMPILE_OPTIONS      "$QSYS_SIMDIR/submodules/WiPhase_top_level_avalon_st_adapter_timing_adapter_0.sv"                    -work timing_adapter_0                          
-  eval  vlog  $USER_DEFINED_VERILOG_COMPILE_OPTIONS $USER_DEFINED_COMPILE_OPTIONS      "$QSYS_SIMDIR/submodules/WiPhase_top_level_avalon_st_adapter_error_adapter_0.sv"                     -work error_adapter_0                           
-  eval  vlog  $USER_DEFINED_VERILOG_COMPILE_OPTIONS $USER_DEFINED_COMPILE_OPTIONS      "$QSYS_SIMDIR/submodules/WiPhase_top_level_avalon_st_adapter_data_format_adapter_0.sv"               -work data_format_adapter_0                     
-  eval  vlog  $USER_DEFINED_VERILOG_COMPILE_OPTIONS $USER_DEFINED_COMPILE_OPTIONS      "$QSYS_SIMDIR/submodules/WiPhase_top_level_avalon_st_adapter_data_format_adapter_0_state_ram.sv"     -work data_format_adapter_0                     
-  eval  vlog  $USER_DEFINED_VERILOG_COMPILE_OPTIONS $USER_DEFINED_COMPILE_OPTIONS      "$QSYS_SIMDIR/submodules/WiPhase_top_level_avalon_st_adapter_data_format_adapter_0_data_ram.sv"      -work data_format_adapter_0                     
-  eval  vlog  $USER_DEFINED_VERILOG_COMPILE_OPTIONS $USER_DEFINED_COMPILE_OPTIONS      "$QSYS_SIMDIR/submodules/WiPhase_top_level_avalon_st_adapter_data_format_adapter_0_sop_ram.sv"       -work data_format_adapter_0                     
-  eval  vcom $USER_DEFINED_VHDL_COMPILE_OPTIONS $USER_DEFINED_COMPILE_OPTIONS          "$QSYS_SIMDIR/submodules/WiPhase_top_level_mm_interconnect_0_avalon_st_adapter.vhd"                  -work avalon_st_adapter                         
-  eval  vlog  $USER_DEFINED_VERILOG_COMPILE_OPTIONS $USER_DEFINED_COMPILE_OPTIONS      "$QSYS_SIMDIR/submodules/WiPhase_top_level_mm_interconnect_0_rsp_mux_001.sv"                         -work rsp_mux_001                               
-  eval  vlog  $USER_DEFINED_VERILOG_COMPILE_OPTIONS $USER_DEFINED_COMPILE_OPTIONS      "$QSYS_SIMDIR/submodules/altera_merlin_arbitrator.sv"                                                -work rsp_mux_001                               
-  eval  vlog  $USER_DEFINED_VERILOG_COMPILE_OPTIONS $USER_DEFINED_COMPILE_OPTIONS      "$QSYS_SIMDIR/submodules/WiPhase_top_level_mm_interconnect_0_rsp_mux.sv"                             -work rsp_mux                                   
-  eval  vlog  $USER_DEFINED_VERILOG_COMPILE_OPTIONS $USER_DEFINED_COMPILE_OPTIONS      "$QSYS_SIMDIR/submodules/altera_merlin_arbitrator.sv"                                                -work rsp_mux                                   
-  eval  vlog  $USER_DEFINED_VERILOG_COMPILE_OPTIONS $USER_DEFINED_COMPILE_OPTIONS      "$QSYS_SIMDIR/submodules/WiPhase_top_level_mm_interconnect_0_rsp_demux_003.sv"                       -work rsp_demux_003                             
-  eval  vlog  $USER_DEFINED_VERILOG_COMPILE_OPTIONS $USER_DEFINED_COMPILE_OPTIONS      "$QSYS_SIMDIR/submodules/WiPhase_top_level_mm_interconnect_0_rsp_demux.sv"                           -work rsp_demux                                 
-  eval  vlog  $USER_DEFINED_VERILOG_COMPILE_OPTIONS $USER_DEFINED_COMPILE_OPTIONS      "$QSYS_SIMDIR/submodules/WiPhase_top_level_mm_interconnect_0_cmd_mux_003.sv"                         -work cmd_mux_003                               
-  eval  vlog  $USER_DEFINED_VERILOG_COMPILE_OPTIONS $USER_DEFINED_COMPILE_OPTIONS      "$QSYS_SIMDIR/submodules/altera_merlin_arbitrator.sv"                                                -work cmd_mux_003                               
-  eval  vlog  $USER_DEFINED_VERILOG_COMPILE_OPTIONS $USER_DEFINED_COMPILE_OPTIONS      "$QSYS_SIMDIR/submodules/WiPhase_top_level_mm_interconnect_0_cmd_mux.sv"                             -work cmd_mux                                   
-  eval  vlog  $USER_DEFINED_VERILOG_COMPILE_OPTIONS $USER_DEFINED_COMPILE_OPTIONS      "$QSYS_SIMDIR/submodules/altera_merlin_arbitrator.sv"                                                -work cmd_mux                                   
-  eval  vlog  $USER_DEFINED_VERILOG_COMPILE_OPTIONS $USER_DEFINED_COMPILE_OPTIONS      "$QSYS_SIMDIR/submodules/WiPhase_top_level_mm_interconnect_0_cmd_demux_001.sv"                       -work cmd_demux_001                             
-  eval  vlog  $USER_DEFINED_VERILOG_COMPILE_OPTIONS $USER_DEFINED_COMPILE_OPTIONS      "$QSYS_SIMDIR/submodules/WiPhase_top_level_mm_interconnect_0_cmd_demux.sv"                           -work cmd_demux                                 
-  eval  vlog  $USER_DEFINED_VERILOG_COMPILE_OPTIONS $USER_DEFINED_COMPILE_OPTIONS      "$QSYS_SIMDIR/submodules/altera_merlin_traffic_limiter.sv"                                           -work cpu_v2_data_master_limiter                
-  eval  vlog  $USER_DEFINED_VERILOG_COMPILE_OPTIONS $USER_DEFINED_COMPILE_OPTIONS      "$QSYS_SIMDIR/submodules/altera_merlin_reorder_memory.sv"                                            -work cpu_v2_data_master_limiter                
-  eval  vlog  $USER_DEFINED_VERILOG_COMPILE_OPTIONS $USER_DEFINED_COMPILE_OPTIONS      "$QSYS_SIMDIR/submodules/altera_avalon_sc_fifo.v"                                                    -work cpu_v2_data_master_limiter                
-  eval  vlog  $USER_DEFINED_VERILOG_COMPILE_OPTIONS $USER_DEFINED_COMPILE_OPTIONS      "$QSYS_SIMDIR/submodules/altera_avalon_st_pipeline_base.v"                                           -work cpu_v2_data_master_limiter                
-  eval  vlog  $USER_DEFINED_VERILOG_COMPILE_OPTIONS $USER_DEFINED_COMPILE_OPTIONS      "$QSYS_SIMDIR/submodules/WiPhase_top_level_mm_interconnect_0_router_005.sv"                          -work router_005                                
-  eval  vlog  $USER_DEFINED_VERILOG_COMPILE_OPTIONS $USER_DEFINED_COMPILE_OPTIONS      "$QSYS_SIMDIR/submodules/WiPhase_top_level_mm_interconnect_0_router_002.sv"                          -work router_002                                
-  eval  vlog  $USER_DEFINED_VERILOG_COMPILE_OPTIONS $USER_DEFINED_COMPILE_OPTIONS      "$QSYS_SIMDIR/submodules/WiPhase_top_level_mm_interconnect_0_router_001.sv"                          -work router_001                                
-  eval  vlog  $USER_DEFINED_VERILOG_COMPILE_OPTIONS $USER_DEFINED_COMPILE_OPTIONS      "$QSYS_SIMDIR/submodules/WiPhase_top_level_mm_interconnect_0_router.sv"                              -work router                                    
-  eval  vlog -v2k5 $USER_DEFINED_VERILOG_COMPILE_OPTIONS $USER_DEFINED_COMPILE_OPTIONS "$QSYS_SIMDIR/submodules/altera_avalon_sc_fifo.v"                                                    -work jtag_uart_avalon_jtag_slave_agent_rsp_fifo
-  eval  vlog  $USER_DEFINED_VERILOG_COMPILE_OPTIONS $USER_DEFINED_COMPILE_OPTIONS      "$QSYS_SIMDIR/submodules/altera_merlin_slave_agent.sv"                                               -work jtag_uart_avalon_jtag_slave_agent         
-  eval  vlog  $USER_DEFINED_VERILOG_COMPILE_OPTIONS $USER_DEFINED_COMPILE_OPTIONS      "$QSYS_SIMDIR/submodules/altera_merlin_burst_uncompressor.sv"                                        -work jtag_uart_avalon_jtag_slave_agent         
-  eval  vlog  $USER_DEFINED_VERILOG_COMPILE_OPTIONS $USER_DEFINED_COMPILE_OPTIONS      "$QSYS_SIMDIR/submodules/altera_merlin_master_agent.sv"                                              -work cpu_v2_data_master_agent                  
-  eval  vlog  $USER_DEFINED_VERILOG_COMPILE_OPTIONS $USER_DEFINED_COMPILE_OPTIONS      "$QSYS_SIMDIR/submodules/altera_merlin_slave_translator.sv"                                          -work jtag_uart_avalon_jtag_slave_translator    
-  eval  vlog  $USER_DEFINED_VERILOG_COMPILE_OPTIONS $USER_DEFINED_COMPILE_OPTIONS      "$QSYS_SIMDIR/submodules/altera_merlin_master_translator.sv"                                         -work cpu_v2_data_master_translator             
-  eval  vlog -v2k5 $USER_DEFINED_VERILOG_COMPILE_OPTIONS $USER_DEFINED_COMPILE_OPTIONS "$QSYS_SIMDIR/submodules/aldec/altera_eth_tse_mac.v"                                                 -work i_tse_mac                                 
-  eval  vlog -v2k5 $USER_DEFINED_VERILOG_COMPILE_OPTIONS $USER_DEFINED_COMPILE_OPTIONS "$QSYS_SIMDIR/submodules/aldec/altera_tse_clk_cntl.v"                                                -work i_tse_mac                                 
-  eval  vlog -v2k5 $USER_DEFINED_VERILOG_COMPILE_OPTIONS $USER_DEFINED_COMPILE_OPTIONS "$QSYS_SIMDIR/submodules/aldec/altera_tse_crc328checker.v"                                           -work i_tse_mac                                 
-  eval  vlog -v2k5 $USER_DEFINED_VERILOG_COMPILE_OPTIONS $USER_DEFINED_COMPILE_OPTIONS "$QSYS_SIMDIR/submodules/aldec/altera_tse_crc328generator.v"                                         -work i_tse_mac                                 
-  eval  vlog -v2k5 $USER_DEFINED_VERILOG_COMPILE_OPTIONS $USER_DEFINED_COMPILE_OPTIONS "$QSYS_SIMDIR/submodules/aldec/altera_tse_crc32ctl8.v"                                               -work i_tse_mac                                 
-  eval  vlog -v2k5 $USER_DEFINED_VERILOG_COMPILE_OPTIONS $USER_DEFINED_COMPILE_OPTIONS "$QSYS_SIMDIR/submodules/aldec/altera_tse_crc32galois8.v"                                            -work i_tse_mac                                 
-  eval  vlog -v2k5 $USER_DEFINED_VERILOG_COMPILE_OPTIONS $USER_DEFINED_COMPILE_OPTIONS "$QSYS_SIMDIR/submodules/aldec/altera_tse_gmii_io.v"                                                 -work i_tse_mac                                 
-  eval  vlog -v2k5 $USER_DEFINED_VERILOG_COMPILE_OPTIONS $USER_DEFINED_COMPILE_OPTIONS "$QSYS_SIMDIR/submodules/aldec/altera_tse_lb_read_cntl.v"                                            -work i_tse_mac                                 
-  eval  vlog -v2k5 $USER_DEFINED_VERILOG_COMPILE_OPTIONS $USER_DEFINED_COMPILE_OPTIONS "$QSYS_SIMDIR/submodules/aldec/altera_tse_lb_wrt_cntl.v"                                             -work i_tse_mac                                 
-  eval  vlog -v2k5 $USER_DEFINED_VERILOG_COMPILE_OPTIONS $USER_DEFINED_COMPILE_OPTIONS "$QSYS_SIMDIR/submodules/aldec/altera_tse_hashing.v"                                                 -work i_tse_mac                                 
-  eval  vlog -v2k5 $USER_DEFINED_VERILOG_COMPILE_OPTIONS $USER_DEFINED_COMPILE_OPTIONS "$QSYS_SIMDIR/submodules/aldec/altera_tse_host_control.v"                                            -work i_tse_mac                                 
-  eval  vlog -v2k5 $USER_DEFINED_VERILOG_COMPILE_OPTIONS $USER_DEFINED_COMPILE_OPTIONS "$QSYS_SIMDIR/submodules/aldec/altera_tse_host_control_small.v"                                      -work i_tse_mac                                 
-  eval  vlog -v2k5 $USER_DEFINED_VERILOG_COMPILE_OPTIONS $USER_DEFINED_COMPILE_OPTIONS "$QSYS_SIMDIR/submodules/aldec/altera_tse_mac_control.v"                                             -work i_tse_mac                                 
-  eval  vlog -v2k5 $USER_DEFINED_VERILOG_COMPILE_OPTIONS $USER_DEFINED_COMPILE_OPTIONS "$QSYS_SIMDIR/submodules/aldec/altera_tse_register_map.v"                                            -work i_tse_mac                                 
-  eval  vlog -v2k5 $USER_DEFINED_VERILOG_COMPILE_OPTIONS $USER_DEFINED_COMPILE_OPTIONS "$QSYS_SIMDIR/submodules/aldec/altera_tse_register_map_small.v"                                      -work i_tse_mac                                 
-  eval  vlog -v2k5 $USER_DEFINED_VERILOG_COMPILE_OPTIONS $USER_DEFINED_COMPILE_OPTIONS "$QSYS_SIMDIR/submodules/aldec/altera_tse_rx_counter_cntl.v"                                         -work i_tse_mac                                 
-  eval  vlog -v2k5 $USER_DEFINED_VERILOG_COMPILE_OPTIONS $USER_DEFINED_COMPILE_OPTIONS "$QSYS_SIMDIR/submodules/aldec/altera_tse_shared_mac_control.v"                                      -work i_tse_mac                                 
-  eval  vlog -v2k5 $USER_DEFINED_VERILOG_COMPILE_OPTIONS $USER_DEFINED_COMPILE_OPTIONS "$QSYS_SIMDIR/submodules/aldec/altera_tse_shared_register_map.v"                                     -work i_tse_mac                                 
-  eval  vlog -v2k5 $USER_DEFINED_VERILOG_COMPILE_OPTIONS $USER_DEFINED_COMPILE_OPTIONS "$QSYS_SIMDIR/submodules/aldec/altera_tse_tx_counter_cntl.v"                                         -work i_tse_mac                                 
-  eval  vlog -v2k5 $USER_DEFINED_VERILOG_COMPILE_OPTIONS $USER_DEFINED_COMPILE_OPTIONS "$QSYS_SIMDIR/submodules/aldec/altera_tse_lfsr_10.v"                                                 -work i_tse_mac                                 
-  eval  vlog -v2k5 $USER_DEFINED_VERILOG_COMPILE_OPTIONS $USER_DEFINED_COMPILE_OPTIONS "$QSYS_SIMDIR/submodules/aldec/altera_tse_loopback_ff.v"                                             -work i_tse_mac                                 
-  eval  vlog -v2k5 $USER_DEFINED_VERILOG_COMPILE_OPTIONS $USER_DEFINED_COMPILE_OPTIONS "$QSYS_SIMDIR/submodules/aldec/altera_tse_altshifttaps.v"                                            -work i_tse_mac                                 
-  eval  vlog -v2k5 $USER_DEFINED_VERILOG_COMPILE_OPTIONS $USER_DEFINED_COMPILE_OPTIONS "$QSYS_SIMDIR/submodules/aldec/altera_tse_fifoless_mac_rx.v"                                         -work i_tse_mac                                 
-  eval  vlog -v2k5 $USER_DEFINED_VERILOG_COMPILE_OPTIONS $USER_DEFINED_COMPILE_OPTIONS "$QSYS_SIMDIR/submodules/aldec/altera_tse_mac_rx.v"                                                  -work i_tse_mac                                 
-  eval  vlog -v2k5 $USER_DEFINED_VERILOG_COMPILE_OPTIONS $USER_DEFINED_COMPILE_OPTIONS "$QSYS_SIMDIR/submodules/aldec/altera_tse_fifoless_mac_tx.v"                                         -work i_tse_mac                                 
-  eval  vlog -v2k5 $USER_DEFINED_VERILOG_COMPILE_OPTIONS $USER_DEFINED_COMPILE_OPTIONS "$QSYS_SIMDIR/submodules/aldec/altera_tse_mac_tx.v"                                                  -work i_tse_mac                                 
-  eval  vlog -v2k5 $USER_DEFINED_VERILOG_COMPILE_OPTIONS $USER_DEFINED_COMPILE_OPTIONS "$QSYS_SIMDIR/submodules/aldec/altera_tse_magic_detection.v"                                         -work i_tse_mac                                 
-  eval  vlog -v2k5 $USER_DEFINED_VERILOG_COMPILE_OPTIONS $USER_DEFINED_COMPILE_OPTIONS "$QSYS_SIMDIR/submodules/aldec/altera_tse_mdio.v"                                                    -work i_tse_mac                                 
-  eval  vlog -v2k5 $USER_DEFINED_VERILOG_COMPILE_OPTIONS $USER_DEFINED_COMPILE_OPTIONS "$QSYS_SIMDIR/submodules/aldec/altera_tse_mdio_clk_gen.v"                                            -work i_tse_mac                                 
-  eval  vlog -v2k5 $USER_DEFINED_VERILOG_COMPILE_OPTIONS $USER_DEFINED_COMPILE_OPTIONS "$QSYS_SIMDIR/submodules/aldec/altera_tse_mdio_cntl.v"                                               -work i_tse_mac                                 
-  eval  vlog -v2k5 $USER_DEFINED_VERILOG_COMPILE_OPTIONS $USER_DEFINED_COMPILE_OPTIONS "$QSYS_SIMDIR/submodules/aldec/altera_tse_top_mdio.v"                                                -work i_tse_mac                                 
-  eval  vlog -v2k5 $USER_DEFINED_VERILOG_COMPILE_OPTIONS $USER_DEFINED_COMPILE_OPTIONS "$QSYS_SIMDIR/submodules/aldec/altera_tse_mii_rx_if.v"                                               -work i_tse_mac                                 
-  eval  vlog -v2k5 $USER_DEFINED_VERILOG_COMPILE_OPTIONS $USER_DEFINED_COMPILE_OPTIONS "$QSYS_SIMDIR/submodules/aldec/altera_tse_mii_tx_if.v"                                               -work i_tse_mac                                 
-  eval  vlog -v2k5 $USER_DEFINED_VERILOG_COMPILE_OPTIONS $USER_DEFINED_COMPILE_OPTIONS "$QSYS_SIMDIR/submodules/aldec/altera_tse_pipeline_base.v"                                           -work i_tse_mac                                 
-  eval  vlog  $USER_DEFINED_VERILOG_COMPILE_OPTIONS $USER_DEFINED_COMPILE_OPTIONS      "$QSYS_SIMDIR/submodules/aldec/altera_tse_pipeline_stage.sv"                                         -work i_tse_mac                                 
-  eval  vlog -v2k5 $USER_DEFINED_VERILOG_COMPILE_OPTIONS $USER_DEFINED_COMPILE_OPTIONS "$QSYS_SIMDIR/submodules/aldec/altera_tse_dpram_16x32.v"                                             -work i_tse_mac                                 
-  eval  vlog -v2k5 $USER_DEFINED_VERILOG_COMPILE_OPTIONS $USER_DEFINED_COMPILE_OPTIONS "$QSYS_SIMDIR/submodules/aldec/altera_tse_dpram_8x32.v"                                              -work i_tse_mac                                 
-  eval  vlog -v2k5 $USER_DEFINED_VERILOG_COMPILE_OPTIONS $USER_DEFINED_COMPILE_OPTIONS "$QSYS_SIMDIR/submodules/aldec/altera_tse_dpram_ecc_16x32.v"                                         -work i_tse_mac                                 
-  eval  vlog -v2k5 $USER_DEFINED_VERILOG_COMPILE_OPTIONS $USER_DEFINED_COMPILE_OPTIONS "$QSYS_SIMDIR/submodules/aldec/altera_tse_fifoless_retransmit_cntl.v"                                -work i_tse_mac                                 
-  eval  vlog -v2k5 $USER_DEFINED_VERILOG_COMPILE_OPTIONS $USER_DEFINED_COMPILE_OPTIONS "$QSYS_SIMDIR/submodules/aldec/altera_tse_retransmit_cntl.v"                                         -work i_tse_mac                                 
-  eval  vlog -v2k5 $USER_DEFINED_VERILOG_COMPILE_OPTIONS $USER_DEFINED_COMPILE_OPTIONS "$QSYS_SIMDIR/submodules/aldec/altera_tse_rgmii_in1.v"                                               -work i_tse_mac                                 
-  eval  vlog -v2k5 $USER_DEFINED_VERILOG_COMPILE_OPTIONS $USER_DEFINED_COMPILE_OPTIONS "$QSYS_SIMDIR/submodules/aldec/altera_tse_rgmii_in4.v"                                               -work i_tse_mac                                 
-  eval  vlog -v2k5 $USER_DEFINED_VERILOG_COMPILE_OPTIONS $USER_DEFINED_COMPILE_OPTIONS "$QSYS_SIMDIR/submodules/aldec/altera_tse_nf_rgmii_module.v"                                         -work i_tse_mac                                 
-  eval  vlog -v2k5 $USER_DEFINED_VERILOG_COMPILE_OPTIONS $USER_DEFINED_COMPILE_OPTIONS "$QSYS_SIMDIR/submodules/aldec/altera_tse_rgmii_module.v"                                            -work i_tse_mac                                 
-  eval  vlog -v2k5 $USER_DEFINED_VERILOG_COMPILE_OPTIONS $USER_DEFINED_COMPILE_OPTIONS "$QSYS_SIMDIR/submodules/aldec/altera_tse_rgmii_out1.v"                                              -work i_tse_mac                                 
-  eval  vlog -v2k5 $USER_DEFINED_VERILOG_COMPILE_OPTIONS $USER_DEFINED_COMPILE_OPTIONS "$QSYS_SIMDIR/submodules/aldec/altera_tse_rgmii_out4.v"                                              -work i_tse_mac                                 
-  eval  vlog -v2k5 $USER_DEFINED_VERILOG_COMPILE_OPTIONS $USER_DEFINED_COMPILE_OPTIONS "$QSYS_SIMDIR/submodules/aldec/altera_tse_rx_ff.v"                                                   -work i_tse_mac                                 
-  eval  vlog -v2k5 $USER_DEFINED_VERILOG_COMPILE_OPTIONS $USER_DEFINED_COMPILE_OPTIONS "$QSYS_SIMDIR/submodules/aldec/altera_tse_rx_min_ff.v"                                               -work i_tse_mac                                 
-  eval  vlog -v2k5 $USER_DEFINED_VERILOG_COMPILE_OPTIONS $USER_DEFINED_COMPILE_OPTIONS "$QSYS_SIMDIR/submodules/aldec/altera_tse_rx_ff_cntrl.v"                                             -work i_tse_mac                                 
-  eval  vlog -v2k5 $USER_DEFINED_VERILOG_COMPILE_OPTIONS $USER_DEFINED_COMPILE_OPTIONS "$QSYS_SIMDIR/submodules/aldec/altera_tse_rx_ff_cntrl_32.v"                                          -work i_tse_mac                                 
-  eval  vlog -v2k5 $USER_DEFINED_VERILOG_COMPILE_OPTIONS $USER_DEFINED_COMPILE_OPTIONS "$QSYS_SIMDIR/submodules/aldec/altera_tse_rx_ff_cntrl_32_shift16.v"                                  -work i_tse_mac                                 
-  eval  vlog -v2k5 $USER_DEFINED_VERILOG_COMPILE_OPTIONS $USER_DEFINED_COMPILE_OPTIONS "$QSYS_SIMDIR/submodules/aldec/altera_tse_rx_ff_length.v"                                            -work i_tse_mac                                 
-  eval  vlog -v2k5 $USER_DEFINED_VERILOG_COMPILE_OPTIONS $USER_DEFINED_COMPILE_OPTIONS "$QSYS_SIMDIR/submodules/aldec/altera_tse_rx_stat_extract.v"                                         -work i_tse_mac                                 
-  eval  vlog -v2k5 $USER_DEFINED_VERILOG_COMPILE_OPTIONS $USER_DEFINED_COMPILE_OPTIONS "$QSYS_SIMDIR/submodules/aldec/altera_tse_timing_adapter32.v"                                        -work i_tse_mac                                 
-  eval  vlog -v2k5 $USER_DEFINED_VERILOG_COMPILE_OPTIONS $USER_DEFINED_COMPILE_OPTIONS "$QSYS_SIMDIR/submodules/aldec/altera_tse_timing_adapter8.v"                                         -work i_tse_mac                                 
-  eval  vlog -v2k5 $USER_DEFINED_VERILOG_COMPILE_OPTIONS $USER_DEFINED_COMPILE_OPTIONS "$QSYS_SIMDIR/submodules/aldec/altera_tse_timing_adapter_fifo32.v"                                   -work i_tse_mac                                 
-  eval  vlog -v2k5 $USER_DEFINED_VERILOG_COMPILE_OPTIONS $USER_DEFINED_COMPILE_OPTIONS "$QSYS_SIMDIR/submodules/aldec/altera_tse_timing_adapter_fifo8.v"                                    -work i_tse_mac                                 
-  eval  vlog -v2k5 $USER_DEFINED_VERILOG_COMPILE_OPTIONS $USER_DEFINED_COMPILE_OPTIONS "$QSYS_SIMDIR/submodules/aldec/altera_tse_top_1geth.v"                                               -work i_tse_mac                                 
-  eval  vlog -v2k5 $USER_DEFINED_VERILOG_COMPILE_OPTIONS $USER_DEFINED_COMPILE_OPTIONS "$QSYS_SIMDIR/submodules/aldec/altera_tse_top_fifoless_1geth.v"                                      -work i_tse_mac                                 
-  eval  vlog -v2k5 $USER_DEFINED_VERILOG_COMPILE_OPTIONS $USER_DEFINED_COMPILE_OPTIONS "$QSYS_SIMDIR/submodules/aldec/altera_tse_top_w_fifo.v"                                              -work i_tse_mac                                 
-  eval  vlog -v2k5 $USER_DEFINED_VERILOG_COMPILE_OPTIONS $USER_DEFINED_COMPILE_OPTIONS "$QSYS_SIMDIR/submodules/aldec/altera_tse_top_w_fifo_10_100_1000.v"                                  -work i_tse_mac                                 
-  eval  vlog -v2k5 $USER_DEFINED_VERILOG_COMPILE_OPTIONS $USER_DEFINED_COMPILE_OPTIONS "$QSYS_SIMDIR/submodules/aldec/altera_tse_top_wo_fifo.v"                                             -work i_tse_mac                                 
-  eval  vlog -v2k5 $USER_DEFINED_VERILOG_COMPILE_OPTIONS $USER_DEFINED_COMPILE_OPTIONS "$QSYS_SIMDIR/submodules/aldec/altera_tse_top_wo_fifo_10_100_1000.v"                                 -work i_tse_mac                                 
-  eval  vlog -v2k5 $USER_DEFINED_VERILOG_COMPILE_OPTIONS $USER_DEFINED_COMPILE_OPTIONS "$QSYS_SIMDIR/submodules/aldec/altera_tse_top_gen_host.v"                                            -work i_tse_mac                                 
-  eval  vlog -v2k5 $USER_DEFINED_VERILOG_COMPILE_OPTIONS $USER_DEFINED_COMPILE_OPTIONS "$QSYS_SIMDIR/submodules/aldec/altera_tse_tx_ff.v"                                                   -work i_tse_mac                                 
-  eval  vlog -v2k5 $USER_DEFINED_VERILOG_COMPILE_OPTIONS $USER_DEFINED_COMPILE_OPTIONS "$QSYS_SIMDIR/submodules/aldec/altera_tse_tx_min_ff.v"                                               -work i_tse_mac                                 
-  eval  vlog -v2k5 $USER_DEFINED_VERILOG_COMPILE_OPTIONS $USER_DEFINED_COMPILE_OPTIONS "$QSYS_SIMDIR/submodules/aldec/altera_tse_tx_ff_cntrl.v"                                             -work i_tse_mac                                 
-  eval  vlog -v2k5 $USER_DEFINED_VERILOG_COMPILE_OPTIONS $USER_DEFINED_COMPILE_OPTIONS "$QSYS_SIMDIR/submodules/aldec/altera_tse_tx_ff_cntrl_32.v"                                          -work i_tse_mac                                 
-  eval  vlog -v2k5 $USER_DEFINED_VERILOG_COMPILE_OPTIONS $USER_DEFINED_COMPILE_OPTIONS "$QSYS_SIMDIR/submodules/aldec/altera_tse_tx_ff_cntrl_32_shift16.v"                                  -work i_tse_mac                                 
-  eval  vlog -v2k5 $USER_DEFINED_VERILOG_COMPILE_OPTIONS $USER_DEFINED_COMPILE_OPTIONS "$QSYS_SIMDIR/submodules/aldec/altera_tse_tx_ff_length.v"                                            -work i_tse_mac                                 
-  eval  vlog -v2k5 $USER_DEFINED_VERILOG_COMPILE_OPTIONS $USER_DEFINED_COMPILE_OPTIONS "$QSYS_SIMDIR/submodules/aldec/altera_tse_tx_ff_read_cntl.v"                                         -work i_tse_mac                                 
-  eval  vlog -v2k5 $USER_DEFINED_VERILOG_COMPILE_OPTIONS $USER_DEFINED_COMPILE_OPTIONS "$QSYS_SIMDIR/submodules/aldec/altera_tse_tx_stat_extract.v"                                         -work i_tse_mac                                 
-  eval  vlog -v2k5 $USER_DEFINED_VERILOG_COMPILE_OPTIONS $USER_DEFINED_COMPILE_OPTIONS "$QSYS_SIMDIR/submodules/aldec/altera_eth_tse_std_synchronizer.v"                                    -work i_tse_mac                                 
-  eval  vlog -v2k5 $USER_DEFINED_VERILOG_COMPILE_OPTIONS $USER_DEFINED_COMPILE_OPTIONS "$QSYS_SIMDIR/submodules/aldec/altera_eth_tse_std_synchronizer_bundle.v"                             -work i_tse_mac                                 
-  eval  vlog -v2k5 $USER_DEFINED_VERILOG_COMPILE_OPTIONS $USER_DEFINED_COMPILE_OPTIONS "$QSYS_SIMDIR/submodules/aldec/altera_eth_tse_ptp_std_synchronizer.v"                                -work i_tse_mac                                 
-  eval  vlog -v2k5 $USER_DEFINED_VERILOG_COMPILE_OPTIONS $USER_DEFINED_COMPILE_OPTIONS "$QSYS_SIMDIR/submodules/aldec/altera_tse_false_path_marker.v"                                       -work i_tse_mac                                 
-  eval  vlog -v2k5 $USER_DEFINED_VERILOG_COMPILE_OPTIONS $USER_DEFINED_COMPILE_OPTIONS "$QSYS_SIMDIR/submodules/aldec/altera_tse_reset_synchronizer.v"                                      -work i_tse_mac                                 
-  eval  vlog -v2k5 $USER_DEFINED_VERILOG_COMPILE_OPTIONS $USER_DEFINED_COMPILE_OPTIONS "$QSYS_SIMDIR/submodules/aldec/altera_tse_clock_crosser.v"                                           -work i_tse_mac                                 
-  eval  vlog -v2k5 $USER_DEFINED_VERILOG_COMPILE_OPTIONS $USER_DEFINED_COMPILE_OPTIONS "$QSYS_SIMDIR/submodules/aldec/altera_tse_a_fifo_13.v"                                               -work i_tse_mac                                 
-  eval  vlog -v2k5 $USER_DEFINED_VERILOG_COMPILE_OPTIONS $USER_DEFINED_COMPILE_OPTIONS "$QSYS_SIMDIR/submodules/aldec/altera_tse_a_fifo_24.v"                                               -work i_tse_mac                                 
-  eval  vlog -v2k5 $USER_DEFINED_VERILOG_COMPILE_OPTIONS $USER_DEFINED_COMPILE_OPTIONS "$QSYS_SIMDIR/submodules/aldec/altera_tse_a_fifo_34.v"                                               -work i_tse_mac                                 
-  eval  vlog -v2k5 $USER_DEFINED_VERILOG_COMPILE_OPTIONS $USER_DEFINED_COMPILE_OPTIONS "$QSYS_SIMDIR/submodules/aldec/altera_tse_a_fifo_opt_1246.v"                                         -work i_tse_mac                                 
-  eval  vlog -v2k5 $USER_DEFINED_VERILOG_COMPILE_OPTIONS $USER_DEFINED_COMPILE_OPTIONS "$QSYS_SIMDIR/submodules/aldec/altera_tse_a_fifo_opt_14_44.v"                                        -work i_tse_mac                                 
-  eval  vlog -v2k5 $USER_DEFINED_VERILOG_COMPILE_OPTIONS $USER_DEFINED_COMPILE_OPTIONS "$QSYS_SIMDIR/submodules/aldec/altera_tse_a_fifo_opt_36_10.v"                                        -work i_tse_mac                                 
-  eval  vlog -v2k5 $USER_DEFINED_VERILOG_COMPILE_OPTIONS $USER_DEFINED_COMPILE_OPTIONS "$QSYS_SIMDIR/submodules/aldec/altera_tse_gray_cnt.v"                                                -work i_tse_mac                                 
-  eval  vlog -v2k5 $USER_DEFINED_VERILOG_COMPILE_OPTIONS $USER_DEFINED_COMPILE_OPTIONS "$QSYS_SIMDIR/submodules/aldec/altera_tse_sdpm_altsyncram.v"                                         -work i_tse_mac                                 
-  eval  vlog -v2k5 $USER_DEFINED_VERILOG_COMPILE_OPTIONS $USER_DEFINED_COMPILE_OPTIONS "$QSYS_SIMDIR/submodules/aldec/altera_tse_altsyncram_dpm_fifo.v"                                     -work i_tse_mac                                 
-  eval  vlog -v2k5 $USER_DEFINED_VERILOG_COMPILE_OPTIONS $USER_DEFINED_COMPILE_OPTIONS "$QSYS_SIMDIR/submodules/aldec/altera_tse_bin_cnt.v"                                                 -work i_tse_mac                                 
-  eval  vlog  $USER_DEFINED_VERILOG_COMPILE_OPTIONS $USER_DEFINED_COMPILE_OPTIONS      "$QSYS_SIMDIR/submodules/aldec/altera_tse_ph_calculator.sv"                                          -work i_tse_mac                                 
-  eval  vlog -v2k5 $USER_DEFINED_VERILOG_COMPILE_OPTIONS $USER_DEFINED_COMPILE_OPTIONS "$QSYS_SIMDIR/submodules/aldec/altera_tse_sdpm_gen.v"                                                -work i_tse_mac                                 
-  eval  vlog -v2k5 $USER_DEFINED_VERILOG_COMPILE_OPTIONS $USER_DEFINED_COMPILE_OPTIONS "$QSYS_SIMDIR/submodules/aldec/altera_tse_ecc_dec_x10.v"                                             -work i_tse_mac                                 
-  eval  vlog -v2k5 $USER_DEFINED_VERILOG_COMPILE_OPTIONS $USER_DEFINED_COMPILE_OPTIONS "$QSYS_SIMDIR/submodules/aldec/altera_tse_ecc_enc_x10.v"                                             -work i_tse_mac                                 
-  eval  vlog -v2k5 $USER_DEFINED_VERILOG_COMPILE_OPTIONS $USER_DEFINED_COMPILE_OPTIONS "$QSYS_SIMDIR/submodules/aldec/altera_tse_ecc_enc_x10_wrapper.v"                                     -work i_tse_mac                                 
-  eval  vlog -v2k5 $USER_DEFINED_VERILOG_COMPILE_OPTIONS $USER_DEFINED_COMPILE_OPTIONS "$QSYS_SIMDIR/submodules/aldec/altera_tse_ecc_dec_x14.v"                                             -work i_tse_mac                                 
-  eval  vlog -v2k5 $USER_DEFINED_VERILOG_COMPILE_OPTIONS $USER_DEFINED_COMPILE_OPTIONS "$QSYS_SIMDIR/submodules/aldec/altera_tse_ecc_enc_x14.v"                                             -work i_tse_mac                                 
-  eval  vlog -v2k5 $USER_DEFINED_VERILOG_COMPILE_OPTIONS $USER_DEFINED_COMPILE_OPTIONS "$QSYS_SIMDIR/submodules/aldec/altera_tse_ecc_enc_x14_wrapper.v"                                     -work i_tse_mac                                 
-  eval  vlog -v2k5 $USER_DEFINED_VERILOG_COMPILE_OPTIONS $USER_DEFINED_COMPILE_OPTIONS "$QSYS_SIMDIR/submodules/aldec/altera_tse_ecc_dec_x2.v"                                              -work i_tse_mac                                 
-  eval  vlog -v2k5 $USER_DEFINED_VERILOG_COMPILE_OPTIONS $USER_DEFINED_COMPILE_OPTIONS "$QSYS_SIMDIR/submodules/aldec/altera_tse_ecc_enc_x2.v"                                              -work i_tse_mac                                 
-  eval  vlog -v2k5 $USER_DEFINED_VERILOG_COMPILE_OPTIONS $USER_DEFINED_COMPILE_OPTIONS "$QSYS_SIMDIR/submodules/aldec/altera_tse_ecc_enc_x2_wrapper.v"                                      -work i_tse_mac                                 
-  eval  vlog -v2k5 $USER_DEFINED_VERILOG_COMPILE_OPTIONS $USER_DEFINED_COMPILE_OPTIONS "$QSYS_SIMDIR/submodules/aldec/altera_tse_ecc_dec_x23.v"                                             -work i_tse_mac                                 
-  eval  vlog -v2k5 $USER_DEFINED_VERILOG_COMPILE_OPTIONS $USER_DEFINED_COMPILE_OPTIONS "$QSYS_SIMDIR/submodules/aldec/altera_tse_ecc_enc_x23.v"                                             -work i_tse_mac                                 
-  eval  vlog -v2k5 $USER_DEFINED_VERILOG_COMPILE_OPTIONS $USER_DEFINED_COMPILE_OPTIONS "$QSYS_SIMDIR/submodules/aldec/altera_tse_ecc_enc_x23_wrapper.v"                                     -work i_tse_mac                                 
-  eval  vlog -v2k5 $USER_DEFINED_VERILOG_COMPILE_OPTIONS $USER_DEFINED_COMPILE_OPTIONS "$QSYS_SIMDIR/submodules/aldec/altera_tse_ecc_dec_x36.v"                                             -work i_tse_mac                                 
-  eval  vlog -v2k5 $USER_DEFINED_VERILOG_COMPILE_OPTIONS $USER_DEFINED_COMPILE_OPTIONS "$QSYS_SIMDIR/submodules/aldec/altera_tse_ecc_enc_x36.v"                                             -work i_tse_mac                                 
-  eval  vlog -v2k5 $USER_DEFINED_VERILOG_COMPILE_OPTIONS $USER_DEFINED_COMPILE_OPTIONS "$QSYS_SIMDIR/submodules/aldec/altera_tse_ecc_enc_x36_wrapper.v"                                     -work i_tse_mac                                 
-  eval  vlog -v2k5 $USER_DEFINED_VERILOG_COMPILE_OPTIONS $USER_DEFINED_COMPILE_OPTIONS "$QSYS_SIMDIR/submodules/aldec/altera_tse_ecc_dec_x40.v"                                             -work i_tse_mac                                 
-  eval  vlog -v2k5 $USER_DEFINED_VERILOG_COMPILE_OPTIONS $USER_DEFINED_COMPILE_OPTIONS "$QSYS_SIMDIR/submodules/aldec/altera_tse_ecc_enc_x40.v"                                             -work i_tse_mac                                 
-  eval  vlog -v2k5 $USER_DEFINED_VERILOG_COMPILE_OPTIONS $USER_DEFINED_COMPILE_OPTIONS "$QSYS_SIMDIR/submodules/aldec/altera_tse_ecc_enc_x40_wrapper.v"                                     -work i_tse_mac                                 
-  eval  vlog -v2k5 $USER_DEFINED_VERILOG_COMPILE_OPTIONS $USER_DEFINED_COMPILE_OPTIONS "$QSYS_SIMDIR/submodules/aldec/altera_tse_ecc_dec_x30.v"                                             -work i_tse_mac                                 
-  eval  vlog -v2k5 $USER_DEFINED_VERILOG_COMPILE_OPTIONS $USER_DEFINED_COMPILE_OPTIONS "$QSYS_SIMDIR/submodules/aldec/altera_tse_ecc_enc_x30.v"                                             -work i_tse_mac                                 
-  eval  vlog -v2k5 $USER_DEFINED_VERILOG_COMPILE_OPTIONS $USER_DEFINED_COMPILE_OPTIONS "$QSYS_SIMDIR/submodules/aldec/altera_tse_ecc_enc_x30_wrapper.v"                                     -work i_tse_mac                                 
-  eval  vlog -v2k5 $USER_DEFINED_VERILOG_COMPILE_OPTIONS $USER_DEFINED_COMPILE_OPTIONS "$QSYS_SIMDIR/submodules/aldec/altera_tse_ecc_status_crosser.v"                                      -work i_tse_mac                                 
-  eval  vlog -v2k5 $USER_DEFINED_VERILOG_COMPILE_OPTIONS $USER_DEFINED_COMPILE_OPTIONS "$QSYS_SIMDIR/submodules/altera_std_synchronizer_nocut.v"                                            -work i_tse_mac                                 
-  eval  vlog -v2k5 $USER_DEFINED_VERILOG_COMPILE_OPTIONS $USER_DEFINED_COMPILE_OPTIONS "$QSYS_SIMDIR/submodules/WiPhase_top_level_cpu_v2_cpu.vo"                                            -work cpu                                       
-  eval  vlog -v2k5 $USER_DEFINED_VERILOG_COMPILE_OPTIONS $USER_DEFINED_COMPILE_OPTIONS "$QSYS_SIMDIR/submodules/WiPhase_top_level_cpu_v2_cpu_debug_slave_sysclk.v"                          -work cpu                                       
-  eval  vlog -v2k5 $USER_DEFINED_VERILOG_COMPILE_OPTIONS $USER_DEFINED_COMPILE_OPTIONS "$QSYS_SIMDIR/submodules/WiPhase_top_level_cpu_v2_cpu_debug_slave_tck.v"                             -work cpu                                       
-  eval  vlog -v2k5 $USER_DEFINED_VERILOG_COMPILE_OPTIONS $USER_DEFINED_COMPILE_OPTIONS "$QSYS_SIMDIR/submodules/WiPhase_top_level_cpu_v2_cpu_debug_slave_wrapper.v"                         -work cpu                                       
-  eval  vlog -v2k5 $USER_DEFINED_VERILOG_COMPILE_OPTIONS $USER_DEFINED_COMPILE_OPTIONS "$QSYS_SIMDIR/submodules/WiPhase_top_level_cpu_v2_cpu_mult_cell.v"                                   -work cpu                                       
-  eval  vlog -v2k5 $USER_DEFINED_VERILOG_COMPILE_OPTIONS $USER_DEFINED_COMPILE_OPTIONS "$QSYS_SIMDIR/submodules/WiPhase_top_level_cpu_v2_cpu_test_bench.v"                                  -work cpu                                       
-  eval  vlog -v2k5 $USER_DEFINED_VERILOG_COMPILE_OPTIONS $USER_DEFINED_COMPILE_OPTIONS "$QSYS_SIMDIR/submodules/altera_reset_controller.v"                                                  -work rst_controller                            
-  eval  vlog -v2k5 $USER_DEFINED_VERILOG_COMPILE_OPTIONS $USER_DEFINED_COMPILE_OPTIONS "$QSYS_SIMDIR/submodules/altera_reset_synchronizer.v"                                                -work rst_controller                            
-  eval  vcom $USER_DEFINED_VHDL_COMPILE_OPTIONS $USER_DEFINED_COMPILE_OPTIONS          "$QSYS_SIMDIR/submodules/WiPhase_top_level_avalon_st_adapter_001.vhd"                                -work avalon_st_adapter_001                     
-  eval  vcom $USER_DEFINED_VHDL_COMPILE_OPTIONS $USER_DEFINED_COMPILE_OPTIONS          "$QSYS_SIMDIR/submodules/WiPhase_top_level_avalon_st_adapter.vhd"                                    -work avalon_st_adapter                         
-  eval  vlog  $USER_DEFINED_VERILOG_COMPILE_OPTIONS $USER_DEFINED_COMPILE_OPTIONS      "$QSYS_SIMDIR/submodules/WiPhase_top_level_irq_mapper.sv"                                            -work irq_mapper                                
-  eval  vlog -v2k5 $USER_DEFINED_VERILOG_COMPILE_OPTIONS $USER_DEFINED_COMPILE_OPTIONS "$QSYS_SIMDIR/submodules/WiPhase_top_level_mm_interconnect_0.v"                                      -work mm_interconnect_0                         
-  eval  vlog -v2k5 $USER_DEFINED_VERILOG_COMPILE_OPTIONS $USER_DEFINED_COMPILE_OPTIONS "$QSYS_SIMDIR/submodules/WiPhase_top_level_timer.v"                                                  -work timer                                     
-  eval  vlog -v2k5 $USER_DEFINED_VERILOG_COMPILE_OPTIONS $USER_DEFINED_COMPILE_OPTIONS "$QSYS_SIMDIR/submodules/WiPhase_top_level_sysid.v"                                                  -work sysid                                     
-  eval  vlog -v2k5 $USER_DEFINED_VERILOG_COMPILE_OPTIONS $USER_DEFINED_COMPILE_OPTIONS "$QSYS_SIMDIR/submodules/WiPhase_top_level_spi.v"                                                    -work spi                                       
-  eval  vcom $USER_DEFINED_VHDL_COMPILE_OPTIONS $USER_DEFINED_COMPILE_OPTIONS          "$QSYS_SIMDIR/submodules/WiPhase_top_level_sample_pll.vho"                                           -work sample_pll                                
-  eval  vlog -v2k5 $USER_DEFINED_VERILOG_COMPILE_OPTIONS $USER_DEFINED_COMPILE_OPTIONS "$QSYS_SIMDIR/submodules/WiPhase_top_level_ram_onchip.v"                                             -work ram_onchip                                
-  eval  vlog -v2k5 $USER_DEFINED_VERILOG_COMPILE_OPTIONS $USER_DEFINED_COMPILE_OPTIONS "$QSYS_SIMDIR/submodules/WiPhase_top_level_jtag_uart.v"                                              -work jtag_uart                                 
-  eval  vcom $USER_DEFINED_VHDL_COMPILE_OPTIONS $USER_DEFINED_COMPILE_OPTIONS          "$QSYS_SIMDIR/submodules/WiPhase_top_level_eth.vhd"                                                  -work eth                                       
-  eval  vlog -v2k5 $USER_DEFINED_VERILOG_COMPILE_OPTIONS $USER_DEFINED_COMPILE_OPTIONS "$QSYS_SIMDIR/submodules/WiPhase_top_level_cpu_v2.v"                                                 -work cpu_v2                                    
-  eval  vcom $USER_DEFINED_VHDL_COMPILE_OPTIONS $USER_DEFINED_COMPILE_OPTIONS          "$QSYS_SIMDIR/submodules/Debug_ST_Source.vhd"                                                        -work Debug_ST_Source_0                         
-  eval  vcom $USER_DEFINED_VHDL_COMPILE_OPTIONS $USER_DEFINED_COMPILE_OPTIONS          "$QSYS_SIMDIR/submodules/Debug_ST_Sink.vhd"                                                          -work Debug_ST_Sink_0                           
-  eval  vcom $USER_DEFINED_VHDL_COMPILE_OPTIONS $USER_DEFINED_COMPILE_OPTIONS          "$QSYS_SIMDIR/WiPhase_top_level.vhd"                                                                                                                 
+  eval  vlog -v2k5 $USER_DEFINED_VERILOG_COMPILE_OPTIONS $USER_DEFINED_COMPILE_OPTIONS "$QSYS_SIMDIR/submodules/WiPhase_top_level_sysid.v"        -work sysid          
+  eval  vlog -v2k5 $USER_DEFINED_VERILOG_COMPILE_OPTIONS $USER_DEFINED_COMPILE_OPTIONS "$QSYS_SIMDIR/submodules/WiPhase_top_level_spi.v"          -work spi            
+  eval  vcom $USER_DEFINED_VHDL_COMPILE_OPTIONS $USER_DEFINED_COMPILE_OPTIONS          "$QSYS_SIMDIR/submodules/WiPhase_top_level_sample_pll.vho" -work sample_pll     
+  eval  vlog -v2k5 $USER_DEFINED_VERILOG_COMPILE_OPTIONS $USER_DEFINED_COMPILE_OPTIONS "$QSYS_SIMDIR/submodules/WiPhase_top_level_ram_onchip.v"   -work ram_onchip     
+  eval  vlog -v2k5 $USER_DEFINED_VERILOG_COMPILE_OPTIONS $USER_DEFINED_COMPILE_OPTIONS "$QSYS_SIMDIR/submodules/WiPhase_top_level_jtag_uart.v"    -work jtag_uart      
+  eval  vcom $USER_DEFINED_VHDL_COMPILE_OPTIONS $USER_DEFINED_COMPILE_OPTIONS          "$QSYS_SIMDIR/submodules/WiPhase_top_level_eth.vhd"        -work eth            
+  eval  vlog -v2k5 $USER_DEFINED_VERILOG_COMPILE_OPTIONS $USER_DEFINED_COMPILE_OPTIONS "$QSYS_SIMDIR/submodules/WiPhase_top_level_cpu_v2.v"       -work cpu_v2         
+  eval  vcom $USER_DEFINED_VHDL_COMPILE_OPTIONS $USER_DEFINED_COMPILE_OPTIONS          "$QSYS_SIMDIR/submodules/Debug_ST_Sink.vhd"                -work Debug_ST_Sink_0
+  eval  vcom $USER_DEFINED_VHDL_COMPILE_OPTIONS $USER_DEFINED_COMPILE_OPTIONS          "$QSYS_SIMDIR/WiPhase_top_level.vhd"                                            
 }
 
 # ----------------------------------------
 # Elaborate top level design
 alias elab {
   echo "\[exec\] elab"
-  eval vsim +access +r -t ps $ELAB_OPTIONS -L work -L error_adapter_0 -L timing_adapter_1 -L timing_adapter_0 -L data_format_adapter_0 -L avalon_st_adapter -L rsp_mux_001 -L rsp_mux -L rsp_demux_003 -L rsp_demux -L cmd_mux_003 -L cmd_mux -L cmd_demux_001 -L cmd_demux -L cpu_v2_data_master_limiter -L router_005 -L router_002 -L router_001 -L router -L jtag_uart_avalon_jtag_slave_agent_rsp_fifo -L jtag_uart_avalon_jtag_slave_agent -L cpu_v2_data_master_agent -L jtag_uart_avalon_jtag_slave_translator -L cpu_v2_data_master_translator -L i_tse_mac -L cpu -L rst_controller -L avalon_st_adapter_001 -L irq_mapper -L mm_interconnect_0 -L timer -L sysid -L spi -L sample_pll -L ram_onchip -L jtag_uart -L eth -L cpu_v2 -L Debug_ST_Source_0 -L Debug_ST_Sink_0 -L altera_ver -L lpm_ver -L sgate_ver -L altera_mf_ver -L altera_lnsim_ver -L cyclone10lp_ver -L altera -L lpm -L sgate -L altera_mf -L altera_lnsim -L cyclone10lp $TOP_LEVEL_NAME
+  eval vsim +access +r -t ps $ELAB_OPTIONS -L work -L sysid -L spi -L sample_pll -L ram_onchip -L jtag_uart -L eth -L cpu_v2 -L Debug_ST_Sink_0 -L altera_ver -L lpm_ver -L sgate_ver -L altera_mf_ver -L altera_lnsim_ver -L cyclone10lp_ver -L altera -L lpm -L sgate -L altera_mf -L altera_lnsim -L cyclone10lp $TOP_LEVEL_NAME
 }
 
 # ----------------------------------------
 # Elaborate the top level design with -dbg -O2 option
 alias elab_debug {
   echo "\[exec\] elab_debug"
-  eval vsim -dbg -O2 +access +r -t ps $ELAB_OPTIONS -L work -L error_adapter_0 -L timing_adapter_1 -L timing_adapter_0 -L data_format_adapter_0 -L avalon_st_adapter -L rsp_mux_001 -L rsp_mux -L rsp_demux_003 -L rsp_demux -L cmd_mux_003 -L cmd_mux -L cmd_demux_001 -L cmd_demux -L cpu_v2_data_master_limiter -L router_005 -L router_002 -L router_001 -L router -L jtag_uart_avalon_jtag_slave_agent_rsp_fifo -L jtag_uart_avalon_jtag_slave_agent -L cpu_v2_data_master_agent -L jtag_uart_avalon_jtag_slave_translator -L cpu_v2_data_master_translator -L i_tse_mac -L cpu -L rst_controller -L avalon_st_adapter_001 -L irq_mapper -L mm_interconnect_0 -L timer -L sysid -L spi -L sample_pll -L ram_onchip -L jtag_uart -L eth -L cpu_v2 -L Debug_ST_Source_0 -L Debug_ST_Sink_0 -L altera_ver -L lpm_ver -L sgate_ver -L altera_mf_ver -L altera_lnsim_ver -L cyclone10lp_ver -L altera -L lpm -L sgate -L altera_mf -L altera_lnsim -L cyclone10lp $TOP_LEVEL_NAME
+  eval vsim -dbg -O2 +access +r -t ps $ELAB_OPTIONS -L work -L sysid -L spi -L sample_pll -L ram_onchip -L jtag_uart -L eth -L cpu_v2 -L Debug_ST_Sink_0 -L altera_ver -L lpm_ver -L sgate_ver -L altera_mf_ver -L altera_lnsim_ver -L cyclone10lp_ver -L altera -L lpm -L sgate -L altera_mf -L altera_lnsim -L cyclone10lp $TOP_LEVEL_NAME
 }
 
 # ----------------------------------------

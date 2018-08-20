@@ -55,15 +55,6 @@ architecture rtl of WiPhase_top_level is
 		);
 	end component Debug_ST_Sink;
 
-	component Debug_ST_Source is
-		port (
-			avalon_streaming_source_data          : out std_logic_vector(7 downto 0);        -- data
-			avalon_streaming_source_endofpacket   : out std_logic;                           -- endofpacket
-			avalon_streaming_source_startofpacket : out std_logic;                           -- startofpacket
-			clk                                   : in  std_logic                    := 'X'  -- clk
-		);
-	end component Debug_ST_Source;
-
 	component WiPhase_top_level_cpu_v2 is
 		port (
 			clk                                 : in  std_logic                     := 'X';             -- clk
@@ -76,13 +67,11 @@ architecture rtl of WiPhase_top_level is
 			d_waitrequest                       : in  std_logic                     := 'X';             -- waitrequest
 			d_write                             : out std_logic;                                        -- write
 			d_writedata                         : out std_logic_vector(31 downto 0);                    -- writedata
-			d_readdatavalid                     : in  std_logic                     := 'X';             -- readdatavalid
 			debug_mem_slave_debugaccess_to_roms : out std_logic;                                        -- debugaccess
-			i_address                           : out std_logic_vector(15 downto 0);                    -- address
+			i_address                           : out std_logic_vector(16 downto 0);                    -- address
 			i_read                              : out std_logic;                                        -- read
 			i_readdata                          : in  std_logic_vector(31 downto 0) := (others => 'X'); -- readdata
 			i_waitrequest                       : in  std_logic                     := 'X';             -- waitrequest
-			i_readdatavalid                     : in  std_logic                     := 'X';             -- readdatavalid
 			irq                                 : in  std_logic_vector(31 downto 0) := (others => 'X'); -- irq
 			debug_reset_request                 : out std_logic;                                        -- reset
 			debug_mem_slave_address             : in  std_logic_vector(8 downto 0)  := (others => 'X'); -- address
@@ -234,6 +223,30 @@ architecture rtl of WiPhase_top_level is
 		);
 	end component WiPhase_top_level_sysid;
 
+	component WiPhase_top_level_test_pattern_st_gen is
+		port (
+			clk                 : in  std_logic                     := 'X';             -- clk
+			reset_n             : in  std_logic                     := 'X';             -- reset_n
+			csr_address         : in  std_logic_vector(1 downto 0)  := (others => 'X'); -- address
+			csr_writedata       : in  std_logic_vector(31 downto 0) := (others => 'X'); -- writedata
+			csr_readdata        : out std_logic_vector(31 downto 0);                    -- readdata
+			csr_read            : in  std_logic                     := 'X';             -- read
+			csr_write           : in  std_logic                     := 'X';             -- write
+			csr_waitrequest     : out std_logic;                                        -- waitrequest
+			command_address     : in  std_logic                     := 'X';             -- address
+			command_writedata   : in  std_logic_vector(31 downto 0) := (others => 'X'); -- writedata
+			command_readdata    : out std_logic_vector(31 downto 0);                    -- readdata
+			command_read        : in  std_logic                     := 'X';             -- read
+			command_write       : in  std_logic                     := 'X';             -- write
+			command_waitrequest : out std_logic;                                        -- waitrequest
+			out_valid           : out std_logic;                                        -- valid
+			out_data            : out std_logic_vector(7 downto 0);                     -- data
+			out_ready           : in  std_logic                     := 'X';             -- ready
+			out_startofpacket   : out std_logic;                                        -- startofpacket
+			out_endofpacket     : out std_logic                                         -- endofpacket
+		);
+	end component WiPhase_top_level_test_pattern_st_gen;
+
 	component WiPhase_top_level_timer is
 		port (
 			clk        : in  std_logic                     := 'X';             -- clk
@@ -256,15 +269,13 @@ architecture rtl of WiPhase_top_level is
 			cpu_v2_data_master_byteenable            : in  std_logic_vector(3 downto 0)  := (others => 'X'); -- byteenable
 			cpu_v2_data_master_read                  : in  std_logic                     := 'X';             -- read
 			cpu_v2_data_master_readdata              : out std_logic_vector(31 downto 0);                    -- readdata
-			cpu_v2_data_master_readdatavalid         : out std_logic;                                        -- readdatavalid
 			cpu_v2_data_master_write                 : in  std_logic                     := 'X';             -- write
 			cpu_v2_data_master_writedata             : in  std_logic_vector(31 downto 0) := (others => 'X'); -- writedata
 			cpu_v2_data_master_debugaccess           : in  std_logic                     := 'X';             -- debugaccess
-			cpu_v2_instruction_master_address        : in  std_logic_vector(15 downto 0) := (others => 'X'); -- address
+			cpu_v2_instruction_master_address        : in  std_logic_vector(16 downto 0) := (others => 'X'); -- address
 			cpu_v2_instruction_master_waitrequest    : out std_logic;                                        -- waitrequest
 			cpu_v2_instruction_master_read           : in  std_logic                     := 'X';             -- read
 			cpu_v2_instruction_master_readdata       : out std_logic_vector(31 downto 0);                    -- readdata
-			cpu_v2_instruction_master_readdatavalid  : out std_logic;                                        -- readdatavalid
 			cpu_v2_debug_mem_slave_address           : out std_logic_vector(8 downto 0);                     -- address
 			cpu_v2_debug_mem_slave_write             : out std_logic;                                        -- write
 			cpu_v2_debug_mem_slave_read              : out std_logic;                                        -- read
@@ -306,6 +317,18 @@ architecture rtl of WiPhase_top_level is
 			spi_spi_control_port_chipselect          : out std_logic;                                        -- chipselect
 			sysid_control_slave_address              : out std_logic_vector(0 downto 0);                     -- address
 			sysid_control_slave_readdata             : in  std_logic_vector(31 downto 0) := (others => 'X'); -- readdata
+			test_pattern_st_gen_command_address      : out std_logic_vector(0 downto 0);                     -- address
+			test_pattern_st_gen_command_write        : out std_logic;                                        -- write
+			test_pattern_st_gen_command_read         : out std_logic;                                        -- read
+			test_pattern_st_gen_command_readdata     : in  std_logic_vector(31 downto 0) := (others => 'X'); -- readdata
+			test_pattern_st_gen_command_writedata    : out std_logic_vector(31 downto 0);                    -- writedata
+			test_pattern_st_gen_command_waitrequest  : in  std_logic                     := 'X';             -- waitrequest
+			test_pattern_st_gen_csr_address          : out std_logic_vector(1 downto 0);                     -- address
+			test_pattern_st_gen_csr_write            : out std_logic;                                        -- write
+			test_pattern_st_gen_csr_read             : out std_logic;                                        -- read
+			test_pattern_st_gen_csr_readdata         : in  std_logic_vector(31 downto 0) := (others => 'X'); -- readdata
+			test_pattern_st_gen_csr_writedata        : out std_logic_vector(31 downto 0);                    -- writedata
+			test_pattern_st_gen_csr_waitrequest      : in  std_logic                     := 'X';             -- waitrequest
 			timer_s1_address                         : out std_logic_vector(2 downto 0);                     -- address
 			timer_s1_write                           : out std_logic;                                        -- write
 			timer_s1_readdata                        : in  std_logic_vector(15 downto 0) := (others => 'X'); -- readdata
@@ -348,6 +371,8 @@ architecture rtl of WiPhase_top_level is
 			in_clk_0_clk        : in  std_logic                     := 'X';             -- clk
 			in_rst_0_reset      : in  std_logic                     := 'X';             -- reset
 			in_0_data           : in  std_logic_vector(7 downto 0)  := (others => 'X'); -- data
+			in_0_valid          : in  std_logic                     := 'X';             -- valid
+			in_0_ready          : out std_logic;                                        -- ready
 			in_0_startofpacket  : in  std_logic                     := 'X';             -- startofpacket
 			in_0_endofpacket    : in  std_logic                     := 'X';             -- endofpacket
 			out_0_data          : out std_logic_vector(31 downto 0);                    -- data
@@ -467,14 +492,12 @@ architecture rtl of WiPhase_top_level is
 	signal cpu_v2_data_master_address                                    : std_logic_vector(16 downto 0); -- cpu_v2:d_address -> mm_interconnect_0:cpu_v2_data_master_address
 	signal cpu_v2_data_master_byteenable                                 : std_logic_vector(3 downto 0);  -- cpu_v2:d_byteenable -> mm_interconnect_0:cpu_v2_data_master_byteenable
 	signal cpu_v2_data_master_read                                       : std_logic;                     -- cpu_v2:d_read -> mm_interconnect_0:cpu_v2_data_master_read
-	signal cpu_v2_data_master_readdatavalid                              : std_logic;                     -- mm_interconnect_0:cpu_v2_data_master_readdatavalid -> cpu_v2:d_readdatavalid
 	signal cpu_v2_data_master_write                                      : std_logic;                     -- cpu_v2:d_write -> mm_interconnect_0:cpu_v2_data_master_write
 	signal cpu_v2_data_master_writedata                                  : std_logic_vector(31 downto 0); -- cpu_v2:d_writedata -> mm_interconnect_0:cpu_v2_data_master_writedata
 	signal cpu_v2_instruction_master_readdata                            : std_logic_vector(31 downto 0); -- mm_interconnect_0:cpu_v2_instruction_master_readdata -> cpu_v2:i_readdata
 	signal cpu_v2_instruction_master_waitrequest                         : std_logic;                     -- mm_interconnect_0:cpu_v2_instruction_master_waitrequest -> cpu_v2:i_waitrequest
-	signal cpu_v2_instruction_master_address                             : std_logic_vector(15 downto 0); -- cpu_v2:i_address -> mm_interconnect_0:cpu_v2_instruction_master_address
+	signal cpu_v2_instruction_master_address                             : std_logic_vector(16 downto 0); -- cpu_v2:i_address -> mm_interconnect_0:cpu_v2_instruction_master_address
 	signal cpu_v2_instruction_master_read                                : std_logic;                     -- cpu_v2:i_read -> mm_interconnect_0:cpu_v2_instruction_master_read
-	signal cpu_v2_instruction_master_readdatavalid                       : std_logic;                     -- mm_interconnect_0:cpu_v2_instruction_master_readdatavalid -> cpu_v2:i_readdatavalid
 	signal mm_interconnect_0_jtag_uart_avalon_jtag_slave_chipselect      : std_logic;                     -- mm_interconnect_0:jtag_uart_avalon_jtag_slave_chipselect -> jtag_uart:av_chipselect
 	signal mm_interconnect_0_jtag_uart_avalon_jtag_slave_readdata        : std_logic_vector(31 downto 0); -- jtag_uart:av_readdata -> mm_interconnect_0:jtag_uart_avalon_jtag_slave_readdata
 	signal mm_interconnect_0_jtag_uart_avalon_jtag_slave_waitrequest     : std_logic;                     -- jtag_uart:av_waitrequest -> mm_interconnect_0:jtag_uart_avalon_jtag_slave_waitrequest
@@ -482,6 +505,12 @@ architecture rtl of WiPhase_top_level is
 	signal mm_interconnect_0_jtag_uart_avalon_jtag_slave_read            : std_logic;                     -- mm_interconnect_0:jtag_uart_avalon_jtag_slave_read -> mm_interconnect_0_jtag_uart_avalon_jtag_slave_read:in
 	signal mm_interconnect_0_jtag_uart_avalon_jtag_slave_write           : std_logic;                     -- mm_interconnect_0:jtag_uart_avalon_jtag_slave_write -> mm_interconnect_0_jtag_uart_avalon_jtag_slave_write:in
 	signal mm_interconnect_0_jtag_uart_avalon_jtag_slave_writedata       : std_logic_vector(31 downto 0); -- mm_interconnect_0:jtag_uart_avalon_jtag_slave_writedata -> jtag_uart:av_writedata
+	signal mm_interconnect_0_test_pattern_st_gen_command_readdata        : std_logic_vector(31 downto 0); -- test_pattern_st_gen:command_readdata -> mm_interconnect_0:test_pattern_st_gen_command_readdata
+	signal mm_interconnect_0_test_pattern_st_gen_command_waitrequest     : std_logic;                     -- test_pattern_st_gen:command_waitrequest -> mm_interconnect_0:test_pattern_st_gen_command_waitrequest
+	signal mm_interconnect_0_test_pattern_st_gen_command_address         : std_logic_vector(0 downto 0);  -- mm_interconnect_0:test_pattern_st_gen_command_address -> test_pattern_st_gen:command_address
+	signal mm_interconnect_0_test_pattern_st_gen_command_read            : std_logic;                     -- mm_interconnect_0:test_pattern_st_gen_command_read -> test_pattern_st_gen:command_read
+	signal mm_interconnect_0_test_pattern_st_gen_command_write           : std_logic;                     -- mm_interconnect_0:test_pattern_st_gen_command_write -> test_pattern_st_gen:command_write
+	signal mm_interconnect_0_test_pattern_st_gen_command_writedata       : std_logic_vector(31 downto 0); -- mm_interconnect_0:test_pattern_st_gen_command_writedata -> test_pattern_st_gen:command_writedata
 	signal mm_interconnect_0_eth_control_port_readdata                   : std_logic_vector(31 downto 0); -- eth:reg_data_out -> mm_interconnect_0:eth_control_port_readdata
 	signal mm_interconnect_0_eth_control_port_waitrequest                : std_logic;                     -- eth:reg_busy -> mm_interconnect_0:eth_control_port_waitrequest
 	signal mm_interconnect_0_eth_control_port_address                    : std_logic_vector(7 downto 0);  -- mm_interconnect_0:eth_control_port_address -> eth:reg_addr
@@ -490,6 +519,12 @@ architecture rtl of WiPhase_top_level is
 	signal mm_interconnect_0_eth_control_port_writedata                  : std_logic_vector(31 downto 0); -- mm_interconnect_0:eth_control_port_writedata -> eth:reg_data_in
 	signal mm_interconnect_0_sysid_control_slave_readdata                : std_logic_vector(31 downto 0); -- sysid:readdata -> mm_interconnect_0:sysid_control_slave_readdata
 	signal mm_interconnect_0_sysid_control_slave_address                 : std_logic_vector(0 downto 0);  -- mm_interconnect_0:sysid_control_slave_address -> sysid:address
+	signal mm_interconnect_0_test_pattern_st_gen_csr_readdata            : std_logic_vector(31 downto 0); -- test_pattern_st_gen:csr_readdata -> mm_interconnect_0:test_pattern_st_gen_csr_readdata
+	signal mm_interconnect_0_test_pattern_st_gen_csr_waitrequest         : std_logic;                     -- test_pattern_st_gen:csr_waitrequest -> mm_interconnect_0:test_pattern_st_gen_csr_waitrequest
+	signal mm_interconnect_0_test_pattern_st_gen_csr_address             : std_logic_vector(1 downto 0);  -- mm_interconnect_0:test_pattern_st_gen_csr_address -> test_pattern_st_gen:csr_address
+	signal mm_interconnect_0_test_pattern_st_gen_csr_read                : std_logic;                     -- mm_interconnect_0:test_pattern_st_gen_csr_read -> test_pattern_st_gen:csr_read
+	signal mm_interconnect_0_test_pattern_st_gen_csr_write               : std_logic;                     -- mm_interconnect_0:test_pattern_st_gen_csr_write -> test_pattern_st_gen:csr_write
+	signal mm_interconnect_0_test_pattern_st_gen_csr_writedata           : std_logic_vector(31 downto 0); -- mm_interconnect_0:test_pattern_st_gen_csr_writedata -> test_pattern_st_gen:csr_writedata
 	signal mm_interconnect_0_cpu_v2_debug_mem_slave_readdata             : std_logic_vector(31 downto 0); -- cpu_v2:debug_mem_slave_readdata -> mm_interconnect_0:cpu_v2_debug_mem_slave_readdata
 	signal mm_interconnect_0_cpu_v2_debug_mem_slave_waitrequest          : std_logic;                     -- cpu_v2:debug_mem_slave_waitrequest -> mm_interconnect_0:cpu_v2_debug_mem_slave_waitrequest
 	signal mm_interconnect_0_cpu_v2_debug_mem_slave_debugaccess          : std_logic;                     -- mm_interconnect_0:cpu_v2_debug_mem_slave_debugaccess -> cpu_v2:debug_mem_slave_debugaccess
@@ -525,9 +560,11 @@ architecture rtl of WiPhase_top_level is
 	signal irq_mapper_receiver1_irq                                      : std_logic;                     -- jtag_uart:av_irq -> irq_mapper:receiver1_irq
 	signal irq_mapper_receiver2_irq                                      : std_logic;                     -- timer:irq -> irq_mapper:receiver2_irq
 	signal cpu_v2_irq_irq                                                : std_logic_vector(31 downto 0); -- irq_mapper:sender_irq -> cpu_v2:irq
-	signal debug_st_source_0_avalon_streaming_source_data                : std_logic_vector(7 downto 0);  -- Debug_ST_Source_0:avalon_streaming_source_data -> avalon_st_adapter:in_0_data
-	signal debug_st_source_0_avalon_streaming_source_startofpacket       : std_logic;                     -- Debug_ST_Source_0:avalon_streaming_source_startofpacket -> avalon_st_adapter:in_0_startofpacket
-	signal debug_st_source_0_avalon_streaming_source_endofpacket         : std_logic;                     -- Debug_ST_Source_0:avalon_streaming_source_endofpacket -> avalon_st_adapter:in_0_endofpacket
+	signal test_pattern_st_gen_out_valid                                 : std_logic;                     -- test_pattern_st_gen:out_valid -> avalon_st_adapter:in_0_valid
+	signal test_pattern_st_gen_out_data                                  : std_logic_vector(7 downto 0);  -- test_pattern_st_gen:out_data -> avalon_st_adapter:in_0_data
+	signal test_pattern_st_gen_out_ready                                 : std_logic;                     -- avalon_st_adapter:in_0_ready -> test_pattern_st_gen:out_ready
+	signal test_pattern_st_gen_out_startofpacket                         : std_logic;                     -- test_pattern_st_gen:out_startofpacket -> avalon_st_adapter:in_0_startofpacket
+	signal test_pattern_st_gen_out_endofpacket                           : std_logic;                     -- test_pattern_st_gen:out_endofpacket -> avalon_st_adapter:in_0_endofpacket
 	signal avalon_st_adapter_out_0_valid                                 : std_logic;                     -- avalon_st_adapter:out_0_valid -> eth:ff_tx_wren
 	signal avalon_st_adapter_out_0_data                                  : std_logic_vector(31 downto 0); -- avalon_st_adapter:out_0_data -> eth:ff_tx_data
 	signal avalon_st_adapter_out_0_ready                                 : std_logic;                     -- eth:ff_tx_rdy -> avalon_st_adapter:out_0_ready
@@ -553,7 +590,7 @@ architecture rtl of WiPhase_top_level is
 	signal mm_interconnect_0_timer_s1_write_ports_inv                    : std_logic;                     -- mm_interconnect_0_timer_s1_write:inv -> timer:write_n
 	signal mm_interconnect_0_spi_spi_control_port_read_ports_inv         : std_logic;                     -- mm_interconnect_0_spi_spi_control_port_read:inv -> spi:read_n
 	signal mm_interconnect_0_spi_spi_control_port_write_ports_inv        : std_logic;                     -- mm_interconnect_0_spi_spi_control_port_write:inv -> spi:write_n
-	signal rst_controller_reset_out_reset_ports_inv                      : std_logic;                     -- rst_controller_reset_out_reset:inv -> [cpu_v2:reset_n, jtag_uart:rst_n, spi:reset_n, sysid:reset_n, timer:reset_n]
+	signal rst_controller_reset_out_reset_ports_inv                      : std_logic;                     -- rst_controller_reset_out_reset:inv -> [cpu_v2:reset_n, jtag_uart:rst_n, spi:reset_n, sysid:reset_n, test_pattern_st_gen:reset_n, timer:reset_n]
 
 begin
 
@@ -563,14 +600,6 @@ begin
 			ST_sink_connection_endofpacket   => avalon_st_adapter_001_out_0_endofpacket,   --                   .endofpacket
 			ST_sink_connection_startofpacket => avalon_st_adapter_001_out_0_startofpacket, --                   .startofpacket
 			clk                              => mclk_i_clk                                 --                clk.clk
-		);
-
-	debug_st_source_0 : component Debug_ST_Source
-		port map (
-			avalon_streaming_source_data          => debug_st_source_0_avalon_streaming_source_data,          -- avalon_streaming_source.data
-			avalon_streaming_source_endofpacket   => debug_st_source_0_avalon_streaming_source_endofpacket,   --                        .endofpacket
-			avalon_streaming_source_startofpacket => debug_st_source_0_avalon_streaming_source_startofpacket, --                        .startofpacket
-			clk                                   => mclk_i_clk                                               --                     clk.clk
 		);
 
 	cpu_v2 : component WiPhase_top_level_cpu_v2
@@ -585,13 +614,11 @@ begin
 			d_waitrequest                       => cpu_v2_data_master_waitrequest,                       --                          .waitrequest
 			d_write                             => cpu_v2_data_master_write,                             --                          .write
 			d_writedata                         => cpu_v2_data_master_writedata,                         --                          .writedata
-			d_readdatavalid                     => cpu_v2_data_master_readdatavalid,                     --                          .readdatavalid
 			debug_mem_slave_debugaccess_to_roms => cpu_v2_data_master_debugaccess,                       --                          .debugaccess
 			i_address                           => cpu_v2_instruction_master_address,                    --        instruction_master.address
 			i_read                              => cpu_v2_instruction_master_read,                       --                          .read
 			i_readdata                          => cpu_v2_instruction_master_readdata,                   --                          .readdata
 			i_waitrequest                       => cpu_v2_instruction_master_waitrequest,                --                          .waitrequest
-			i_readdatavalid                     => cpu_v2_instruction_master_readdatavalid,              --                          .readdatavalid
 			irq                                 => cpu_v2_irq_irq,                                       --                       irq.irq
 			debug_reset_request                 => open,                                                 --       debug_reset_request.reset
 			debug_mem_slave_address             => mm_interconnect_0_cpu_v2_debug_mem_slave_address,     --           debug_mem_slave.address
@@ -736,6 +763,29 @@ begin
 			address  => mm_interconnect_0_sysid_control_slave_address(0)  --              .address
 		);
 
+	test_pattern_st_gen : component WiPhase_top_level_test_pattern_st_gen
+		port map (
+			clk                 => mclk_i_clk,                                                --     clk.clk
+			reset_n             => rst_controller_reset_out_reset_ports_inv,                  --   reset.reset_n
+			csr_address         => mm_interconnect_0_test_pattern_st_gen_csr_address,         --     csr.address
+			csr_writedata       => mm_interconnect_0_test_pattern_st_gen_csr_writedata,       --        .writedata
+			csr_readdata        => mm_interconnect_0_test_pattern_st_gen_csr_readdata,        --        .readdata
+			csr_read            => mm_interconnect_0_test_pattern_st_gen_csr_read,            --        .read
+			csr_write           => mm_interconnect_0_test_pattern_st_gen_csr_write,           --        .write
+			csr_waitrequest     => mm_interconnect_0_test_pattern_st_gen_csr_waitrequest,     --        .waitrequest
+			command_address     => mm_interconnect_0_test_pattern_st_gen_command_address(0),  -- command.address
+			command_writedata   => mm_interconnect_0_test_pattern_st_gen_command_writedata,   --        .writedata
+			command_readdata    => mm_interconnect_0_test_pattern_st_gen_command_readdata,    --        .readdata
+			command_read        => mm_interconnect_0_test_pattern_st_gen_command_read,        --        .read
+			command_write       => mm_interconnect_0_test_pattern_st_gen_command_write,       --        .write
+			command_waitrequest => mm_interconnect_0_test_pattern_st_gen_command_waitrequest, --        .waitrequest
+			out_valid           => test_pattern_st_gen_out_valid,                             --     out.valid
+			out_data            => test_pattern_st_gen_out_data,                              --        .data
+			out_ready           => test_pattern_st_gen_out_ready,                             --        .ready
+			out_startofpacket   => test_pattern_st_gen_out_startofpacket,                     --        .startofpacket
+			out_endofpacket     => test_pattern_st_gen_out_endofpacket                        --        .endofpacket
+		);
+
 	timer : component WiPhase_top_level_timer
 		port map (
 			clk        => mclk_i_clk,                                 --   clk.clk
@@ -757,7 +807,6 @@ begin
 			cpu_v2_data_master_byteenable            => cpu_v2_data_master_byteenable,                             --                                   .byteenable
 			cpu_v2_data_master_read                  => cpu_v2_data_master_read,                                   --                                   .read
 			cpu_v2_data_master_readdata              => cpu_v2_data_master_readdata,                               --                                   .readdata
-			cpu_v2_data_master_readdatavalid         => cpu_v2_data_master_readdatavalid,                          --                                   .readdatavalid
 			cpu_v2_data_master_write                 => cpu_v2_data_master_write,                                  --                                   .write
 			cpu_v2_data_master_writedata             => cpu_v2_data_master_writedata,                              --                                   .writedata
 			cpu_v2_data_master_debugaccess           => cpu_v2_data_master_debugaccess,                            --                                   .debugaccess
@@ -765,7 +814,6 @@ begin
 			cpu_v2_instruction_master_waitrequest    => cpu_v2_instruction_master_waitrequest,                     --                                   .waitrequest
 			cpu_v2_instruction_master_read           => cpu_v2_instruction_master_read,                            --                                   .read
 			cpu_v2_instruction_master_readdata       => cpu_v2_instruction_master_readdata,                        --                                   .readdata
-			cpu_v2_instruction_master_readdatavalid  => cpu_v2_instruction_master_readdatavalid,                   --                                   .readdatavalid
 			cpu_v2_debug_mem_slave_address           => mm_interconnect_0_cpu_v2_debug_mem_slave_address,          --             cpu_v2_debug_mem_slave.address
 			cpu_v2_debug_mem_slave_write             => mm_interconnect_0_cpu_v2_debug_mem_slave_write,            --                                   .write
 			cpu_v2_debug_mem_slave_read              => mm_interconnect_0_cpu_v2_debug_mem_slave_read,             --                                   .read
@@ -807,6 +855,18 @@ begin
 			spi_spi_control_port_chipselect          => mm_interconnect_0_spi_spi_control_port_chipselect,         --                                   .chipselect
 			sysid_control_slave_address              => mm_interconnect_0_sysid_control_slave_address,             --                sysid_control_slave.address
 			sysid_control_slave_readdata             => mm_interconnect_0_sysid_control_slave_readdata,            --                                   .readdata
+			test_pattern_st_gen_command_address      => mm_interconnect_0_test_pattern_st_gen_command_address,     --        test_pattern_st_gen_command.address
+			test_pattern_st_gen_command_write        => mm_interconnect_0_test_pattern_st_gen_command_write,       --                                   .write
+			test_pattern_st_gen_command_read         => mm_interconnect_0_test_pattern_st_gen_command_read,        --                                   .read
+			test_pattern_st_gen_command_readdata     => mm_interconnect_0_test_pattern_st_gen_command_readdata,    --                                   .readdata
+			test_pattern_st_gen_command_writedata    => mm_interconnect_0_test_pattern_st_gen_command_writedata,   --                                   .writedata
+			test_pattern_st_gen_command_waitrequest  => mm_interconnect_0_test_pattern_st_gen_command_waitrequest, --                                   .waitrequest
+			test_pattern_st_gen_csr_address          => mm_interconnect_0_test_pattern_st_gen_csr_address,         --            test_pattern_st_gen_csr.address
+			test_pattern_st_gen_csr_write            => mm_interconnect_0_test_pattern_st_gen_csr_write,           --                                   .write
+			test_pattern_st_gen_csr_read             => mm_interconnect_0_test_pattern_st_gen_csr_read,            --                                   .read
+			test_pattern_st_gen_csr_readdata         => mm_interconnect_0_test_pattern_st_gen_csr_readdata,        --                                   .readdata
+			test_pattern_st_gen_csr_writedata        => mm_interconnect_0_test_pattern_st_gen_csr_writedata,       --                                   .writedata
+			test_pattern_st_gen_csr_waitrequest      => mm_interconnect_0_test_pattern_st_gen_csr_waitrequest,     --                                   .waitrequest
 			timer_s1_address                         => mm_interconnect_0_timer_s1_address,                        --                           timer_s1.address
 			timer_s1_write                           => mm_interconnect_0_timer_s1_write,                          --                                   .write
 			timer_s1_readdata                        => mm_interconnect_0_timer_s1_readdata,                       --                                   .readdata
@@ -832,8 +892,8 @@ begin
 			inChannelWidth  => 0,
 			inErrorWidth    => 0,
 			inUseEmptyPort  => 0,
-			inUseValid      => 0,
-			inUseReady      => 0,
+			inUseValid      => 1,
+			inUseReady      => 1,
 			inReadyLatency  => 0,
 			outDataWidth    => 32,
 			outChannelWidth => 0,
@@ -844,18 +904,20 @@ begin
 			outReadyLatency => 0
 		)
 		port map (
-			in_clk_0_clk        => mclk_i_clk,                                              -- in_clk_0.clk
-			in_rst_0_reset      => rst_controller_reset_out_reset,                          -- in_rst_0.reset
-			in_0_data           => debug_st_source_0_avalon_streaming_source_data,          --     in_0.data
-			in_0_startofpacket  => debug_st_source_0_avalon_streaming_source_startofpacket, --         .startofpacket
-			in_0_endofpacket    => debug_st_source_0_avalon_streaming_source_endofpacket,   --         .endofpacket
-			out_0_data          => avalon_st_adapter_out_0_data,                            --    out_0.data
-			out_0_valid         => avalon_st_adapter_out_0_valid,                           --         .valid
-			out_0_ready         => avalon_st_adapter_out_0_ready,                           --         .ready
-			out_0_startofpacket => avalon_st_adapter_out_0_startofpacket,                   --         .startofpacket
-			out_0_endofpacket   => avalon_st_adapter_out_0_endofpacket,                     --         .endofpacket
-			out_0_empty         => avalon_st_adapter_out_0_empty,                           --         .empty
-			out_0_error         => avalon_st_adapter_out_0_error                            --         .error
+			in_clk_0_clk        => mclk_i_clk,                            -- in_clk_0.clk
+			in_rst_0_reset      => rst_controller_reset_out_reset,        -- in_rst_0.reset
+			in_0_data           => test_pattern_st_gen_out_data,          --     in_0.data
+			in_0_valid          => test_pattern_st_gen_out_valid,         --         .valid
+			in_0_ready          => test_pattern_st_gen_out_ready,         --         .ready
+			in_0_startofpacket  => test_pattern_st_gen_out_startofpacket, --         .startofpacket
+			in_0_endofpacket    => test_pattern_st_gen_out_endofpacket,   --         .endofpacket
+			out_0_data          => avalon_st_adapter_out_0_data,          --    out_0.data
+			out_0_valid         => avalon_st_adapter_out_0_valid,         --         .valid
+			out_0_ready         => avalon_st_adapter_out_0_ready,         --         .ready
+			out_0_startofpacket => avalon_st_adapter_out_0_startofpacket, --         .startofpacket
+			out_0_endofpacket   => avalon_st_adapter_out_0_endofpacket,   --         .endofpacket
+			out_0_empty         => avalon_st_adapter_out_0_empty,         --         .empty
+			out_0_error         => avalon_st_adapter_out_0_error          --         .error
 		);
 
 	avalon_st_adapter_001 : component WiPhase_top_level_avalon_st_adapter_001

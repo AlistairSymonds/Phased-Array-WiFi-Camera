@@ -1,0 +1,19 @@
+#include <stdint.h>
+#include "altera_avalon_tse.h"
+#include "eth_init.h"
+
+#define MDIO_ADDR 0x0A
+
+
+
+int init_eth(uint8_t* mac){
+	printf("Hello");
+
+	uint32_t * eth_config_reg;
+	eth_config_reg = ETH_BASE;
+
+
+	return 0;
+
+}
+

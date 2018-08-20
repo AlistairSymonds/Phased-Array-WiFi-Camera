@@ -12,7 +12,7 @@
 # or its authorized distributors. Please refer to the applicable 
 # agreement for further details.
 
-# ACDS 17.1 590 win32 2018.08.15.23:19:12
+# ACDS 17.1 590 win32 2018.08.20.13:35:23
 
 # ----------------------------------------
 # ncsim - auto-generated simulation script
@@ -106,7 +106,7 @@
 # within the Quartus project, and generate a unified
 # script which supports all the Altera IP within the design.
 # ----------------------------------------
-# ACDS 17.1 590 win32 2018.08.15.23:19:12
+# ACDS 17.1 590 win32 2018.08.20.13:35:23
 # ----------------------------------------
 # initialize variables
 TOP_LEVEL_NAME="WiPhase_top_level"
@@ -146,36 +146,6 @@ fi
 # ----------------------------------------
 # create compilation libraries
 mkdir -p ./libraries/work/
-mkdir -p ./libraries/error_adapter_0/
-mkdir -p ./libraries/timing_adapter_1/
-mkdir -p ./libraries/timing_adapter_0/
-mkdir -p ./libraries/data_format_adapter_0/
-mkdir -p ./libraries/avalon_st_adapter/
-mkdir -p ./libraries/rsp_mux_001/
-mkdir -p ./libraries/rsp_mux/
-mkdir -p ./libraries/rsp_demux_003/
-mkdir -p ./libraries/rsp_demux/
-mkdir -p ./libraries/cmd_mux_003/
-mkdir -p ./libraries/cmd_mux/
-mkdir -p ./libraries/cmd_demux_001/
-mkdir -p ./libraries/cmd_demux/
-mkdir -p ./libraries/cpu_v2_data_master_limiter/
-mkdir -p ./libraries/router_005/
-mkdir -p ./libraries/router_002/
-mkdir -p ./libraries/router_001/
-mkdir -p ./libraries/router/
-mkdir -p ./libraries/jtag_uart_avalon_jtag_slave_agent_rsp_fifo/
-mkdir -p ./libraries/jtag_uart_avalon_jtag_slave_agent/
-mkdir -p ./libraries/cpu_v2_data_master_agent/
-mkdir -p ./libraries/jtag_uart_avalon_jtag_slave_translator/
-mkdir -p ./libraries/cpu_v2_data_master_translator/
-mkdir -p ./libraries/i_tse_mac/
-mkdir -p ./libraries/cpu/
-mkdir -p ./libraries/rst_controller/
-mkdir -p ./libraries/avalon_st_adapter_001/
-mkdir -p ./libraries/irq_mapper/
-mkdir -p ./libraries/mm_interconnect_0/
-mkdir -p ./libraries/timer/
 mkdir -p ./libraries/sysid/
 mkdir -p ./libraries/spi/
 mkdir -p ./libraries/sample_pll/
@@ -183,7 +153,6 @@ mkdir -p ./libraries/ram_onchip/
 mkdir -p ./libraries/jtag_uart/
 mkdir -p ./libraries/eth/
 mkdir -p ./libraries/cpu_v2/
-mkdir -p ./libraries/Debug_ST_Source_0/
 mkdir -p ./libraries/Debug_ST_Sink_0/
 mkdir -p ./libraries/altera_ver/
 mkdir -p ./libraries/lpm_ver/
@@ -200,21 +169,6 @@ mkdir -p ./libraries/cyclone10lp/
 # ----------------------------------------
 # copy RAM/ROM files to simulation directory
 if [ $SKIP_FILE_COPY -eq 0 ]; then
-  cp -f $QSYS_SIMDIR/submodules/WiPhase_top_level_cpu_v2_cpu_dc_tag_ram.dat ./
-  cp -f $QSYS_SIMDIR/submodules/WiPhase_top_level_cpu_v2_cpu_dc_tag_ram.hex ./
-  cp -f $QSYS_SIMDIR/submodules/WiPhase_top_level_cpu_v2_cpu_dc_tag_ram.mif ./
-  cp -f $QSYS_SIMDIR/submodules/WiPhase_top_level_cpu_v2_cpu_ic_tag_ram.dat ./
-  cp -f $QSYS_SIMDIR/submodules/WiPhase_top_level_cpu_v2_cpu_ic_tag_ram.hex ./
-  cp -f $QSYS_SIMDIR/submodules/WiPhase_top_level_cpu_v2_cpu_ic_tag_ram.mif ./
-  cp -f $QSYS_SIMDIR/submodules/WiPhase_top_level_cpu_v2_cpu_ociram_default_contents.dat ./
-  cp -f $QSYS_SIMDIR/submodules/WiPhase_top_level_cpu_v2_cpu_ociram_default_contents.hex ./
-  cp -f $QSYS_SIMDIR/submodules/WiPhase_top_level_cpu_v2_cpu_ociram_default_contents.mif ./
-  cp -f $QSYS_SIMDIR/submodules/WiPhase_top_level_cpu_v2_cpu_rf_ram_a.dat ./
-  cp -f $QSYS_SIMDIR/submodules/WiPhase_top_level_cpu_v2_cpu_rf_ram_a.hex ./
-  cp -f $QSYS_SIMDIR/submodules/WiPhase_top_level_cpu_v2_cpu_rf_ram_a.mif ./
-  cp -f $QSYS_SIMDIR/submodules/WiPhase_top_level_cpu_v2_cpu_rf_ram_b.dat ./
-  cp -f $QSYS_SIMDIR/submodules/WiPhase_top_level_cpu_v2_cpu_rf_ram_b.hex ./
-  cp -f $QSYS_SIMDIR/submodules/WiPhase_top_level_cpu_v2_cpu_rf_ram_b.mif ./
   cp -f $QSYS_SIMDIR/submodules/WiPhase_top_level_ram_onchip.hex ./
 fi
 
@@ -247,71 +201,15 @@ fi
 # ----------------------------------------
 # compile design files in correct order
 if [ $SKIP_COM -eq 0 ]; then
-  ncvlog -sv $USER_DEFINED_VERILOG_COMPILE_OPTIONS $USER_DEFINED_COMPILE_OPTIONS "$QSYS_SIMDIR/submodules/WiPhase_top_level_mm_interconnect_0_avalon_st_adapter_error_adapter_0.sv"   -work error_adapter_0                            -cdslib ./cds_libs/error_adapter_0.cds.lib                           
-  ncvlog -sv $USER_DEFINED_VERILOG_COMPILE_OPTIONS $USER_DEFINED_COMPILE_OPTIONS "$QSYS_SIMDIR/submodules/WiPhase_top_level_avalon_st_adapter_001_timing_adapter_1.sv"                -work timing_adapter_1                           -cdslib ./cds_libs/timing_adapter_1.cds.lib                          
-  ncvlog -sv $USER_DEFINED_VERILOG_COMPILE_OPTIONS $USER_DEFINED_COMPILE_OPTIONS "$QSYS_SIMDIR/submodules/WiPhase_top_level_avalon_st_adapter_001_timing_adapter_0.sv"                -work timing_adapter_0                           -cdslib ./cds_libs/timing_adapter_0.cds.lib                          
-  ncvlog -sv $USER_DEFINED_VERILOG_COMPILE_OPTIONS $USER_DEFINED_COMPILE_OPTIONS "$QSYS_SIMDIR/submodules/WiPhase_top_level_avalon_st_adapter_001_timing_adapter_0_fifo.sv"           -work timing_adapter_0                           -cdslib ./cds_libs/timing_adapter_0.cds.lib                          
-  ncvlog -sv $USER_DEFINED_VERILOG_COMPILE_OPTIONS $USER_DEFINED_COMPILE_OPTIONS "$QSYS_SIMDIR/submodules/WiPhase_top_level_avalon_st_adapter_001_error_adapter_0.sv"                 -work error_adapter_0                            -cdslib ./cds_libs/error_adapter_0.cds.lib                           
-  ncvlog -sv $USER_DEFINED_VERILOG_COMPILE_OPTIONS $USER_DEFINED_COMPILE_OPTIONS "$QSYS_SIMDIR/submodules/WiPhase_top_level_avalon_st_adapter_001_data_format_adapter_0.sv"           -work data_format_adapter_0                      -cdslib ./cds_libs/data_format_adapter_0.cds.lib                     
-  ncvlog -sv $USER_DEFINED_VERILOG_COMPILE_OPTIONS $USER_DEFINED_COMPILE_OPTIONS "$QSYS_SIMDIR/submodules/WiPhase_top_level_avalon_st_adapter_001_data_format_adapter_0_state_ram.sv" -work data_format_adapter_0                      -cdslib ./cds_libs/data_format_adapter_0.cds.lib                     
-  ncvlog -sv $USER_DEFINED_VERILOG_COMPILE_OPTIONS $USER_DEFINED_COMPILE_OPTIONS "$QSYS_SIMDIR/submodules/WiPhase_top_level_avalon_st_adapter_001_data_format_adapter_0_data_ram.sv"  -work data_format_adapter_0                      -cdslib ./cds_libs/data_format_adapter_0.cds.lib                     
-  ncvlog -sv $USER_DEFINED_VERILOG_COMPILE_OPTIONS $USER_DEFINED_COMPILE_OPTIONS "$QSYS_SIMDIR/submodules/WiPhase_top_level_avalon_st_adapter_timing_adapter_0.sv"                    -work timing_adapter_0                           -cdslib ./cds_libs/timing_adapter_0.cds.lib                          
-  ncvlog -sv $USER_DEFINED_VERILOG_COMPILE_OPTIONS $USER_DEFINED_COMPILE_OPTIONS "$QSYS_SIMDIR/submodules/WiPhase_top_level_avalon_st_adapter_error_adapter_0.sv"                     -work error_adapter_0                            -cdslib ./cds_libs/error_adapter_0.cds.lib                           
-  ncvlog -sv $USER_DEFINED_VERILOG_COMPILE_OPTIONS $USER_DEFINED_COMPILE_OPTIONS "$QSYS_SIMDIR/submodules/WiPhase_top_level_avalon_st_adapter_data_format_adapter_0.sv"               -work data_format_adapter_0                      -cdslib ./cds_libs/data_format_adapter_0.cds.lib                     
-  ncvlog -sv $USER_DEFINED_VERILOG_COMPILE_OPTIONS $USER_DEFINED_COMPILE_OPTIONS "$QSYS_SIMDIR/submodules/WiPhase_top_level_avalon_st_adapter_data_format_adapter_0_state_ram.sv"     -work data_format_adapter_0                      -cdslib ./cds_libs/data_format_adapter_0.cds.lib                     
-  ncvlog -sv $USER_DEFINED_VERILOG_COMPILE_OPTIONS $USER_DEFINED_COMPILE_OPTIONS "$QSYS_SIMDIR/submodules/WiPhase_top_level_avalon_st_adapter_data_format_adapter_0_data_ram.sv"      -work data_format_adapter_0                      -cdslib ./cds_libs/data_format_adapter_0.cds.lib                     
-  ncvlog -sv $USER_DEFINED_VERILOG_COMPILE_OPTIONS $USER_DEFINED_COMPILE_OPTIONS "$QSYS_SIMDIR/submodules/WiPhase_top_level_avalon_st_adapter_data_format_adapter_0_sop_ram.sv"       -work data_format_adapter_0                      -cdslib ./cds_libs/data_format_adapter_0.cds.lib                     
-  ncvhdl -v93 $USER_DEFINED_VHDL_COMPILE_OPTIONS $USER_DEFINED_COMPILE_OPTIONS   "$QSYS_SIMDIR/submodules/WiPhase_top_level_mm_interconnect_0_avalon_st_adapter.vhd"                  -work avalon_st_adapter                          -cdslib ./cds_libs/avalon_st_adapter.cds.lib                         
-  ncvlog -sv $USER_DEFINED_VERILOG_COMPILE_OPTIONS $USER_DEFINED_COMPILE_OPTIONS "$QSYS_SIMDIR/submodules/WiPhase_top_level_mm_interconnect_0_rsp_mux_001.sv"                         -work rsp_mux_001                                -cdslib ./cds_libs/rsp_mux_001.cds.lib                               
-  ncvlog -sv $USER_DEFINED_VERILOG_COMPILE_OPTIONS $USER_DEFINED_COMPILE_OPTIONS "$QSYS_SIMDIR/submodules/altera_merlin_arbitrator.sv"                                                -work rsp_mux_001                                -cdslib ./cds_libs/rsp_mux_001.cds.lib                               
-  ncvlog -sv $USER_DEFINED_VERILOG_COMPILE_OPTIONS $USER_DEFINED_COMPILE_OPTIONS "$QSYS_SIMDIR/submodules/WiPhase_top_level_mm_interconnect_0_rsp_mux.sv"                             -work rsp_mux                                    -cdslib ./cds_libs/rsp_mux.cds.lib                                   
-  ncvlog -sv $USER_DEFINED_VERILOG_COMPILE_OPTIONS $USER_DEFINED_COMPILE_OPTIONS "$QSYS_SIMDIR/submodules/altera_merlin_arbitrator.sv"                                                -work rsp_mux                                    -cdslib ./cds_libs/rsp_mux.cds.lib                                   
-  ncvlog -sv $USER_DEFINED_VERILOG_COMPILE_OPTIONS $USER_DEFINED_COMPILE_OPTIONS "$QSYS_SIMDIR/submodules/WiPhase_top_level_mm_interconnect_0_rsp_demux_003.sv"                       -work rsp_demux_003                              -cdslib ./cds_libs/rsp_demux_003.cds.lib                             
-  ncvlog -sv $USER_DEFINED_VERILOG_COMPILE_OPTIONS $USER_DEFINED_COMPILE_OPTIONS "$QSYS_SIMDIR/submodules/WiPhase_top_level_mm_interconnect_0_rsp_demux.sv"                           -work rsp_demux                                  -cdslib ./cds_libs/rsp_demux.cds.lib                                 
-  ncvlog -sv $USER_DEFINED_VERILOG_COMPILE_OPTIONS $USER_DEFINED_COMPILE_OPTIONS "$QSYS_SIMDIR/submodules/WiPhase_top_level_mm_interconnect_0_cmd_mux_003.sv"                         -work cmd_mux_003                                -cdslib ./cds_libs/cmd_mux_003.cds.lib                               
-  ncvlog -sv $USER_DEFINED_VERILOG_COMPILE_OPTIONS $USER_DEFINED_COMPILE_OPTIONS "$QSYS_SIMDIR/submodules/altera_merlin_arbitrator.sv"                                                -work cmd_mux_003                                -cdslib ./cds_libs/cmd_mux_003.cds.lib                               
-  ncvlog -sv $USER_DEFINED_VERILOG_COMPILE_OPTIONS $USER_DEFINED_COMPILE_OPTIONS "$QSYS_SIMDIR/submodules/WiPhase_top_level_mm_interconnect_0_cmd_mux.sv"                             -work cmd_mux                                    -cdslib ./cds_libs/cmd_mux.cds.lib                                   
-  ncvlog -sv $USER_DEFINED_VERILOG_COMPILE_OPTIONS $USER_DEFINED_COMPILE_OPTIONS "$QSYS_SIMDIR/submodules/altera_merlin_arbitrator.sv"                                                -work cmd_mux                                    -cdslib ./cds_libs/cmd_mux.cds.lib                                   
-  ncvlog -sv $USER_DEFINED_VERILOG_COMPILE_OPTIONS $USER_DEFINED_COMPILE_OPTIONS "$QSYS_SIMDIR/submodules/WiPhase_top_level_mm_interconnect_0_cmd_demux_001.sv"                       -work cmd_demux_001                              -cdslib ./cds_libs/cmd_demux_001.cds.lib                             
-  ncvlog -sv $USER_DEFINED_VERILOG_COMPILE_OPTIONS $USER_DEFINED_COMPILE_OPTIONS "$QSYS_SIMDIR/submodules/WiPhase_top_level_mm_interconnect_0_cmd_demux.sv"                           -work cmd_demux                                  -cdslib ./cds_libs/cmd_demux.cds.lib                                 
-  ncvlog -sv $USER_DEFINED_VERILOG_COMPILE_OPTIONS $USER_DEFINED_COMPILE_OPTIONS "$QSYS_SIMDIR/submodules/altera_merlin_traffic_limiter.sv"                                           -work cpu_v2_data_master_limiter                 -cdslib ./cds_libs/cpu_v2_data_master_limiter.cds.lib                
-  ncvlog -sv $USER_DEFINED_VERILOG_COMPILE_OPTIONS $USER_DEFINED_COMPILE_OPTIONS "$QSYS_SIMDIR/submodules/altera_merlin_reorder_memory.sv"                                            -work cpu_v2_data_master_limiter                 -cdslib ./cds_libs/cpu_v2_data_master_limiter.cds.lib                
-  ncvlog -sv $USER_DEFINED_VERILOG_COMPILE_OPTIONS $USER_DEFINED_COMPILE_OPTIONS "$QSYS_SIMDIR/submodules/altera_avalon_sc_fifo.v"                                                    -work cpu_v2_data_master_limiter                 -cdslib ./cds_libs/cpu_v2_data_master_limiter.cds.lib                
-  ncvlog -sv $USER_DEFINED_VERILOG_COMPILE_OPTIONS $USER_DEFINED_COMPILE_OPTIONS "$QSYS_SIMDIR/submodules/altera_avalon_st_pipeline_base.v"                                           -work cpu_v2_data_master_limiter                 -cdslib ./cds_libs/cpu_v2_data_master_limiter.cds.lib                
-  ncvlog -sv $USER_DEFINED_VERILOG_COMPILE_OPTIONS $USER_DEFINED_COMPILE_OPTIONS "$QSYS_SIMDIR/submodules/WiPhase_top_level_mm_interconnect_0_router_005.sv"                          -work router_005                                 -cdslib ./cds_libs/router_005.cds.lib                                
-  ncvlog -sv $USER_DEFINED_VERILOG_COMPILE_OPTIONS $USER_DEFINED_COMPILE_OPTIONS "$QSYS_SIMDIR/submodules/WiPhase_top_level_mm_interconnect_0_router_002.sv"                          -work router_002                                 -cdslib ./cds_libs/router_002.cds.lib                                
-  ncvlog -sv $USER_DEFINED_VERILOG_COMPILE_OPTIONS $USER_DEFINED_COMPILE_OPTIONS "$QSYS_SIMDIR/submodules/WiPhase_top_level_mm_interconnect_0_router_001.sv"                          -work router_001                                 -cdslib ./cds_libs/router_001.cds.lib                                
-  ncvlog -sv $USER_DEFINED_VERILOG_COMPILE_OPTIONS $USER_DEFINED_COMPILE_OPTIONS "$QSYS_SIMDIR/submodules/WiPhase_top_level_mm_interconnect_0_router.sv"                              -work router                                     -cdslib ./cds_libs/router.cds.lib                                    
-  ncvlog $USER_DEFINED_VERILOG_COMPILE_OPTIONS $USER_DEFINED_COMPILE_OPTIONS     "$QSYS_SIMDIR/submodules/altera_avalon_sc_fifo.v"                                                    -work jtag_uart_avalon_jtag_slave_agent_rsp_fifo -cdslib ./cds_libs/jtag_uart_avalon_jtag_slave_agent_rsp_fifo.cds.lib
-  ncvlog -sv $USER_DEFINED_VERILOG_COMPILE_OPTIONS $USER_DEFINED_COMPILE_OPTIONS "$QSYS_SIMDIR/submodules/altera_merlin_slave_agent.sv"                                               -work jtag_uart_avalon_jtag_slave_agent          -cdslib ./cds_libs/jtag_uart_avalon_jtag_slave_agent.cds.lib         
-  ncvlog -sv $USER_DEFINED_VERILOG_COMPILE_OPTIONS $USER_DEFINED_COMPILE_OPTIONS "$QSYS_SIMDIR/submodules/altera_merlin_burst_uncompressor.sv"                                        -work jtag_uart_avalon_jtag_slave_agent          -cdslib ./cds_libs/jtag_uart_avalon_jtag_slave_agent.cds.lib         
-  ncvlog -sv $USER_DEFINED_VERILOG_COMPILE_OPTIONS $USER_DEFINED_COMPILE_OPTIONS "$QSYS_SIMDIR/submodules/altera_merlin_master_agent.sv"                                              -work cpu_v2_data_master_agent                   -cdslib ./cds_libs/cpu_v2_data_master_agent.cds.lib                  
-  ncvlog -sv $USER_DEFINED_VERILOG_COMPILE_OPTIONS $USER_DEFINED_COMPILE_OPTIONS "$QSYS_SIMDIR/submodules/altera_merlin_slave_translator.sv"                                          -work jtag_uart_avalon_jtag_slave_translator     -cdslib ./cds_libs/jtag_uart_avalon_jtag_slave_translator.cds.lib    
-  ncvlog -sv $USER_DEFINED_VERILOG_COMPILE_OPTIONS $USER_DEFINED_COMPILE_OPTIONS "$QSYS_SIMDIR/submodules/altera_merlin_master_translator.sv"                                         -work cpu_v2_data_master_translator              -cdslib ./cds_libs/cpu_v2_data_master_translator.cds.lib             
-  ncvlog $USER_DEFINED_VERILOG_COMPILE_OPTIONS $USER_DEFINED_COMPILE_OPTIONS     "$QSYS_SIMDIR/submodules/altera_std_synchronizer_nocut.v"                                            -work i_tse_mac                                  -cdslib ./cds_libs/i_tse_mac.cds.lib                                 
-  ncvlog $USER_DEFINED_VERILOG_COMPILE_OPTIONS $USER_DEFINED_COMPILE_OPTIONS     "$QSYS_SIMDIR/submodules/WiPhase_top_level_cpu_v2_cpu.vo"                                            -work cpu                                        -cdslib ./cds_libs/cpu.cds.lib                                       
-  ncvlog $USER_DEFINED_VERILOG_COMPILE_OPTIONS $USER_DEFINED_COMPILE_OPTIONS     "$QSYS_SIMDIR/submodules/WiPhase_top_level_cpu_v2_cpu_debug_slave_sysclk.v"                          -work cpu                                        -cdslib ./cds_libs/cpu.cds.lib                                       
-  ncvlog $USER_DEFINED_VERILOG_COMPILE_OPTIONS $USER_DEFINED_COMPILE_OPTIONS     "$QSYS_SIMDIR/submodules/WiPhase_top_level_cpu_v2_cpu_debug_slave_tck.v"                             -work cpu                                        -cdslib ./cds_libs/cpu.cds.lib                                       
-  ncvlog $USER_DEFINED_VERILOG_COMPILE_OPTIONS $USER_DEFINED_COMPILE_OPTIONS     "$QSYS_SIMDIR/submodules/WiPhase_top_level_cpu_v2_cpu_debug_slave_wrapper.v"                         -work cpu                                        -cdslib ./cds_libs/cpu.cds.lib                                       
-  ncvlog $USER_DEFINED_VERILOG_COMPILE_OPTIONS $USER_DEFINED_COMPILE_OPTIONS     "$QSYS_SIMDIR/submodules/WiPhase_top_level_cpu_v2_cpu_mult_cell.v"                                   -work cpu                                        -cdslib ./cds_libs/cpu.cds.lib                                       
-  ncvlog $USER_DEFINED_VERILOG_COMPILE_OPTIONS $USER_DEFINED_COMPILE_OPTIONS     "$QSYS_SIMDIR/submodules/WiPhase_top_level_cpu_v2_cpu_test_bench.v"                                  -work cpu                                        -cdslib ./cds_libs/cpu.cds.lib                                       
-  ncvlog $USER_DEFINED_VERILOG_COMPILE_OPTIONS $USER_DEFINED_COMPILE_OPTIONS     "$QSYS_SIMDIR/submodules/altera_reset_controller.v"                                                  -work rst_controller                             -cdslib ./cds_libs/rst_controller.cds.lib                            
-  ncvlog $USER_DEFINED_VERILOG_COMPILE_OPTIONS $USER_DEFINED_COMPILE_OPTIONS     "$QSYS_SIMDIR/submodules/altera_reset_synchronizer.v"                                                -work rst_controller                             -cdslib ./cds_libs/rst_controller.cds.lib                            
-  ncvhdl -v93 $USER_DEFINED_VHDL_COMPILE_OPTIONS $USER_DEFINED_COMPILE_OPTIONS   "$QSYS_SIMDIR/submodules/WiPhase_top_level_avalon_st_adapter_001.vhd"                                -work avalon_st_adapter_001                      -cdslib ./cds_libs/avalon_st_adapter_001.cds.lib                     
-  ncvhdl -v93 $USER_DEFINED_VHDL_COMPILE_OPTIONS $USER_DEFINED_COMPILE_OPTIONS   "$QSYS_SIMDIR/submodules/WiPhase_top_level_avalon_st_adapter.vhd"                                    -work avalon_st_adapter                          -cdslib ./cds_libs/avalon_st_adapter.cds.lib                         
-  ncvlog -sv $USER_DEFINED_VERILOG_COMPILE_OPTIONS $USER_DEFINED_COMPILE_OPTIONS "$QSYS_SIMDIR/submodules/WiPhase_top_level_irq_mapper.sv"                                            -work irq_mapper                                 -cdslib ./cds_libs/irq_mapper.cds.lib                                
-  ncvlog $USER_DEFINED_VERILOG_COMPILE_OPTIONS $USER_DEFINED_COMPILE_OPTIONS     "$QSYS_SIMDIR/submodules/WiPhase_top_level_mm_interconnect_0.v"                                      -work mm_interconnect_0                          -cdslib ./cds_libs/mm_interconnect_0.cds.lib                         
-  ncvlog $USER_DEFINED_VERILOG_COMPILE_OPTIONS $USER_DEFINED_COMPILE_OPTIONS     "$QSYS_SIMDIR/submodules/WiPhase_top_level_timer.v"                                                  -work timer                                      -cdslib ./cds_libs/timer.cds.lib                                     
-  ncvlog $USER_DEFINED_VERILOG_COMPILE_OPTIONS $USER_DEFINED_COMPILE_OPTIONS     "$QSYS_SIMDIR/submodules/WiPhase_top_level_sysid.v"                                                  -work sysid                                      -cdslib ./cds_libs/sysid.cds.lib                                     
-  ncvlog $USER_DEFINED_VERILOG_COMPILE_OPTIONS $USER_DEFINED_COMPILE_OPTIONS     "$QSYS_SIMDIR/submodules/WiPhase_top_level_spi.v"                                                    -work spi                                        -cdslib ./cds_libs/spi.cds.lib                                       
-  ncvhdl -v93 $USER_DEFINED_VHDL_COMPILE_OPTIONS $USER_DEFINED_COMPILE_OPTIONS   "$QSYS_SIMDIR/submodules/WiPhase_top_level_sample_pll.vho"                                           -work sample_pll                                 -cdslib ./cds_libs/sample_pll.cds.lib                                
-  ncvlog $USER_DEFINED_VERILOG_COMPILE_OPTIONS $USER_DEFINED_COMPILE_OPTIONS     "$QSYS_SIMDIR/submodules/WiPhase_top_level_ram_onchip.v"                                             -work ram_onchip                                 -cdslib ./cds_libs/ram_onchip.cds.lib                                
-  ncvlog $USER_DEFINED_VERILOG_COMPILE_OPTIONS $USER_DEFINED_COMPILE_OPTIONS     "$QSYS_SIMDIR/submodules/WiPhase_top_level_jtag_uart.v"                                              -work jtag_uart                                  -cdslib ./cds_libs/jtag_uart.cds.lib                                 
-  ncvhdl -v93 $USER_DEFINED_VHDL_COMPILE_OPTIONS $USER_DEFINED_COMPILE_OPTIONS   "$QSYS_SIMDIR/submodules/WiPhase_top_level_eth.vhd"                                                  -work eth                                        -cdslib ./cds_libs/eth.cds.lib                                       
-  ncvlog $USER_DEFINED_VERILOG_COMPILE_OPTIONS $USER_DEFINED_COMPILE_OPTIONS     "$QSYS_SIMDIR/submodules/WiPhase_top_level_cpu_v2.v"                                                 -work cpu_v2                                     -cdslib ./cds_libs/cpu_v2.cds.lib                                    
-  ncvhdl -v93 $USER_DEFINED_VHDL_COMPILE_OPTIONS $USER_DEFINED_COMPILE_OPTIONS   "$QSYS_SIMDIR/submodules/Debug_ST_Source.vhd"                                                        -work Debug_ST_Source_0                          -cdslib ./cds_libs/Debug_ST_Source_0.cds.lib                         
-  ncvhdl -v93 $USER_DEFINED_VHDL_COMPILE_OPTIONS $USER_DEFINED_COMPILE_OPTIONS   "$QSYS_SIMDIR/submodules/Debug_ST_Sink.vhd"                                                          -work Debug_ST_Sink_0                            -cdslib ./cds_libs/Debug_ST_Sink_0.cds.lib                           
-  ncvhdl -v93 $USER_DEFINED_VHDL_COMPILE_OPTIONS $USER_DEFINED_COMPILE_OPTIONS   "$QSYS_SIMDIR/WiPhase_top_level.vhd"                                                                                                                                                                                       
+  ncvlog $USER_DEFINED_VERILOG_COMPILE_OPTIONS $USER_DEFINED_COMPILE_OPTIONS   "$QSYS_SIMDIR/submodules/WiPhase_top_level_sysid.v"        -work sysid           -cdslib ./cds_libs/sysid.cds.lib          
+  ncvlog $USER_DEFINED_VERILOG_COMPILE_OPTIONS $USER_DEFINED_COMPILE_OPTIONS   "$QSYS_SIMDIR/submodules/WiPhase_top_level_spi.v"          -work spi             -cdslib ./cds_libs/spi.cds.lib            
+  ncvhdl -v93 $USER_DEFINED_VHDL_COMPILE_OPTIONS $USER_DEFINED_COMPILE_OPTIONS "$QSYS_SIMDIR/submodules/WiPhase_top_level_sample_pll.vho" -work sample_pll      -cdslib ./cds_libs/sample_pll.cds.lib     
+  ncvlog $USER_DEFINED_VERILOG_COMPILE_OPTIONS $USER_DEFINED_COMPILE_OPTIONS   "$QSYS_SIMDIR/submodules/WiPhase_top_level_ram_onchip.v"   -work ram_onchip      -cdslib ./cds_libs/ram_onchip.cds.lib     
+  ncvlog $USER_DEFINED_VERILOG_COMPILE_OPTIONS $USER_DEFINED_COMPILE_OPTIONS   "$QSYS_SIMDIR/submodules/WiPhase_top_level_jtag_uart.v"    -work jtag_uart       -cdslib ./cds_libs/jtag_uart.cds.lib      
+  ncvhdl -v93 $USER_DEFINED_VHDL_COMPILE_OPTIONS $USER_DEFINED_COMPILE_OPTIONS "$QSYS_SIMDIR/submodules/WiPhase_top_level_eth.vhd"        -work eth             -cdslib ./cds_libs/eth.cds.lib            
+  ncvlog $USER_DEFINED_VERILOG_COMPILE_OPTIONS $USER_DEFINED_COMPILE_OPTIONS   "$QSYS_SIMDIR/submodules/WiPhase_top_level_cpu_v2.v"       -work cpu_v2          -cdslib ./cds_libs/cpu_v2.cds.lib         
+  ncvhdl -v93 $USER_DEFINED_VHDL_COMPILE_OPTIONS $USER_DEFINED_COMPILE_OPTIONS "$QSYS_SIMDIR/submodules/Debug_ST_Sink.vhd"                -work Debug_ST_Sink_0 -cdslib ./cds_libs/Debug_ST_Sink_0.cds.lib
+  ncvhdl -v93 $USER_DEFINED_VHDL_COMPILE_OPTIONS $USER_DEFINED_COMPILE_OPTIONS "$QSYS_SIMDIR/WiPhase_top_level.vhd"                                                                                       
 fi
 
 # ----------------------------------------

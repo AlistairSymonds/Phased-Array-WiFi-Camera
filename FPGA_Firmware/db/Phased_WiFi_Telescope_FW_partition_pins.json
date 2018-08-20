@@ -4,6 +4,10 @@
 			"name" : "Top",
 			"pins" : [
 				{
+					"name" : "ENET_MDC",
+					"strict" : false
+				},
+				{
 					"name" : "ENET_RG_TXD0",
 					"strict" : false
 				},
@@ -44,11 +48,39 @@
 					"strict" : false
 				},
 				{
-					"name" : "ENET_CLK_125M",
+					"name" : "ENET_MDIO",
 					"strict" : false
 				},
 				{
 					"name" : "C10_CLK50M",
+					"strict" : false
+				},
+				{
+					"name" : "ENET_CLK_125M",
+					"strict" : false
+				},
+				{
+					"name" : "ENET_RG_RXCLK",
+					"strict" : false
+				},
+				{
+					"name" : "ENET_RG_RXCTL",
+					"strict" : false
+				},
+				{
+					"name" : "ENET_RG_RXD0",
+					"strict" : false
+				},
+				{
+					"name" : "ENET_RG_RXD3",
+					"strict" : false
+				},
+				{
+					"name" : "ENET_RG_RXD2",
+					"strict" : false
+				},
+				{
+					"name" : "ENET_RG_RXD1",
 					"strict" : false
 				},
 				{

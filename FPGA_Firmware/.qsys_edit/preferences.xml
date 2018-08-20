@@ -5,12 +5,13 @@
   <columns>
    <connections preferredWidth="223" />
    <irq preferredWidth="34" />
-   <name preferredWidth="306" />
+   <name preferredWidth="405" />
    <description preferredWidth="383" />
    <inputclock preferredWidth="307" />
   </columns>
  </systemtable>
- <library expandedCategories="Library,Project" />
+ <library
+   expandedCategories="Library/University Program,Library/DSP,Library,Project,Library/DSP/Video and Image Processing,Library/Basic Functions/Simulation; Debug and Verification,Library/University Program/Audio &amp; Video,Library/Basic Functions,Library/Basic Functions/Simulation; Debug and Verification/Verification,Library/University Program/Audio &amp; Video/Video" />
  <window width="3862" height="2122" x="-11" y="-11" />
  <hdlexample language="VHDL" />
  <generation synthesis="VHDL" greybox="0" simulation="VHDL" path="_PROJECT_NAME_" />

@@ -1,0 +1,11 @@
+
+#include "eth_init.h"
+
+#define MDIO_ADDR 0x0A
+
+int init_eth(uint8_t* mac){
+	printf("Hello");
+	return 0;
+
+}
+

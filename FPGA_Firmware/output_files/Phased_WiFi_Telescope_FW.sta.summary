@@ -3,51 +3,51 @@ TimeQuest Timing Analyzer Summary
 ------------------------------------------------------------
 
 Type  : Slow 1200mV 85C Model Setup 'ENET_CLK_125M'
-Slack : 1.729
+Slack : 2.009
 TNS   : 0.000
 
 Type  : Slow 1200mV 85C Model Setup 'C10_clk50M'
-Slack : 8.302
+Slack : 8.282
 TNS   : 0.000
 
 Type  : Slow 1200mV 85C Model Setup 'altera_reserved_tck'
-Slack : 45.187
+Slack : 44.565
 TNS   : 0.000
 
 Type  : Slow 1200mV 85C Model Hold 'C10_clk50M'
-Slack : 0.348
+Slack : 0.409
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Hold 'ENET_CLK_125M'
+Slack : 0.449
 TNS   : 0.000
 
 Type  : Slow 1200mV 85C Model Hold 'altera_reserved_tck'
 Slack : 0.453
 TNS   : 0.000
 
-Type  : Slow 1200mV 85C Model Hold 'ENET_CLK_125M'
-Slack : 0.454
-TNS   : 0.000
-
 Type  : Slow 1200mV 85C Model Recovery 'ENET_CLK_125M'
-Slack : 3.570
+Slack : 3.519
 TNS   : 0.000
 
 Type  : Slow 1200mV 85C Model Recovery 'C10_clk50M'
-Slack : 15.121
+Slack : 13.055
 TNS   : 0.000
 
 Type  : Slow 1200mV 85C Model Recovery 'altera_reserved_tck'
-Slack : 47.798
+Slack : 47.733
 TNS   : 0.000
 
 Type  : Slow 1200mV 85C Model Removal 'altera_reserved_tck'
-Slack : 1.309
+Slack : 1.604
 TNS   : 0.000
 
 Type  : Slow 1200mV 85C Model Removal 'C10_clk50M'
-Slack : 2.314
+Slack : 2.403
 TNS   : 0.000
 
 Type  : Slow 1200mV 85C Model Removal 'ENET_CLK_125M'
-Slack : 2.368
+Slack : 2.403
 TNS   : 0.000
 
 Type  : Slow 1200mV 85C Model Minimum Pulse Width 'ENET_CLK_125M'
@@ -59,80 +59,89 @@ Slack : 5.000
 TNS   : 0.000
 
 Type  : Slow 1200mV 85C Model Minimum Pulse Width 'C10_clk50M'
-Slack : 9.399
+Slack : 9.569
 TNS   : 0.000
 
 Type  : Slow 1200mV 85C Model Minimum Pulse Width 'altera_reserved_tck'
-Slack : 49.441
+Slack : 49.440
 TNS   : 0.000
 
 Type  : Slow 1200mV 85C Model Max Skew 'set_max_skew'
-Slack : 6.381
+Slack : 6.402
 
 Type  : Slow 1200mV 85C Model Max Skew 'set_max_skew'
-Slack : 6.537
+Slack : 6.529
+
+Type  : Slow 1200mV 85C Model Max Skew 'set_max_skew'
+Slack : 6.648
 
 Type  : Slow 1200mV 85C Model Net Delay 'set_net_delay'
-Slack : 3.613
+Slack : 2.884
 
 Type  : Slow 1200mV 85C Model Net Delay 'set_net_delay'
-Slack : 4.635
+Slack : 4.362
 
 Type  : Slow 1200mV 85C Model Net Delay 'set_net_delay'
-Slack : 5.167
+Slack : 4.663
 
 Type  : Slow 1200mV 85C Model Net Delay 'set_net_delay'
-Slack : 5.167
+Slack : 4.663
 
 Type  : Slow 1200mV 85C Model Net Delay 'set_net_delay'
-Slack : 5.168
+Slack : 4.669
+
+Type  : Slow 1200mV 85C Model Net Delay 'set_net_delay'
+Slack : 4.793
+
+Type  : Slow 1200mV 85C Model Net Delay 'set_net_delay'
+Slack : 4.798
 
 Type  : Slow 1200mV 0C Model Setup 'ENET_CLK_125M'
-Slack : 2.100
+Slack : 2.274
 TNS   : 0.000
 
 Type  : Slow 1200mV 0C Model Setup 'C10_clk50M'
-Slack : 8.766
+Slack : 8.797
 TNS   : 0.000
 
 Type  : Slow 1200mV 0C Model Setup 'altera_reserved_tck'
-Slack : 45.580
+Slack : 44.985
 TNS   : 0.000
 
 Type  : Slow 1200mV 0C Model Hold 'C10_clk50M'
-Slack : 0.334
-TNS   : 0.000
-
-Type  : Slow 1200mV 0C Model Hold 'altera_reserved_tck'
-Slack : 0.401
+Slack : 0.386
 TNS   : 0.000
 
 Type  : Slow 1200mV 0C Model Hold 'ENET_CLK_125M'
-Slack : 0.402
+Slack : 0.401
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Hold 'altera_reserved_tck'
+Slack : 0.403
 TNS   : 0.000
 
 Type  : Slow 1200mV 0C Model Recovery 'ENET_CLK_125M'
-Slack : 3.922
+Slack : 3.884
 TNS   : 0.000
 
 Type  : Slow 1200mV 0C Model Recovery 'C10_clk50M'
-Slack : 15.505
+Slack : 13.516
 TNS   : 0.000
 
 Type  : Slow 1200mV 0C Model Recovery 'altera_reserved_tck'
-Slack : 48.106
+Slack : 48.036
 TNS   : 0.000
 
 Type  : Slow 1200mV 0C Model Removal 'altera_reserved_tck'
-Slack : 1.214
+Slack : 1.442
 TNS   : 0.000
 
 Type  : Slow 1200mV 0C Model Removal 'C10_clk50M'
-Slack : 2.049
+Slack : 2.114
 TNS   : 0.000
 
 Type  : Slow 1200mV 0C Model Removal 'ENET_CLK_125M'
-Slack : 2.086
+Slack : 2.125
 TNS   : 0.000
 
 Type  : Slow 1200mV 0C Model Minimum Pulse Width 'ENET_CLK_125M'
@@ -144,48 +153,57 @@ Slack : 5.000
 TNS   : 0.000
 
 Type  : Slow 1200mV 0C Model Minimum Pulse Width 'C10_clk50M'
-Slack : 9.425
+Slack : 9.574
 TNS   : 0.000
 
 Type  : Slow 1200mV 0C Model Minimum Pulse Width 'altera_reserved_tck'
-Slack : 49.314
+Slack : 49.313
 TNS   : 0.000
 
 Type  : Slow 1200mV 0C Model Max Skew 'set_max_skew'
-Slack : 6.472
+Slack : 6.435
 
 Type  : Slow 1200mV 0C Model Max Skew 'set_max_skew'
-Slack : 6.573
+Slack : 6.545
+
+Type  : Slow 1200mV 0C Model Max Skew 'set_max_skew'
+Slack : 6.659
 
 Type  : Slow 1200mV 0C Model Net Delay 'set_net_delay'
-Slack : 3.717
+Slack : 2.995
 
 Type  : Slow 1200mV 0C Model Net Delay 'set_net_delay'
-Slack : 4.691
+Slack : 4.441
 
 Type  : Slow 1200mV 0C Model Net Delay 'set_net_delay'
-Slack : 5.225
+Slack : 4.719
 
 Type  : Slow 1200mV 0C Model Net Delay 'set_net_delay'
-Slack : 5.234
+Slack : 4.723
 
 Type  : Slow 1200mV 0C Model Net Delay 'set_net_delay'
-Slack : 5.235
+Slack : 4.725
+
+Type  : Slow 1200mV 0C Model Net Delay 'set_net_delay'
+Slack : 4.832
+
+Type  : Slow 1200mV 0C Model Net Delay 'set_net_delay'
+Slack : 4.851
 
 Type  : Fast 1200mV 0C Model Setup 'ENET_CLK_125M'
-Slack : 5.203
+Slack : 5.402
 TNS   : 0.000
 
 Type  : Fast 1200mV 0C Model Setup 'C10_clk50M'
-Slack : 14.749
+Slack : 14.785
 TNS   : 0.000
 
 Type  : Fast 1200mV 0C Model Setup 'altera_reserved_tck'
-Slack : 48.228
+Slack : 47.974
 TNS   : 0.000
 
 Type  : Fast 1200mV 0C Model Hold 'C10_clk50M'
-Slack : 0.105
+Slack : 0.143
 TNS   : 0.000
 
 Type  : Fast 1200mV 0C Model Hold 'ENET_CLK_125M'
@@ -193,31 +211,31 @@ Slack : 0.184
 TNS   : 0.000
 
 Type  : Fast 1200mV 0C Model Hold 'altera_reserved_tck'
-Slack : 0.188
+Slack : 0.187
 TNS   : 0.000
 
 Type  : Fast 1200mV 0C Model Recovery 'ENET_CLK_125M'
-Slack : 6.044
+Slack : 6.019
 TNS   : 0.000
 
 Type  : Fast 1200mV 0C Model Recovery 'C10_clk50M'
-Slack : 17.739
+Slack : 16.688
 TNS   : 0.000
 
 Type  : Fast 1200mV 0C Model Recovery 'altera_reserved_tck'
-Slack : 49.338
+Slack : 49.291
 TNS   : 0.000
 
 Type  : Fast 1200mV 0C Model Removal 'altera_reserved_tck'
-Slack : 0.557
-TNS   : 0.000
-
-Type  : Fast 1200mV 0C Model Removal 'C10_clk50M'
-Slack : 1.080
+Slack : 0.668
 TNS   : 0.000
 
 Type  : Fast 1200mV 0C Model Removal 'ENET_CLK_125M'
-Slack : 1.107
+Slack : 1.124
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Removal 'C10_clk50M'
+Slack : 1.127
 TNS   : 0.000
 
 Type  : Fast 1200mV 0C Model Minimum Pulse Width 'ENET_CLK_125M'
@@ -237,24 +255,33 @@ Slack : 49.286
 TNS   : 0.000
 
 Type  : Fast 1200mV 0C Model Max Skew 'set_max_skew'
-Slack : 7.021
+Slack : 6.939
 
 Type  : Fast 1200mV 0C Model Max Skew 'set_max_skew'
-Slack : 7.030
+Slack : 7.014
+
+Type  : Fast 1200mV 0C Model Max Skew 'set_max_skew'
+Slack : 7.083
 
 Type  : Fast 1200mV 0C Model Net Delay 'set_net_delay'
-Slack : 4.857
+Slack : 4.517
 
 Type  : Fast 1200mV 0C Model Net Delay 'set_net_delay'
-Slack : 5.383
+Slack : 5.252
 
 Type  : Fast 1200mV 0C Model Net Delay 'set_net_delay'
-Slack : 5.646
+Slack : 5.388
 
 Type  : Fast 1200mV 0C Model Net Delay 'set_net_delay'
-Slack : 5.663
+Slack : 5.394
 
 Type  : Fast 1200mV 0C Model Net Delay 'set_net_delay'
-Slack : 5.664
+Slack : 5.400
+
+Type  : Fast 1200mV 0C Model Net Delay 'set_net_delay'
+Slack : 5.451
+
+Type  : Fast 1200mV 0C Model Net Delay 'set_net_delay'
+Slack : 5.458
 
 ------------------------------------------------------------

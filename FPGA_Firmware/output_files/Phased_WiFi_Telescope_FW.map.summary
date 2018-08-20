@@ -1,14 +1,14 @@
-Analysis & Synthesis Status : Successful - Wed Aug 15 23:23:21 2018
+Analysis & Synthesis Status : Successful - Mon Aug 20 15:34:56 2018
 Quartus Prime Version : 17.1.0 Build 590 10/25/2017 SJ Lite Edition
 Revision Name : Phased_WiFi_Telescope_FW
 Top-level Entity Name : WiPhase_phys
 Family : Cyclone 10 LP
-Total logic elements : 6,014
-    Total combinational functions : 4,388
-    Dedicated logic registers : 3,677
-Total registers : 3685
+Total logic elements : 5,850
+    Total combinational functions : 4,005
+    Dedicated logic registers : 3,811
+Total registers : 3819
 Total pins : 37
 Total virtual pins : 0
-Total memory bits : 292,416
-Embedded Multiplier 9-bit elements : 6
+Total memory bits : 258,736
+Embedded Multiplier 9-bit elements : 0
 Total PLLs : 1

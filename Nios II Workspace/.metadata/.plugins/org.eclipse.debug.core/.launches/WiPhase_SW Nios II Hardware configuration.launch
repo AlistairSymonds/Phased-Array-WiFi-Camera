@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<launchConfiguration type="com.altera.sbtgui.launch.hardware.Nios2HardwareLaunchConfiguration">
+<stringAttribute key="byteStreamDeviceCableName" value="Cyclone 10 LP Evaluation Kit on localhost [USB-1]"/>
+<stringAttribute key="byteStreamDeviceDeviceID" value="1"/>
+<stringAttribute key="byteStreamDeviceInstanceID" value="0"/>
+<stringAttribute key="com.altera.sbtgui.launch.REMOTE_PORT" value="52602"/>
+<booleanAttribute key="downloadProgram" value="true"/>
+<stringAttribute key="elfFile" value="C:\Users\alist\OneDrive\Electrickery\Phased-Array-Radio-Telescope\Phased-Array-WiFi-Camera\FPGA_Firmware\software\WiPhase_SW\WiPhase_SW.elf"/>
+<stringAttribute key="org.eclipse.cdt.debug.mi.core.commandFactory" value="com.altera.debug.cdi.gdb.plugin.Nios2GDBServerCommandFactory"/>
+<stringAttribute key="org.eclipse.cdt.launch.DEBUGGER_ID" value="com.altera.debug.cdi.gdb.plugin.Nios2GdbCdiDebugger"/>
+<stringAttribute key="org.eclipse.cdt.launch.DEBUGGER_START_MODE" value="run"/>
+<booleanAttribute key="org.eclipse.cdt.launch.DEBUGGER_STOP_AT_MAIN" value="true"/>
+<stringAttribute key="org.eclipse.cdt.launch.PROGRAM_NAME" value="WiPhase_SW.elf"/>
+<stringAttribute key="org.eclipse.cdt.launch.PROJECT_ATTR" value="WiPhase_SW"/>
+<stringAttribute key="processorCableName" value="Cyclone 10 LP Evaluation Kit on localhost [USB-1]"/>
+<stringAttribute key="processorDeviceIndex" value="1"/>
+<stringAttribute key="processorInstanceId" value="0"/>
+<booleanAttribute key="runProgram" value="true"/>
+</launchConfiguration>
