@@ -17600,7 +17600,7 @@ W = angled&lt;p&gt;
 <part name="SUPPLY3" library="supply2" library_urn="urn:adsk.eagle:library:372" deviceset="GND" device=""/>
 <part name="SUPPLY4" library="supply2" library_urn="urn:adsk.eagle:library:372" deviceset="GND" device=""/>
 <part name="SUPPLY5" library="supply2" library_urn="urn:adsk.eagle:library:372" deviceset="GND" device=""/>
-<part name="LNA_RF" library="ADL5523ACPZ-R7" deviceset="ADL5523ACPZ-R7" device="CP_8_2-M" value="ADL5523ACPZ-R7CP_8_2-M"/>
+<part name="LNA" library="ADL5523ACPZ-R7" deviceset="ADL5523ACPZ-R7" device="CP_8_2-M" value="ADL5523ACPZ-R7CP_8_2-M"/>
 <part name="BPF_RF" library="Johanson BPF 2450BP18C100C" deviceset="2450BP18C100C" device=""/>
 <part name="BPF_LO" library="Johanson BPF 2450BP18C100C" deviceset="2450BP18C100C" device=""/>
 <part name="SUPPLY8" library="supply2" library_urn="urn:adsk.eagle:library:372" deviceset="GND" device=""/>
@@ -17650,7 +17650,7 @@ W = angled&lt;p&gt;
 <instance part="SUPPLY3" gate="GND" x="0" y="111.76"/>
 <instance part="SUPPLY4" gate="GND" x="7.62" y="96.52"/>
 <instance part="SUPPLY5" gate="GND" x="71.12" y="116.84"/>
-<instance part="LNA_RF" gate="A" x="78.74" y="60.96"/>
+<instance part="LNA" gate="A" x="78.74" y="60.96"/>
 <instance part="BPF_RF" gate="A" x="193.04" y="53.34"/>
 <instance part="BPF_LO" gate="A" x="193.04" y="116.84"/>
 <instance part="SUPPLY8" gate="GND" x="246.38" y="60.96" rot="R270"/>
@@ -17748,7 +17748,7 @@ W = angled&lt;p&gt;
 <wire x1="-7.62" y1="40.64" x2="-7.62" y2="35.56" width="0.1524" layer="91"/>
 </segment>
 <segment>
-<pinref part="LNA_RF" gate="A" pin="EP"/>
+<pinref part="LNA" gate="A" pin="EP"/>
 <pinref part="SUPPLY21" gate="GND" pin="GND"/>
 <wire x1="142.24" y1="60.96" x2="147.32" y2="60.96" width="0.1524" layer="91"/>
 </segment>
@@ -17866,7 +17866,7 @@ W = angled&lt;p&gt;
 </net>
 <net name="RF_AMPED" class="1">
 <segment>
-<pinref part="LNA_RF" gate="A" pin="RFOUT"/>
+<pinref part="LNA" gate="A" pin="RFOUT"/>
 <pinref part="BPF_RF" gate="A" pin="I/O_1"/>
 <wire x1="142.24" y1="55.88" x2="177.8" y2="55.88" width="0.1524" layer="91"/>
 <label x="162.56" y="53.34" size="1.778" layer="95"/>
@@ -17907,7 +17907,7 @@ W = angled&lt;p&gt;
 <wire x1="63.5" y1="60.96" x2="66.04" y2="60.96" width="0.1524" layer="91"/>
 <junction x="63.5" y="60.96"/>
 <label x="63.5" y="76.2" size="1.778" layer="95"/>
-<pinref part="LNA_RF" gate="A" pin="VPOS"/>
+<pinref part="LNA" gate="A" pin="VPOS"/>
 <wire x1="63.5" y1="60.96" x2="63.5" y2="38.1" width="0.1524" layer="91"/>
 <wire x1="63.5" y1="38.1" x2="81.28" y2="38.1" width="0.1524" layer="91"/>
 </segment>
@@ -17977,13 +17977,13 @@ W = angled&lt;p&gt;
 <segment>
 <pinref part="R3" gate="G$1" pin="1"/>
 <wire x1="76.2" y1="60.96" x2="78.74" y2="60.96" width="0.1524" layer="91"/>
-<pinref part="LNA_RF" gate="A" pin="VBIAS"/>
+<pinref part="LNA" gate="A" pin="VBIAS"/>
 <wire x1="78.74" y1="60.96" x2="81.28" y2="60.96" width="0.1524" layer="91"/>
 </segment>
 </net>
 <net name="N$5" class="1">
 <segment>
-<pinref part="LNA_RF" gate="A" pin="RFIN"/>
+<pinref part="LNA" gate="A" pin="RFIN"/>
 <wire x1="81.28" y1="55.88" x2="81.28" y2="45.72" width="0.1524" layer="91"/>
 <wire x1="81.28" y1="45.72" x2="33.02" y2="45.72" width="0.1524" layer="91"/>
 <pinref part="L1" gate="A" pin="P$2"/>

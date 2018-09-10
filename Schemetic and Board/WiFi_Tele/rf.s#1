@@ -17602,7 +17602,7 @@ W = angled&lt;p&gt;
 <part name="SUPPLY5" library="supply2" library_urn="urn:adsk.eagle:library:372" deviceset="GND" device=""/>
 <part name="LNA" library="ADL5523ACPZ-R7" deviceset="ADL5523ACPZ-R7" device="CP_8_2-M" value="ADL5523ACPZ-R7CP_8_2-M"/>
 <part name="BPF1" library="Johanson BPF 2450BP18C100C" deviceset="2450BP18C100C" device=""/>
-<part name="BPF_LO" library="Johanson BPF 2450BP18C100C" deviceset="2450BP18C100C" device=""/>
+<part name="BPF2" library="Johanson BPF 2450BP18C100C" deviceset="2450BP18C100C" device=""/>
 <part name="SUPPLY8" library="supply2" library_urn="urn:adsk.eagle:library:372" deviceset="GND" device=""/>
 <part name="SUPPLY10" library="supply2" library_urn="urn:adsk.eagle:library:372" deviceset="GND" device=""/>
 <part name="SUPPLY12" library="supply2" library_urn="urn:adsk.eagle:library:372" deviceset="GND" device=""/>
@@ -17652,7 +17652,7 @@ W = angled&lt;p&gt;
 <instance part="SUPPLY5" gate="GND" x="71.12" y="116.84"/>
 <instance part="LNA" gate="A" x="78.74" y="60.96"/>
 <instance part="BPF1" gate="A" x="193.04" y="53.34"/>
-<instance part="BPF_LO" gate="A" x="193.04" y="116.84"/>
+<instance part="BPF2" gate="A" x="193.04" y="116.84"/>
 <instance part="SUPPLY8" gate="GND" x="246.38" y="60.96" rot="R270"/>
 <instance part="SUPPLY10" gate="GND" x="193.04" y="33.02"/>
 <instance part="SUPPLY12" gate="GND" x="193.04" y="96.52"/>
@@ -17721,7 +17721,7 @@ W = angled&lt;p&gt;
 </segment>
 <segment>
 <pinref part="SUPPLY12" gate="GND" pin="GND"/>
-<pinref part="BPF_LO" gate="A" pin="GND"/>
+<pinref part="BPF2" gate="A" pin="GND"/>
 <wire x1="193.04" y1="106.68" x2="193.04" y2="99.06" width="0.1524" layer="91"/>
 </segment>
 <segment>
@@ -17851,7 +17851,7 @@ W = angled&lt;p&gt;
 </net>
 <net name="LO_AMPED" class="1">
 <segment>
-<pinref part="BPF_LO" gate="A" pin="I/O_1"/>
+<pinref part="BPF2" gate="A" pin="I/O_1"/>
 <wire x1="142.24" y1="119.38" x2="177.8" y2="119.38" width="0.1524" layer="91"/>
 <label x="162.56" y="116.84" size="1.778" layer="95"/>
 <pinref part="C10" gate="G$1" pin="1"/>
@@ -17885,7 +17885,7 @@ W = angled&lt;p&gt;
 </net>
 <net name="LO_FILTERED" class="1">
 <segment>
-<pinref part="BPF_LO" gate="A" pin="I/O_2"/>
+<pinref part="BPF2" gate="A" pin="I/O_2"/>
 <wire x1="208.28" y1="119.38" x2="228.6" y2="119.38" width="0.1524" layer="91"/>
 <label x="190.5" y="20.32" size="1.778" layer="95"/>
 <wire x1="228.6" y1="119.38" x2="299.72" y2="119.38" width="0.1524" layer="91"/>

@@ -18000,7 +18000,7 @@ W = angled&lt;p&gt;
 <junction x="7.62" y="45.72"/>
 </segment>
 </net>
-<net name="IF_N" class="0">
+<net name="N$4" class="0">
 <segment>
 <pinref part="U1" gate="A" pin="IF-"/>
 <wire x1="287.02" y1="43.18" x2="299.72" y2="43.18" width="0.1524" layer="91"/>
@@ -18009,7 +18009,6 @@ W = angled&lt;p&gt;
 <junction x="299.72" y="43.18"/>
 <pinref part="U$1" gate="G$1" pin="SECONDARY_1"/>
 <wire x1="299.72" y1="50.8" x2="307.34" y2="50.8" width="0.1524" layer="91"/>
-<label x="297.18" y="38.1" size="1.778" layer="95"/>
 </segment>
 </net>
 <net name="IF_P" class="0">
@@ -18023,22 +18022,24 @@ W = angled&lt;p&gt;
 <label x="292.1" y="48.26" size="1.778" layer="95"/>
 </segment>
 </net>
-<net name="N$3" class="0">
+<net name="IF+" class="0">
 <segment>
 <pinref part="U$1" gate="G$1" pin="PRIMARY_5"/>
 <wire x1="322.58" y1="50.8" x2="342.9" y2="50.8" width="0.1524" layer="91"/>
 <wire x1="342.9" y1="50.8" x2="342.9" y2="48.26" width="0.1524" layer="91"/>
 <pinref part="IF" gate="G$1" pin="1"/>
 <wire x1="342.9" y1="48.26" x2="347.98" y2="48.26" width="0.1524" layer="91"/>
+<label x="330.2" y="50.8" size="1.778" layer="95"/>
 </segment>
 </net>
-<net name="N$7" class="0">
+<net name="IF-" class="0">
 <segment>
 <pinref part="U$1" gate="G$1" pin="PRIMARY_4"/>
 <wire x1="322.58" y1="40.64" x2="342.9" y2="40.64" width="0.1524" layer="91"/>
 <wire x1="342.9" y1="40.64" x2="342.9" y2="43.18" width="0.1524" layer="91"/>
 <pinref part="IF" gate="G$1" pin="2"/>
 <wire x1="342.9" y1="43.18" x2="347.98" y2="43.18" width="0.1524" layer="91"/>
+<label x="330.2" y="40.64" size="1.778" layer="95"/>
 </segment>
 </net>
 </nets>

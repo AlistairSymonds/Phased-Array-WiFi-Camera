@@ -18005,17 +18005,20 @@ W = angled&lt;p&gt;
 <pinref part="U1" gate="A" pin="IF-"/>
 <wire x1="287.02" y1="43.18" x2="299.72" y2="43.18" width="0.1524" layer="91"/>
 <wire x1="299.72" y1="43.18" x2="299.72" y2="40.64" width="0.1524" layer="91"/>
-<pinref part="U$1" gate="G$1" pin="SECONDARY_3"/>
-<wire x1="299.72" y1="40.64" x2="307.34" y2="40.64" width="0.1524" layer="91"/>
+<wire x1="299.72" y1="43.18" x2="299.72" y2="50.8" width="0.1524" layer="91"/>
+<junction x="299.72" y="43.18"/>
+<pinref part="U$1" gate="G$1" pin="SECONDARY_1"/>
+<wire x1="299.72" y1="50.8" x2="307.34" y2="50.8" width="0.1524" layer="91"/>
 </segment>
 </net>
 <net name="N$6" class="0">
 <segment>
 <pinref part="U1" gate="A" pin="IF+"/>
 <wire x1="287.02" y1="45.72" x2="299.72" y2="45.72" width="0.1524" layer="91"/>
-<wire x1="299.72" y1="45.72" x2="299.72" y2="50.8" width="0.1524" layer="91"/>
-<pinref part="U$1" gate="G$1" pin="SECONDARY_1"/>
-<wire x1="299.72" y1="50.8" x2="307.34" y2="50.8" width="0.1524" layer="91"/>
+<wire x1="299.72" y1="45.72" x2="302.26" y2="45.72" width="0.1524" layer="91"/>
+<pinref part="U$1" gate="G$1" pin="SECONDARY_3"/>
+<wire x1="302.26" y1="45.72" x2="302.26" y2="40.64" width="0.1524" layer="91"/>
+<wire x1="302.26" y1="40.64" x2="307.34" y2="40.64" width="0.1524" layer="91"/>
 </segment>
 </net>
 <net name="N$3" class="0">

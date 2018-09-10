@@ -4,7 +4,7 @@
  * Machine generated for CPU 'cpu_v2' in SOPC Builder design 'WiPhase_top_level'
  * SOPC Builder design path: ../../WiPhase_top_level.sopcinfo
  *
- * Generated: Mon Aug 20 22:40:47 EST 2018
+ * Generated: Sun Sep 09 12:51:43 EST 2018
  */
 
 /*
@@ -141,7 +141,6 @@
 #define __ALTERA_ETH_TSE
 #define __ALTERA_NIOS2_GEN2
 #define __ALTPLL
-#define __DATA_SOURCE
 
 
 /*
@@ -200,11 +199,11 @@
 #define ETH_PCS 0
 #define ETH_PCS_ID 0
 #define ETH_PCS_SGMII 0
-#define ETH_RECEIVE_FIFO_DEPTH 2048
+#define ETH_RECEIVE_FIFO_DEPTH 1024
 #define ETH_REGISTER_SHARED 0
 #define ETH_RGMII 1
 #define ETH_SPAN 1024
-#define ETH_TRANSMIT_FIFO_DEPTH 2048
+#define ETH_TRANSMIT_FIFO_DEPTH 512
 #define ETH_TYPE "altera_eth_tse"
 #define ETH_USE_MDIO 1
 
@@ -324,36 +323,8 @@
 #define SYSID_IRQ_INTERRUPT_CONTROLLER_ID -1
 #define SYSID_NAME "/dev/sysid"
 #define SYSID_SPAN 8
-#define SYSID_TIMESTAMP 1534766112
+#define SYSID_TIMESTAMP 1536457240
 #define SYSID_TYPE "altera_avalon_sysid_qsys"
-
-
-/*
- * test_pattern_st_gen_command configuration
- *
- */
-
-#define ALT_MODULE_CLASS_test_pattern_st_gen_command data_source
-#define TEST_PATTERN_ST_GEN_COMMAND_BASE 0x11460
-#define TEST_PATTERN_ST_GEN_COMMAND_IRQ -1
-#define TEST_PATTERN_ST_GEN_COMMAND_IRQ_INTERRUPT_CONTROLLER_ID -1
-#define TEST_PATTERN_ST_GEN_COMMAND_NAME "/dev/test_pattern_st_gen_command"
-#define TEST_PATTERN_ST_GEN_COMMAND_SPAN 8
-#define TEST_PATTERN_ST_GEN_COMMAND_TYPE "data_source"
-
-
-/*
- * test_pattern_st_gen_csr configuration
- *
- */
-
-#define ALT_MODULE_CLASS_test_pattern_st_gen_csr data_source
-#define TEST_PATTERN_ST_GEN_CSR_BASE 0x11440
-#define TEST_PATTERN_ST_GEN_CSR_IRQ -1
-#define TEST_PATTERN_ST_GEN_CSR_IRQ_INTERRUPT_CONTROLLER_ID -1
-#define TEST_PATTERN_ST_GEN_CSR_NAME "/dev/test_pattern_st_gen_csr"
-#define TEST_PATTERN_ST_GEN_CSR_SPAN 16
-#define TEST_PATTERN_ST_GEN_CSR_TYPE "data_source"
 
 
 /*

@@ -26,10 +26,10 @@ entity hmcad1511_controller is
 			
 		
 		-- dxA = dx(0), dXB = dx(1)
-		d1 : in std_logic_vector(1 downto 0);
-		d2 : in std_logic_vector(1 downto 0);
-		d3 : in std_logic_vector(1 downto 0);
-		d4 : in std_logic_vector(1 downto 0)
+		d1_in : in std_logic_vector(1 downto 0);
+		d2_in : in std_logic_vector(1 downto 0);
+		d3_in : in std_logic_vector(1 downto 0);
+		d4_in : in std_logic_vector(1 downto 0)
 	);
 	
 end entity;
@@ -61,28 +61,28 @@ begin
 	
 	d1lvds : adc_lvds
 	port map(
-		rx_in => d1,
+		rx_in => d1_in,
 		rx_inclock => lclk,
 		rx_out => d1val
 	);
 	
 	d2lvds : adc_lvds
 	port map(
-		rx_in => d2,
+		rx_in => d2_in,
 		rx_inclock => lclk,
 		rx_out => d2val
 	);
 	
 	d3lvds : adc_lvds
 	port map(
-		rx_in => d3,
+		rx_in => d3_in,
 		rx_inclock => lclk,
 		rx_out => d3val
 	);
 	
 	d4lvds : adc_lvds
 	port map(
-		rx_in => d4,
+		rx_in => d4_in,
 		rx_inclock => lclk,
 		rx_out => d4val
 	);

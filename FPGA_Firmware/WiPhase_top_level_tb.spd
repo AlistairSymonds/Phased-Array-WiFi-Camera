@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<simPackage>
+ <file
+   path="WiPhase_top_level/testbench/WiPhase_top_level_tb/simulation/submodules/WiPhase_top_level_sysid.v"
+   type="VERILOG"
+   library="sysid" />
+ <file
+   path="WiPhase_top_level/testbench/WiPhase_top_level_tb/simulation/submodules/WiPhase_top_level_spi.v"
+   type="VERILOG"
+   library="spi" />
+ <file
+   path="WiPhase_top_level/testbench/WiPhase_top_level_tb/simulation/submodules/WiPhase_top_level_sample_pll.vho"
+   type="VHDL"
+   library="sample_pll" />
+ <file
+   path="WiPhase_top_level/testbench/WiPhase_top_level_tb/simulation/submodules/WiPhase_top_level_ram_onchip.hex"
+   type="HEX"
+   library="ram_onchip" />
+ <file
+   path="WiPhase_top_level/testbench/WiPhase_top_level_tb/simulation/submodules/WiPhase_top_level_ram_onchip.v"
+   type="VERILOG"
+   library="ram_onchip" />
+ <file
+   path="WiPhase_top_level/testbench/WiPhase_top_level_tb/simulation/submodules/WiPhase_top_level_jtag_uart.v"
+   type="VERILOG"
+   library="jtag_uart" />
+ <file
+   path="WiPhase_top_level/testbench/WiPhase_top_level_tb/simulation/submodules/WiPhase_top_level_eth.vhd"
+   type="VHDL"
+   library="eth" />
+ <file
+   path="WiPhase_top_level/testbench/WiPhase_top_level_tb/simulation/submodules/WiPhase_top_level_cpu_v2.v"
+   type="VERILOG"
+   library="cpu_v2" />
+ <file
+   path="WiPhase_top_level/testbench/WiPhase_top_level_tb/simulation/submodules/Debug_ST_Sink.vhd"
+   type="VHDL"
+   library="Debug_ST_Sink_0" />
+ <file
+   path="WiPhase_top_level/testbench/WiPhase_top_level_tb/simulation/submodules/altera_conduit_bfm_0006_vhdl_pkg.vhd"
+   type="VHDL"
+   library="WiPhase_top_level_inst_spi_signals_o_bfm" />
+ <file
+   path="WiPhase_top_level/testbench/WiPhase_top_level_tb/simulation/submodules/altera_conduit_bfm_0006.vhd"
+   type="VHDL"
+   library="WiPhase_top_level_inst_spi_signals_o_bfm" />
+ <file
+   path="WiPhase_top_level/testbench/WiPhase_top_level_tb/simulation/submodules/altera_conduit_bfm_0005_vhdl_pkg.vhd"
+   type="VHDL"
+   library="WiPhase_top_level_inst_sample_pll_locked_conduit_bfm" />
+ <file
+   path="WiPhase_top_level/testbench/WiPhase_top_level_tb/simulation/submodules/altera_conduit_bfm_0005.vhd"
+   type="VHDL"
+   library="WiPhase_top_level_inst_sample_pll_locked_conduit_bfm" />
+ <file
+   path="WiPhase_top_level/testbench/WiPhase_top_level_tb/simulation/submodules/altera_conduit_bfm_0004_vhdl_pkg.vhd"
+   type="VHDL"
+   library="WiPhase_top_level_inst_sample_pll_areset_conduit_bfm" />
+ <file
+   path="WiPhase_top_level/testbench/WiPhase_top_level_tb/simulation/submodules/altera_conduit_bfm_0004.vhd"
+   type="VHDL"
+   library="WiPhase_top_level_inst_sample_pll_areset_conduit_bfm" />
+ <file
+   path="WiPhase_top_level/testbench/WiPhase_top_level_tb/simulation/submodules/altera_avalon_reset_source.vhd"
+   type="VHDL"
+   library="WiPhase_top_level_inst_mclk_reset_bfm" />
+ <file
+   path="WiPhase_top_level/testbench/WiPhase_top_level_tb/simulation/submodules/altera_avalon_clock_source.vhd"
+   type="VHDL"
+   library="WiPhase_top_level_inst_eth_rgmii_rx_clk_bfm" />
+ <file
+   path="WiPhase_top_level/testbench/WiPhase_top_level_tb/simulation/submodules/altera_conduit_bfm_0003_vhdl_pkg.vhd"
+   type="VHDL"
+   library="WiPhase_top_level_inst_eth_mac_status_connection_bfm" />
+ <file
+   path="WiPhase_top_level/testbench/WiPhase_top_level_tb/simulation/submodules/altera_conduit_bfm_0003.vhd"
+   type="VHDL"
+   library="WiPhase_top_level_inst_eth_mac_status_connection_bfm" />
+ <file
+   path="WiPhase_top_level/testbench/WiPhase_top_level_tb/simulation/submodules/altera_conduit_bfm_0002_vhdl_pkg.vhd"
+   type="VHDL"
+   library="WiPhase_top_level_inst_eth_mac_rgmii_connection_bfm" />
+ <file
+   path="WiPhase_top_level/testbench/WiPhase_top_level_tb/simulation/submodules/altera_conduit_bfm_0002.vhd"
+   type="VHDL"
+   library="WiPhase_top_level_inst_eth_mac_rgmii_connection_bfm" />
+ <file
+   path="WiPhase_top_level/testbench/WiPhase_top_level_tb/simulation/submodules/altera_conduit_bfm_vhdl_pkg.vhd"
+   type="VHDL"
+   library="WiPhase_top_level_inst_eth_mac_mdio_connection_bfm" />
+ <file
+   path="WiPhase_top_level/testbench/WiPhase_top_level_tb/simulation/submodules/altera_conduit_bfm.vhd"
+   type="VHDL"
+   library="WiPhase_top_level_inst_eth_mac_mdio_connection_bfm" />
+ <file
+   path="WiPhase_top_level/testbench/WiPhase_top_level_tb/simulation/submodules/WiPhase_top_level.vhd"
+   type="VHDL"
+   library="WiPhase_top_level_inst" />
+ <file
+   path="WiPhase_top_level/testbench/WiPhase_top_level_tb/simulation/WiPhase_top_level_tb.vhd"
+   type="VHDL" />
+ <topLevel name="WiPhase_top_level_tb" />
+ <deviceFamily name="cyclone10lp" />
+ <modelMap
+   controllerPath="WiPhase_top_level_tb.WiPhase_top_level_inst.ram_onchip"
+   modelPath="WiPhase_top_level_tb.WiPhase_top_level_inst.ram_onchip" />
+</simPackage>

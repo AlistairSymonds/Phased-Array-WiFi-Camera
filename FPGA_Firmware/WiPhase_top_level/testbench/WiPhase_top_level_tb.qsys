@@ -1,0 +1,358 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<system name="$${FILENAME}">
+ <component
+   name="$${FILENAME}"
+   displayName="$${FILENAME}"
+   version="1.0"
+   description=""
+   tags=""
+   categories="" />
+ <parameter name="bonusData"><![CDATA[bonusData 
+{
+   element WiPhase_top_level_inst
+   {
+      datum _sortIndex
+      {
+         value = "0";
+         type = "int";
+      }
+   }
+   element WiPhase_top_level_inst_eth_mac_mdio_connection_bfm
+   {
+      datum _sortIndex
+      {
+         value = "6";
+         type = "int";
+      }
+   }
+   element WiPhase_top_level_inst_eth_mac_rgmii_connection_bfm
+   {
+      datum _sortIndex
+      {
+         value = "7";
+         type = "int";
+      }
+   }
+   element WiPhase_top_level_inst_eth_mac_status_connection_bfm
+   {
+      datum _sortIndex
+      {
+         value = "8";
+         type = "int";
+      }
+   }
+   element WiPhase_top_level_inst_eth_rgmii_rx_clk_bfm
+   {
+      datum _sortIndex
+      {
+         value = "1";
+         type = "int";
+      }
+   }
+   element WiPhase_top_level_inst_eth_rgmii_tx_clk_bfm
+   {
+      datum _sortIndex
+      {
+         value = "2";
+         type = "int";
+      }
+   }
+   element WiPhase_top_level_inst_mclk_i_bfm
+   {
+      datum _sortIndex
+      {
+         value = "3";
+         type = "int";
+      }
+   }
+   element WiPhase_top_level_inst_mclk_reset_bfm
+   {
+      datum _sortIndex
+      {
+         value = "5";
+         type = "int";
+      }
+   }
+   element WiPhase_top_level_inst_pll_inclk_bfm
+   {
+      datum _sortIndex
+      {
+         value = "4";
+         type = "int";
+      }
+   }
+   element WiPhase_top_level_inst_sample_pll_areset_conduit_bfm
+   {
+      datum _sortIndex
+      {
+         value = "9";
+         type = "int";
+      }
+   }
+   element WiPhase_top_level_inst_sample_pll_locked_conduit_bfm
+   {
+      datum _sortIndex
+      {
+         value = "10";
+         type = "int";
+      }
+   }
+   element WiPhase_top_level_inst_spi_signals_o_bfm
+   {
+      datum _sortIndex
+      {
+         value = "11";
+         type = "int";
+      }
+   }
+}
+]]></parameter>
+ <parameter name="clockCrossingAdapter" value="HANDSHAKE" />
+ <parameter name="device" value="10CL025YU256C8G" />
+ <parameter name="deviceFamily" value="Cyclone 10 LP" />
+ <parameter name="deviceSpeedGrade" value="8" />
+ <parameter name="fabricMode" value="QSYS" />
+ <parameter name="generateLegacySim" value="false" />
+ <parameter name="generationId" value="0" />
+ <parameter name="globalResetBus" value="false" />
+ <parameter name="hdlLanguage" value="VERILOG" />
+ <parameter name="hideFromIPCatalog" value="false" />
+ <parameter name="lockedInterfaceDefinition" value="" />
+ <parameter name="maxAdditionalLatency" value="1" />
+ <parameter name="projectName">Phased_WiFi_Telescope_FW.qpf</parameter>
+ <parameter name="sopcBorderPoints" value="false" />
+ <parameter name="systemHash" value="0" />
+ <parameter name="testBenchDutName" value="WiPhase_top_level" />
+ <parameter name="timeStamp" value="0" />
+ <parameter name="useTestBenchNamingPattern" value="true" />
+ <instanceScript></instanceScript>
+ <module
+   name="WiPhase_top_level_inst"
+   kind="WiPhase_top_level"
+   version="1.0"
+   enabled="1">
+  <parameter name="AUTO_DEVICE" value="10CL025YU256C8G" />
+  <parameter name="AUTO_DEVICE_FAMILY" value="Cyclone 10 LP" />
+  <parameter name="AUTO_DEVICE_SPEEDGRADE" value="8" />
+  <parameter name="AUTO_ETH_RGMII_RX_CLK_CLOCK_DOMAIN" value="1" />
+  <parameter name="AUTO_ETH_RGMII_RX_CLK_CLOCK_RATE" value="0" />
+  <parameter name="AUTO_ETH_RGMII_RX_CLK_RESET_DOMAIN" value="1" />
+  <parameter name="AUTO_ETH_RGMII_TX_CLK_CLOCK_DOMAIN" value="2" />
+  <parameter name="AUTO_ETH_RGMII_TX_CLK_CLOCK_RATE" value="0" />
+  <parameter name="AUTO_ETH_RGMII_TX_CLK_RESET_DOMAIN" value="2" />
+  <parameter name="AUTO_GENERATION_ID" value="0" />
+  <parameter name="AUTO_MCLK_I_CLOCK_DOMAIN" value="3" />
+  <parameter name="AUTO_MCLK_I_CLOCK_RATE" value="0" />
+  <parameter name="AUTO_MCLK_I_RESET_DOMAIN" value="3" />
+  <parameter name="AUTO_PLL_INCLK_CLOCK_DOMAIN" value="5" />
+  <parameter name="AUTO_PLL_INCLK_CLOCK_RATE" value="0" />
+  <parameter name="AUTO_PLL_INCLK_RESET_DOMAIN" value="5" />
+  <parameter name="AUTO_UNIQUE_ID" value="WiPhase_top_level" />
+ </module>
+ <module
+   name="WiPhase_top_level_inst_eth_mac_mdio_connection_bfm"
+   kind="altera_conduit_bfm"
+   version="17.1"
+   enabled="1">
+  <parameter name="CLOCKED_SIGNAL" value="false" />
+  <parameter name="ENABLE_RESET" value="false" />
+  <parameter name="SIGNAL_DIRECTIONS">input,output,input,input</parameter>
+  <parameter name="SIGNAL_ROLES">mdc,mdio_in,mdio_oen,mdio_out</parameter>
+  <parameter name="SIGNAL_WIDTHS" value="1,1,1,1" />
+ </module>
+ <module
+   name="WiPhase_top_level_inst_eth_mac_rgmii_connection_bfm"
+   kind="altera_conduit_bfm"
+   version="17.1"
+   enabled="1">
+  <parameter name="CLOCKED_SIGNAL" value="false" />
+  <parameter name="ENABLE_RESET" value="false" />
+  <parameter name="SIGNAL_DIRECTIONS">output,input,output,input</parameter>
+  <parameter name="SIGNAL_ROLES">rgmii_in,rgmii_out,rx_control,tx_control</parameter>
+  <parameter name="SIGNAL_WIDTHS" value="4,4,1,1" />
+ </module>
+ <module
+   name="WiPhase_top_level_inst_eth_mac_status_connection_bfm"
+   kind="altera_conduit_bfm"
+   version="17.1"
+   enabled="1">
+  <parameter name="CLOCKED_SIGNAL" value="false" />
+  <parameter name="ENABLE_RESET" value="false" />
+  <parameter name="SIGNAL_DIRECTIONS">input,input,output,output</parameter>
+  <parameter name="SIGNAL_ROLES">ena_10,eth_mode,set_10,set_1000</parameter>
+  <parameter name="SIGNAL_WIDTHS" value="1,1,1,1" />
+ </module>
+ <module
+   name="WiPhase_top_level_inst_eth_rgmii_rx_clk_bfm"
+   kind="altera_avalon_clock_source"
+   version="17.1"
+   enabled="1">
+  <parameter name="CLOCK_RATE" value="50000000" />
+  <parameter name="CLOCK_UNIT" value="1" />
+ </module>
+ <module
+   name="WiPhase_top_level_inst_eth_rgmii_tx_clk_bfm"
+   kind="altera_avalon_clock_source"
+   version="17.1"
+   enabled="1">
+  <parameter name="CLOCK_RATE" value="50000000" />
+  <parameter name="CLOCK_UNIT" value="1" />
+ </module>
+ <module
+   name="WiPhase_top_level_inst_mclk_i_bfm"
+   kind="altera_avalon_clock_source"
+   version="17.1"
+   enabled="1">
+  <parameter name="CLOCK_RATE" value="50000000" />
+  <parameter name="CLOCK_UNIT" value="1" />
+ </module>
+ <module
+   name="WiPhase_top_level_inst_mclk_reset_bfm"
+   kind="altera_avalon_reset_source"
+   version="17.1"
+   enabled="1">
+  <parameter name="ASSERT_HIGH_RESET" value="0" />
+  <parameter name="INITIAL_RESET_CYCLES" value="50" />
+ </module>
+ <module
+   name="WiPhase_top_level_inst_pll_inclk_bfm"
+   kind="altera_avalon_clock_source"
+   version="17.1"
+   enabled="1">
+  <parameter name="CLOCK_RATE" value="50000000" />
+  <parameter name="CLOCK_UNIT" value="1" />
+ </module>
+ <module
+   name="WiPhase_top_level_inst_sample_pll_areset_conduit_bfm"
+   kind="altera_conduit_bfm"
+   version="17.1"
+   enabled="1">
+  <parameter name="CLOCKED_SIGNAL" value="false" />
+  <parameter name="ENABLE_RESET" value="false" />
+  <parameter name="SIGNAL_DIRECTIONS" value="output" />
+  <parameter name="SIGNAL_ROLES" value="export" />
+  <parameter name="SIGNAL_WIDTHS" value="1" />
+ </module>
+ <module
+   name="WiPhase_top_level_inst_sample_pll_locked_conduit_bfm"
+   kind="altera_conduit_bfm"
+   version="17.1"
+   enabled="1">
+  <parameter name="CLOCKED_SIGNAL" value="false" />
+  <parameter name="ENABLE_RESET" value="false" />
+  <parameter name="SIGNAL_DIRECTIONS" value="input" />
+  <parameter name="SIGNAL_ROLES" value="export" />
+  <parameter name="SIGNAL_WIDTHS" value="1" />
+ </module>
+ <module
+   name="WiPhase_top_level_inst_spi_signals_o_bfm"
+   kind="altera_conduit_bfm"
+   version="17.1"
+   enabled="1">
+  <parameter name="CLOCKED_SIGNAL" value="false" />
+  <parameter name="ENABLE_RESET" value="false" />
+  <parameter name="SIGNAL_DIRECTIONS">output,input,input,input</parameter>
+  <parameter name="SIGNAL_ROLES" value="MISO,MOSI,SCLK,SS_n" />
+  <parameter name="SIGNAL_WIDTHS" value="1,1,1,3" />
+ </module>
+ <connection
+   kind="clock"
+   version="17.1"
+   start="WiPhase_top_level_inst_eth_rgmii_rx_clk_bfm.clk"
+   end="WiPhase_top_level_inst_mclk_reset_bfm.clk" />
+ <connection
+   kind="clock"
+   version="17.1"
+   start="WiPhase_top_level_inst_eth_rgmii_rx_clk_bfm.clk"
+   end="WiPhase_top_level_inst.eth_rgmii_rx_clk" />
+ <connection
+   kind="clock"
+   version="17.1"
+   start="WiPhase_top_level_inst_eth_rgmii_tx_clk_bfm.clk"
+   end="WiPhase_top_level_inst.eth_rgmii_tx_clk" />
+ <connection
+   kind="clock"
+   version="17.1"
+   start="WiPhase_top_level_inst_mclk_i_bfm.clk"
+   end="WiPhase_top_level_inst.mclk_i" />
+ <connection
+   kind="clock"
+   version="17.1"
+   start="WiPhase_top_level_inst_pll_inclk_bfm.clk"
+   end="WiPhase_top_level_inst.pll_inclk" />
+ <connection
+   kind="conduit"
+   version="17.1"
+   start="WiPhase_top_level_inst_eth_mac_mdio_connection_bfm.conduit"
+   end="WiPhase_top_level_inst.eth_mac_mdio_connection">
+  <parameter name="endPort" value="" />
+  <parameter name="endPortLSB" value="0" />
+  <parameter name="startPort" value="" />
+  <parameter name="startPortLSB" value="0" />
+  <parameter name="width" value="0" />
+ </connection>
+ <connection
+   kind="conduit"
+   version="17.1"
+   start="WiPhase_top_level_inst_eth_mac_rgmii_connection_bfm.conduit"
+   end="WiPhase_top_level_inst.eth_mac_rgmii_connection">
+  <parameter name="endPort" value="" />
+  <parameter name="endPortLSB" value="0" />
+  <parameter name="startPort" value="" />
+  <parameter name="startPortLSB" value="0" />
+  <parameter name="width" value="0" />
+ </connection>
+ <connection
+   kind="conduit"
+   version="17.1"
+   start="WiPhase_top_level_inst_eth_mac_status_connection_bfm.conduit"
+   end="WiPhase_top_level_inst.eth_mac_status_connection">
+  <parameter name="endPort" value="" />
+  <parameter name="endPortLSB" value="0" />
+  <parameter name="startPort" value="" />
+  <parameter name="startPortLSB" value="0" />
+  <parameter name="width" value="0" />
+ </connection>
+ <connection
+   kind="conduit"
+   version="17.1"
+   start="WiPhase_top_level_inst_sample_pll_areset_conduit_bfm.conduit"
+   end="WiPhase_top_level_inst.sample_pll_areset_conduit">
+  <parameter name="endPort" value="" />
+  <parameter name="endPortLSB" value="0" />
+  <parameter name="startPort" value="" />
+  <parameter name="startPortLSB" value="0" />
+  <parameter name="width" value="0" />
+ </connection>
+ <connection
+   kind="conduit"
+   version="17.1"
+   start="WiPhase_top_level_inst_sample_pll_locked_conduit_bfm.conduit"
+   end="WiPhase_top_level_inst.sample_pll_locked_conduit">
+  <parameter name="endPort" value="" />
+  <parameter name="endPortLSB" value="0" />
+  <parameter name="startPort" value="" />
+  <parameter name="startPortLSB" value="0" />
+  <parameter name="width" value="0" />
+ </connection>
+ <connection
+   kind="conduit"
+   version="17.1"
+   start="WiPhase_top_level_inst_spi_signals_o_bfm.conduit"
+   end="WiPhase_top_level_inst.spi_signals_o">
+  <parameter name="endPort" value="" />
+  <parameter name="endPortLSB" value="0" />
+  <parameter name="startPort" value="" />
+  <parameter name="startPortLSB" value="0" />
+  <parameter name="width" value="0" />
+ </connection>
+ <connection
+   kind="reset"
+   version="17.1"
+   start="WiPhase_top_level_inst_mclk_reset_bfm.reset"
+   end="WiPhase_top_level_inst.mclk_reset" />
+ <interconnectRequirement for="$system" name="qsys_mm.clockCrossingAdapter" value="HANDSHAKE" />
+ <interconnectRequirement for="$system" name="qsys_mm.enableEccProtection" value="FALSE" />
+ <interconnectRequirement for="$system" name="qsys_mm.insertDefaultSlave" value="FALSE" />
+ <interconnectRequirement for="$system" name="qsys_mm.maxAdditionalLatency" value="1" />
+</system>

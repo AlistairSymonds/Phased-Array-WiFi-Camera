@@ -17,7 +17,7 @@ module WiPhase_top_level_mm_interconnect_0 (
 		input  wire        cpu_v2_data_master_write,                 //                                   .write
 		input  wire [31:0] cpu_v2_data_master_writedata,             //                                   .writedata
 		input  wire        cpu_v2_data_master_debugaccess,           //                                   .debugaccess
-		input  wire [15:0] cpu_v2_instruction_master_address,        //          cpu_v2_instruction_master.address
+		input  wire [16:0] cpu_v2_instruction_master_address,        //          cpu_v2_instruction_master.address
 		output wire        cpu_v2_instruction_master_waitrequest,    //                                   .waitrequest
 		input  wire        cpu_v2_instruction_master_read,           //                                   .read
 		output wire [31:0] cpu_v2_instruction_master_readdata,       //                                   .readdata
@@ -667,7 +667,7 @@ module WiPhase_top_level_mm_interconnect_0 (
 	);
 
 	altera_merlin_master_translator #(
-		.AV_ADDRESS_W                (16),
+		.AV_ADDRESS_W                (17),
 		.AV_DATA_W                   (32),
 		.AV_BURSTCOUNT_W             (1),
 		.AV_BYTEENABLE_W             (4),

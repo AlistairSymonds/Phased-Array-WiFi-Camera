@@ -1,9 +1,9 @@
-22:53:30 **** Incremental Build of configuration Nios II for project WiPhase_SW ****
+13:35:53 **** Incremental Build of configuration Nios II for project WiPhase_SW ****
 make all 
 Info: Building ../WiPhase_SW_bsp/
 C:/intelFPGA_lite/17.1/nios2eds/bin/gnu/H-x86_64-mingw32/bin/make --no-print-directory -C ../WiPhase_SW_bsp/
 [BSP build complete]
 [WiPhase_SW build complete]
 
-22:53:30 Build Finished (took 566ms)
+13:35:53 Build Finished (took 532ms)
 

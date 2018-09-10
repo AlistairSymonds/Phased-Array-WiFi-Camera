@@ -17601,7 +17601,7 @@ W = angled&lt;p&gt;
 <part name="SUPPLY4" library="supply2" library_urn="urn:adsk.eagle:library:372" deviceset="GND" device=""/>
 <part name="SUPPLY5" library="supply2" library_urn="urn:adsk.eagle:library:372" deviceset="GND" device=""/>
 <part name="LNA" library="ADL5523ACPZ-R7" deviceset="ADL5523ACPZ-R7" device="CP_8_2-M" value="ADL5523ACPZ-R7CP_8_2-M"/>
-<part name="BPF_RF" library="Johanson BPF 2450BP18C100C" deviceset="2450BP18C100C" device=""/>
+<part name="BPF1" library="Johanson BPF 2450BP18C100C" deviceset="2450BP18C100C" device=""/>
 <part name="BPF_LO" library="Johanson BPF 2450BP18C100C" deviceset="2450BP18C100C" device=""/>
 <part name="SUPPLY8" library="supply2" library_urn="urn:adsk.eagle:library:372" deviceset="GND" device=""/>
 <part name="SUPPLY10" library="supply2" library_urn="urn:adsk.eagle:library:372" deviceset="GND" device=""/>
@@ -17651,7 +17651,7 @@ W = angled&lt;p&gt;
 <instance part="SUPPLY4" gate="GND" x="7.62" y="96.52"/>
 <instance part="SUPPLY5" gate="GND" x="71.12" y="116.84"/>
 <instance part="LNA" gate="A" x="78.74" y="60.96"/>
-<instance part="BPF_RF" gate="A" x="193.04" y="53.34"/>
+<instance part="BPF1" gate="A" x="193.04" y="53.34"/>
 <instance part="BPF_LO" gate="A" x="193.04" y="116.84"/>
 <instance part="SUPPLY8" gate="GND" x="246.38" y="60.96" rot="R270"/>
 <instance part="SUPPLY10" gate="GND" x="193.04" y="33.02"/>
@@ -17715,7 +17715,7 @@ W = angled&lt;p&gt;
 <pinref part="SUPPLY5" gate="GND" pin="GND"/>
 </segment>
 <segment>
-<pinref part="BPF_RF" gate="A" pin="GND"/>
+<pinref part="BPF1" gate="A" pin="GND"/>
 <pinref part="SUPPLY10" gate="GND" pin="GND"/>
 <wire x1="193.04" y1="43.18" x2="193.04" y2="35.56" width="0.1524" layer="91"/>
 </segment>
@@ -17867,14 +17867,14 @@ W = angled&lt;p&gt;
 <net name="RF_AMPED" class="1">
 <segment>
 <pinref part="LNA" gate="A" pin="RFOUT"/>
-<pinref part="BPF_RF" gate="A" pin="I/O_1"/>
+<pinref part="BPF1" gate="A" pin="I/O_1"/>
 <wire x1="142.24" y1="55.88" x2="177.8" y2="55.88" width="0.1524" layer="91"/>
 <label x="162.56" y="53.34" size="1.778" layer="95"/>
 </segment>
 </net>
 <net name="RF_FILTERED" class="1">
 <segment>
-<pinref part="BPF_RF" gate="A" pin="I/O_2"/>
+<pinref part="BPF1" gate="A" pin="I/O_2"/>
 <wire x1="208.28" y1="55.88" x2="236.22" y2="55.88" width="0.1524" layer="91"/>
 <label x="213.36" y="55.88" size="1.778" layer="95"/>
 <pinref part="MIX" gate="A" pin="RF-"/>

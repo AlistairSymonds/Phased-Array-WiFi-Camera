@@ -33,6 +33,14 @@
          type = "String";
       }
    }
+   element Debug_ST_Source_0
+   {
+      datum _sortIndex
+      {
+         value = "10";
+         type = "int";
+      }
+   }
    element WiPhase_top_level
    {
       datum _originalDeviceFamily
@@ -128,11 +136,6 @@
          value = "1";
          type = "int";
       }
-      datum sopceditor_expanded
-      {
-         value = "1";
-         type = "boolean";
-      }
    }
    element eth.control_port
    {
@@ -227,30 +230,6 @@
          type = "String";
       }
    }
-   element test_pattern_st_gen
-   {
-      datum _sortIndex
-      {
-         value = "10";
-         type = "int";
-      }
-   }
-   element test_pattern_st_gen.command
-   {
-      datum baseAddress
-      {
-         value = "70752";
-         type = "String";
-      }
-   }
-   element test_pattern_st_gen.csr
-   {
-      datum baseAddress
-      {
-         value = "70720";
-         type = "String";
-      }
-   }
    element timer
    {
       datum _sortIndex
@@ -297,19 +276,29 @@
  <parameter name="useTestBenchNamingPattern" value="false" />
  <instanceScript></instanceScript>
  <interface
-   name="mac_mdio_connection"
+   name="eth_mac_mdio_connection"
    internal="eth.mac_mdio_connection"
    type="conduit"
    dir="end" />
  <interface
-   name="mac_misc_connection"
-   internal="eth.mac_misc_connection"
+   name="eth_mac_rgmii_connection"
+   internal="eth.mac_rgmii_connection"
    type="conduit"
    dir="end" />
  <interface
-   name="mac_status"
+   name="eth_mac_status_connection"
    internal="eth.mac_status_connection"
    type="conduit"
+   dir="end" />
+ <interface
+   name="eth_rgmii_rx_clk"
+   internal="eth.pcs_mac_rx_clock_connection"
+   type="clock"
+   dir="end" />
+ <interface
+   name="eth_rgmii_tx_clk"
+   internal="eth.pcs_mac_tx_clock_connection"
+   type="clock"
    dir="end" />
  <interface name="mclk_i" internal="C10_Clk50M.clk_in" type="clock" dir="end" />
  <interface
@@ -319,21 +308,6 @@
    dir="end" />
  <interface name="pll_inclk" internal="sample_pll.inclk0" type="clock" dir="end" />
  <interface name="pll_out" internal="sample_pll.c0" type="clock" dir="start" />
- <interface
-   name="rgmii_connection"
-   internal="eth.mac_rgmii_connection"
-   type="conduit"
-   dir="end" />
- <interface
-   name="rgmii_rx_clk"
-   internal="eth.pcs_mac_rx_clock_connection"
-   type="clock"
-   dir="end" />
- <interface
-   name="rgmii_tx_clk"
-   internal="eth.pcs_mac_tx_clock_connection"
-   type="clock"
-   dir="end" />
  <interface
    name="sample_pll_areset_conduit"
    internal="sample_pll.areset_conduit"
@@ -352,9 +326,14 @@
   <parameter name="resetSynchronousEdges" value="NONE" />
  </module>
  <module name="Debug_ST_Sink_0" kind="Debug_ST_Sink" version="1.0" enabled="1" />
+ <module
+   name="Debug_ST_Source_0"
+   kind="Debug_ST_Source"
+   version="1.0"
+   enabled="1" />
  <module name="cpu_v2" kind="altera_nios2_gen2" version="17.1" enabled="1">
-  <parameter name="AUTO_CLK_CLOCK_DOMAIN" value="1" />
-  <parameter name="AUTO_CLK_RESET_DOMAIN" value="1" />
+  <parameter name="AUTO_CLK_CLOCK_DOMAIN" value="3" />
+  <parameter name="AUTO_CLK_RESET_DOMAIN" value="3" />
   <parameter name="AUTO_DEVICE" value="10CL025YU256C8G" />
   <parameter name="AUTO_DEVICE_SPEEDGRADE" value="8" />
   <parameter name="bht_ramBlockType" value="Automatic" />
@@ -372,7 +351,7 @@
   <parameter name="dataAddrWidth" value="17" />
   <parameter name="dataMasterHighPerformanceAddrWidth" value="1" />
   <parameter name="dataMasterHighPerformanceMapParam" value="" />
-  <parameter name="dataSlaveMapParam"><![CDATA[<address-map><slave name='ram_onchip.s1' start='0x8000' end='0xD000' type='altera_avalon_onchip_memory2.s1' /><slave name='cpu_v2.debug_mem_slave' start='0x10800' end='0x11000' type='altera_nios2_gen2.debug_mem_slave' /><slave name='eth.control_port' start='0x11000' end='0x11400' type='altera_eth_tse.control_port' /><slave name='spi.spi_control_port' start='0x11400' end='0x11420' type='altera_avalon_spi.spi_control_port' /><slave name='timer.s1' start='0x11420' end='0x11440' type='altera_avalon_timer.s1' /><slave name='test_pattern_st_gen.csr' start='0x11440' end='0x11450' type='data_source.csr' /><slave name='sample_pll.pll_slave' start='0x11450' end='0x11460' type='altpll.pll_slave' /><slave name='test_pattern_st_gen.command' start='0x11460' end='0x11468' type='data_source.command' /><slave name='sysid.control_slave' start='0x11468' end='0x11470' type='altera_avalon_sysid_qsys.control_slave' /><slave name='jtag_uart.avalon_jtag_slave' start='0x11470' end='0x11478' type='altera_avalon_jtag_uart.avalon_jtag_slave' /></address-map>]]></parameter>
+  <parameter name="dataSlaveMapParam"><![CDATA[<address-map><slave name='ram_onchip.s1' start='0x8000' end='0xD000' type='altera_avalon_onchip_memory2.s1' /><slave name='cpu_v2.debug_mem_slave' start='0x10800' end='0x11000' type='altera_nios2_gen2.debug_mem_slave' /><slave name='eth.control_port' start='0x11000' end='0x11400' type='altera_eth_tse.control_port' /><slave name='spi.spi_control_port' start='0x11400' end='0x11420' type='altera_avalon_spi.spi_control_port' /><slave name='timer.s1' start='0x11420' end='0x11440' type='altera_avalon_timer.s1' /><slave name='sample_pll.pll_slave' start='0x11450' end='0x11460' type='altpll.pll_slave' /><slave name='sysid.control_slave' start='0x11468' end='0x11470' type='altera_avalon_sysid_qsys.control_slave' /><slave name='jtag_uart.avalon_jtag_slave' start='0x11470' end='0x11478' type='altera_avalon_jtag_uart.avalon_jtag_slave' /></address-map>]]></parameter>
   <parameter name="data_master_high_performance_paddr_base" value="0" />
   <parameter name="data_master_high_performance_paddr_size" value="0" />
   <parameter name="data_master_paddr_base" value="0" />
@@ -540,7 +519,7 @@
   <parameter name="XCVR_SET_USER_IDENTIFIER" value="0" />
   <parameter name="core_variation" value="MAC_ONLY" />
   <parameter name="deviceFamilyName" value="Cyclone 10 LP" />
-  <parameter name="eg_addr" value="11" />
+  <parameter name="eg_addr" value="9" />
   <parameter name="ena_hash" value="false" />
   <parameter name="enable_alt_reconfig" value="false" />
   <parameter name="enable_ecc" value="false" />
@@ -549,7 +528,7 @@
   <parameter name="enable_hd_logic" value="false" />
   <parameter name="enable_mac_flow_ctrl" value="false" />
   <parameter name="enable_mac_vlan" value="false" />
-  <parameter name="enable_magic_detect" value="false" />
+  <parameter name="enable_magic_detect" value="true" />
   <parameter name="enable_ptp_1step" value="false" />
   <parameter name="enable_sgmii" value="false" />
   <parameter name="enable_shift16" value="true" />
@@ -559,7 +538,7 @@
   <parameter name="export_pwrdn" value="false" />
   <parameter name="ext_stat_cnt_ena" value="false" />
   <parameter name="ifGMII" value="RGMII" />
-  <parameter name="ing_addr" value="11" />
+  <parameter name="ing_addr" value="10" />
   <parameter name="max_channels" value="1" />
   <parameter name="mdio_clk_div" value="40" />
   <parameter name="nf_phyip_rcfg_enable" value="false" />
@@ -569,7 +548,7 @@
   <parameter name="phyip_pll_type" value="CMU" />
   <parameter name="phyip_pma_bonding_mode" value="x1" />
   <parameter name="starting_channel_number" value="0" />
-  <parameter name="stat_cnt_ena" value="false" />
+  <parameter name="stat_cnt_ena" value="true" />
   <parameter name="transceiver_type" value="NONE" />
   <parameter name="tstamp_fp_width" value="4" />
   <parameter name="useMDIO" value="true" />
@@ -817,26 +796,6 @@
    enabled="1">
   <parameter name="id" value="305419896" />
  </module>
- <module
-   name="test_pattern_st_gen"
-   kind="data_source"
-   version="17.1"
-   enabled="1">
-  <parameter name="dataOutBitsPerSymbol" value="8" />
-  <parameter name="dataOutErrorDescriptor" value="" />
-  <parameter name="dataOutErrorWidth" value="0" />
-  <parameter name="dataOutSymbolsPerBeat" value="1" />
-  <parameter name="dataOutUsePackets" value="true" />
-  <parameter name="generationLanguage" value="VERILOG" />
-  <parameter name="moduleName" value="" />
-  <parameter name="numberOfChannels" value="0" />
-  <parameter name="readyLatency" value="0" />
-  <parameter name="throttlePrbsSeed" value="1" />
-  <parameter name="useEmpty" value="AUTO" />
-  <parameter name="useOptionalEmpty" value="false" />
-  <parameter name="useReady" value="true" />
-  <parameter name="useValid" value="true" />
- </module>
  <module name="timer" kind="altera_avalon_timer" version="17.1" enabled="1">
   <parameter name="alwaysRun" value="false" />
   <parameter name="counterSize" value="32" />
@@ -862,15 +821,6 @@
    kind="avalon"
    version="17.1"
    start="cpu_v2.data_master"
-   end="test_pattern_st_gen.command">
-  <parameter name="arbitrationPriority" value="1" />
-  <parameter name="baseAddress" value="0x00011460" />
-  <parameter name="defaultConnection" value="false" />
- </connection>
- <connection
-   kind="avalon"
-   version="17.1"
-   start="cpu_v2.data_master"
    end="eth.control_port">
   <parameter name="arbitrationPriority" value="1" />
   <parameter name="baseAddress" value="0x00011000" />
@@ -883,15 +833,6 @@
    end="sysid.control_slave">
   <parameter name="arbitrationPriority" value="1" />
   <parameter name="baseAddress" value="0x00011468" />
-  <parameter name="defaultConnection" value="false" />
- </connection>
- <connection
-   kind="avalon"
-   version="17.1"
-   start="cpu_v2.data_master"
-   end="test_pattern_st_gen.csr">
-  <parameter name="arbitrationPriority" value="1" />
-  <parameter name="baseAddress" value="0x00011440" />
   <parameter name="defaultConnection" value="false" />
  </connection>
  <connection
@@ -960,7 +901,7 @@
  <connection
    kind="avalon_streaming"
    version="17.1"
-   start="test_pattern_st_gen.out"
+   start="Debug_ST_Source_0.avalon_streaming_source"
    end="eth.transmit" />
  <connection
    kind="avalon_streaming"
@@ -979,13 +920,13 @@
    version="17.1"
    start="C10_Clk50M.clk"
    end="Debug_ST_Sink_0.clk" />
- <connection kind="clock" version="17.1" start="C10_Clk50M.clk" end="cpu_v2.clk" />
  <connection kind="clock" version="17.1" start="C10_Clk50M.clk" end="timer.clk" />
+ <connection kind="clock" version="17.1" start="C10_Clk50M.clk" end="cpu_v2.clk" />
  <connection
    kind="clock"
    version="17.1"
    start="C10_Clk50M.clk"
-   end="test_pattern_st_gen.clk" />
+   end="Debug_ST_Source_0.clk" />
  <connection
    kind="clock"
    version="17.1"
@@ -1063,7 +1004,7 @@
    kind="reset"
    version="17.1"
    start="C10_Clk50M.clk_reset"
-   end="test_pattern_st_gen.reset" />
+   end="Debug_ST_Source_0.reset" />
  <connection
    kind="reset"
    version="17.1"

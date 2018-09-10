@@ -15,11 +15,11 @@
 set IS_SMALLMAC 0
 set ENABLE_SUP_ADDR 0
 set ENABLE_MAC_FLOW_CTRL 0
-set ENABLE_MAGIC_DETECT 0
+set ENABLE_MAGIC_DETECT 1
 set ENABLE_HD_LOGIC 0
 set ENABLE_ENA 32
 set ENABLE_GMII_LOOPBACK 0
-set STAT_CNT_ENA 0
+set STAT_CNT_ENA 1
 
 set old_mode [set_project_mode -get_mode_value always_show_entity_name] 
 set_project_mode -always_show_entity_name on

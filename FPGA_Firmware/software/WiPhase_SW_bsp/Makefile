@@ -287,13 +287,6 @@ altera_nios2_gen2_hal_driver_ASM_LIB_SRCS := \
 	$(altera_nios2_gen2_hal_driver_SRCS_ROOT)/src/alt_log_macro.S \
 	$(altera_nios2_gen2_hal_driver_SRCS_ROOT)/src/crt0.S
 
-# data_source sources root 
-data_source_SRCS_ROOT := drivers
-
-# data_source sources 
-data_source_C_LIB_SRCS := \
-	$(data_source_SRCS_ROOT)/src/data_source_util.c
-
 # hal sources root 
 hal_SRCS_ROOT := HAL
 
@@ -362,7 +355,6 @@ COMPONENT_C_LIB_SRCS += \
 	$(altera_avalon_timer_driver_C_LIB_SRCS) \
 	$(altera_eth_tse_driver_hal_C_LIB_SRCS) \
 	$(altera_nios2_gen2_hal_driver_C_LIB_SRCS) \
-	$(data_source_C_LIB_SRCS) \
 	$(hal_C_LIB_SRCS)
 
 # Assemble all component assembly source files 

@@ -10,9 +10,13 @@
    <inputclock preferredWidth="307" />
   </columns>
  </systemtable>
- <library
-   expandedCategories="Library/Interface Protocols/Ethernet/10G to 1G Multi-rate Ethernet,Library/Interface Protocols,Library/Interface Protocols/Ethernet/Reference Design Components,Library/Interface Protocols/Ethernet,Project,Library,Library/Interface Protocols/Ethernet/1G Multi-rate Ethernet" />
+ <library expandedCategories="Project,Library" />
  <window width="3840" height="2100" x="0" y="0" />
  <hdlexample language="VHDL" />
- <generation synthesis="VHDL" greybox="0" simulation="VHDL" path="_PROJECT_NAME_" />
+ <generation
+   synthesis="VHDL"
+   greybox="0"
+   simulation="VHDL"
+   path="_PROJECT_NAME_"
+   testbench_simulation="VHDL" />
 </preferences>

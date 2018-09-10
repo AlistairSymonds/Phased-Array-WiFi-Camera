@@ -8,23 +8,23 @@
 					"strict" : false
 				},
 				{
-					"name" : "ENET_RG_TXCLK",
+					"name" : "ENET_RG_TXCTL",
 					"strict" : false
 				},
 				{
-					"name" : "ENET_RG_TXD0",
+					"name" : "ENET_RG_TXD[0]",
 					"strict" : false
 				},
 				{
-					"name" : "ENET_RG_TXD1",
+					"name" : "ENET_RG_TXD[1]",
 					"strict" : false
 				},
 				{
-					"name" : "ENET_RG_TXD2",
+					"name" : "ENET_RG_TXD[2]",
 					"strict" : false
 				},
 				{
-					"name" : "ENET_RG_TXD3",
+					"name" : "ENET_RG_TXD[3]",
 					"strict" : false
 				},
 				{
@@ -56,11 +56,11 @@
 					"strict" : false
 				},
 				{
-					"name" : "ENET_CLK_125M",
+					"name" : "C10_CLK50M",
 					"strict" : false
 				},
 				{
-					"name" : "C10_CLK50M",
+					"name" : "ENET_CLK_125M",
 					"strict" : false
 				},
 				{
@@ -72,19 +72,19 @@
 					"strict" : false
 				},
 				{
-					"name" : "ENET_RG_RXD0",
+					"name" : "ENET_RG_RXD[0]",
 					"strict" : false
 				},
 				{
-					"name" : "ENET_RG_RXD3",
+					"name" : "ENET_RG_RXD[3]",
 					"strict" : false
 				},
 				{
-					"name" : "ENET_RG_RXD2",
+					"name" : "ENET_RG_RXD[2]",
 					"strict" : false
 				},
 				{
-					"name" : "ENET_RG_RXD1",
+					"name" : "ENET_RG_RXD[1]",
 					"strict" : false
 				},
 				{

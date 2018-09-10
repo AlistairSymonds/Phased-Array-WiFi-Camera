@@ -10,69 +10,860 @@
 # Copying C:/intelFPGA_lite/17.1/modelsim_ase/win32aloem/../modelsim.ini to modelsim.ini
 # Modifying modelsim.ini
 # 
-# vcom -2008 -work work {C:/Users/alist/OneDrive/Electrickery/Phased Array Radio Telescope/WiFi Tele/FPGA Firmware/adc_spi.vhd}
-# Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 02:02:07 on Aug 05,2018
-# vcom -reportprogress 300 -2008 -work work C:/Users/alist/OneDrive/Electrickery/Phased Array Radio Telescope/WiFi Tele/FPGA Firmware/adc_spi.vhd 
-# -- Loading package STANDARD
-# -- Loading package TEXTIO
-# -- Loading package std_logic_1164
-# -- Loading package NUMERIC_STD
-# -- Compiling entity adc_spi
-# -- Compiling architecture arch of adc_spi
-# End time: 02:02:07 on Aug 05,2018, Elapsed time: 0:00:00
+# vlib WiPhase_top_level
+# vmap WiPhase_top_level WiPhase_top_level
+# Model Technology ModelSim - Intel FPGA Edition vmap 10.5b Lib Mapping Utility 2016.10 Oct  5 2016
+# vmap WiPhase_top_level WiPhase_top_level 
+# Modifying modelsim.ini
+# vlog -vlog01compat -work WiPhase_top_level +incdir+C:/Users/alist/OneDrive/Electrickery/Phased-Array-Radio-Telescope/Phased-Array-WiFi-Camera/FPGA_Firmware/WiPhase_top_level/synthesis/submodules {C:/Users/alist/OneDrive/Electrickery/Phased-Array-Radio-Telescope/Phased-Array-WiFi-Camera/FPGA_Firmware/WiPhase_top_level/synthesis/submodules/altera_reset_controller.v}
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 00:17:01 on Sep 09,2018
+# vlog -reportprogress 300 -vlog01compat -work WiPhase_top_level "+incdir+C:/Users/alist/OneDrive/Electrickery/Phased-Array-Radio-Telescope/Phased-Array-WiFi-Camera/FPGA_Firmware/WiPhase_top_level/synthesis/submodules" C:/Users/alist/OneDrive/Electrickery/Phased-Array-Radio-Telescope/Phased-Array-WiFi-Camera/FPGA_Firmware/WiPhase_top_level/synthesis/submodules/altera_reset_controller.v 
+# -- Compiling module altera_reset_controller
+# 
+# Top level modules:
+# 	altera_reset_controller
+# End time: 00:17:01 on Sep 09,2018, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
-# vcom -2008 -work work {C:/Users/alist/OneDrive/Electrickery/Phased Array Radio Telescope/WiFi Tele/FPGA Firmware/clk_div8vhd.vhd}
+# vlog -vlog01compat -work WiPhase_top_level +incdir+C:/Users/alist/OneDrive/Electrickery/Phased-Array-Radio-Telescope/Phased-Array-WiFi-Camera/FPGA_Firmware/WiPhase_top_level/synthesis/submodules {C:/Users/alist/OneDrive/Electrickery/Phased-Array-Radio-Telescope/Phased-Array-WiFi-Camera/FPGA_Firmware/WiPhase_top_level/synthesis/submodules/altera_reset_synchronizer.v}
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 00:17:01 on Sep 09,2018
+# vlog -reportprogress 300 -vlog01compat -work WiPhase_top_level "+incdir+C:/Users/alist/OneDrive/Electrickery/Phased-Array-Radio-Telescope/Phased-Array-WiFi-Camera/FPGA_Firmware/WiPhase_top_level/synthesis/submodules" C:/Users/alist/OneDrive/Electrickery/Phased-Array-Radio-Telescope/Phased-Array-WiFi-Camera/FPGA_Firmware/WiPhase_top_level/synthesis/submodules/altera_reset_synchronizer.v 
+# -- Compiling module altera_reset_synchronizer
+# 
+# Top level modules:
+# 	altera_reset_synchronizer
+# End time: 00:17:01 on Sep 09,2018, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -vlog01compat -work WiPhase_top_level +incdir+C:/Users/alist/OneDrive/Electrickery/Phased-Array-Radio-Telescope/Phased-Array-WiFi-Camera/FPGA_Firmware/WiPhase_top_level/synthesis/submodules {C:/Users/alist/OneDrive/Electrickery/Phased-Array-Radio-Telescope/Phased-Array-WiFi-Camera/FPGA_Firmware/WiPhase_top_level/synthesis/submodules/WiPhase_top_level_avalon_st_adapter_001.v}
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 00:17:01 on Sep 09,2018
+# vlog -reportprogress 300 -vlog01compat -work WiPhase_top_level "+incdir+C:/Users/alist/OneDrive/Electrickery/Phased-Array-Radio-Telescope/Phased-Array-WiFi-Camera/FPGA_Firmware/WiPhase_top_level/synthesis/submodules" C:/Users/alist/OneDrive/Electrickery/Phased-Array-Radio-Telescope/Phased-Array-WiFi-Camera/FPGA_Firmware/WiPhase_top_level/synthesis/submodules/WiPhase_top_level_avalon_st_adapter_001.v 
+# -- Compiling module WiPhase_top_level_avalon_st_adapter_001
+# 
+# Top level modules:
+# 	WiPhase_top_level_avalon_st_adapter_001
+# End time: 00:17:01 on Sep 09,2018, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -vlog01compat -work WiPhase_top_level +incdir+C:/Users/alist/OneDrive/Electrickery/Phased-Array-Radio-Telescope/Phased-Array-WiFi-Camera/FPGA_Firmware/WiPhase_top_level/synthesis/submodules {C:/Users/alist/OneDrive/Electrickery/Phased-Array-Radio-Telescope/Phased-Array-WiFi-Camera/FPGA_Firmware/WiPhase_top_level/synthesis/submodules/WiPhase_top_level_avalon_st_adapter.v}
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 00:17:01 on Sep 09,2018
+# vlog -reportprogress 300 -vlog01compat -work WiPhase_top_level "+incdir+C:/Users/alist/OneDrive/Electrickery/Phased-Array-Radio-Telescope/Phased-Array-WiFi-Camera/FPGA_Firmware/WiPhase_top_level/synthesis/submodules" C:/Users/alist/OneDrive/Electrickery/Phased-Array-Radio-Telescope/Phased-Array-WiFi-Camera/FPGA_Firmware/WiPhase_top_level/synthesis/submodules/WiPhase_top_level_avalon_st_adapter.v 
+# -- Compiling module WiPhase_top_level_avalon_st_adapter
+# 
+# Top level modules:
+# 	WiPhase_top_level_avalon_st_adapter
+# End time: 00:17:01 on Sep 09,2018, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -vlog01compat -work WiPhase_top_level +incdir+C:/Users/alist/OneDrive/Electrickery/Phased-Array-Radio-Telescope/Phased-Array-WiFi-Camera/FPGA_Firmware/WiPhase_top_level/synthesis/submodules {C:/Users/alist/OneDrive/Electrickery/Phased-Array-Radio-Telescope/Phased-Array-WiFi-Camera/FPGA_Firmware/WiPhase_top_level/synthesis/submodules/WiPhase_top_level_mm_interconnect_0.v}
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 00:17:02 on Sep 09,2018
+# vlog -reportprogress 300 -vlog01compat -work WiPhase_top_level "+incdir+C:/Users/alist/OneDrive/Electrickery/Phased-Array-Radio-Telescope/Phased-Array-WiFi-Camera/FPGA_Firmware/WiPhase_top_level/synthesis/submodules" C:/Users/alist/OneDrive/Electrickery/Phased-Array-Radio-Telescope/Phased-Array-WiFi-Camera/FPGA_Firmware/WiPhase_top_level/synthesis/submodules/WiPhase_top_level_mm_interconnect_0.v 
+# -- Compiling module WiPhase_top_level_mm_interconnect_0
+# 
+# Top level modules:
+# 	WiPhase_top_level_mm_interconnect_0
+# End time: 00:17:02 on Sep 09,2018, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -vlog01compat -work WiPhase_top_level +incdir+C:/Users/alist/OneDrive/Electrickery/Phased-Array-Radio-Telescope/Phased-Array-WiFi-Camera/FPGA_Firmware/WiPhase_top_level/synthesis/submodules {C:/Users/alist/OneDrive/Electrickery/Phased-Array-Radio-Telescope/Phased-Array-WiFi-Camera/FPGA_Firmware/WiPhase_top_level/synthesis/submodules/WiPhase_top_level_mm_interconnect_0_avalon_st_adapter.v}
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 00:17:02 on Sep 09,2018
+# vlog -reportprogress 300 -vlog01compat -work WiPhase_top_level "+incdir+C:/Users/alist/OneDrive/Electrickery/Phased-Array-Radio-Telescope/Phased-Array-WiFi-Camera/FPGA_Firmware/WiPhase_top_level/synthesis/submodules" C:/Users/alist/OneDrive/Electrickery/Phased-Array-Radio-Telescope/Phased-Array-WiFi-Camera/FPGA_Firmware/WiPhase_top_level/synthesis/submodules/WiPhase_top_level_mm_interconnect_0_avalon_st_adapter.v 
+# -- Compiling module WiPhase_top_level_mm_interconnect_0_avalon_st_adapter
+# 
+# Top level modules:
+# 	WiPhase_top_level_mm_interconnect_0_avalon_st_adapter
+# End time: 00:17:02 on Sep 09,2018, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -vlog01compat -work WiPhase_top_level +incdir+C:/Users/alist/OneDrive/Electrickery/Phased-Array-Radio-Telescope/Phased-Array-WiFi-Camera/FPGA_Firmware/WiPhase_top_level/synthesis/submodules {C:/Users/alist/OneDrive/Electrickery/Phased-Array-Radio-Telescope/Phased-Array-WiFi-Camera/FPGA_Firmware/WiPhase_top_level/synthesis/submodules/altera_avalon_sc_fifo.v}
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 00:17:02 on Sep 09,2018
+# vlog -reportprogress 300 -vlog01compat -work WiPhase_top_level "+incdir+C:/Users/alist/OneDrive/Electrickery/Phased-Array-Radio-Telescope/Phased-Array-WiFi-Camera/FPGA_Firmware/WiPhase_top_level/synthesis/submodules" C:/Users/alist/OneDrive/Electrickery/Phased-Array-Radio-Telescope/Phased-Array-WiFi-Camera/FPGA_Firmware/WiPhase_top_level/synthesis/submodules/altera_avalon_sc_fifo.v 
+# -- Compiling module altera_avalon_sc_fifo
+# 
+# Top level modules:
+# 	altera_avalon_sc_fifo
+# End time: 00:17:02 on Sep 09,2018, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -vlog01compat -work WiPhase_top_level +incdir+C:/Users/alist/OneDrive/Electrickery/Phased-Array-Radio-Telescope/Phased-Array-WiFi-Camera/FPGA_Firmware/WiPhase_top_level/synthesis/submodules {C:/Users/alist/OneDrive/Electrickery/Phased-Array-Radio-Telescope/Phased-Array-WiFi-Camera/FPGA_Firmware/WiPhase_top_level/synthesis/submodules/WiPhase_top_level_timer.v}
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 00:17:02 on Sep 09,2018
+# vlog -reportprogress 300 -vlog01compat -work WiPhase_top_level "+incdir+C:/Users/alist/OneDrive/Electrickery/Phased-Array-Radio-Telescope/Phased-Array-WiFi-Camera/FPGA_Firmware/WiPhase_top_level/synthesis/submodules" C:/Users/alist/OneDrive/Electrickery/Phased-Array-Radio-Telescope/Phased-Array-WiFi-Camera/FPGA_Firmware/WiPhase_top_level/synthesis/submodules/WiPhase_top_level_timer.v 
+# -- Compiling module WiPhase_top_level_timer
+# 
+# Top level modules:
+# 	WiPhase_top_level_timer
+# End time: 00:17:02 on Sep 09,2018, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -vlog01compat -work WiPhase_top_level +incdir+C:/Users/alist/OneDrive/Electrickery/Phased-Array-Radio-Telescope/Phased-Array-WiFi-Camera/FPGA_Firmware/WiPhase_top_level/synthesis/submodules {C:/Users/alist/OneDrive/Electrickery/Phased-Array-Radio-Telescope/Phased-Array-WiFi-Camera/FPGA_Firmware/WiPhase_top_level/synthesis/submodules/WiPhase_top_level_test_pattern_st_gen.v}
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 00:17:02 on Sep 09,2018
+# vlog -reportprogress 300 -vlog01compat -work WiPhase_top_level "+incdir+C:/Users/alist/OneDrive/Electrickery/Phased-Array-Radio-Telescope/Phased-Array-WiFi-Camera/FPGA_Firmware/WiPhase_top_level/synthesis/submodules" C:/Users/alist/OneDrive/Electrickery/Phased-Array-Radio-Telescope/Phased-Array-WiFi-Camera/FPGA_Firmware/WiPhase_top_level/synthesis/submodules/WiPhase_top_level_test_pattern_st_gen.v 
+# -- Compiling module WiPhase_top_level_test_pattern_st_gen
+# 
+# Top level modules:
+# 	WiPhase_top_level_test_pattern_st_gen
+# End time: 00:17:02 on Sep 09,2018, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -vlog01compat -work WiPhase_top_level +incdir+C:/Users/alist/OneDrive/Electrickery/Phased-Array-Radio-Telescope/Phased-Array-WiFi-Camera/FPGA_Firmware/WiPhase_top_level/synthesis/submodules {C:/Users/alist/OneDrive/Electrickery/Phased-Array-Radio-Telescope/Phased-Array-WiFi-Camera/FPGA_Firmware/WiPhase_top_level/synthesis/submodules/WiPhase_top_level_test_pattern_st_gen_command_fifo.v}
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 00:17:02 on Sep 09,2018
+# vlog -reportprogress 300 -vlog01compat -work WiPhase_top_level "+incdir+C:/Users/alist/OneDrive/Electrickery/Phased-Array-Radio-Telescope/Phased-Array-WiFi-Camera/FPGA_Firmware/WiPhase_top_level/synthesis/submodules" C:/Users/alist/OneDrive/Electrickery/Phased-Array-Radio-Telescope/Phased-Array-WiFi-Camera/FPGA_Firmware/WiPhase_top_level/synthesis/submodules/WiPhase_top_level_test_pattern_st_gen_command_fifo.v 
+# -- Compiling module WiPhase_top_level_test_pattern_st_gen_command_fifo
+# 
+# Top level modules:
+# 	WiPhase_top_level_test_pattern_st_gen_command_fifo
+# End time: 00:17:02 on Sep 09,2018, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -vlog01compat -work WiPhase_top_level +incdir+C:/Users/alist/OneDrive/Electrickery/Phased-Array-Radio-Telescope/Phased-Array-WiFi-Camera/FPGA_Firmware/WiPhase_top_level/synthesis/submodules {C:/Users/alist/OneDrive/Electrickery/Phased-Array-Radio-Telescope/Phased-Array-WiFi-Camera/FPGA_Firmware/WiPhase_top_level/synthesis/submodules/WiPhase_top_level_test_pattern_st_gen_position_ram.v}
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 00:17:02 on Sep 09,2018
+# vlog -reportprogress 300 -vlog01compat -work WiPhase_top_level "+incdir+C:/Users/alist/OneDrive/Electrickery/Phased-Array-Radio-Telescope/Phased-Array-WiFi-Camera/FPGA_Firmware/WiPhase_top_level/synthesis/submodules" C:/Users/alist/OneDrive/Electrickery/Phased-Array-Radio-Telescope/Phased-Array-WiFi-Camera/FPGA_Firmware/WiPhase_top_level/synthesis/submodules/WiPhase_top_level_test_pattern_st_gen_position_ram.v 
+# -- Compiling module WiPhase_top_level_test_pattern_st_gen_position_ram
+# 
+# Top level modules:
+# 	WiPhase_top_level_test_pattern_st_gen_position_ram
+# End time: 00:17:02 on Sep 09,2018, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -vlog01compat -work WiPhase_top_level +incdir+C:/Users/alist/OneDrive/Electrickery/Phased-Array-Radio-Telescope/Phased-Array-WiFi-Camera/FPGA_Firmware/WiPhase_top_level/synthesis/submodules {C:/Users/alist/OneDrive/Electrickery/Phased-Array-Radio-Telescope/Phased-Array-WiFi-Camera/FPGA_Firmware/WiPhase_top_level/synthesis/submodules/WiPhase_top_level_test_pattern_st_gen_packetcount_ram.v}
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 00:17:02 on Sep 09,2018
+# vlog -reportprogress 300 -vlog01compat -work WiPhase_top_level "+incdir+C:/Users/alist/OneDrive/Electrickery/Phased-Array-Radio-Telescope/Phased-Array-WiFi-Camera/FPGA_Firmware/WiPhase_top_level/synthesis/submodules" C:/Users/alist/OneDrive/Electrickery/Phased-Array-Radio-Telescope/Phased-Array-WiFi-Camera/FPGA_Firmware/WiPhase_top_level/synthesis/submodules/WiPhase_top_level_test_pattern_st_gen_packetcount_ram.v 
+# -- Compiling module WiPhase_top_level_test_pattern_st_gen_packetcount_ram
+# 
+# Top level modules:
+# 	WiPhase_top_level_test_pattern_st_gen_packetcount_ram
+# End time: 00:17:02 on Sep 09,2018, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -vlog01compat -work WiPhase_top_level +incdir+C:/Users/alist/OneDrive/Electrickery/Phased-Array-Radio-Telescope/Phased-Array-WiFi-Camera/FPGA_Firmware/WiPhase_top_level/synthesis/submodules {C:/Users/alist/OneDrive/Electrickery/Phased-Array-Radio-Telescope/Phased-Array-WiFi-Camera/FPGA_Firmware/WiPhase_top_level/synthesis/submodules/WiPhase_top_level_sysid.v}
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 00:17:02 on Sep 09,2018
+# vlog -reportprogress 300 -vlog01compat -work WiPhase_top_level "+incdir+C:/Users/alist/OneDrive/Electrickery/Phased-Array-Radio-Telescope/Phased-Array-WiFi-Camera/FPGA_Firmware/WiPhase_top_level/synthesis/submodules" C:/Users/alist/OneDrive/Electrickery/Phased-Array-Radio-Telescope/Phased-Array-WiFi-Camera/FPGA_Firmware/WiPhase_top_level/synthesis/submodules/WiPhase_top_level_sysid.v 
+# -- Compiling module WiPhase_top_level_sysid
+# 
+# Top level modules:
+# 	WiPhase_top_level_sysid
+# End time: 00:17:02 on Sep 09,2018, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -vlog01compat -work WiPhase_top_level +incdir+C:/Users/alist/OneDrive/Electrickery/Phased-Array-Radio-Telescope/Phased-Array-WiFi-Camera/FPGA_Firmware/WiPhase_top_level/synthesis/submodules {C:/Users/alist/OneDrive/Electrickery/Phased-Array-Radio-Telescope/Phased-Array-WiFi-Camera/FPGA_Firmware/WiPhase_top_level/synthesis/submodules/WiPhase_top_level_spi.v}
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 00:17:02 on Sep 09,2018
+# vlog -reportprogress 300 -vlog01compat -work WiPhase_top_level "+incdir+C:/Users/alist/OneDrive/Electrickery/Phased-Array-Radio-Telescope/Phased-Array-WiFi-Camera/FPGA_Firmware/WiPhase_top_level/synthesis/submodules" C:/Users/alist/OneDrive/Electrickery/Phased-Array-Radio-Telescope/Phased-Array-WiFi-Camera/FPGA_Firmware/WiPhase_top_level/synthesis/submodules/WiPhase_top_level_spi.v 
+# -- Compiling module WiPhase_top_level_spi
+# 
+# Top level modules:
+# 	WiPhase_top_level_spi
+# End time: 00:17:02 on Sep 09,2018, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -vlog01compat -work WiPhase_top_level +incdir+C:/Users/alist/OneDrive/Electrickery/Phased-Array-Radio-Telescope/Phased-Array-WiFi-Camera/FPGA_Firmware/WiPhase_top_level/synthesis/submodules {C:/Users/alist/OneDrive/Electrickery/Phased-Array-Radio-Telescope/Phased-Array-WiFi-Camera/FPGA_Firmware/WiPhase_top_level/synthesis/submodules/WiPhase_top_level_sample_pll.v}
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 00:17:02 on Sep 09,2018
+# vlog -reportprogress 300 -vlog01compat -work WiPhase_top_level "+incdir+C:/Users/alist/OneDrive/Electrickery/Phased-Array-Radio-Telescope/Phased-Array-WiFi-Camera/FPGA_Firmware/WiPhase_top_level/synthesis/submodules" C:/Users/alist/OneDrive/Electrickery/Phased-Array-Radio-Telescope/Phased-Array-WiFi-Camera/FPGA_Firmware/WiPhase_top_level/synthesis/submodules/WiPhase_top_level_sample_pll.v 
+# -- Compiling module WiPhase_top_level_sample_pll_dffpipe_l2c
+# -- Compiling module WiPhase_top_level_sample_pll_stdsync_sv6
+# -- Compiling module WiPhase_top_level_sample_pll_altpll_mtd2
+# -- Compiling module WiPhase_top_level_sample_pll
+# 
+# Top level modules:
+# 	WiPhase_top_level_sample_pll
+# End time: 00:17:02 on Sep 09,2018, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -vlog01compat -work WiPhase_top_level +incdir+C:/Users/alist/OneDrive/Electrickery/Phased-Array-Radio-Telescope/Phased-Array-WiFi-Camera/FPGA_Firmware/WiPhase_top_level/synthesis/submodules {C:/Users/alist/OneDrive/Electrickery/Phased-Array-Radio-Telescope/Phased-Array-WiFi-Camera/FPGA_Firmware/WiPhase_top_level/synthesis/submodules/WiPhase_top_level_ram_onchip.v}
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 00:17:02 on Sep 09,2018
+# vlog -reportprogress 300 -vlog01compat -work WiPhase_top_level "+incdir+C:/Users/alist/OneDrive/Electrickery/Phased-Array-Radio-Telescope/Phased-Array-WiFi-Camera/FPGA_Firmware/WiPhase_top_level/synthesis/submodules" C:/Users/alist/OneDrive/Electrickery/Phased-Array-Radio-Telescope/Phased-Array-WiFi-Camera/FPGA_Firmware/WiPhase_top_level/synthesis/submodules/WiPhase_top_level_ram_onchip.v 
+# -- Compiling module WiPhase_top_level_ram_onchip
+# 
+# Top level modules:
+# 	WiPhase_top_level_ram_onchip
+# End time: 00:17:02 on Sep 09,2018, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -vlog01compat -work WiPhase_top_level +incdir+C:/Users/alist/OneDrive/Electrickery/Phased-Array-Radio-Telescope/Phased-Array-WiFi-Camera/FPGA_Firmware/WiPhase_top_level/synthesis/submodules {C:/Users/alist/OneDrive/Electrickery/Phased-Array-Radio-Telescope/Phased-Array-WiFi-Camera/FPGA_Firmware/WiPhase_top_level/synthesis/submodules/WiPhase_top_level_jtag_uart.v}
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 00:17:02 on Sep 09,2018
+# vlog -reportprogress 300 -vlog01compat -work WiPhase_top_level "+incdir+C:/Users/alist/OneDrive/Electrickery/Phased-Array-Radio-Telescope/Phased-Array-WiFi-Camera/FPGA_Firmware/WiPhase_top_level/synthesis/submodules" C:/Users/alist/OneDrive/Electrickery/Phased-Array-Radio-Telescope/Phased-Array-WiFi-Camera/FPGA_Firmware/WiPhase_top_level/synthesis/submodules/WiPhase_top_level_jtag_uart.v 
+# -- Compiling module WiPhase_top_level_jtag_uart_sim_scfifo_w
+# -- Compiling module WiPhase_top_level_jtag_uart_scfifo_w
+# -- Compiling module WiPhase_top_level_jtag_uart_sim_scfifo_r
+# -- Compiling module WiPhase_top_level_jtag_uart_scfifo_r
+# -- Compiling module WiPhase_top_level_jtag_uart
+# 
+# Top level modules:
+# 	WiPhase_top_level_jtag_uart
+# End time: 00:17:02 on Sep 09,2018, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -vlog01compat -work WiPhase_top_level +incdir+C:/Users/alist/OneDrive/Electrickery/Phased-Array-Radio-Telescope/Phased-Array-WiFi-Camera/FPGA_Firmware/WiPhase_top_level/synthesis/submodules {C:/Users/alist/OneDrive/Electrickery/Phased-Array-Radio-Telescope/Phased-Array-WiFi-Camera/FPGA_Firmware/WiPhase_top_level/synthesis/submodules/WiPhase_top_level_eth.v}
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 00:17:02 on Sep 09,2018
+# vlog -reportprogress 300 -vlog01compat -work WiPhase_top_level "+incdir+C:/Users/alist/OneDrive/Electrickery/Phased-Array-Radio-Telescope/Phased-Array-WiFi-Camera/FPGA_Firmware/WiPhase_top_level/synthesis/submodules" C:/Users/alist/OneDrive/Electrickery/Phased-Array-Radio-Telescope/Phased-Array-WiFi-Camera/FPGA_Firmware/WiPhase_top_level/synthesis/submodules/WiPhase_top_level_eth.v 
+# -- Compiling module WiPhase_top_level_eth
+# 
+# Top level modules:
+# 	WiPhase_top_level_eth
+# End time: 00:17:02 on Sep 09,2018, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -vlog01compat -work WiPhase_top_level +incdir+C:/Users/alist/OneDrive/Electrickery/Phased-Array-Radio-Telescope/Phased-Array-WiFi-Camera/FPGA_Firmware/WiPhase_top_level/synthesis/submodules {C:/Users/alist/OneDrive/Electrickery/Phased-Array-Radio-Telescope/Phased-Array-WiFi-Camera/FPGA_Firmware/WiPhase_top_level/synthesis/submodules/WiPhase_top_level_cpu_v2.v}
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 00:17:02 on Sep 09,2018
+# vlog -reportprogress 300 -vlog01compat -work WiPhase_top_level "+incdir+C:/Users/alist/OneDrive/Electrickery/Phased-Array-Radio-Telescope/Phased-Array-WiFi-Camera/FPGA_Firmware/WiPhase_top_level/synthesis/submodules" C:/Users/alist/OneDrive/Electrickery/Phased-Array-Radio-Telescope/Phased-Array-WiFi-Camera/FPGA_Firmware/WiPhase_top_level/synthesis/submodules/WiPhase_top_level_cpu_v2.v 
+# -- Compiling module WiPhase_top_level_cpu_v2
+# 
+# Top level modules:
+# 	WiPhase_top_level_cpu_v2
+# End time: 00:17:02 on Sep 09,2018, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -vlog01compat -work WiPhase_top_level +incdir+C:/Users/alist/OneDrive/Electrickery/Phased-Array-Radio-Telescope/Phased-Array-WiFi-Camera/FPGA_Firmware/WiPhase_top_level/synthesis/submodules {C:/Users/alist/OneDrive/Electrickery/Phased-Array-Radio-Telescope/Phased-Array-WiFi-Camera/FPGA_Firmware/WiPhase_top_level/synthesis/submodules/WiPhase_top_level_cpu_v2_cpu.v}
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 00:17:02 on Sep 09,2018
+# vlog -reportprogress 300 -vlog01compat -work WiPhase_top_level "+incdir+C:/Users/alist/OneDrive/Electrickery/Phased-Array-Radio-Telescope/Phased-Array-WiFi-Camera/FPGA_Firmware/WiPhase_top_level/synthesis/submodules" C:/Users/alist/OneDrive/Electrickery/Phased-Array-Radio-Telescope/Phased-Array-WiFi-Camera/FPGA_Firmware/WiPhase_top_level/synthesis/submodules/WiPhase_top_level_cpu_v2_cpu.v 
+# -- Compiling module WiPhase_top_level_cpu_v2_cpu_register_bank_a_module
+# -- Compiling module WiPhase_top_level_cpu_v2_cpu_register_bank_b_module
+# -- Compiling module WiPhase_top_level_cpu_v2_cpu_nios2_oci_debug
+# -- Compiling module WiPhase_top_level_cpu_v2_cpu_nios2_oci_break
+# -- Compiling module WiPhase_top_level_cpu_v2_cpu_nios2_oci_xbrk
+# -- Compiling module WiPhase_top_level_cpu_v2_cpu_nios2_oci_dbrk
+# -- Compiling module WiPhase_top_level_cpu_v2_cpu_nios2_oci_itrace
+# -- Compiling module WiPhase_top_level_cpu_v2_cpu_nios2_oci_td_mode
+# -- Compiling module WiPhase_top_level_cpu_v2_cpu_nios2_oci_dtrace
+# -- Compiling module WiPhase_top_level_cpu_v2_cpu_nios2_oci_compute_input_tm_cnt
+# -- Compiling module WiPhase_top_level_cpu_v2_cpu_nios2_oci_fifo_wrptr_inc
+# -- Compiling module WiPhase_top_level_cpu_v2_cpu_nios2_oci_fifo_cnt_inc
+# -- Compiling module WiPhase_top_level_cpu_v2_cpu_nios2_oci_fifo
+# -- Compiling module WiPhase_top_level_cpu_v2_cpu_nios2_oci_pib
+# -- Compiling module WiPhase_top_level_cpu_v2_cpu_nios2_oci_im
+# -- Compiling module WiPhase_top_level_cpu_v2_cpu_nios2_performance_monitors
+# -- Compiling module WiPhase_top_level_cpu_v2_cpu_nios2_avalon_reg
+# -- Compiling module WiPhase_top_level_cpu_v2_cpu_ociram_sp_ram_module
+# -- Compiling module WiPhase_top_level_cpu_v2_cpu_nios2_ocimem
+# -- Compiling module WiPhase_top_level_cpu_v2_cpu_nios2_oci
+# -- Compiling module WiPhase_top_level_cpu_v2_cpu
+# 
+# Top level modules:
+# 	WiPhase_top_level_cpu_v2_cpu_nios2_performance_monitors
+# 	WiPhase_top_level_cpu_v2_cpu
+# End time: 00:17:02 on Sep 09,2018, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -vlog01compat -work WiPhase_top_level +incdir+C:/Users/alist/OneDrive/Electrickery/Phased-Array-Radio-Telescope/Phased-Array-WiFi-Camera/FPGA_Firmware/WiPhase_top_level/synthesis/submodules {C:/Users/alist/OneDrive/Electrickery/Phased-Array-Radio-Telescope/Phased-Array-WiFi-Camera/FPGA_Firmware/WiPhase_top_level/synthesis/submodules/WiPhase_top_level_cpu_v2_cpu_debug_slave_sysclk.v}
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 00:17:02 on Sep 09,2018
+# vlog -reportprogress 300 -vlog01compat -work WiPhase_top_level "+incdir+C:/Users/alist/OneDrive/Electrickery/Phased-Array-Radio-Telescope/Phased-Array-WiFi-Camera/FPGA_Firmware/WiPhase_top_level/synthesis/submodules" C:/Users/alist/OneDrive/Electrickery/Phased-Array-Radio-Telescope/Phased-Array-WiFi-Camera/FPGA_Firmware/WiPhase_top_level/synthesis/submodules/WiPhase_top_level_cpu_v2_cpu_debug_slave_sysclk.v 
+# -- Compiling module WiPhase_top_level_cpu_v2_cpu_debug_slave_sysclk
+# 
+# Top level modules:
+# 	WiPhase_top_level_cpu_v2_cpu_debug_slave_sysclk
+# End time: 00:17:02 on Sep 09,2018, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -vlog01compat -work WiPhase_top_level +incdir+C:/Users/alist/OneDrive/Electrickery/Phased-Array-Radio-Telescope/Phased-Array-WiFi-Camera/FPGA_Firmware/WiPhase_top_level/synthesis/submodules {C:/Users/alist/OneDrive/Electrickery/Phased-Array-Radio-Telescope/Phased-Array-WiFi-Camera/FPGA_Firmware/WiPhase_top_level/synthesis/submodules/WiPhase_top_level_cpu_v2_cpu_debug_slave_tck.v}
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 00:17:02 on Sep 09,2018
+# vlog -reportprogress 300 -vlog01compat -work WiPhase_top_level "+incdir+C:/Users/alist/OneDrive/Electrickery/Phased-Array-Radio-Telescope/Phased-Array-WiFi-Camera/FPGA_Firmware/WiPhase_top_level/synthesis/submodules" C:/Users/alist/OneDrive/Electrickery/Phased-Array-Radio-Telescope/Phased-Array-WiFi-Camera/FPGA_Firmware/WiPhase_top_level/synthesis/submodules/WiPhase_top_level_cpu_v2_cpu_debug_slave_tck.v 
+# -- Compiling module WiPhase_top_level_cpu_v2_cpu_debug_slave_tck
+# 
+# Top level modules:
+# 	WiPhase_top_level_cpu_v2_cpu_debug_slave_tck
+# End time: 00:17:02 on Sep 09,2018, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -vlog01compat -work WiPhase_top_level +incdir+C:/Users/alist/OneDrive/Electrickery/Phased-Array-Radio-Telescope/Phased-Array-WiFi-Camera/FPGA_Firmware/WiPhase_top_level/synthesis/submodules {C:/Users/alist/OneDrive/Electrickery/Phased-Array-Radio-Telescope/Phased-Array-WiFi-Camera/FPGA_Firmware/WiPhase_top_level/synthesis/submodules/WiPhase_top_level_cpu_v2_cpu_debug_slave_wrapper.v}
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 00:17:02 on Sep 09,2018
+# vlog -reportprogress 300 -vlog01compat -work WiPhase_top_level "+incdir+C:/Users/alist/OneDrive/Electrickery/Phased-Array-Radio-Telescope/Phased-Array-WiFi-Camera/FPGA_Firmware/WiPhase_top_level/synthesis/submodules" C:/Users/alist/OneDrive/Electrickery/Phased-Array-Radio-Telescope/Phased-Array-WiFi-Camera/FPGA_Firmware/WiPhase_top_level/synthesis/submodules/WiPhase_top_level_cpu_v2_cpu_debug_slave_wrapper.v 
+# -- Compiling module WiPhase_top_level_cpu_v2_cpu_debug_slave_wrapper
+# 
+# Top level modules:
+# 	WiPhase_top_level_cpu_v2_cpu_debug_slave_wrapper
+# End time: 00:17:03 on Sep 09,2018, Elapsed time: 0:00:01
+# Errors: 0, Warnings: 0
+# vlog -vlog01compat -work WiPhase_top_level +incdir+C:/Users/alist/OneDrive/Electrickery/Phased-Array-Radio-Telescope/Phased-Array-WiFi-Camera/FPGA_Firmware/WiPhase_top_level/synthesis/submodules {C:/Users/alist/OneDrive/Electrickery/Phased-Array-Radio-Telescope/Phased-Array-WiFi-Camera/FPGA_Firmware/WiPhase_top_level/synthesis/submodules/WiPhase_top_level_cpu_v2_cpu_test_bench.v}
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 00:17:03 on Sep 09,2018
+# vlog -reportprogress 300 -vlog01compat -work WiPhase_top_level "+incdir+C:/Users/alist/OneDrive/Electrickery/Phased-Array-Radio-Telescope/Phased-Array-WiFi-Camera/FPGA_Firmware/WiPhase_top_level/synthesis/submodules" C:/Users/alist/OneDrive/Electrickery/Phased-Array-Radio-Telescope/Phased-Array-WiFi-Camera/FPGA_Firmware/WiPhase_top_level/synthesis/submodules/WiPhase_top_level_cpu_v2_cpu_test_bench.v 
+# -- Compiling module WiPhase_top_level_cpu_v2_cpu_test_bench
+# 
+# Top level modules:
+# 	WiPhase_top_level_cpu_v2_cpu_test_bench
+# End time: 00:17:03 on Sep 09,2018, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -sv -work WiPhase_top_level +incdir+C:/Users/alist/OneDrive/Electrickery/Phased-Array-Radio-Telescope/Phased-Array-WiFi-Camera/FPGA_Firmware/WiPhase_top_level/synthesis/submodules {C:/Users/alist/OneDrive/Electrickery/Phased-Array-Radio-Telescope/Phased-Array-WiFi-Camera/FPGA_Firmware/WiPhase_top_level/synthesis/submodules/WiPhase_top_level_avalon_st_adapter_001_timing_adapter_1.sv}
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 00:17:03 on Sep 09,2018
+# vlog -reportprogress 300 -sv -work WiPhase_top_level "+incdir+C:/Users/alist/OneDrive/Electrickery/Phased-Array-Radio-Telescope/Phased-Array-WiFi-Camera/FPGA_Firmware/WiPhase_top_level/synthesis/submodules" C:/Users/alist/OneDrive/Electrickery/Phased-Array-Radio-Telescope/Phased-Array-WiFi-Camera/FPGA_Firmware/WiPhase_top_level/synthesis/submodules/WiPhase_top_level_avalon_st_adapter_001_timing_adapter_1.sv 
+# -- Compiling module WiPhase_top_level_avalon_st_adapter_001_timing_adapter_1
+# 
+# Top level modules:
+# 	WiPhase_top_level_avalon_st_adapter_001_timing_adapter_1
+# End time: 00:17:03 on Sep 09,2018, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -sv -work WiPhase_top_level +incdir+C:/Users/alist/OneDrive/Electrickery/Phased-Array-Radio-Telescope/Phased-Array-WiFi-Camera/FPGA_Firmware/WiPhase_top_level/synthesis/submodules {C:/Users/alist/OneDrive/Electrickery/Phased-Array-Radio-Telescope/Phased-Array-WiFi-Camera/FPGA_Firmware/WiPhase_top_level/synthesis/submodules/WiPhase_top_level_avalon_st_adapter_001_timing_adapter_0.sv}
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 00:17:03 on Sep 09,2018
+# vlog -reportprogress 300 -sv -work WiPhase_top_level "+incdir+C:/Users/alist/OneDrive/Electrickery/Phased-Array-Radio-Telescope/Phased-Array-WiFi-Camera/FPGA_Firmware/WiPhase_top_level/synthesis/submodules" C:/Users/alist/OneDrive/Electrickery/Phased-Array-Radio-Telescope/Phased-Array-WiFi-Camera/FPGA_Firmware/WiPhase_top_level/synthesis/submodules/WiPhase_top_level_avalon_st_adapter_001_timing_adapter_0.sv 
+# -- Compiling module WiPhase_top_level_avalon_st_adapter_001_timing_adapter_0
+# 
+# Top level modules:
+# 	WiPhase_top_level_avalon_st_adapter_001_timing_adapter_0
+# End time: 00:17:03 on Sep 09,2018, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -sv -work WiPhase_top_level +incdir+C:/Users/alist/OneDrive/Electrickery/Phased-Array-Radio-Telescope/Phased-Array-WiFi-Camera/FPGA_Firmware/WiPhase_top_level/synthesis/submodules {C:/Users/alist/OneDrive/Electrickery/Phased-Array-Radio-Telescope/Phased-Array-WiFi-Camera/FPGA_Firmware/WiPhase_top_level/synthesis/submodules/WiPhase_top_level_avalon_st_adapter_001_timing_adapter_0_fifo.sv}
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 00:17:03 on Sep 09,2018
+# vlog -reportprogress 300 -sv -work WiPhase_top_level "+incdir+C:/Users/alist/OneDrive/Electrickery/Phased-Array-Radio-Telescope/Phased-Array-WiFi-Camera/FPGA_Firmware/WiPhase_top_level/synthesis/submodules" C:/Users/alist/OneDrive/Electrickery/Phased-Array-Radio-Telescope/Phased-Array-WiFi-Camera/FPGA_Firmware/WiPhase_top_level/synthesis/submodules/WiPhase_top_level_avalon_st_adapter_001_timing_adapter_0_fifo.sv 
+# -- Compiling module WiPhase_top_level_avalon_st_adapter_001_timing_adapter_0_fifo
+# 
+# Top level modules:
+# 	WiPhase_top_level_avalon_st_adapter_001_timing_adapter_0_fifo
+# End time: 00:17:03 on Sep 09,2018, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -sv -work WiPhase_top_level +incdir+C:/Users/alist/OneDrive/Electrickery/Phased-Array-Radio-Telescope/Phased-Array-WiFi-Camera/FPGA_Firmware/WiPhase_top_level/synthesis/submodules {C:/Users/alist/OneDrive/Electrickery/Phased-Array-Radio-Telescope/Phased-Array-WiFi-Camera/FPGA_Firmware/WiPhase_top_level/synthesis/submodules/WiPhase_top_level_avalon_st_adapter_001_error_adapter_0.sv}
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 00:17:03 on Sep 09,2018
+# vlog -reportprogress 300 -sv -work WiPhase_top_level "+incdir+C:/Users/alist/OneDrive/Electrickery/Phased-Array-Radio-Telescope/Phased-Array-WiFi-Camera/FPGA_Firmware/WiPhase_top_level/synthesis/submodules" C:/Users/alist/OneDrive/Electrickery/Phased-Array-Radio-Telescope/Phased-Array-WiFi-Camera/FPGA_Firmware/WiPhase_top_level/synthesis/submodules/WiPhase_top_level_avalon_st_adapter_001_error_adapter_0.sv 
+# -- Compiling module WiPhase_top_level_avalon_st_adapter_001_error_adapter_0
+# 
+# Top level modules:
+# 	WiPhase_top_level_avalon_st_adapter_001_error_adapter_0
+# End time: 00:17:03 on Sep 09,2018, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -sv -work WiPhase_top_level +incdir+C:/Users/alist/OneDrive/Electrickery/Phased-Array-Radio-Telescope/Phased-Array-WiFi-Camera/FPGA_Firmware/WiPhase_top_level/synthesis/submodules {C:/Users/alist/OneDrive/Electrickery/Phased-Array-Radio-Telescope/Phased-Array-WiFi-Camera/FPGA_Firmware/WiPhase_top_level/synthesis/submodules/WiPhase_top_level_avalon_st_adapter_001_data_format_adapter_0.sv}
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 00:17:03 on Sep 09,2018
+# vlog -reportprogress 300 -sv -work WiPhase_top_level "+incdir+C:/Users/alist/OneDrive/Electrickery/Phased-Array-Radio-Telescope/Phased-Array-WiFi-Camera/FPGA_Firmware/WiPhase_top_level/synthesis/submodules" C:/Users/alist/OneDrive/Electrickery/Phased-Array-Radio-Telescope/Phased-Array-WiFi-Camera/FPGA_Firmware/WiPhase_top_level/synthesis/submodules/WiPhase_top_level_avalon_st_adapter_001_data_format_adapter_0.sv 
+# -- Compiling module WiPhase_top_level_avalon_st_adapter_001_data_format_adapter_0
+# 
+# Top level modules:
+# 	WiPhase_top_level_avalon_st_adapter_001_data_format_adapter_0
+# End time: 00:17:03 on Sep 09,2018, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -sv -work WiPhase_top_level +incdir+C:/Users/alist/OneDrive/Electrickery/Phased-Array-Radio-Telescope/Phased-Array-WiFi-Camera/FPGA_Firmware/WiPhase_top_level/synthesis/submodules {C:/Users/alist/OneDrive/Electrickery/Phased-Array-Radio-Telescope/Phased-Array-WiFi-Camera/FPGA_Firmware/WiPhase_top_level/synthesis/submodules/WiPhase_top_level_avalon_st_adapter_error_adapter_0.sv}
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 00:17:03 on Sep 09,2018
+# vlog -reportprogress 300 -sv -work WiPhase_top_level "+incdir+C:/Users/alist/OneDrive/Electrickery/Phased-Array-Radio-Telescope/Phased-Array-WiFi-Camera/FPGA_Firmware/WiPhase_top_level/synthesis/submodules" C:/Users/alist/OneDrive/Electrickery/Phased-Array-Radio-Telescope/Phased-Array-WiFi-Camera/FPGA_Firmware/WiPhase_top_level/synthesis/submodules/WiPhase_top_level_avalon_st_adapter_error_adapter_0.sv 
+# -- Compiling module WiPhase_top_level_avalon_st_adapter_error_adapter_0
+# 
+# Top level modules:
+# 	WiPhase_top_level_avalon_st_adapter_error_adapter_0
+# End time: 00:17:03 on Sep 09,2018, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -sv -work WiPhase_top_level +incdir+C:/Users/alist/OneDrive/Electrickery/Phased-Array-Radio-Telescope/Phased-Array-WiFi-Camera/FPGA_Firmware/WiPhase_top_level/synthesis/submodules {C:/Users/alist/OneDrive/Electrickery/Phased-Array-Radio-Telescope/Phased-Array-WiFi-Camera/FPGA_Firmware/WiPhase_top_level/synthesis/submodules/WiPhase_top_level_avalon_st_adapter_data_format_adapter_0.sv}
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 00:17:03 on Sep 09,2018
+# vlog -reportprogress 300 -sv -work WiPhase_top_level "+incdir+C:/Users/alist/OneDrive/Electrickery/Phased-Array-Radio-Telescope/Phased-Array-WiFi-Camera/FPGA_Firmware/WiPhase_top_level/synthesis/submodules" C:/Users/alist/OneDrive/Electrickery/Phased-Array-Radio-Telescope/Phased-Array-WiFi-Camera/FPGA_Firmware/WiPhase_top_level/synthesis/submodules/WiPhase_top_level_avalon_st_adapter_data_format_adapter_0.sv 
+# -- Compiling module WiPhase_top_level_avalon_st_adapter_data_format_adapter_0
+# 
+# Top level modules:
+# 	WiPhase_top_level_avalon_st_adapter_data_format_adapter_0
+# End time: 00:17:03 on Sep 09,2018, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -sv -work WiPhase_top_level +incdir+C:/Users/alist/OneDrive/Electrickery/Phased-Array-Radio-Telescope/Phased-Array-WiFi-Camera/FPGA_Firmware/WiPhase_top_level/synthesis/submodules {C:/Users/alist/OneDrive/Electrickery/Phased-Array-Radio-Telescope/Phased-Array-WiFi-Camera/FPGA_Firmware/WiPhase_top_level/synthesis/submodules/WiPhase_top_level_irq_mapper.sv}
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 00:17:03 on Sep 09,2018
+# vlog -reportprogress 300 -sv -work WiPhase_top_level "+incdir+C:/Users/alist/OneDrive/Electrickery/Phased-Array-Radio-Telescope/Phased-Array-WiFi-Camera/FPGA_Firmware/WiPhase_top_level/synthesis/submodules" C:/Users/alist/OneDrive/Electrickery/Phased-Array-Radio-Telescope/Phased-Array-WiFi-Camera/FPGA_Firmware/WiPhase_top_level/synthesis/submodules/WiPhase_top_level_irq_mapper.sv 
+# -- Compiling module WiPhase_top_level_irq_mapper
+# 
+# Top level modules:
+# 	WiPhase_top_level_irq_mapper
+# End time: 00:17:03 on Sep 09,2018, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -sv -work WiPhase_top_level +incdir+C:/Users/alist/OneDrive/Electrickery/Phased-Array-Radio-Telescope/Phased-Array-WiFi-Camera/FPGA_Firmware/WiPhase_top_level/synthesis/submodules {C:/Users/alist/OneDrive/Electrickery/Phased-Array-Radio-Telescope/Phased-Array-WiFi-Camera/FPGA_Firmware/WiPhase_top_level/synthesis/submodules/WiPhase_top_level_mm_interconnect_0_avalon_st_adapter_error_adapter_0.sv}
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 00:17:03 on Sep 09,2018
+# vlog -reportprogress 300 -sv -work WiPhase_top_level "+incdir+C:/Users/alist/OneDrive/Electrickery/Phased-Array-Radio-Telescope/Phased-Array-WiFi-Camera/FPGA_Firmware/WiPhase_top_level/synthesis/submodules" C:/Users/alist/OneDrive/Electrickery/Phased-Array-Radio-Telescope/Phased-Array-WiFi-Camera/FPGA_Firmware/WiPhase_top_level/synthesis/submodules/WiPhase_top_level_mm_interconnect_0_avalon_st_adapter_error_adapter_0.sv 
+# -- Compiling module WiPhase_top_level_mm_interconnect_0_avalon_st_adapter_error_adapter_0
+# 
+# Top level modules:
+# 	WiPhase_top_level_mm_interconnect_0_avalon_st_adapter_error_adapter_0
+# End time: 00:17:03 on Sep 09,2018, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -sv -work WiPhase_top_level +incdir+C:/Users/alist/OneDrive/Electrickery/Phased-Array-Radio-Telescope/Phased-Array-WiFi-Camera/FPGA_Firmware/WiPhase_top_level/synthesis/submodules {C:/Users/alist/OneDrive/Electrickery/Phased-Array-Radio-Telescope/Phased-Array-WiFi-Camera/FPGA_Firmware/WiPhase_top_level/synthesis/submodules/WiPhase_top_level_mm_interconnect_0_rsp_mux_001.sv}
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 00:17:03 on Sep 09,2018
+# vlog -reportprogress 300 -sv -work WiPhase_top_level "+incdir+C:/Users/alist/OneDrive/Electrickery/Phased-Array-Radio-Telescope/Phased-Array-WiFi-Camera/FPGA_Firmware/WiPhase_top_level/synthesis/submodules" C:/Users/alist/OneDrive/Electrickery/Phased-Array-Radio-Telescope/Phased-Array-WiFi-Camera/FPGA_Firmware/WiPhase_top_level/synthesis/submodules/WiPhase_top_level_mm_interconnect_0_rsp_mux_001.sv 
+# -- Compiling module WiPhase_top_level_mm_interconnect_0_rsp_mux_001
+# 
+# Top level modules:
+# 	WiPhase_top_level_mm_interconnect_0_rsp_mux_001
+# End time: 00:17:03 on Sep 09,2018, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -sv -work WiPhase_top_level +incdir+C:/Users/alist/OneDrive/Electrickery/Phased-Array-Radio-Telescope/Phased-Array-WiFi-Camera/FPGA_Firmware/WiPhase_top_level/synthesis/submodules {C:/Users/alist/OneDrive/Electrickery/Phased-Array-Radio-Telescope/Phased-Array-WiFi-Camera/FPGA_Firmware/WiPhase_top_level/synthesis/submodules/altera_merlin_arbitrator.sv}
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 00:17:03 on Sep 09,2018
+# vlog -reportprogress 300 -sv -work WiPhase_top_level "+incdir+C:/Users/alist/OneDrive/Electrickery/Phased-Array-Radio-Telescope/Phased-Array-WiFi-Camera/FPGA_Firmware/WiPhase_top_level/synthesis/submodules" C:/Users/alist/OneDrive/Electrickery/Phased-Array-Radio-Telescope/Phased-Array-WiFi-Camera/FPGA_Firmware/WiPhase_top_level/synthesis/submodules/altera_merlin_arbitrator.sv 
+# -- Compiling module altera_merlin_arbitrator
+# -- Compiling module altera_merlin_arb_adder
+# 
+# Top level modules:
+# 	altera_merlin_arbitrator
+# End time: 00:17:03 on Sep 09,2018, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -sv -work WiPhase_top_level +incdir+C:/Users/alist/OneDrive/Electrickery/Phased-Array-Radio-Telescope/Phased-Array-WiFi-Camera/FPGA_Firmware/WiPhase_top_level/synthesis/submodules {C:/Users/alist/OneDrive/Electrickery/Phased-Array-Radio-Telescope/Phased-Array-WiFi-Camera/FPGA_Firmware/WiPhase_top_level/synthesis/submodules/WiPhase_top_level_mm_interconnect_0_rsp_mux.sv}
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 00:17:03 on Sep 09,2018
+# vlog -reportprogress 300 -sv -work WiPhase_top_level "+incdir+C:/Users/alist/OneDrive/Electrickery/Phased-Array-Radio-Telescope/Phased-Array-WiFi-Camera/FPGA_Firmware/WiPhase_top_level/synthesis/submodules" C:/Users/alist/OneDrive/Electrickery/Phased-Array-Radio-Telescope/Phased-Array-WiFi-Camera/FPGA_Firmware/WiPhase_top_level/synthesis/submodules/WiPhase_top_level_mm_interconnect_0_rsp_mux.sv 
+# -- Compiling module WiPhase_top_level_mm_interconnect_0_rsp_mux
+# 
+# Top level modules:
+# 	WiPhase_top_level_mm_interconnect_0_rsp_mux
+# End time: 00:17:03 on Sep 09,2018, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -sv -work WiPhase_top_level +incdir+C:/Users/alist/OneDrive/Electrickery/Phased-Array-Radio-Telescope/Phased-Array-WiFi-Camera/FPGA_Firmware/WiPhase_top_level/synthesis/submodules {C:/Users/alist/OneDrive/Electrickery/Phased-Array-Radio-Telescope/Phased-Array-WiFi-Camera/FPGA_Firmware/WiPhase_top_level/synthesis/submodules/WiPhase_top_level_mm_interconnect_0_rsp_demux.sv}
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 00:17:03 on Sep 09,2018
+# vlog -reportprogress 300 -sv -work WiPhase_top_level "+incdir+C:/Users/alist/OneDrive/Electrickery/Phased-Array-Radio-Telescope/Phased-Array-WiFi-Camera/FPGA_Firmware/WiPhase_top_level/synthesis/submodules" C:/Users/alist/OneDrive/Electrickery/Phased-Array-Radio-Telescope/Phased-Array-WiFi-Camera/FPGA_Firmware/WiPhase_top_level/synthesis/submodules/WiPhase_top_level_mm_interconnect_0_rsp_demux.sv 
+# -- Compiling module WiPhase_top_level_mm_interconnect_0_rsp_demux
+# 
+# Top level modules:
+# 	WiPhase_top_level_mm_interconnect_0_rsp_demux
+# End time: 00:17:03 on Sep 09,2018, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -sv -work WiPhase_top_level +incdir+C:/Users/alist/OneDrive/Electrickery/Phased-Array-Radio-Telescope/Phased-Array-WiFi-Camera/FPGA_Firmware/WiPhase_top_level/synthesis/submodules {C:/Users/alist/OneDrive/Electrickery/Phased-Array-Radio-Telescope/Phased-Array-WiFi-Camera/FPGA_Firmware/WiPhase_top_level/synthesis/submodules/WiPhase_top_level_mm_interconnect_0_cmd_mux_005.sv}
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 00:17:03 on Sep 09,2018
+# vlog -reportprogress 300 -sv -work WiPhase_top_level "+incdir+C:/Users/alist/OneDrive/Electrickery/Phased-Array-Radio-Telescope/Phased-Array-WiFi-Camera/FPGA_Firmware/WiPhase_top_level/synthesis/submodules" C:/Users/alist/OneDrive/Electrickery/Phased-Array-Radio-Telescope/Phased-Array-WiFi-Camera/FPGA_Firmware/WiPhase_top_level/synthesis/submodules/WiPhase_top_level_mm_interconnect_0_cmd_mux_005.sv 
+# -- Compiling module WiPhase_top_level_mm_interconnect_0_cmd_mux_005
+# 
+# Top level modules:
+# 	WiPhase_top_level_mm_interconnect_0_cmd_mux_005
+# End time: 00:17:03 on Sep 09,2018, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -sv -work WiPhase_top_level +incdir+C:/Users/alist/OneDrive/Electrickery/Phased-Array-Radio-Telescope/Phased-Array-WiFi-Camera/FPGA_Firmware/WiPhase_top_level/synthesis/submodules {C:/Users/alist/OneDrive/Electrickery/Phased-Array-Radio-Telescope/Phased-Array-WiFi-Camera/FPGA_Firmware/WiPhase_top_level/synthesis/submodules/WiPhase_top_level_mm_interconnect_0_cmd_mux.sv}
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 00:17:03 on Sep 09,2018
+# vlog -reportprogress 300 -sv -work WiPhase_top_level "+incdir+C:/Users/alist/OneDrive/Electrickery/Phased-Array-Radio-Telescope/Phased-Array-WiFi-Camera/FPGA_Firmware/WiPhase_top_level/synthesis/submodules" C:/Users/alist/OneDrive/Electrickery/Phased-Array-Radio-Telescope/Phased-Array-WiFi-Camera/FPGA_Firmware/WiPhase_top_level/synthesis/submodules/WiPhase_top_level_mm_interconnect_0_cmd_mux.sv 
+# -- Compiling module WiPhase_top_level_mm_interconnect_0_cmd_mux
+# 
+# Top level modules:
+# 	WiPhase_top_level_mm_interconnect_0_cmd_mux
+# End time: 00:17:03 on Sep 09,2018, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -sv -work WiPhase_top_level +incdir+C:/Users/alist/OneDrive/Electrickery/Phased-Array-Radio-Telescope/Phased-Array-WiFi-Camera/FPGA_Firmware/WiPhase_top_level/synthesis/submodules {C:/Users/alist/OneDrive/Electrickery/Phased-Array-Radio-Telescope/Phased-Array-WiFi-Camera/FPGA_Firmware/WiPhase_top_level/synthesis/submodules/WiPhase_top_level_mm_interconnect_0_cmd_demux_001.sv}
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 00:17:03 on Sep 09,2018
+# vlog -reportprogress 300 -sv -work WiPhase_top_level "+incdir+C:/Users/alist/OneDrive/Electrickery/Phased-Array-Radio-Telescope/Phased-Array-WiFi-Camera/FPGA_Firmware/WiPhase_top_level/synthesis/submodules" C:/Users/alist/OneDrive/Electrickery/Phased-Array-Radio-Telescope/Phased-Array-WiFi-Camera/FPGA_Firmware/WiPhase_top_level/synthesis/submodules/WiPhase_top_level_mm_interconnect_0_cmd_demux_001.sv 
+# -- Compiling module WiPhase_top_level_mm_interconnect_0_cmd_demux_001
+# 
+# Top level modules:
+# 	WiPhase_top_level_mm_interconnect_0_cmd_demux_001
+# End time: 00:17:03 on Sep 09,2018, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -sv -work WiPhase_top_level +incdir+C:/Users/alist/OneDrive/Electrickery/Phased-Array-Radio-Telescope/Phased-Array-WiFi-Camera/FPGA_Firmware/WiPhase_top_level/synthesis/submodules {C:/Users/alist/OneDrive/Electrickery/Phased-Array-Radio-Telescope/Phased-Array-WiFi-Camera/FPGA_Firmware/WiPhase_top_level/synthesis/submodules/WiPhase_top_level_mm_interconnect_0_cmd_demux.sv}
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 00:17:03 on Sep 09,2018
+# vlog -reportprogress 300 -sv -work WiPhase_top_level "+incdir+C:/Users/alist/OneDrive/Electrickery/Phased-Array-Radio-Telescope/Phased-Array-WiFi-Camera/FPGA_Firmware/WiPhase_top_level/synthesis/submodules" C:/Users/alist/OneDrive/Electrickery/Phased-Array-Radio-Telescope/Phased-Array-WiFi-Camera/FPGA_Firmware/WiPhase_top_level/synthesis/submodules/WiPhase_top_level_mm_interconnect_0_cmd_demux.sv 
+# -- Compiling module WiPhase_top_level_mm_interconnect_0_cmd_demux
+# 
+# Top level modules:
+# 	WiPhase_top_level_mm_interconnect_0_cmd_demux
+# End time: 00:17:03 on Sep 09,2018, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -sv -work WiPhase_top_level +incdir+C:/Users/alist/OneDrive/Electrickery/Phased-Array-Radio-Telescope/Phased-Array-WiFi-Camera/FPGA_Firmware/WiPhase_top_level/synthesis/submodules {C:/Users/alist/OneDrive/Electrickery/Phased-Array-Radio-Telescope/Phased-Array-WiFi-Camera/FPGA_Firmware/WiPhase_top_level/synthesis/submodules/WiPhase_top_level_mm_interconnect_0_router_007.sv}
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 00:17:03 on Sep 09,2018
+# vlog -reportprogress 300 -sv -work WiPhase_top_level "+incdir+C:/Users/alist/OneDrive/Electrickery/Phased-Array-Radio-Telescope/Phased-Array-WiFi-Camera/FPGA_Firmware/WiPhase_top_level/synthesis/submodules" C:/Users/alist/OneDrive/Electrickery/Phased-Array-Radio-Telescope/Phased-Array-WiFi-Camera/FPGA_Firmware/WiPhase_top_level/synthesis/submodules/WiPhase_top_level_mm_interconnect_0_router_007.sv 
+# -- Compiling module WiPhase_top_level_mm_interconnect_0_router_007_default_decode
+# -- Compiling module WiPhase_top_level_mm_interconnect_0_router_007
+# 
+# Top level modules:
+# 	WiPhase_top_level_mm_interconnect_0_router_007
+# End time: 00:17:03 on Sep 09,2018, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -sv -work WiPhase_top_level +incdir+C:/Users/alist/OneDrive/Electrickery/Phased-Array-Radio-Telescope/Phased-Array-WiFi-Camera/FPGA_Firmware/WiPhase_top_level/synthesis/submodules {C:/Users/alist/OneDrive/Electrickery/Phased-Array-Radio-Telescope/Phased-Array-WiFi-Camera/FPGA_Firmware/WiPhase_top_level/synthesis/submodules/WiPhase_top_level_mm_interconnect_0_router_002.sv}
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 00:17:03 on Sep 09,2018
+# vlog -reportprogress 300 -sv -work WiPhase_top_level "+incdir+C:/Users/alist/OneDrive/Electrickery/Phased-Array-Radio-Telescope/Phased-Array-WiFi-Camera/FPGA_Firmware/WiPhase_top_level/synthesis/submodules" C:/Users/alist/OneDrive/Electrickery/Phased-Array-Radio-Telescope/Phased-Array-WiFi-Camera/FPGA_Firmware/WiPhase_top_level/synthesis/submodules/WiPhase_top_level_mm_interconnect_0_router_002.sv 
+# -- Compiling module WiPhase_top_level_mm_interconnect_0_router_002_default_decode
+# -- Compiling module WiPhase_top_level_mm_interconnect_0_router_002
+# 
+# Top level modules:
+# 	WiPhase_top_level_mm_interconnect_0_router_002
+# End time: 00:17:03 on Sep 09,2018, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -sv -work WiPhase_top_level +incdir+C:/Users/alist/OneDrive/Electrickery/Phased-Array-Radio-Telescope/Phased-Array-WiFi-Camera/FPGA_Firmware/WiPhase_top_level/synthesis/submodules {C:/Users/alist/OneDrive/Electrickery/Phased-Array-Radio-Telescope/Phased-Array-WiFi-Camera/FPGA_Firmware/WiPhase_top_level/synthesis/submodules/WiPhase_top_level_mm_interconnect_0_router_001.sv}
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 00:17:03 on Sep 09,2018
+# vlog -reportprogress 300 -sv -work WiPhase_top_level "+incdir+C:/Users/alist/OneDrive/Electrickery/Phased-Array-Radio-Telescope/Phased-Array-WiFi-Camera/FPGA_Firmware/WiPhase_top_level/synthesis/submodules" C:/Users/alist/OneDrive/Electrickery/Phased-Array-Radio-Telescope/Phased-Array-WiFi-Camera/FPGA_Firmware/WiPhase_top_level/synthesis/submodules/WiPhase_top_level_mm_interconnect_0_router_001.sv 
+# -- Compiling module WiPhase_top_level_mm_interconnect_0_router_001_default_decode
+# -- Compiling module WiPhase_top_level_mm_interconnect_0_router_001
+# 
+# Top level modules:
+# 	WiPhase_top_level_mm_interconnect_0_router_001
+# End time: 00:17:04 on Sep 09,2018, Elapsed time: 0:00:01
+# Errors: 0, Warnings: 0
+# vlog -sv -work WiPhase_top_level +incdir+C:/Users/alist/OneDrive/Electrickery/Phased-Array-Radio-Telescope/Phased-Array-WiFi-Camera/FPGA_Firmware/WiPhase_top_level/synthesis/submodules {C:/Users/alist/OneDrive/Electrickery/Phased-Array-Radio-Telescope/Phased-Array-WiFi-Camera/FPGA_Firmware/WiPhase_top_level/synthesis/submodules/WiPhase_top_level_mm_interconnect_0_router.sv}
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 00:17:04 on Sep 09,2018
+# vlog -reportprogress 300 -sv -work WiPhase_top_level "+incdir+C:/Users/alist/OneDrive/Electrickery/Phased-Array-Radio-Telescope/Phased-Array-WiFi-Camera/FPGA_Firmware/WiPhase_top_level/synthesis/submodules" C:/Users/alist/OneDrive/Electrickery/Phased-Array-Radio-Telescope/Phased-Array-WiFi-Camera/FPGA_Firmware/WiPhase_top_level/synthesis/submodules/WiPhase_top_level_mm_interconnect_0_router.sv 
+# -- Compiling module WiPhase_top_level_mm_interconnect_0_router_default_decode
+# -- Compiling module WiPhase_top_level_mm_interconnect_0_router
+# 
+# Top level modules:
+# 	WiPhase_top_level_mm_interconnect_0_router
+# End time: 00:17:04 on Sep 09,2018, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -sv -work WiPhase_top_level +incdir+C:/Users/alist/OneDrive/Electrickery/Phased-Array-Radio-Telescope/Phased-Array-WiFi-Camera/FPGA_Firmware/WiPhase_top_level/synthesis/submodules {C:/Users/alist/OneDrive/Electrickery/Phased-Array-Radio-Telescope/Phased-Array-WiFi-Camera/FPGA_Firmware/WiPhase_top_level/synthesis/submodules/altera_merlin_slave_agent.sv}
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 00:17:04 on Sep 09,2018
+# vlog -reportprogress 300 -sv -work WiPhase_top_level "+incdir+C:/Users/alist/OneDrive/Electrickery/Phased-Array-Radio-Telescope/Phased-Array-WiFi-Camera/FPGA_Firmware/WiPhase_top_level/synthesis/submodules" C:/Users/alist/OneDrive/Electrickery/Phased-Array-Radio-Telescope/Phased-Array-WiFi-Camera/FPGA_Firmware/WiPhase_top_level/synthesis/submodules/altera_merlin_slave_agent.sv 
+# -- Compiling module altera_merlin_slave_agent
+# ** Warning: C:/Users/alist/OneDrive/Electrickery/Phased-Array-Radio-Telescope/Phased-Array-WiFi-Camera/FPGA_Firmware/WiPhase_top_level/synthesis/submodules/altera_merlin_slave_agent.sv(618): (vlog-2186) SystemVerilog testbench feature
+# (randomization, coverage or assertion) detected in the design.
+# These features are only supported in Questasim.
+# ** Warning: C:/Users/alist/OneDrive/Electrickery/Phased-Array-Radio-Telescope/Phased-Array-WiFi-Camera/FPGA_Firmware/WiPhase_top_level/synthesis/submodules/altera_merlin_slave_agent.sv(488): (vlog-2583) [SVCHK] - Some checking for conflicts with always_comb and always_latch variables not yet supported. Run vopt to provide additional design-level checks.
+# ** Warning: C:/Users/alist/OneDrive/Electrickery/Phased-Array-Radio-Telescope/Phased-Array-WiFi-Camera/FPGA_Firmware/WiPhase_top_level/synthesis/submodules/altera_merlin_slave_agent.sv(489): (vlog-2583) [SVCHK] - Some checking for conflicts with always_comb and always_latch variables not yet supported. Run vopt to provide additional design-level checks.
+# ** Warning: C:/Users/alist/OneDrive/Electrickery/Phased-Array-Radio-Telescope/Phased-Array-WiFi-Camera/FPGA_Firmware/WiPhase_top_level/synthesis/submodules/altera_merlin_slave_agent.sv(490): (vlog-2583) [SVCHK] - Some checking for conflicts with always_comb and always_latch variables not yet supported. Run vopt to provide additional design-level checks.
+# ** Warning: C:/Users/alist/OneDrive/Electrickery/Phased-Array-Radio-Telescope/Phased-Array-WiFi-Camera/FPGA_Firmware/WiPhase_top_level/synthesis/submodules/altera_merlin_slave_agent.sv(491): (vlog-2583) [SVCHK] - Some checking for conflicts with always_comb and always_latch variables not yet supported. Run vopt to provide additional design-level checks.
+# ** Warning: C:/Users/alist/OneDrive/Electrickery/Phased-Array-Radio-Telescope/Phased-Array-WiFi-Camera/FPGA_Firmware/WiPhase_top_level/synthesis/submodules/altera_merlin_slave_agent.sv(34): (vlog-2186) SystemVerilog testbench feature
+# (randomization, coverage or assertion) detected in the design.
+# These features are only supported in Questasim.
+# 
+# Top level modules:
+# 	altera_merlin_slave_agent
+# End time: 00:17:04 on Sep 09,2018, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 6
+# vlog -sv -work WiPhase_top_level +incdir+C:/Users/alist/OneDrive/Electrickery/Phased-Array-Radio-Telescope/Phased-Array-WiFi-Camera/FPGA_Firmware/WiPhase_top_level/synthesis/submodules {C:/Users/alist/OneDrive/Electrickery/Phased-Array-Radio-Telescope/Phased-Array-WiFi-Camera/FPGA_Firmware/WiPhase_top_level/synthesis/submodules/altera_merlin_burst_uncompressor.sv}
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 00:17:04 on Sep 09,2018
+# vlog -reportprogress 300 -sv -work WiPhase_top_level "+incdir+C:/Users/alist/OneDrive/Electrickery/Phased-Array-Radio-Telescope/Phased-Array-WiFi-Camera/FPGA_Firmware/WiPhase_top_level/synthesis/submodules" C:/Users/alist/OneDrive/Electrickery/Phased-Array-Radio-Telescope/Phased-Array-WiFi-Camera/FPGA_Firmware/WiPhase_top_level/synthesis/submodules/altera_merlin_burst_uncompressor.sv 
+# -- Compiling module altera_merlin_burst_uncompressor
+# 
+# Top level modules:
+# 	altera_merlin_burst_uncompressor
+# End time: 00:17:04 on Sep 09,2018, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -sv -work WiPhase_top_level +incdir+C:/Users/alist/OneDrive/Electrickery/Phased-Array-Radio-Telescope/Phased-Array-WiFi-Camera/FPGA_Firmware/WiPhase_top_level/synthesis/submodules {C:/Users/alist/OneDrive/Electrickery/Phased-Array-Radio-Telescope/Phased-Array-WiFi-Camera/FPGA_Firmware/WiPhase_top_level/synthesis/submodules/altera_merlin_master_agent.sv}
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 00:17:04 on Sep 09,2018
+# vlog -reportprogress 300 -sv -work WiPhase_top_level "+incdir+C:/Users/alist/OneDrive/Electrickery/Phased-Array-Radio-Telescope/Phased-Array-WiFi-Camera/FPGA_Firmware/WiPhase_top_level/synthesis/submodules" C:/Users/alist/OneDrive/Electrickery/Phased-Array-Radio-Telescope/Phased-Array-WiFi-Camera/FPGA_Firmware/WiPhase_top_level/synthesis/submodules/altera_merlin_master_agent.sv 
+# -- Compiling module altera_merlin_master_agent
+# 
+# Top level modules:
+# 	altera_merlin_master_agent
+# End time: 00:17:04 on Sep 09,2018, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -sv -work WiPhase_top_level +incdir+C:/Users/alist/OneDrive/Electrickery/Phased-Array-Radio-Telescope/Phased-Array-WiFi-Camera/FPGA_Firmware/WiPhase_top_level/synthesis/submodules {C:/Users/alist/OneDrive/Electrickery/Phased-Array-Radio-Telescope/Phased-Array-WiFi-Camera/FPGA_Firmware/WiPhase_top_level/synthesis/submodules/altera_merlin_slave_translator.sv}
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 00:17:04 on Sep 09,2018
+# vlog -reportprogress 300 -sv -work WiPhase_top_level "+incdir+C:/Users/alist/OneDrive/Electrickery/Phased-Array-Radio-Telescope/Phased-Array-WiFi-Camera/FPGA_Firmware/WiPhase_top_level/synthesis/submodules" C:/Users/alist/OneDrive/Electrickery/Phased-Array-Radio-Telescope/Phased-Array-WiFi-Camera/FPGA_Firmware/WiPhase_top_level/synthesis/submodules/altera_merlin_slave_translator.sv 
+# -- Compiling module altera_merlin_slave_translator
+# 
+# Top level modules:
+# 	altera_merlin_slave_translator
+# End time: 00:17:04 on Sep 09,2018, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -sv -work WiPhase_top_level +incdir+C:/Users/alist/OneDrive/Electrickery/Phased-Array-Radio-Telescope/Phased-Array-WiFi-Camera/FPGA_Firmware/WiPhase_top_level/synthesis/submodules {C:/Users/alist/OneDrive/Electrickery/Phased-Array-Radio-Telescope/Phased-Array-WiFi-Camera/FPGA_Firmware/WiPhase_top_level/synthesis/submodules/altera_merlin_master_translator.sv}
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 00:17:04 on Sep 09,2018
+# vlog -reportprogress 300 -sv -work WiPhase_top_level "+incdir+C:/Users/alist/OneDrive/Electrickery/Phased-Array-Radio-Telescope/Phased-Array-WiFi-Camera/FPGA_Firmware/WiPhase_top_level/synthesis/submodules" C:/Users/alist/OneDrive/Electrickery/Phased-Array-Radio-Telescope/Phased-Array-WiFi-Camera/FPGA_Firmware/WiPhase_top_level/synthesis/submodules/altera_merlin_master_translator.sv 
+# -- Compiling module altera_merlin_master_translator
+# 
+# Top level modules:
+# 	altera_merlin_master_translator
+# End time: 00:17:04 on Sep 09,2018, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vcom -2008 -work WiPhase_top_level {C:/Users/alist/OneDrive/Electrickery/Phased-Array-Radio-Telescope/Phased-Array-WiFi-Camera/FPGA_Firmware/WiPhase_top_level/synthesis/WiPhase_top_level.vhd}
 # Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 02:02:07 on Aug 05,2018
-# vcom -reportprogress 300 -2008 -work work C:/Users/alist/OneDrive/Electrickery/Phased Array Radio Telescope/WiFi Tele/FPGA Firmware/clk_div8vhd.vhd 
+# Start time: 00:17:04 on Sep 09,2018
+# vcom -reportprogress 300 -2008 -work WiPhase_top_level C:/Users/alist/OneDrive/Electrickery/Phased-Array-Radio-Telescope/Phased-Array-WiFi-Camera/FPGA_Firmware/WiPhase_top_level/synthesis/WiPhase_top_level.vhd 
 # -- Loading package STANDARD
 # -- Loading package TEXTIO
 # -- Loading package std_logic_1164
 # -- Loading package NUMERIC_STD
-# -- Compiling entity clk_div8
-# -- Compiling architecture arch of clk_div8
-# End time: 02:02:07 on Aug 05,2018, Elapsed time: 0:00:00
+# -- Compiling entity WiPhase_top_level
+# -- Compiling architecture rtl of WiPhase_top_level
+# End time: 00:17:04 on Sep 09,2018, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vcom -2008 -work WiPhase_top_level {C:/Users/alist/OneDrive/Electrickery/Phased-Array-Radio-Telescope/Phased-Array-WiFi-Camera/FPGA_Firmware/WiPhase_top_level/synthesis/submodules/Debug_ST_Sink.vhd}
+# Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 00:17:04 on Sep 09,2018
+# vcom -reportprogress 300 -2008 -work WiPhase_top_level C:/Users/alist/OneDrive/Electrickery/Phased-Array-Radio-Telescope/Phased-Array-WiFi-Camera/FPGA_Firmware/WiPhase_top_level/synthesis/submodules/Debug_ST_Sink.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity Debug_ST_Sink
+# -- Compiling architecture rtl of Debug_ST_Sink
+# End time: 00:17:04 on Sep 09,2018, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vcom -2008 -work work {C:/Users/alist/OneDrive/Electrickery/Phased-Array-Radio-Telescope/Phased-Array-WiFi-Camera/FPGA_Firmware/WiPhase_phys.vhd}
+# Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 00:17:04 on Sep 09,2018
+# vcom -reportprogress 300 -2008 -work work C:/Users/alist/OneDrive/Electrickery/Phased-Array-Radio-Telescope/Phased-Array-WiFi-Camera/FPGA_Firmware/WiPhase_phys.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity WiPhase_phys
+# -- Compiling architecture arch of WiPhase_phys
+# End time: 00:17:04 on Sep 09,2018, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vcom -2008 -work work {C:/Users/alist/OneDrive/Electrickery/Phased-Array-Radio-Telescope/Phased-Array-WiFi-Camera/FPGA_Firmware/clock_divider.vhd}
+# Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 00:17:04 on Sep 09,2018
+# vcom -reportprogress 300 -2008 -work work C:/Users/alist/OneDrive/Electrickery/Phased-Array-Radio-Telescope/Phased-Array-WiFi-Camera/FPGA_Firmware/clock_divider.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity clock_divider
+# -- Compiling architecture arch of clock_divider
+# End time: 00:17:04 on Sep 09,2018, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # 
-# vcom -2008 -work work {C:/Users/alist/OneDrive/Electrickery/Phased Array Radio Telescope/WiFi Tele/FPGA Firmware/simulation/modelsim/adc_spi.vht}
+# vcom -2008 -work work {C:/Users/alist/OneDrive/Electrickery/Phased-Array-Radio-Telescope/Phased-Array-WiFi-Camera/FPGA_Firmware/WiPhase_phys_tst.vht}
 # Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 02:02:07 on Aug 05,2018
-# vcom -reportprogress 300 -2008 -work work C:/Users/alist/OneDrive/Electrickery/Phased Array Radio Telescope/WiFi Tele/FPGA Firmware/simulation/modelsim/adc_spi.vht 
+# Start time: 00:17:04 on Sep 09,2018
+# vcom -reportprogress 300 -2008 -work work C:/Users/alist/OneDrive/Electrickery/Phased-Array-Radio-Telescope/Phased-Array-WiFi-Camera/FPGA_Firmware/WiPhase_phys_tst.vht 
 # -- Loading package STANDARD
 # -- Loading package TEXTIO
 # -- Loading package std_logic_1164
-# -- Loading package NUMERIC_STD
-# -- Compiling entity adc_spi_vhd_tst
-# -- Compiling architecture adc_spi_arch of adc_spi_vhd_tst
-# End time: 02:02:07 on Aug 05,2018, Elapsed time: 0:00:00
-# Errors: 0, Warnings: 0
+# -- Compiling entity WiPhase_phys_vhd_tst
+# -- Compiling architecture WiPhase_phys_arch of WiPhase_phys_vhd_tst
+# ** Warning: C:/Users/alist/OneDrive/Electrickery/Phased-Array-Radio-Telescope/Phased-Array-WiFi-Camera/FPGA_Firmware/WiPhase_phys_tst.vht(140): (vcom-1207) An abstract literal and an identifier must have a separator between them.
+# ** Warning: C:/Users/alist/OneDrive/Electrickery/Phased-Array-Radio-Telescope/Phased-Array-WiFi-Camera/FPGA_Firmware/WiPhase_phys_tst.vht(142): (vcom-1207) An abstract literal and an identifier must have a separator between them.
+# End time: 00:17:04 on Sep 09,2018, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 2
 # 
-# vsim -t 1ps -L altera -L lpm -L sgate -L altera_mf -L altera_lnsim -L cyclone10lp -L rtl_work -L work -voptargs="+acc"  adc_spi_vhd_tst
-# vsim -t 1ps -L altera -L lpm -L sgate -L altera_mf -L altera_lnsim -L cyclone10lp -L rtl_work -L work -voptargs=""+acc"" adc_spi_vhd_tst 
-# Start time: 02:02:07 on Aug 05,2018
+# vsim -t 1ps -L altera -L lpm -L sgate -L altera_mf -L altera_lnsim -L cyclone10lp -L rtl_work -L work -L WiPhase_top_level -voptargs="+acc"  WiPhase_phys_vhd_tst
+# vsim -t 1ps -L altera -L lpm -L sgate -L altera_mf -L altera_lnsim -L cyclone10lp -L rtl_work -L work -L WiPhase_top_level -voptargs=""+acc"" WiPhase_phys_vhd_tst 
+# Start time: 00:17:04 on Sep 09,2018
 # Loading std.standard
 # Loading std.textio(body)
 # Loading ieee.std_logic_1164(body)
+# Loading work.wiphase_phys_vhd_tst(wiphase_phys_arch)
 # Loading ieee.numeric_std(body)
-# Loading work.adc_spi_vhd_tst(adc_spi_arch)
-# Loading work.adc_spi(arch)
-# Loading work.clk_div8(arch)
-# 
-# add wave *
-# ** Warning: (vsim-WLF-5000) WLF file currently in use: vsim.wlf
-#           File in use by: alist  Hostname: TOWER  ProcessID: 20764
-#           Attempting to use alternate WLF file "./wlft95756z".
-# ** Warning: (vsim-WLF-5001) Could not open WLF file: vsim.wlf
-#           Using alternate file: ./wlft95756z
-# view structure
-# .main_pane.structure.interior.cs.body.struct
-# view signals
-# .main_pane.objects.interior.cs.body.tree
-# run 1000 ns
-# ** Warning: NUMERIC_STD."<": metavalue detected, returning FALSE
-#    Time: 20 ns  Iteration: 1  Instance: /adc_spi_vhd_tst/i1/spi_clk_divider
-# ** Warning: NUMERIC_STD."<": metavalue detected, returning FALSE
-#    Time: 40 ns  Iteration: 1  Instance: /adc_spi_vhd_tst/i1/spi_clk_divider
-# ** Warning: NUMERIC_STD."<": metavalue detected, returning FALSE
-#    Time: 60 ns  Iteration: 1  Instance: /adc_spi_vhd_tst/i1/spi_clk_divider
+# Loading work.wiphase_phys(arch)
+# Loading WiPhase_top_level.wiphase_top_level(rtl)
+# Loading WiPhase_top_level.debug_st_sink(rtl)
+# Loading WiPhase_top_level.WiPhase_top_level_cpu_v2
+# Loading WiPhase_top_level.WiPhase_top_level_cpu_v2_cpu
+# Loading WiPhase_top_level.WiPhase_top_level_cpu_v2_cpu_test_bench
+# Loading WiPhase_top_level.WiPhase_top_level_cpu_v2_cpu_register_bank_a_module
+# Loading WiPhase_top_level.WiPhase_top_level_cpu_v2_cpu_register_bank_b_module
+# Loading WiPhase_top_level.WiPhase_top_level_cpu_v2_cpu_nios2_oci
+# Loading WiPhase_top_level.WiPhase_top_level_cpu_v2_cpu_nios2_oci_debug
+# Loading WiPhase_top_level.WiPhase_top_level_cpu_v2_cpu_nios2_oci_break
+# Loading WiPhase_top_level.WiPhase_top_level_cpu_v2_cpu_nios2_oci_xbrk
+# Loading WiPhase_top_level.WiPhase_top_level_cpu_v2_cpu_nios2_oci_dbrk
+# Loading WiPhase_top_level.WiPhase_top_level_cpu_v2_cpu_nios2_oci_itrace
+# Loading WiPhase_top_level.WiPhase_top_level_cpu_v2_cpu_nios2_oci_dtrace
+# Loading WiPhase_top_level.WiPhase_top_level_cpu_v2_cpu_nios2_oci_td_mode
+# Loading WiPhase_top_level.WiPhase_top_level_cpu_v2_cpu_nios2_oci_fifo
+# Loading WiPhase_top_level.WiPhase_top_level_cpu_v2_cpu_nios2_oci_compute_input_tm_cnt
+# Loading WiPhase_top_level.WiPhase_top_level_cpu_v2_cpu_nios2_oci_fifo_wrptr_inc
+# Loading WiPhase_top_level.WiPhase_top_level_cpu_v2_cpu_nios2_oci_fifo_cnt_inc
+# Loading WiPhase_top_level.WiPhase_top_level_cpu_v2_cpu_nios2_oci_pib
+# Loading WiPhase_top_level.WiPhase_top_level_cpu_v2_cpu_nios2_oci_im
+# Loading WiPhase_top_level.WiPhase_top_level_cpu_v2_cpu_nios2_avalon_reg
+# Loading WiPhase_top_level.WiPhase_top_level_cpu_v2_cpu_nios2_ocimem
+# Loading WiPhase_top_level.WiPhase_top_level_cpu_v2_cpu_ociram_sp_ram_module
+# Loading WiPhase_top_level.WiPhase_top_level_cpu_v2_cpu_debug_slave_wrapper
+# Loading WiPhase_top_level.WiPhase_top_level_cpu_v2_cpu_debug_slave_tck
+# Loading WiPhase_top_level.WiPhase_top_level_cpu_v2_cpu_debug_slave_sysclk
+# ** Error (suppressible): (vsim-10000) C:/Users/alist/OneDrive/Electrickery/Phased-Array-Radio-Telescope/Phased-Array-WiFi-Camera/FPGA_Firmware/WiPhase_top_level/synthesis/submodules/WiPhase_top_level_cpu_v2_cpu.v(60): Unresolved defparam reference to 'the_altsyncram' in the_altsyncram.address_reg_b.
+#    Time: 0 ps  Iteration: 0  Instance: /wiphase_phys_vhd_tst/i1/u1/cpu_v2/cpu/WiPhase_top_level_cpu_v2_cpu_register_bank_a File: C:/Users/alist/OneDrive/Electrickery/Phased-Array-Radio-Telescope/Phased-Array-WiFi-Camera/FPGA_Firmware/WiPhase_top_level/synthesis/submodules/WiPhase_top_level_cpu_v2_cpu.v
+# ** Error (suppressible): (vsim-10000) C:/Users/alist/OneDrive/Electrickery/Phased-Array-Radio-Telescope/Phased-Array-WiFi-Camera/FPGA_Firmware/WiPhase_top_level/synthesis/submodules/WiPhase_top_level_cpu_v2_cpu.v(61): Unresolved defparam reference to 'the_altsyncram' in the_altsyncram.init_file.
+#    Time: 0 ps  Iteration: 0  Instance: /wiphase_phys_vhd_tst/i1/u1/cpu_v2/cpu/WiPhase_top_level_cpu_v2_cpu_register_bank_a File: C:/Users/alist/OneDrive/Electrickery/Phased-Array-Radio-Telescope/Phased-Array-WiFi-Camera/FPGA_Firmware/WiPhase_top_level/synthesis/submodules/WiPhase_top_level_cpu_v2_cpu.v
+# ** Error (suppressible): (vsim-10000) C:/Users/alist/OneDrive/Electrickery/Phased-Array-Radio-Telescope/Phased-Array-WiFi-Camera/FPGA_Firmware/WiPhase_top_level/synthesis/submodules/WiPhase_top_level_cpu_v2_cpu.v(62): Unresolved defparam reference to 'the_altsyncram' in the_altsyncram.maximum_depth.
+#    Time: 0 ps  Iteration: 0  Instance: /wiphase_phys_vhd_tst/i1/u1/cpu_v2/cpu/WiPhase_top_level_cpu_v2_cpu_register_bank_a File: C:/Users/alist/OneDrive/Electrickery/Phased-Array-Radio-Telescope/Phased-Array-WiFi-Camera/FPGA_Firmware/WiPhase_top_level/synthesis/submodules/WiPhase_top_level_cpu_v2_cpu.v
+# ** Error (suppressible): (vsim-10000) C:/Users/alist/OneDrive/Electrickery/Phased-Array-Radio-Telescope/Phased-Array-WiFi-Camera/FPGA_Firmware/WiPhase_top_level/synthesis/submodules/WiPhase_top_level_cpu_v2_cpu.v(63): Unresolved defparam reference to 'the_altsyncram' in the_altsyncram.numwords_a.
+#    Time: 0 ps  Iteration: 0  Instance: /wiphase_phys_vhd_tst/i1/u1/cpu_v2/cpu/WiPhase_top_level_cpu_v2_cpu_register_bank_a File: C:/Users/alist/OneDrive/Electrickery/Phased-Array-Radio-Telescope/Phased-Array-WiFi-Camera/FPGA_Firmware/WiPhase_top_level/synthesis/submodules/WiPhase_top_level_cpu_v2_cpu.v
+# ** Error (suppressible): (vsim-10000) C:/Users/alist/OneDrive/Electrickery/Phased-Array-Radio-Telescope/Phased-Array-WiFi-Camera/FPGA_Firmware/WiPhase_top_level/synthesis/submodules/WiPhase_top_level_cpu_v2_cpu.v(64): Unresolved defparam reference to 'the_altsyncram' in the_altsyncram.numwords_b.
+#    Time: 0 ps  Iteration: 0  Instance: /wiphase_phys_vhd_tst/i1/u1/cpu_v2/cpu/WiPhase_top_level_cpu_v2_cpu_register_bank_a File: C:/Users/alist/OneDrive/Electrickery/Phased-Array-Radio-Telescope/Phased-Array-WiFi-Camera/FPGA_Firmware/WiPhase_top_level/synthesis/submodules/WiPhase_top_level_cpu_v2_cpu.v
+# ** Error (suppressible): (vsim-10000) C:/Users/alist/OneDrive/Electrickery/Phased-Array-Radio-Telescope/Phased-Array-WiFi-Camera/FPGA_Firmware/WiPhase_top_level/synthesis/submodules/WiPhase_top_level_cpu_v2_cpu.v(65): Unresolved defparam reference to 'the_altsyncram' in the_altsyncram.operation_mode.
+#    Time: 0 ps  Iteration: 0  Instance: /wiphase_phys_vhd_tst/i1/u1/cpu_v2/cpu/WiPhase_top_level_cpu_v2_cpu_register_bank_a File: C:/Users/alist/OneDrive/Electrickery/Phased-Array-Radio-Telescope/Phased-Array-WiFi-Camera/FPGA_Firmware/WiPhase_top_level/synthesis/submodules/WiPhase_top_level_cpu_v2_cpu.v
+# ** Error (suppressible): (vsim-10000) C:/Users/alist/OneDrive/Electrickery/Phased-Array-Radio-Telescope/Phased-Array-WiFi-Camera/FPGA_Firmware/WiPhase_top_level/synthesis/submodules/WiPhase_top_level_cpu_v2_cpu.v(66): Unresolved defparam reference to 'the_altsyncram' in the_altsyncram.outdata_reg_b.
+#    Time: 0 ps  Iteration: 0  Instance: /wiphase_phys_vhd_tst/i1/u1/cpu_v2/cpu/WiPhase_top_level_cpu_v2_cpu_register_bank_a File: C:/Users/alist/OneDrive/Electrickery/Phased-Array-Radio-Telescope/Phased-Array-WiFi-Camera/FPGA_Firmware/WiPhase_top_level/synthesis/submodules/WiPhase_top_level_cpu_v2_cpu.v
+# ** Error (suppressible): (vsim-10000) C:/Users/alist/OneDrive/Electrickery/Phased-Array-Radio-Telescope/Phased-Array-WiFi-Camera/FPGA_Firmware/WiPhase_top_level/synthesis/submodules/WiPhase_top_level_cpu_v2_cpu.v(67): Unresolved defparam reference to 'the_altsyncram' in the_altsyncram.ram_block_type.
+#    Time: 0 ps  Iteration: 0  Instance: /wiphase_phys_vhd_tst/i1/u1/cpu_v2/cpu/WiPhase_top_level_cpu_v2_cpu_register_bank_a File: C:/Users/alist/OneDrive/Electrickery/Phased-Array-Radio-Telescope/Phased-Array-WiFi-Camera/FPGA_Firmware/WiPhase_top_level/synthesis/submodules/WiPhase_top_level_cpu_v2_cpu.v
+# ** Error (suppressible): (vsim-10000) C:/Users/alist/OneDrive/Electrickery/Phased-Array-Radio-Telescope/Phased-Array-WiFi-Camera/FPGA_Firmware/WiPhase_top_level/synthesis/submodules/WiPhase_top_level_cpu_v2_cpu.v(68): Unresolved defparam reference to 'the_altsyncram' in the_altsyncram.rdcontrol_reg_b.
+#    Time: 0 ps  Iteration: 0  Instance: /wiphase_phys_vhd_tst/i1/u1/cpu_v2/cpu/WiPhase_top_level_cpu_v2_cpu_register_bank_a File: C:/Users/alist/OneDrive/Electrickery/Phased-Array-Radio-Telescope/Phased-Array-WiFi-Camera/FPGA_Firmware/WiPhase_top_level/synthesis/submodules/WiPhase_top_level_cpu_v2_cpu.v
+# ** Error (suppressible): (vsim-10000) C:/Users/alist/OneDrive/Electrickery/Phased-Array-Radio-Telescope/Phased-Array-WiFi-Camera/FPGA_Firmware/WiPhase_top_level/synthesis/submodules/WiPhase_top_level_cpu_v2_cpu.v(69): Unresolved defparam reference to 'the_altsyncram' in the_altsyncram.read_during_write_mode_mixed_ports.
+#    Time: 0 ps  Iteration: 0  Instance: /wiphase_phys_vhd_tst/i1/u1/cpu_v2/cpu/WiPhase_top_level_cpu_v2_cpu_register_bank_a File: C:/Users/alist/OneDrive/Electrickery/Phased-Array-Radio-Telescope/Phased-Array-WiFi-Camera/FPGA_Firmware/WiPhase_top_level/synthesis/submodules/WiPhase_top_level_cpu_v2_cpu.v
+# ** Error (suppressible): (vsim-10000) C:/Users/alist/OneDrive/Electrickery/Phased-Array-Radio-Telescope/Phased-Array-WiFi-Camera/FPGA_Firmware/WiPhase_top_level/synthesis/submodules/WiPhase_top_level_cpu_v2_cpu.v(70): Unresolved defparam reference to 'the_altsyncram' in the_altsyncram.width_a.
+#    Time: 0 ps  Iteration: 0  Instance: /wiphase_phys_vhd_tst/i1/u1/cpu_v2/cpu/WiPhase_top_level_cpu_v2_cpu_register_bank_a File: C:/Users/alist/OneDrive/Electrickery/Phased-Array-Radio-Telescope/Phased-Array-WiFi-Camera/FPGA_Firmware/WiPhase_top_level/synthesis/submodules/WiPhase_top_level_cpu_v2_cpu.v
+# ** Error (suppressible): (vsim-10000) C:/Users/alist/OneDrive/Electrickery/Phased-Array-Radio-Telescope/Phased-Array-WiFi-Camera/FPGA_Firmware/WiPhase_top_level/synthesis/submodules/WiPhase_top_level_cpu_v2_cpu.v(71): Unresolved defparam reference to 'the_altsyncram' in the_altsyncram.width_b.
+#    Time: 0 ps  Iteration: 0  Instance: /wiphase_phys_vhd_tst/i1/u1/cpu_v2/cpu/WiPhase_top_level_cpu_v2_cpu_register_bank_a File: C:/Users/alist/OneDrive/Electrickery/Phased-Array-Radio-Telescope/Phased-Array-WiFi-Camera/FPGA_Firmware/WiPhase_top_level/synthesis/submodules/WiPhase_top_level_cpu_v2_cpu.v
+# ** Error (suppressible): (vsim-10000) C:/Users/alist/OneDrive/Electrickery/Phased-Array-Radio-Telescope/Phased-Array-WiFi-Camera/FPGA_Firmware/WiPhase_top_level/synthesis/submodules/WiPhase_top_level_cpu_v2_cpu.v(72): Unresolved defparam reference to 'the_altsyncram' in the_altsyncram.widthad_a.
+#    Time: 0 ps  Iteration: 0  Instance: /wiphase_phys_vhd_tst/i1/u1/cpu_v2/cpu/WiPhase_top_level_cpu_v2_cpu_register_bank_a File: C:/Users/alist/OneDrive/Electrickery/Phased-Array-Radio-Telescope/Phased-Array-WiFi-Camera/FPGA_Firmware/WiPhase_top_level/synthesis/submodules/WiPhase_top_level_cpu_v2_cpu.v
+# ** Error (suppressible): (vsim-10000) C:/Users/alist/OneDrive/Electrickery/Phased-Array-Radio-Telescope/Phased-Array-WiFi-Camera/FPGA_Firmware/WiPhase_top_level/synthesis/submodules/WiPhase_top_level_cpu_v2_cpu.v(73): Unresolved defparam reference to 'the_altsyncram' in the_altsyncram.widthad_b.
+#    Time: 0 ps  Iteration: 0  Instance: /wiphase_phys_vhd_tst/i1/u1/cpu_v2/cpu/WiPhase_top_level_cpu_v2_cpu_register_bank_a File: C:/Users/alist/OneDrive/Electrickery/Phased-Array-Radio-Telescope/Phased-Array-WiFi-Camera/FPGA_Firmware/WiPhase_top_level/synthesis/submodules/WiPhase_top_level_cpu_v2_cpu.v
+# ** Error (suppressible): (vsim-10000) C:/Users/alist/OneDrive/Electrickery/Phased-Array-Radio-Telescope/Phased-Array-WiFi-Camera/FPGA_Firmware/WiPhase_top_level/synthesis/submodules/WiPhase_top_level_cpu_v2_cpu.v(126): Unresolved defparam reference to 'the_altsyncram' in the_altsyncram.address_reg_b.
+#    Time: 0 ps  Iteration: 0  Instance: /wiphase_phys_vhd_tst/i1/u1/cpu_v2/cpu/WiPhase_top_level_cpu_v2_cpu_register_bank_b File: C:/Users/alist/OneDrive/Electrickery/Phased-Array-Radio-Telescope/Phased-Array-WiFi-Camera/FPGA_Firmware/WiPhase_top_level/synthesis/submodules/WiPhase_top_level_cpu_v2_cpu.v
+# ** Error (suppressible): (vsim-10000) C:/Users/alist/OneDrive/Electrickery/Phased-Array-Radio-Telescope/Phased-Array-WiFi-Camera/FPGA_Firmware/WiPhase_top_level/synthesis/submodules/WiPhase_top_level_cpu_v2_cpu.v(127): Unresolved defparam reference to 'the_altsyncram' in the_altsyncram.init_file.
+#    Time: 0 ps  Iteration: 0  Instance: /wiphase_phys_vhd_tst/i1/u1/cpu_v2/cpu/WiPhase_top_level_cpu_v2_cpu_register_bank_b File: C:/Users/alist/OneDrive/Electrickery/Phased-Array-Radio-Telescope/Phased-Array-WiFi-Camera/FPGA_Firmware/WiPhase_top_level/synthesis/submodules/WiPhase_top_level_cpu_v2_cpu.v
+# ** Error (suppressible): (vsim-10000) C:/Users/alist/OneDrive/Electrickery/Phased-Array-Radio-Telescope/Phased-Array-WiFi-Camera/FPGA_Firmware/WiPhase_top_level/synthesis/submodules/WiPhase_top_level_cpu_v2_cpu.v(128): Unresolved defparam reference to 'the_altsyncram' in the_altsyncram.maximum_depth.
+#    Time: 0 ps  Iteration: 0  Instance: /wiphase_phys_vhd_tst/i1/u1/cpu_v2/cpu/WiPhase_top_level_cpu_v2_cpu_register_bank_b File: C:/Users/alist/OneDrive/Electrickery/Phased-Array-Radio-Telescope/Phased-Array-WiFi-Camera/FPGA_Firmware/WiPhase_top_level/synthesis/submodules/WiPhase_top_level_cpu_v2_cpu.v
+# ** Error (suppressible): (vsim-10000) C:/Users/alist/OneDrive/Electrickery/Phased-Array-Radio-Telescope/Phased-Array-WiFi-Camera/FPGA_Firmware/WiPhase_top_level/synthesis/submodules/WiPhase_top_level_cpu_v2_cpu.v(129): Unresolved defparam reference to 'the_altsyncram' in the_altsyncram.numwords_a.
+#    Time: 0 ps  Iteration: 0  Instance: /wiphase_phys_vhd_tst/i1/u1/cpu_v2/cpu/WiPhase_top_level_cpu_v2_cpu_register_bank_b File: C:/Users/alist/OneDrive/Electrickery/Phased-Array-Radio-Telescope/Phased-Array-WiFi-Camera/FPGA_Firmware/WiPhase_top_level/synthesis/submodules/WiPhase_top_level_cpu_v2_cpu.v
+# ** Error (suppressible): (vsim-10000) C:/Users/alist/OneDrive/Electrickery/Phased-Array-Radio-Telescope/Phased-Array-WiFi-Camera/FPGA_Firmware/WiPhase_top_level/synthesis/submodules/WiPhase_top_level_cpu_v2_cpu.v(130): Unresolved defparam reference to 'the_altsyncram' in the_altsyncram.numwords_b.
+#    Time: 0 ps  Iteration: 0  Instance: /wiphase_phys_vhd_tst/i1/u1/cpu_v2/cpu/WiPhase_top_level_cpu_v2_cpu_register_bank_b File: C:/Users/alist/OneDrive/Electrickery/Phased-Array-Radio-Telescope/Phased-Array-WiFi-Camera/FPGA_Firmware/WiPhase_top_level/synthesis/submodules/WiPhase_top_level_cpu_v2_cpu.v
+# ** Error (suppressible): (vsim-10000) C:/Users/alist/OneDrive/Electrickery/Phased-Array-Radio-Telescope/Phased-Array-WiFi-Camera/FPGA_Firmware/WiPhase_top_level/synthesis/submodules/WiPhase_top_level_cpu_v2_cpu.v(131): Unresolved defparam reference to 'the_altsyncram' in the_altsyncram.operation_mode.
+#    Time: 0 ps  Iteration: 0  Instance: /wiphase_phys_vhd_tst/i1/u1/cpu_v2/cpu/WiPhase_top_level_cpu_v2_cpu_register_bank_b File: C:/Users/alist/OneDrive/Electrickery/Phased-Array-Radio-Telescope/Phased-Array-WiFi-Camera/FPGA_Firmware/WiPhase_top_level/synthesis/submodules/WiPhase_top_level_cpu_v2_cpu.v
+# ** Error (suppressible): (vsim-10000) C:/Users/alist/OneDrive/Electrickery/Phased-Array-Radio-Telescope/Phased-Array-WiFi-Camera/FPGA_Firmware/WiPhase_top_level/synthesis/submodules/WiPhase_top_level_cpu_v2_cpu.v(132): Unresolved defparam reference to 'the_altsyncram' in the_altsyncram.outdata_reg_b.
+#    Time: 0 ps  Iteration: 0  Instance: /wiphase_phys_vhd_tst/i1/u1/cpu_v2/cpu/WiPhase_top_level_cpu_v2_cpu_register_bank_b File: C:/Users/alist/OneDrive/Electrickery/Phased-Array-Radio-Telescope/Phased-Array-WiFi-Camera/FPGA_Firmware/WiPhase_top_level/synthesis/submodules/WiPhase_top_level_cpu_v2_cpu.v
+# ** Error (suppressible): (vsim-10000) C:/Users/alist/OneDrive/Electrickery/Phased-Array-Radio-Telescope/Phased-Array-WiFi-Camera/FPGA_Firmware/WiPhase_top_level/synthesis/submodules/WiPhase_top_level_cpu_v2_cpu.v(133): Unresolved defparam reference to 'the_altsyncram' in the_altsyncram.ram_block_type.
+#    Time: 0 ps  Iteration: 0  Instance: /wiphase_phys_vhd_tst/i1/u1/cpu_v2/cpu/WiPhase_top_level_cpu_v2_cpu_register_bank_b File: C:/Users/alist/OneDrive/Electrickery/Phased-Array-Radio-Telescope/Phased-Array-WiFi-Camera/FPGA_Firmware/WiPhase_top_level/synthesis/submodules/WiPhase_top_level_cpu_v2_cpu.v
+# ** Error (suppressible): (vsim-10000) C:/Users/alist/OneDrive/Electrickery/Phased-Array-Radio-Telescope/Phased-Array-WiFi-Camera/FPGA_Firmware/WiPhase_top_level/synthesis/submodules/WiPhase_top_level_cpu_v2_cpu.v(134): Unresolved defparam reference to 'the_altsyncram' in the_altsyncram.rdcontrol_reg_b.
+#    Time: 0 ps  Iteration: 0  Instance: /wiphase_phys_vhd_tst/i1/u1/cpu_v2/cpu/WiPhase_top_level_cpu_v2_cpu_register_bank_b File: C:/Users/alist/OneDrive/Electrickery/Phased-Array-Radio-Telescope/Phased-Array-WiFi-Camera/FPGA_Firmware/WiPhase_top_level/synthesis/submodules/WiPhase_top_level_cpu_v2_cpu.v
+# ** Error (suppressible): (vsim-10000) C:/Users/alist/OneDrive/Electrickery/Phased-Array-Radio-Telescope/Phased-Array-WiFi-Camera/FPGA_Firmware/WiPhase_top_level/synthesis/submodules/WiPhase_top_level_cpu_v2_cpu.v(135): Unresolved defparam reference to 'the_altsyncram' in the_altsyncram.read_during_write_mode_mixed_ports.
+#    Time: 0 ps  Iteration: 0  Instance: /wiphase_phys_vhd_tst/i1/u1/cpu_v2/cpu/WiPhase_top_level_cpu_v2_cpu_register_bank_b File: C:/Users/alist/OneDrive/Electrickery/Phased-Array-Radio-Telescope/Phased-Array-WiFi-Camera/FPGA_Firmware/WiPhase_top_level/synthesis/submodules/WiPhase_top_level_cpu_v2_cpu.v
+# ** Error (suppressible): (vsim-10000) C:/Users/alist/OneDrive/Electrickery/Phased-Array-Radio-Telescope/Phased-Array-WiFi-Camera/FPGA_Firmware/WiPhase_top_level/synthesis/submodules/WiPhase_top_level_cpu_v2_cpu.v(136): Unresolved defparam reference to 'the_altsyncram' in the_altsyncram.width_a.
+#    Time: 0 ps  Iteration: 0  Instance: /wiphase_phys_vhd_tst/i1/u1/cpu_v2/cpu/WiPhase_top_level_cpu_v2_cpu_register_bank_b File: C:/Users/alist/OneDrive/Electrickery/Phased-Array-Radio-Telescope/Phased-Array-WiFi-Camera/FPGA_Firmware/WiPhase_top_level/synthesis/submodules/WiPhase_top_level_cpu_v2_cpu.v
+# ** Error (suppressible): (vsim-10000) C:/Users/alist/OneDrive/Electrickery/Phased-Array-Radio-Telescope/Phased-Array-WiFi-Camera/FPGA_Firmware/WiPhase_top_level/synthesis/submodules/WiPhase_top_level_cpu_v2_cpu.v(137): Unresolved defparam reference to 'the_altsyncram' in the_altsyncram.width_b.
+#    Time: 0 ps  Iteration: 0  Instance: /wiphase_phys_vhd_tst/i1/u1/cpu_v2/cpu/WiPhase_top_level_cpu_v2_cpu_register_bank_b File: C:/Users/alist/OneDrive/Electrickery/Phased-Array-Radio-Telescope/Phased-Array-WiFi-Camera/FPGA_Firmware/WiPhase_top_level/synthesis/submodules/WiPhase_top_level_cpu_v2_cpu.v
+# ** Error (suppressible): (vsim-10000) C:/Users/alist/OneDrive/Electrickery/Phased-Array-Radio-Telescope/Phased-Array-WiFi-Camera/FPGA_Firmware/WiPhase_top_level/synthesis/submodules/WiPhase_top_level_cpu_v2_cpu.v(138): Unresolved defparam reference to 'the_altsyncram' in the_altsyncram.widthad_a.
+#    Time: 0 ps  Iteration: 0  Instance: /wiphase_phys_vhd_tst/i1/u1/cpu_v2/cpu/WiPhase_top_level_cpu_v2_cpu_register_bank_b File: C:/Users/alist/OneDrive/Electrickery/Phased-Array-Radio-Telescope/Phased-Array-WiFi-Camera/FPGA_Firmware/WiPhase_top_level/synthesis/submodules/WiPhase_top_level_cpu_v2_cpu.v
+# ** Error (suppressible): (vsim-10000) C:/Users/alist/OneDrive/Electrickery/Phased-Array-Radio-Telescope/Phased-Array-WiFi-Camera/FPGA_Firmware/WiPhase_top_level/synthesis/submodules/WiPhase_top_level_cpu_v2_cpu.v(139): Unresolved defparam reference to 'the_altsyncram' in the_altsyncram.widthad_b.
+#    Time: 0 ps  Iteration: 0  Instance: /wiphase_phys_vhd_tst/i1/u1/cpu_v2/cpu/WiPhase_top_level_cpu_v2_cpu_register_bank_b File: C:/Users/alist/OneDrive/Electrickery/Phased-Array-Radio-Telescope/Phased-Array-WiFi-Camera/FPGA_Firmware/WiPhase_top_level/synthesis/submodules/WiPhase_top_level_cpu_v2_cpu.v
+# ** Error (suppressible): (vsim-10000) C:/Users/alist/OneDrive/Electrickery/Phased-Array-Radio-Telescope/Phased-Array-WiFi-Camera/FPGA_Firmware/WiPhase_top_level/synthesis/submodules/WiPhase_top_level_cpu_v2_cpu.v(222): Unresolved defparam reference to 'the_altera_std_synchronizer' in the_altera_std_synchronizer.depth.
+#    Time: 0 ps  Iteration: 0  Instance: /wiphase_phys_vhd_tst/i1/u1/cpu_v2/cpu/the_WiPhase_top_level_cpu_v2_cpu_nios2_oci/the_WiPhase_top_level_cpu_v2_cpu_nios2_oci_debug File: C:/Users/alist/OneDrive/Electrickery/Phased-Array-Radio-Telescope/Phased-Array-WiFi-Camera/FPGA_Firmware/WiPhase_top_level/synthesis/submodules/WiPhase_top_level_cpu_v2_cpu.v
+# ** Error (suppressible): (vsim-10000) C:/Users/alist/OneDrive/Electrickery/Phased-Array-Radio-Telescope/Phased-Array-WiFi-Camera/FPGA_Firmware/WiPhase_top_level/synthesis/submodules/WiPhase_top_level_cpu_v2_cpu.v(2158): Unresolved defparam reference to 'the_altsyncram' in the_altsyncram.init_file.
+#    Time: 0 ps  Iteration: 0  Instance: /wiphase_phys_vhd_tst/i1/u1/cpu_v2/cpu/the_WiPhase_top_level_cpu_v2_cpu_nios2_oci/the_WiPhase_top_level_cpu_v2_cpu_nios2_ocimem/WiPhase_top_level_cpu_v2_cpu_ociram_sp_ram File: C:/Users/alist/OneDrive/Electrickery/Phased-Array-Radio-Telescope/Phased-Array-WiFi-Camera/FPGA_Firmware/WiPhase_top_level/synthesis/submodules/WiPhase_top_level_cpu_v2_cpu.v
+# ** Error (suppressible): (vsim-10000) C:/Users/alist/OneDrive/Electrickery/Phased-Array-Radio-Telescope/Phased-Array-WiFi-Camera/FPGA_Firmware/WiPhase_top_level/synthesis/submodules/WiPhase_top_level_cpu_v2_cpu.v(2159): Unresolved defparam reference to 'the_altsyncram' in the_altsyncram.maximum_depth.
+#    Time: 0 ps  Iteration: 0  Instance: /wiphase_phys_vhd_tst/i1/u1/cpu_v2/cpu/the_WiPhase_top_level_cpu_v2_cpu_nios2_oci/the_WiPhase_top_level_cpu_v2_cpu_nios2_ocimem/WiPhase_top_level_cpu_v2_cpu_ociram_sp_ram File: C:/Users/alist/OneDrive/Electrickery/Phased-Array-Radio-Telescope/Phased-Array-WiFi-Camera/FPGA_Firmware/WiPhase_top_level/synthesis/submodules/WiPhase_top_level_cpu_v2_cpu.v
+# ** Error (suppressible): (vsim-10000) C:/Users/alist/OneDrive/Electrickery/Phased-Array-Radio-Telescope/Phased-Array-WiFi-Camera/FPGA_Firmware/WiPhase_top_level/synthesis/submodules/WiPhase_top_level_cpu_v2_cpu.v(2160): Unresolved defparam reference to 'the_altsyncram' in the_altsyncram.numwords_a.
+#    Time: 0 ps  Iteration: 0  Instance: /wiphase_phys_vhd_tst/i1/u1/cpu_v2/cpu/the_WiPhase_top_level_cpu_v2_cpu_nios2_oci/the_WiPhase_top_level_cpu_v2_cpu_nios2_ocimem/WiPhase_top_level_cpu_v2_cpu_ociram_sp_ram File: C:/Users/alist/OneDrive/Electrickery/Phased-Array-Radio-Telescope/Phased-Array-WiFi-Camera/FPGA_Firmware/WiPhase_top_level/synthesis/submodules/WiPhase_top_level_cpu_v2_cpu.v
+# ** Error (suppressible): (vsim-10000) C:/Users/alist/OneDrive/Electrickery/Phased-Array-Radio-Telescope/Phased-Array-WiFi-Camera/FPGA_Firmware/WiPhase_top_level/synthesis/submodules/WiPhase_top_level_cpu_v2_cpu.v(2161): Unresolved defparam reference to 'the_altsyncram' in the_altsyncram.operation_mode.
+#    Time: 0 ps  Iteration: 0  Instance: /wiphase_phys_vhd_tst/i1/u1/cpu_v2/cpu/the_WiPhase_top_level_cpu_v2_cpu_nios2_oci/the_WiPhase_top_level_cpu_v2_cpu_nios2_ocimem/WiPhase_top_level_cpu_v2_cpu_ociram_sp_ram File: C:/Users/alist/OneDrive/Electrickery/Phased-Array-Radio-Telescope/Phased-Array-WiFi-Camera/FPGA_Firmware/WiPhase_top_level/synthesis/submodules/WiPhase_top_level_cpu_v2_cpu.v
+# ** Error (suppressible): (vsim-10000) C:/Users/alist/OneDrive/Electrickery/Phased-Array-Radio-Telescope/Phased-Array-WiFi-Camera/FPGA_Firmware/WiPhase_top_level/synthesis/submodules/WiPhase_top_level_cpu_v2_cpu.v(2162): Unresolved defparam reference to 'the_altsyncram' in the_altsyncram.outdata_reg_a.
+#    Time: 0 ps  Iteration: 0  Instance: /wiphase_phys_vhd_tst/i1/u1/cpu_v2/cpu/the_WiPhase_top_level_cpu_v2_cpu_nios2_oci/the_WiPhase_top_level_cpu_v2_cpu_nios2_ocimem/WiPhase_top_level_cpu_v2_cpu_ociram_sp_ram File: C:/Users/alist/OneDrive/Electrickery/Phased-Array-Radio-Telescope/Phased-Array-WiFi-Camera/FPGA_Firmware/WiPhase_top_level/synthesis/submodules/WiPhase_top_level_cpu_v2_cpu.v
+# ** Error (suppressible): (vsim-10000) C:/Users/alist/OneDrive/Electrickery/Phased-Array-Radio-Telescope/Phased-Array-WiFi-Camera/FPGA_Firmware/WiPhase_top_level/synthesis/submodules/WiPhase_top_level_cpu_v2_cpu.v(2163): Unresolved defparam reference to 'the_altsyncram' in the_altsyncram.ram_block_type.
+#    Time: 0 ps  Iteration: 0  Instance: /wiphase_phys_vhd_tst/i1/u1/cpu_v2/cpu/the_WiPhase_top_level_cpu_v2_cpu_nios2_oci/the_WiPhase_top_level_cpu_v2_cpu_nios2_ocimem/WiPhase_top_level_cpu_v2_cpu_ociram_sp_ram File: C:/Users/alist/OneDrive/Electrickery/Phased-Array-Radio-Telescope/Phased-Array-WiFi-Camera/FPGA_Firmware/WiPhase_top_level/synthesis/submodules/WiPhase_top_level_cpu_v2_cpu.v
+# ** Error (suppressible): (vsim-10000) C:/Users/alist/OneDrive/Electrickery/Phased-Array-Radio-Telescope/Phased-Array-WiFi-Camera/FPGA_Firmware/WiPhase_top_level/synthesis/submodules/WiPhase_top_level_cpu_v2_cpu.v(2164): Unresolved defparam reference to 'the_altsyncram' in the_altsyncram.read_during_write_mode_port_a.
+#    Time: 0 ps  Iteration: 0  Instance: /wiphase_phys_vhd_tst/i1/u1/cpu_v2/cpu/the_WiPhase_top_level_cpu_v2_cpu_nios2_oci/the_WiPhase_top_level_cpu_v2_cpu_nios2_ocimem/WiPhase_top_level_cpu_v2_cpu_ociram_sp_ram File: C:/Users/alist/OneDrive/Electrickery/Phased-Array-Radio-Telescope/Phased-Array-WiFi-Camera/FPGA_Firmware/WiPhase_top_level/synthesis/submodules/WiPhase_top_level_cpu_v2_cpu.v
+# ** Error (suppressible): (vsim-10000) C:/Users/alist/OneDrive/Electrickery/Phased-Array-Radio-Telescope/Phased-Array-WiFi-Camera/FPGA_Firmware/WiPhase_top_level/synthesis/submodules/WiPhase_top_level_cpu_v2_cpu.v(2165): Unresolved defparam reference to 'the_altsyncram' in the_altsyncram.width_a.
+#    Time: 0 ps  Iteration: 0  Instance: /wiphase_phys_vhd_tst/i1/u1/cpu_v2/cpu/the_WiPhase_top_level_cpu_v2_cpu_nios2_oci/the_WiPhase_top_level_cpu_v2_cpu_nios2_ocimem/WiPhase_top_level_cpu_v2_cpu_ociram_sp_ram File: C:/Users/alist/OneDrive/Electrickery/Phased-Array-Radio-Telescope/Phased-Array-WiFi-Camera/FPGA_Firmware/WiPhase_top_level/synthesis/submodules/WiPhase_top_level_cpu_v2_cpu.v
+# ** Error (suppressible): (vsim-10000) C:/Users/alist/OneDrive/Electrickery/Phased-Array-Radio-Telescope/Phased-Array-WiFi-Camera/FPGA_Firmware/WiPhase_top_level/synthesis/submodules/WiPhase_top_level_cpu_v2_cpu.v(2166): Unresolved defparam reference to 'the_altsyncram' in the_altsyncram.width_byteena_a.
+#    Time: 0 ps  Iteration: 0  Instance: /wiphase_phys_vhd_tst/i1/u1/cpu_v2/cpu/the_WiPhase_top_level_cpu_v2_cpu_nios2_oci/the_WiPhase_top_level_cpu_v2_cpu_nios2_ocimem/WiPhase_top_level_cpu_v2_cpu_ociram_sp_ram File: C:/Users/alist/OneDrive/Electrickery/Phased-Array-Radio-Telescope/Phased-Array-WiFi-Camera/FPGA_Firmware/WiPhase_top_level/synthesis/submodules/WiPhase_top_level_cpu_v2_cpu.v
+# ** Error (suppressible): (vsim-10000) C:/Users/alist/OneDrive/Electrickery/Phased-Array-Radio-Telescope/Phased-Array-WiFi-Camera/FPGA_Firmware/WiPhase_top_level/synthesis/submodules/WiPhase_top_level_cpu_v2_cpu.v(2167): Unresolved defparam reference to 'the_altsyncram' in the_altsyncram.widthad_a.
+#    Time: 0 ps  Iteration: 0  Instance: /wiphase_phys_vhd_tst/i1/u1/cpu_v2/cpu/the_WiPhase_top_level_cpu_v2_cpu_nios2_oci/the_WiPhase_top_level_cpu_v2_cpu_nios2_ocimem/WiPhase_top_level_cpu_v2_cpu_ociram_sp_ram File: C:/Users/alist/OneDrive/Electrickery/Phased-Array-Radio-Telescope/Phased-Array-WiFi-Camera/FPGA_Firmware/WiPhase_top_level/synthesis/submodules/WiPhase_top_level_cpu_v2_cpu.v
+# ** Error (suppressible): (vsim-10000) C:/Users/alist/OneDrive/Electrickery/Phased-Array-Radio-Telescope/Phased-Array-WiFi-Camera/FPGA_Firmware/WiPhase_top_level/synthesis/submodules/WiPhase_top_level_cpu_v2_cpu_debug_slave_tck.v(204): Unresolved defparam reference to 'the_altera_std_synchronizer1' in the_altera_std_synchronizer1.depth.
+#    Time: 0 ps  Iteration: 0  Instance: /wiphase_phys_vhd_tst/i1/u1/cpu_v2/cpu/the_WiPhase_top_level_cpu_v2_cpu_nios2_oci/the_WiPhase_top_level_cpu_v2_cpu_debug_slave_wrapper/the_WiPhase_top_level_cpu_v2_cpu_debug_slave_tck File: C:/Users/alist/OneDrive/Electrickery/Phased-Array-Radio-Telescope/Phased-Array-WiFi-Camera/FPGA_Firmware/WiPhase_top_level/synthesis/submodules/WiPhase_top_level_cpu_v2_cpu_debug_slave_tck.v
+# ** Error (suppressible): (vsim-10000) C:/Users/alist/OneDrive/Electrickery/Phased-Array-Radio-Telescope/Phased-Array-WiFi-Camera/FPGA_Firmware/WiPhase_top_level/synthesis/submodules/WiPhase_top_level_cpu_v2_cpu_debug_slave_tck.v(215): Unresolved defparam reference to 'the_altera_std_synchronizer2' in the_altera_std_synchronizer2.depth.
+#    Time: 0 ps  Iteration: 0  Instance: /wiphase_phys_vhd_tst/i1/u1/cpu_v2/cpu/the_WiPhase_top_level_cpu_v2_cpu_nios2_oci/the_WiPhase_top_level_cpu_v2_cpu_debug_slave_wrapper/the_WiPhase_top_level_cpu_v2_cpu_debug_slave_tck File: C:/Users/alist/OneDrive/Electrickery/Phased-Array-Radio-Telescope/Phased-Array-WiFi-Camera/FPGA_Firmware/WiPhase_top_level/synthesis/submodules/WiPhase_top_level_cpu_v2_cpu_debug_slave_tck.v
+# ** Error (suppressible): (vsim-10000) C:/Users/alist/OneDrive/Electrickery/Phased-Array-Radio-Telescope/Phased-Array-WiFi-Camera/FPGA_Firmware/WiPhase_top_level/synthesis/submodules/WiPhase_top_level_cpu_v2_cpu_debug_slave_sysclk.v(92): Unresolved defparam reference to 'the_altera_std_synchronizer3' in the_altera_std_synchronizer3.depth.
+#    Time: 0 ps  Iteration: 0  Instance: /wiphase_phys_vhd_tst/i1/u1/cpu_v2/cpu/the_WiPhase_top_level_cpu_v2_cpu_nios2_oci/the_WiPhase_top_level_cpu_v2_cpu_debug_slave_wrapper/the_WiPhase_top_level_cpu_v2_cpu_debug_slave_sysclk File: C:/Users/alist/OneDrive/Electrickery/Phased-Array-Radio-Telescope/Phased-Array-WiFi-Camera/FPGA_Firmware/WiPhase_top_level/synthesis/submodules/WiPhase_top_level_cpu_v2_cpu_debug_slave_sysclk.v
+# ** Error (suppressible): (vsim-10000) C:/Users/alist/OneDrive/Electrickery/Phased-Array-Radio-Telescope/Phased-Array-WiFi-Camera/FPGA_Firmware/WiPhase_top_level/synthesis/submodules/WiPhase_top_level_cpu_v2_cpu_debug_slave_sysclk.v(103): Unresolved defparam reference to 'the_altera_std_synchronizer4' in the_altera_std_synchronizer4.depth.
+#    Time: 0 ps  Iteration: 0  Instance: /wiphase_phys_vhd_tst/i1/u1/cpu_v2/cpu/the_WiPhase_top_level_cpu_v2_cpu_nios2_oci/the_WiPhase_top_level_cpu_v2_cpu_debug_slave_wrapper/the_WiPhase_top_level_cpu_v2_cpu_debug_slave_sysclk File: C:/Users/alist/OneDrive/Electrickery/Phased-Array-Radio-Telescope/Phased-Array-WiFi-Camera/FPGA_Firmware/WiPhase_top_level/synthesis/submodules/WiPhase_top_level_cpu_v2_cpu_debug_slave_sysclk.v
+# Loading WiPhase_top_level.WiPhase_top_level_eth
+# ** Error: (vsim-3033) C:/Users/alist/OneDrive/Electrickery/Phased-Array-Radio-Telescope/Phased-Array-WiFi-Camera/FPGA_Firmware/WiPhase_top_level/synthesis/submodules/WiPhase_top_level_eth.v(101): Instantiation of 'altera_eth_tse_mac' failed. The design unit was not found.
+#    Time: 0 ps  Iteration: 0  Instance: /wiphase_phys_vhd_tst/i1/u1/eth File: C:/Users/alist/OneDrive/Electrickery/Phased-Array-Radio-Telescope/Phased-Array-WiFi-Camera/FPGA_Firmware/WiPhase_top_level/synthesis/submodules/WiPhase_top_level_eth.v
+#         Searched libraries:
+#             C:/intelFPGA_lite/17.1/modelsim_ase/altera/vhdl/altera
+#             C:/intelFPGA_lite/17.1/modelsim_ase/altera/vhdl/220model
+#             C:/intelFPGA_lite/17.1/modelsim_ase/altera/vhdl/sgate
+#             C:/intelFPGA_lite/17.1/modelsim_ase/altera/vhdl/altera_mf
+#             C:/intelFPGA_lite/17.1/modelsim_ase/altera/vhdl/altera_lnsim
+#             C:/intelFPGA_lite/17.1/modelsim_ase/altera/vhdl/cyclone10lp
+#             C:/Users/alist/OneDrive/Electrickery/Phased-Array-Radio-Telescope/Phased-Array-WiFi-Camera/FPGA_Firmware/simulation/modelsim/rtl_work
+#             C:/Users/alist/OneDrive/Electrickery/Phased-Array-Radio-Telescope/Phased-Array-WiFi-Camera/FPGA_Firmware/simulation/modelsim/WiPhase_top_level
+#             C:/Users/alist/OneDrive/Electrickery/Phased-Array-Radio-Telescope/Phased-Array-WiFi-Camera/FPGA_Firmware/simulation/modelsim/WiPhase_top_level
+# Loading WiPhase_top_level.WiPhase_top_level_jtag_uart
+# Loading WiPhase_top_level.WiPhase_top_level_jtag_uart_scfifo_w
+# Loading WiPhase_top_level.WiPhase_top_level_jtag_uart_sim_scfifo_w
+# Loading WiPhase_top_level.WiPhase_top_level_jtag_uart_scfifo_r
+# Loading WiPhase_top_level.WiPhase_top_level_jtag_uart_sim_scfifo_r
+# Loading WiPhase_top_level.WiPhase_top_level_ram_onchip
+# ** Error (suppressible): (vsim-10000) C:/Users/alist/OneDrive/Electrickery/Phased-Array-Radio-Telescope/Phased-Array-WiFi-Camera/FPGA_Firmware/WiPhase_top_level/synthesis/submodules/WiPhase_top_level_ram_onchip.v(71): Unresolved defparam reference to 'the_altsyncram' in the_altsyncram.byte_size.
+#    Time: 0 ps  Iteration: 0  Instance: /wiphase_phys_vhd_tst/i1/u1/ram_onchip File: C:/Users/alist/OneDrive/Electrickery/Phased-Array-Radio-Telescope/Phased-Array-WiFi-Camera/FPGA_Firmware/WiPhase_top_level/synthesis/submodules/WiPhase_top_level_ram_onchip.v
+# ** Error (suppressible): (vsim-10000) C:/Users/alist/OneDrive/Electrickery/Phased-Array-Radio-Telescope/Phased-Array-WiFi-Camera/FPGA_Firmware/WiPhase_top_level/synthesis/submodules/WiPhase_top_level_ram_onchip.v(72): Unresolved defparam reference to 'the_altsyncram' in the_altsyncram.init_file.
+#    Time: 0 ps  Iteration: 0  Instance: /wiphase_phys_vhd_tst/i1/u1/ram_onchip File: C:/Users/alist/OneDrive/Electrickery/Phased-Array-Radio-Telescope/Phased-Array-WiFi-Camera/FPGA_Firmware/WiPhase_top_level/synthesis/submodules/WiPhase_top_level_ram_onchip.v
+# ** Error (suppressible): (vsim-10000) C:/Users/alist/OneDrive/Electrickery/Phased-Array-Radio-Telescope/Phased-Array-WiFi-Camera/FPGA_Firmware/WiPhase_top_level/synthesis/submodules/WiPhase_top_level_ram_onchip.v(73): Unresolved defparam reference to 'the_altsyncram' in the_altsyncram.lpm_type.
+#    Time: 0 ps  Iteration: 0  Instance: /wiphase_phys_vhd_tst/i1/u1/ram_onchip File: C:/Users/alist/OneDrive/Electrickery/Phased-Array-Radio-Telescope/Phased-Array-WiFi-Camera/FPGA_Firmware/WiPhase_top_level/synthesis/submodules/WiPhase_top_level_ram_onchip.v
+# ** Error (suppressible): (vsim-10000) C:/Users/alist/OneDrive/Electrickery/Phased-Array-Radio-Telescope/Phased-Array-WiFi-Camera/FPGA_Firmware/WiPhase_top_level/synthesis/submodules/WiPhase_top_level_ram_onchip.v(74): Unresolved defparam reference to 'the_altsyncram' in the_altsyncram.maximum_depth.
+#    Time: 0 ps  Iteration: 0  Instance: /wiphase_phys_vhd_tst/i1/u1/ram_onchip File: C:/Users/alist/OneDrive/Electrickery/Phased-Array-Radio-Telescope/Phased-Array-WiFi-Camera/FPGA_Firmware/WiPhase_top_level/synthesis/submodules/WiPhase_top_level_ram_onchip.v
+# ** Error (suppressible): (vsim-10000) C:/Users/alist/OneDrive/Electrickery/Phased-Array-Radio-Telescope/Phased-Array-WiFi-Camera/FPGA_Firmware/WiPhase_top_level/synthesis/submodules/WiPhase_top_level_ram_onchip.v(75): Unresolved defparam reference to 'the_altsyncram' in the_altsyncram.numwords_a.
+#    Time: 0 ps  Iteration: 0  Instance: /wiphase_phys_vhd_tst/i1/u1/ram_onchip File: C:/Users/alist/OneDrive/Electrickery/Phased-Array-Radio-Telescope/Phased-Array-WiFi-Camera/FPGA_Firmware/WiPhase_top_level/synthesis/submodules/WiPhase_top_level_ram_onchip.v
+# ** Error (suppressible): (vsim-10000) C:/Users/alist/OneDrive/Electrickery/Phased-Array-Radio-Telescope/Phased-Array-WiFi-Camera/FPGA_Firmware/WiPhase_top_level/synthesis/submodules/WiPhase_top_level_ram_onchip.v(76): Unresolved defparam reference to 'the_altsyncram' in the_altsyncram.operation_mode.
+#    Time: 0 ps  Iteration: 0  Instance: /wiphase_phys_vhd_tst/i1/u1/ram_onchip File: C:/Users/alist/OneDrive/Electrickery/Phased-Array-Radio-Telescope/Phased-Array-WiFi-Camera/FPGA_Firmware/WiPhase_top_level/synthesis/submodules/WiPhase_top_level_ram_onchip.v
+# ** Error (suppressible): (vsim-10000) C:/Users/alist/OneDrive/Electrickery/Phased-Array-Radio-Telescope/Phased-Array-WiFi-Camera/FPGA_Firmware/WiPhase_top_level/synthesis/submodules/WiPhase_top_level_ram_onchip.v(77): Unresolved defparam reference to 'the_altsyncram' in the_altsyncram.outdata_reg_a.
+#    Time: 0 ps  Iteration: 0  Instance: /wiphase_phys_vhd_tst/i1/u1/ram_onchip File: C:/Users/alist/OneDrive/Electrickery/Phased-Array-Radio-Telescope/Phased-Array-WiFi-Camera/FPGA_Firmware/WiPhase_top_level/synthesis/submodules/WiPhase_top_level_ram_onchip.v
+# ** Error (suppressible): (vsim-10000) C:/Users/alist/OneDrive/Electrickery/Phased-Array-Radio-Telescope/Phased-Array-WiFi-Camera/FPGA_Firmware/WiPhase_top_level/synthesis/submodules/WiPhase_top_level_ram_onchip.v(78): Unresolved defparam reference to 'the_altsyncram' in the_altsyncram.ram_block_type.
+#    Time: 0 ps  Iteration: 0  Instance: /wiphase_phys_vhd_tst/i1/u1/ram_onchip File: C:/Users/alist/OneDrive/Electrickery/Phased-Array-Radio-Telescope/Phased-Array-WiFi-Camera/FPGA_Firmware/WiPhase_top_level/synthesis/submodules/WiPhase_top_level_ram_onchip.v
+# ** Error (suppressible): (vsim-10000) C:/Users/alist/OneDrive/Electrickery/Phased-Array-Radio-Telescope/Phased-Array-WiFi-Camera/FPGA_Firmware/WiPhase_top_level/synthesis/submodules/WiPhase_top_level_ram_onchip.v(79): Unresolved defparam reference to 'the_altsyncram' in the_altsyncram.read_during_write_mode_mixed_ports.
+#    Time: 0 ps  Iteration: 0  Instance: /wiphase_phys_vhd_tst/i1/u1/ram_onchip File: C:/Users/alist/OneDrive/Electrickery/Phased-Array-Radio-Telescope/Phased-Array-WiFi-Camera/FPGA_Firmware/WiPhase_top_level/synthesis/submodules/WiPhase_top_level_ram_onchip.v
+# ** Error (suppressible): (vsim-10000) C:/Users/alist/OneDrive/Electrickery/Phased-Array-Radio-Telescope/Phased-Array-WiFi-Camera/FPGA_Firmware/WiPhase_top_level/synthesis/submodules/WiPhase_top_level_ram_onchip.v(80): Unresolved defparam reference to 'the_altsyncram' in the_altsyncram.read_during_write_mode_port_a.
+#    Time: 0 ps  Iteration: 0  Instance: /wiphase_phys_vhd_tst/i1/u1/ram_onchip File: C:/Users/alist/OneDrive/Electrickery/Phased-Array-Radio-Telescope/Phased-Array-WiFi-Camera/FPGA_Firmware/WiPhase_top_level/synthesis/submodules/WiPhase_top_level_ram_onchip.v
+# ** Error (suppressible): (vsim-10000) C:/Users/alist/OneDrive/Electrickery/Phased-Array-Radio-Telescope/Phased-Array-WiFi-Camera/FPGA_Firmware/WiPhase_top_level/synthesis/submodules/WiPhase_top_level_ram_onchip.v(81): Unresolved defparam reference to 'the_altsyncram' in the_altsyncram.width_a.
+#    Time: 0 ps  Iteration: 0  Instance: /wiphase_phys_vhd_tst/i1/u1/ram_onchip File: C:/Users/alist/OneDrive/Electrickery/Phased-Array-Radio-Telescope/Phased-Array-WiFi-Camera/FPGA_Firmware/WiPhase_top_level/synthesis/submodules/WiPhase_top_level_ram_onchip.v
+# ** Error (suppressible): (vsim-10000) C:/Users/alist/OneDrive/Electrickery/Phased-Array-Radio-Telescope/Phased-Array-WiFi-Camera/FPGA_Firmware/WiPhase_top_level/synthesis/submodules/WiPhase_top_level_ram_onchip.v(82): Unresolved defparam reference to 'the_altsyncram' in the_altsyncram.width_byteena_a.
+#    Time: 0 ps  Iteration: 0  Instance: /wiphase_phys_vhd_tst/i1/u1/ram_onchip File: C:/Users/alist/OneDrive/Electrickery/Phased-Array-Radio-Telescope/Phased-Array-WiFi-Camera/FPGA_Firmware/WiPhase_top_level/synthesis/submodules/WiPhase_top_level_ram_onchip.v
+# ** Error (suppressible): (vsim-10000) C:/Users/alist/OneDrive/Electrickery/Phased-Array-Radio-Telescope/Phased-Array-WiFi-Camera/FPGA_Firmware/WiPhase_top_level/synthesis/submodules/WiPhase_top_level_ram_onchip.v(83): Unresolved defparam reference to 'the_altsyncram' in the_altsyncram.widthad_a.
+#    Time: 0 ps  Iteration: 0  Instance: /wiphase_phys_vhd_tst/i1/u1/ram_onchip File: C:/Users/alist/OneDrive/Electrickery/Phased-Array-Radio-Telescope/Phased-Array-WiFi-Camera/FPGA_Firmware/WiPhase_top_level/synthesis/submodules/WiPhase_top_level_ram_onchip.v
+# Loading WiPhase_top_level.WiPhase_top_level_sample_pll
+# Loading WiPhase_top_level.WiPhase_top_level_sample_pll_stdsync_sv6
+# Loading WiPhase_top_level.WiPhase_top_level_sample_pll_dffpipe_l2c
+# Loading WiPhase_top_level.WiPhase_top_level_sample_pll_altpll_mtd2
+# ** Error (suppressible): (vsim-10000) C:/Users/alist/OneDrive/Electrickery/Phased-Array-Radio-Telescope/Phased-Array-WiFi-Camera/FPGA_Firmware/WiPhase_top_level/synthesis/submodules/WiPhase_top_level_sample_pll.v(212): Unresolved defparam reference to 'pll7' in pll7.bandwidth_type.
+#    Time: 0 ps  Iteration: 0  Instance: /wiphase_phys_vhd_tst/i1/u1/sample_pll/sd1 File: C:/Users/alist/OneDrive/Electrickery/Phased-Array-Radio-Telescope/Phased-Array-WiFi-Camera/FPGA_Firmware/WiPhase_top_level/synthesis/submodules/WiPhase_top_level_sample_pll.v
+# ** Error (suppressible): (vsim-10000) C:/Users/alist/OneDrive/Electrickery/Phased-Array-Radio-Telescope/Phased-Array-WiFi-Camera/FPGA_Firmware/WiPhase_top_level/synthesis/submodules/WiPhase_top_level_sample_pll.v(213): Unresolved defparam reference to 'pll7' in pll7.clk0_divide_by.
+#    Time: 0 ps  Iteration: 0  Instance: /wiphase_phys_vhd_tst/i1/u1/sample_pll/sd1 File: C:/Users/alist/OneDrive/Electrickery/Phased-Array-Radio-Telescope/Phased-Array-WiFi-Camera/FPGA_Firmware/WiPhase_top_level/synthesis/submodules/WiPhase_top_level_sample_pll.v
+# ** Error (suppressible): (vsim-10000) C:/Users/alist/OneDrive/Electrickery/Phased-Array-Radio-Telescope/Phased-Array-WiFi-Camera/FPGA_Firmware/WiPhase_top_level/synthesis/submodules/WiPhase_top_level_sample_pll.v(214): Unresolved defparam reference to 'pll7' in pll7.clk0_duty_cycle.
+#    Time: 0 ps  Iteration: 0  Instance: /wiphase_phys_vhd_tst/i1/u1/sample_pll/sd1 File: C:/Users/alist/OneDrive/Electrickery/Phased-Array-Radio-Telescope/Phased-Array-WiFi-Camera/FPGA_Firmware/WiPhase_top_level/synthesis/submodules/WiPhase_top_level_sample_pll.v
+# ** Error (suppressible): (vsim-10000) C:/Users/alist/OneDrive/Electrickery/Phased-Array-Radio-Telescope/Phased-Array-WiFi-Camera/FPGA_Firmware/WiPhase_top_level/synthesis/submodules/WiPhase_top_level_sample_pll.v(215): Unresolved defparam reference to 'pll7' in pll7.clk0_multiply_by.
+#    Time: 0 ps  Iteration: 0  Instance: /wiphase_phys_vhd_tst/i1/u1/sample_pll/sd1 File: C:/Users/alist/OneDrive/Electrickery/Phased-Array-Radio-Telescope/Phased-Array-WiFi-Camera/FPGA_Firmware/WiPhase_top_level/synthesis/submodules/WiPhase_top_level_sample_pll.v
+# ** Error (suppressible): (vsim-10000) C:/Users/alist/OneDrive/Electrickery/Phased-Array-Radio-Telescope/Phased-Array-WiFi-Camera/FPGA_Firmware/WiPhase_top_level/synthesis/submodules/WiPhase_top_level_sample_pll.v(216): Unresolved defparam reference to 'pll7' in pll7.clk0_phase_shift.
+#    Time: 0 ps  Iteration: 0  Instance: /wiphase_phys_vhd_tst/i1/u1/sample_pll/sd1 File: C:/Users/alist/OneDrive/Electrickery/Phased-Array-Radio-Telescope/Phased-Array-WiFi-Camera/FPGA_Firmware/WiPhase_top_level/synthesis/submodules/WiPhase_top_level_sample_pll.v
+# ** Error (suppressible): (vsim-10000) C:/Users/alist/OneDrive/Electrickery/Phased-Array-Radio-Telescope/Phased-Array-WiFi-Camera/FPGA_Firmware/WiPhase_top_level/synthesis/submodules/WiPhase_top_level_sample_pll.v(217): Unresolved defparam reference to 'pll7' in pll7.compensate_clock.
+#    Time: 0 ps  Iteration: 0  Instance: /wiphase_phys_vhd_tst/i1/u1/sample_pll/sd1 File: C:/Users/alist/OneDrive/Electrickery/Phased-Array-Radio-Telescope/Phased-Array-WiFi-Camera/FPGA_Firmware/WiPhase_top_level/synthesis/submodules/WiPhase_top_level_sample_pll.v
+# ** Error (suppressible): (vsim-10000) C:/Users/alist/OneDrive/Electrickery/Phased-Array-Radio-Telescope/Phased-Array-WiFi-Camera/FPGA_Firmware/WiPhase_top_level/synthesis/submodules/WiPhase_top_level_sample_pll.v(218): Unresolved defparam reference to 'pll7' in pll7.inclk0_input_frequency.
+#    Time: 0 ps  Iteration: 0  Instance: /wiphase_phys_vhd_tst/i1/u1/sample_pll/sd1 File: C:/Users/alist/OneDrive/Electrickery/Phased-Array-Radio-Telescope/Phased-Array-WiFi-Camera/FPGA_Firmware/WiPhase_top_level/synthesis/submodules/WiPhase_top_level_sample_pll.v
+# ** Error (suppressible): (vsim-10000) C:/Users/alist/OneDrive/Electrickery/Phased-Array-Radio-Telescope/Phased-Array-WiFi-Camera/FPGA_Firmware/WiPhase_top_level/synthesis/submodules/WiPhase_top_level_sample_pll.v(219): Unresolved defparam reference to 'pll7' in pll7.operation_mode.
+#    Time: 0 ps  Iteration: 0  Instance: /wiphase_phys_vhd_tst/i1/u1/sample_pll/sd1 File: C:/Users/alist/OneDrive/Electrickery/Phased-Array-Radio-Telescope/Phased-Array-WiFi-Camera/FPGA_Firmware/WiPhase_top_level/synthesis/submodules/WiPhase_top_level_sample_pll.v
+# ** Error (suppressible): (vsim-10000) C:/Users/alist/OneDrive/Electrickery/Phased-Array-Radio-Telescope/Phased-Array-WiFi-Camera/FPGA_Firmware/WiPhase_top_level/synthesis/submodules/WiPhase_top_level_sample_pll.v(220): Unresolved defparam reference to 'pll7' in pll7.pll_type.
+#    Time: 0 ps  Iteration: 0  Instance: /wiphase_phys_vhd_tst/i1/u1/sample_pll/sd1 File: C:/Users/alist/OneDrive/Electrickery/Phased-Array-Radio-Telescope/Phased-Array-WiFi-Camera/FPGA_Firmware/WiPhase_top_level/synthesis/submodules/WiPhase_top_level_sample_pll.v
+# ** Error (suppressible): (vsim-10000) C:/Users/alist/OneDrive/Electrickery/Phased-Array-Radio-Telescope/Phased-Array-WiFi-Camera/FPGA_Firmware/WiPhase_top_level/synthesis/submodules/WiPhase_top_level_sample_pll.v(221): Unresolved defparam reference to 'pll7' in pll7.scan_chain_mif_file.
+#    Time: 0 ps  Iteration: 0  Instance: /wiphase_phys_vhd_tst/i1/u1/sample_pll/sd1 File: C:/Users/alist/OneDrive/Electrickery/Phased-Array-Radio-Telescope/Phased-Array-WiFi-Camera/FPGA_Firmware/WiPhase_top_level/synthesis/submodules/WiPhase_top_level_sample_pll.v
+# ** Error (suppressible): (vsim-10000) C:/Users/alist/OneDrive/Electrickery/Phased-Array-Radio-Telescope/Phased-Array-WiFi-Camera/FPGA_Firmware/WiPhase_top_level/synthesis/submodules/WiPhase_top_level_sample_pll.v(222): Unresolved defparam reference to 'pll7' in pll7.lpm_type.
+#    Time: 0 ps  Iteration: 0  Instance: /wiphase_phys_vhd_tst/i1/u1/sample_pll/sd1 File: C:/Users/alist/OneDrive/Electrickery/Phased-Array-Radio-Telescope/Phased-Array-WiFi-Camera/FPGA_Firmware/WiPhase_top_level/synthesis/submodules/WiPhase_top_level_sample_pll.v
+# Loading WiPhase_top_level.WiPhase_top_level_spi
+# Loading WiPhase_top_level.WiPhase_top_level_sysid
+# Loading WiPhase_top_level.WiPhase_top_level_test_pattern_st_gen
+# Loading WiPhase_top_level.WiPhase_top_level_test_pattern_st_gen_position_ram
+# Loading WiPhase_top_level.WiPhase_top_level_test_pattern_st_gen_packetcount_ram
+# Loading WiPhase_top_level.WiPhase_top_level_test_pattern_st_gen_command_fifo
+# Loading WiPhase_top_level.WiPhase_top_level_timer
+# Loading WiPhase_top_level.WiPhase_top_level_mm_interconnect_0
+# Loading sv_std.std
+# Loading WiPhase_top_level.altera_merlin_master_translator
+# Loading WiPhase_top_level.altera_merlin_slave_translator
+# Loading WiPhase_top_level.altera_merlin_master_agent
+# Loading WiPhase_top_level.altera_merlin_slave_agent
+# Loading WiPhase_top_level.altera_merlin_burst_uncompressor
+# Loading WiPhase_top_level.altera_avalon_sc_fifo
+# Loading WiPhase_top_level.WiPhase_top_level_mm_interconnect_0_router
+# Loading WiPhase_top_level.WiPhase_top_level_mm_interconnect_0_router_default_decode
+# Loading WiPhase_top_level.WiPhase_top_level_mm_interconnect_0_router_001
+# Loading WiPhase_top_level.WiPhase_top_level_mm_interconnect_0_router_001_default_decode
+# Loading WiPhase_top_level.WiPhase_top_level_mm_interconnect_0_router_002
+# Loading WiPhase_top_level.WiPhase_top_level_mm_interconnect_0_router_002_default_decode
+# Loading WiPhase_top_level.WiPhase_top_level_mm_interconnect_0_router_007
+# Loading WiPhase_top_level.WiPhase_top_level_mm_interconnect_0_router_007_default_decode
+# Loading WiPhase_top_level.WiPhase_top_level_mm_interconnect_0_cmd_demux
+# Loading WiPhase_top_level.WiPhase_top_level_mm_interconnect_0_cmd_demux_001
+# Loading WiPhase_top_level.WiPhase_top_level_mm_interconnect_0_cmd_mux
+# Loading WiPhase_top_level.WiPhase_top_level_mm_interconnect_0_cmd_mux_005
+# Loading WiPhase_top_level.altera_merlin_arbitrator
+# Loading WiPhase_top_level.altera_merlin_arb_adder
+# Loading WiPhase_top_level.WiPhase_top_level_mm_interconnect_0_rsp_demux
+# Loading WiPhase_top_level.WiPhase_top_level_mm_interconnect_0_rsp_mux
+# Loading WiPhase_top_level.WiPhase_top_level_mm_interconnect_0_rsp_mux_001
+# Loading WiPhase_top_level.WiPhase_top_level_mm_interconnect_0_avalon_st_adapter
+# Loading WiPhase_top_level.WiPhase_top_level_mm_interconnect_0_avalon_st_adapter_error_adapter_0
+# ** Warning: (vsim-8311) System Verilog assertions are supported only in Questasim.
+# Loading WiPhase_top_level.WiPhase_top_level_irq_mapper
+# Loading WiPhase_top_level.WiPhase_top_level_avalon_st_adapter
+# Loading WiPhase_top_level.WiPhase_top_level_avalon_st_adapter_data_format_adapter_0
+# Loading WiPhase_top_level.WiPhase_top_level_avalon_st_adapter_error_adapter_0
+# Loading WiPhase_top_level.WiPhase_top_level_avalon_st_adapter_001
+# Loading WiPhase_top_level.WiPhase_top_level_avalon_st_adapter_001_data_format_adapter_0
+# Loading WiPhase_top_level.WiPhase_top_level_avalon_st_adapter_001_error_adapter_0
+# Loading WiPhase_top_level.WiPhase_top_level_avalon_st_adapter_001_timing_adapter_0
+# Loading WiPhase_top_level.WiPhase_top_level_avalon_st_adapter_001_timing_adapter_0_fifo
+# Loading WiPhase_top_level.WiPhase_top_level_avalon_st_adapter_001_timing_adapter_1
+# Loading WiPhase_top_level.altera_reset_controller
+# Loading WiPhase_top_level.altera_reset_synchronizer
+# Loading work.clock_divider(arch)
+# Error loading design
+# Error: Error loading design
+#        Pausing macro execution
+# MACRO ./Phased_WiFi_Telescope_FW_run_msim_rtl_vhdl.do PAUSED at line 67
+# End time: 00:18:05 on Sep 09,2018, Elapsed time: 0:01:01
+# Errors: 68, Warnings: 1

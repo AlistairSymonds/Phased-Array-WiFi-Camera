@@ -7,127 +7,123 @@ z2
 !i10e 25
 !i10f 100
 cModel Technology
-Z0 dC:/Users/alist/OneDrive/Electrickery/Phased Array Radio Telescope/WiFi Tele/FPGA Firmware/simulation/modelsim
-Eadc_spi
-Z1 w1533396967
-Z2 DPx4 ieee 11 numeric_std 0 22 :ASDNFgHXf_ih3J@9F3Ze1
-Z3 DPx3 std 6 textio 0 22 zE1`LPoLg^DX3Oz^4Fj1K3
-Z4 DPx4 ieee 14 std_logic_1164 0 22 eNV`TJ_GofJTzYa?f<@Oe1
+Z0 dC:/Users/alist/OneDrive/Electrickery/Phased-Array-Radio-Telescope/Phased-Array-WiFi-Camera/FPGA_Firmware/simulation/modelsim
+Eclock_divider
+Z1 w1521338012
+Z2 DPx3 std 6 textio 0 22 zE1`LPoLg^DX3Oz^4Fj1K3
+Z3 DPx4 ieee 14 std_logic_1164 0 22 eNV`TJ_GofJTzYa?f<@Oe1
 R0
-Z5 8C:/Users/alist/OneDrive/Electrickery/Phased Array Radio Telescope/WiFi Tele/FPGA Firmware/adc_spi.vhd
-Z6 FC:/Users/alist/OneDrive/Electrickery/Phased Array Radio Telescope/WiFi Tele/FPGA Firmware/adc_spi.vhd
+Z4 8C:/Users/alist/OneDrive/Electrickery/Phased-Array-Radio-Telescope/Phased-Array-WiFi-Camera/FPGA_Firmware/clock_divider.vhd
+Z5 FC:/Users/alist/OneDrive/Electrickery/Phased-Array-Radio-Telescope/Phased-Array-WiFi-Camera/FPGA_Firmware/clock_divider.vhd
 l0
-L5
-VDjZgXS<Am<YZiVEk?zRRa0
-!s100 @hbF7Dz3C`QY15ioJlBLU1
-Z7 OV;C;10.5b;63
+L4
+VgLXQO3LYO7oST^CnE95HN2
+!s100 Xg2RmFQPoMC=n93@N?o=81
+Z6 OV;C;10.5b;63
 33
-Z8 !s110 1533398527
+Z7 !s110 1536416224
 !i10b 1
-Z9 !s108 1533398527.000000
-Z10 !s90 -reportprogress|300|-2008|-work|work|C:/Users/alist/OneDrive/Electrickery/Phased Array Radio Telescope/WiFi Tele/FPGA Firmware/adc_spi.vhd|
-Z11 !s107 C:/Users/alist/OneDrive/Electrickery/Phased Array Radio Telescope/WiFi Tele/FPGA Firmware/adc_spi.vhd|
+Z8 !s108 1536416224.000000
+Z9 !s90 -reportprogress|300|-2008|-work|work|C:/Users/alist/OneDrive/Electrickery/Phased-Array-Radio-Telescope/Phased-Array-WiFi-Camera/FPGA_Firmware/clock_divider.vhd|
+Z10 !s107 C:/Users/alist/OneDrive/Electrickery/Phased-Array-Radio-Telescope/Phased-Array-WiFi-Camera/FPGA_Firmware/clock_divider.vhd|
 !i113 1
-Z12 o-2008 -work work
-Z13 tExplicit 1 CvgOpt 0
+Z11 o-2008 -work work
+Z12 tExplicit 1 CvgOpt 0
 Aarch
 R2
 R3
-R4
-DEx4 work 7 adc_spi 0 22 DjZgXS<Am<YZiVEk?zRRa0
-l44
-L20
-V[n7c`@oXP5_39>M7CM?Lk2
-!s100 _?<5U=3<kMP5OLjXm@A9[1
-R7
+DEx4 work 13 clock_divider 0 22 gLXQO3LYO7oST^CnE95HN2
+l17
+L13
+VBhYUj;dLJ4FU]B2oN=9_[3
+!s100 oJU_A`WiB[`YIg[PmOdHD1
+R6
 33
-R8
+R7
 !i10b 1
+R8
 R9
 R10
+!i113 1
 R11
-!i113 1
 R12
-R13
-Eadc_spi_vhd_tst
-Z14 w1533395800
+Ewiphase_phys
+Z13 w1536413583
+Z14 DPx4 ieee 11 numeric_std 0 22 :ASDNFgHXf_ih3J@9F3Ze1
 R2
 R3
-R4
 R0
-Z15 8C:/Users/alist/OneDrive/Electrickery/Phased Array Radio Telescope/WiFi Tele/FPGA Firmware/simulation/modelsim/adc_spi.vht
-Z16 FC:/Users/alist/OneDrive/Electrickery/Phased Array Radio Telescope/WiFi Tele/FPGA Firmware/simulation/modelsim/adc_spi.vht
+Z15 8C:/Users/alist/OneDrive/Electrickery/Phased-Array-Radio-Telescope/Phased-Array-WiFi-Camera/FPGA_Firmware/WiPhase_phys.vhd
+Z16 FC:/Users/alist/OneDrive/Electrickery/Phased-Array-Radio-Telescope/Phased-Array-WiFi-Camera/FPGA_Firmware/WiPhase_phys.vhd
 l0
-L31
-VeI[<B2L8ZkSGcFeOJaO]Z3
-!s100 :LzbjcnYzniKTETg>RLIa2
-R7
+L5
+V:GR3hjhXOd]I9`A0TXobo3
+!s100 >Q[^aTafVBK5BZPGm;^mk2
+R6
 33
-R8
+R7
 !i10b 1
-R9
-Z17 !s90 -reportprogress|300|-2008|-work|work|C:/Users/alist/OneDrive/Electrickery/Phased Array Radio Telescope/WiFi Tele/FPGA Firmware/simulation/modelsim/adc_spi.vht|
-Z18 !s107 C:/Users/alist/OneDrive/Electrickery/Phased Array Radio Telescope/WiFi Tele/FPGA Firmware/simulation/modelsim/adc_spi.vht|
+R8
+Z17 !s90 -reportprogress|300|-2008|-work|work|C:/Users/alist/OneDrive/Electrickery/Phased-Array-Radio-Telescope/Phased-Array-WiFi-Camera/FPGA_Firmware/WiPhase_phys.vhd|
+Z18 !s107 C:/Users/alist/OneDrive/Electrickery/Phased-Array-Radio-Telescope/Phased-Array-WiFi-Camera/FPGA_Firmware/WiPhase_phys.vhd|
 !i113 1
+R11
 R12
-R13
-Aadc_spi_arch
+Aarch
+R14
 R2
 R3
-R4
-DEx4 work 15 adc_spi_vhd_tst 0 22 eI[<B2L8ZkSGcFeOJaO]Z3
-l57
-L33
-VIM70oE^4SQ[I^o3cMdO2;2
-!s100 :TH^L^Wlcfge[LF>^JhDD3
-R7
+DEx4 work 12 wiphase_phys 0 22 :GR3hjhXOd]I9`A0TXobo3
+l122
+L62
+V[lj[R6ZPWoIEaBlk8>MFz2
+!s100 NcIYNXV9U<Pz5ee4oY^Kj3
+R6
 33
-R8
+R7
 !i10b 1
-R9
+R8
 R17
 R18
 !i113 1
+R11
 R12
-R13
-Eclk_div8
-Z19 w1533396045
+Ewiphase_phys_vhd_tst
+Z19 w1536416117
 R2
 R3
-R4
 R0
-Z20 8C:/Users/alist/OneDrive/Electrickery/Phased Array Radio Telescope/WiFi Tele/FPGA Firmware/clk_div8vhd.vhd
-Z21 FC:/Users/alist/OneDrive/Electrickery/Phased Array Radio Telescope/WiFi Tele/FPGA Firmware/clk_div8vhd.vhd
+Z20 8C:/Users/alist/OneDrive/Electrickery/Phased-Array-Radio-Telescope/Phased-Array-WiFi-Camera/FPGA_Firmware/WiPhase_phys_tst.vht
+Z21 FC:/Users/alist/OneDrive/Electrickery/Phased-Array-Radio-Telescope/Phased-Array-WiFi-Camera/FPGA_Firmware/WiPhase_phys_tst.vht
 l0
-L5
-V`TlBQGi0^PnM>j:m[zHg@3
-!s100 `DdiPY3iGjz>JV48P0AJ;2
-R7
+L30
+VFYM085z=nTm62MZ_eGa`J0
+!s100 0958CDDGg8Q00iV>f];Pd2
+R6
 33
-R8
+R7
 !i10b 1
-R9
-Z22 !s90 -reportprogress|300|-2008|-work|work|C:/Users/alist/OneDrive/Electrickery/Phased Array Radio Telescope/WiFi Tele/FPGA Firmware/clk_div8vhd.vhd|
-Z23 !s107 C:/Users/alist/OneDrive/Electrickery/Phased Array Radio Telescope/WiFi Tele/FPGA Firmware/clk_div8vhd.vhd|
+R8
+Z22 !s90 -reportprogress|300|-2008|-work|work|C:/Users/alist/OneDrive/Electrickery/Phased-Array-Radio-Telescope/Phased-Array-WiFi-Camera/FPGA_Firmware/WiPhase_phys_tst.vht|
+Z23 !s107 C:/Users/alist/OneDrive/Electrickery/Phased-Array-Radio-Telescope/Phased-Array-WiFi-Camera/FPGA_Firmware/WiPhase_phys_tst.vht|
 !i113 1
+R11
 R12
-R13
-Aarch
+Awiphase_phys_arch
 R2
 R3
-R4
-DEx4 work 8 clk_div8 0 22 `TlBQGi0^PnM>j:m[zHg@3
-l20
-L15
-V9ka[AmQ6N_[QAWl5SMMeE2
-!s100 o@kG5]:^l51hPPbdN`>hQ1
-R7
+DEx4 work 20 wiphase_phys_vhd_tst 0 22 FYM085z=nTm62MZ_eGa`J0
+l95
+L32
+V<OAg8D;9N7zDFj9@?0d060
+!s100 <oSQ_D0I8mcS8eCafQ1993
+R6
 33
-R8
+R7
 !i10b 1
-R9
+R8
 R22
 R23
 !i113 1
+R11
 R12
-R13

@@ -45,7 +45,9 @@ module WiPhase_top_level_eth (
 		input  wire        mdio_in,       //                              .mdio_in
 		output wire        mdio_out,      //                              .mdio_out
 		output wire        mdio_oen,      //                              .mdio_oen
-		input  wire        ff_tx_crc_fwd, //           mac_misc_connection.ff_tx_crc_fwd
+		output wire        magic_wakeup,  //           mac_misc_connection.magic_wakeup
+		input  wire        magic_sleep_n, //                              .magic_sleep_n
+		input  wire        ff_tx_crc_fwd, //                              .ff_tx_crc_fwd
 		output wire        ff_tx_septy,   //                              .ff_tx_septy
 		output wire        tx_ff_uflow,   //                              .tx_ff_uflow
 		output wire        ff_tx_a_full,  //                              .ff_tx_a_full
@@ -58,28 +60,28 @@ module WiPhase_top_level_eth (
 	);
 
 	altera_eth_tse_mac #(
-		.ING_ADDR                 (11),
+		.ING_ADDR                 (10),
 		.ENABLE_MAC_RX_VLAN       (0),
 		.ENABLE_SUP_ADDR          (0),
 		.DEVICE_FAMILY            ("CYCLONE10LP"),
 		.INSERT_TA                (0),
-		.ING_FIFO                 (2048),
+		.ING_FIFO                 (1024),
 		.ENABLE_ECC               (0),
 		.CRC32DWIDTH              (8),
 		.ENABLE_ENA               (32),
 		.SYNCHRONIZER_DEPTH       (3),
 		.ENABLE_MAC_TX_VLAN       (0),
 		.RESET_LEVEL              (1),
-		.STAT_CNT_ENA             (0),
+		.STAT_CNT_ENA             (1),
 		.CUST_VERSION             (0),
 		.CRC32S1L2_EXTERN         (0),
 		.MBIT_ONLY                (1),
-		.EG_ADDR                  (11),
+		.EG_ADDR                  (9),
 		.CORE_VERSION             (4353),
 		.CRC32GENDELAY            (6),
-		.EG_FIFO                  (2048),
+		.EG_FIFO                  (512),
 		.REDUCED_INTERFACE_ENA    (1),
-		.ENABLE_MAGIC_DETECT      (0),
+		.ENABLE_MAGIC_DETECT      (1),
 		.ENABLE_MDIO              (1),
 		.ENABLE_MAC_TXADDR_SET    (1),
 		.RAM_TYPE                 ("AUTO"),
@@ -121,7 +123,9 @@ module WiPhase_top_level_eth (
 		.ff_tx_rdy       (ff_tx_rdy),     //                              .ready
 		.ff_tx_sop       (ff_tx_sop),     //                              .startofpacket
 		.ff_tx_wren      (ff_tx_wren),    //                              .valid
-		.ff_tx_crc_fwd   (ff_tx_crc_fwd), //           mac_misc_connection.export
+		.magic_wakeup    (magic_wakeup),  //           mac_misc_connection.export
+		.magic_sleep_n   (magic_sleep_n), //                              .export
+		.ff_tx_crc_fwd   (ff_tx_crc_fwd), //                              .export
 		.ff_tx_septy     (ff_tx_septy),   //                              .export
 		.tx_ff_uflow     (tx_ff_uflow),   //                              .export
 		.ff_tx_a_full    (ff_tx_a_full),  //                              .export
@@ -145,12 +149,10 @@ module WiPhase_top_level_eth (
 		.ena_10          (ena_10),        //                              .ena_10
 		.tx_clk          (tx_clk),        //   pcs_mac_tx_clock_connection.clk
 		.rx_clk          (rx_clk),        //   pcs_mac_rx_clock_connection.clk
-		.magic_sleep_n   (1'b1),          //                   (terminated)
 		.rx_clkena       (1'b1),          //                   (terminated)
 		.tx_clkena       (1'b1),          //                   (terminated)
 		.xon_gen         (1'b0),          //                   (terminated)
 		.xoff_gen        (1'b0),          //                   (terminated)
-		.magic_wakeup    (),              //                   (terminated)
 		.mac_eccstatus   (),              //                   (terminated)
 		.gm_rx_d         (8'b00000000),   //                   (terminated)
 		.gm_rx_dv        (1'b0),          //                   (terminated)

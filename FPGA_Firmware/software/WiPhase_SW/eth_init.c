@@ -24,11 +24,12 @@ int init_eth(uint8_t* mac){
 
 
 	uint32_t mac_config = 0x0;
-	mac_config = 0x00000008;
+	mac_config = 0x00802220;
 	eth_base_reg[2] = mac_config;
-	eth_base_reg[2] = eth_base_reg[2] | 0x00000003;
-
-	eth_base_reg[2] = eth_base_reg[2] | 0x00002000;
+	while(eth_base_reg[2] >> 13 != 0){
+		//wait
+	}
+	eth_base_reg[2] = 0x00800223;
 
 	//Desktop mac 30-5A-3A-E1-2D-AF
 	printf("MAC enabled, reg %X \n", eth_base_reg[2]);

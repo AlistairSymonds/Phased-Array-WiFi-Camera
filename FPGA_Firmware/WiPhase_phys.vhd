@@ -19,17 +19,11 @@ entity WiPhase_phys is
 	
 		ENET_RG_RXCLK : in std_logic;
 		ENET_RG_RXCTL : in std_logic;
-		ENET_RG_RXD0 : in std_logic;
-		ENET_RG_RXD1 : in std_logic;
-		ENET_RG_RXD2 : in std_logic;
-		ENET_RG_RXD3 : in std_logic;
+		ENET_RG_RXD : in std_logic_vector(3 downto 0);
 		
 		ENET_RG_TXCLK : out std_logic;
 		ENET_RG_TXCTL : out std_logic;
-		ENET_RG_TXD0 : out std_logic;
-		ENET_RG_TXD1 : out std_logic;
-		ENET_RG_TXD2 : out std_logic;
-		ENET_RG_TXD3 : out std_logic;
+		ENET_RG_TXD : out std_logic_vector(3 downto 0);
 	
 		--spi lines
 		spi_adc_cs_pin : out std_logic;
@@ -69,55 +63,45 @@ architecture arch of WiPhase_phys is
 
 component WiPhase_top_level is
 		port (
-			mac_mdio_connection_mdc           : out std_logic;                                        -- mdc
-			mac_mdio_connection_mdio_in       : in  std_logic                     := 'X';             -- mdio_in
-			mac_mdio_connection_mdio_out      : out std_logic;                                        -- mdio_out
-			mac_mdio_connection_mdio_oen      : out std_logic;                                        -- mdio_oen
-			mac_misc_connection_ff_tx_crc_fwd : in  std_logic                     := 'X';             -- ff_tx_crc_fwd
-			mac_misc_connection_ff_tx_septy   : out std_logic;                                        -- ff_tx_septy
-			mac_misc_connection_tx_ff_uflow   : out std_logic;                                        -- tx_ff_uflow
-			mac_misc_connection_ff_tx_a_full  : out std_logic;                                        -- ff_tx_a_full
-			mac_misc_connection_ff_tx_a_empty : out std_logic;                                        -- ff_tx_a_empty
-			mac_misc_connection_rx_err_stat   : out std_logic_vector(17 downto 0);                    -- rx_err_stat
-			mac_misc_connection_rx_frm_type   : out std_logic_vector(3 downto 0);                     -- rx_frm_type
-			mac_misc_connection_ff_rx_dsav    : out std_logic;                                        -- ff_rx_dsav
-			mac_misc_connection_ff_rx_a_full  : out std_logic;                                        -- ff_rx_a_full
-			mac_misc_connection_ff_rx_a_empty : out std_logic;                                        -- ff_rx_a_empty
-			mac_status_set_10                 : in  std_logic                     := 'X';             -- set_10
-			mac_status_set_1000               : in  std_logic                     := 'X';             -- set_1000
-			mac_status_eth_mode               : out std_logic;                                        -- eth_mode
-			mac_status_ena_10                 : out std_logic;                                        -- ena_10
-			mclk_i_clk                        : in  std_logic                     := 'X';             -- clk
-			mclk_reset_reset_n                : in  std_logic                     := 'X';             -- reset_n
-			pll_inclk_clk                     : in  std_logic                     := 'X';             -- clk
-			pll_out_clk                       : out std_logic;                                        -- clk
-			rgmii_connection_rgmii_in         : in  std_logic_vector(3 downto 0)  := (others => 'X'); -- rgmii_in
-			rgmii_connection_rgmii_out        : out std_logic_vector(3 downto 0);                     -- rgmii_out
-			rgmii_connection_rx_control       : in  std_logic                     := 'X';             -- rx_control
-			rgmii_connection_tx_control       : out std_logic;                                        -- tx_control
-			rgmii_rx_clk_clk                  : in  std_logic                     := 'X';             -- clk
-			sample_pll_areset_conduit_export  : in  std_logic                     := 'X';             -- export
-			sample_pll_locked_conduit_export  : out std_logic;                                        -- export
-			spi_signals_o_MISO                : in  std_logic                     := 'X';             -- MISO
-			spi_signals_o_MOSI                : out std_logic;                                        -- MOSI
-			spi_signals_o_SCLK                : out std_logic;                                        -- SCLK
-			spi_signals_o_SS_n                : out std_logic_vector(2 downto 0);                     -- SS_n
-			rgmii_tx_clk_clk                  : in  std_logic                     := 'X'              -- clk
+			mclk_i_clk                          : in  std_logic                    := 'X';             -- clk
+			mclk_reset_reset_n                  : in  std_logic                    := 'X';             -- reset_n
+			pll_inclk_clk                       : in  std_logic                    := 'X';             -- clk
+			pll_out_clk                         : out std_logic;                                       -- clk
+			sample_pll_areset_conduit_export    : in  std_logic                    := 'X';             -- export
+			sample_pll_locked_conduit_export    : out std_logic;                                       -- export
+			spi_signals_o_MISO                  : in  std_logic                    := 'X';             -- MISO
+			spi_signals_o_MOSI                  : out std_logic;                                       -- MOSI
+			spi_signals_o_SCLK                  : out std_logic;                                       -- SCLK
+			spi_signals_o_SS_n                  : out std_logic_vector(2 downto 0);                    -- SS_n
+			eth_mac_mdio_connection_mdc         : out std_logic;                                       -- mdc
+			eth_mac_mdio_connection_mdio_in     : in  std_logic                    := 'X';             -- mdio_in
+			eth_mac_mdio_connection_mdio_out    : out std_logic;                                       -- mdio_out
+			eth_mac_mdio_connection_mdio_oen    : out std_logic;                                       -- mdio_oen
+			eth_mac_rgmii_connection_rgmii_in   : in  std_logic_vector(3 downto 0) := (others => 'X'); -- rgmii_in
+			eth_mac_rgmii_connection_rgmii_out  : out std_logic_vector(3 downto 0);                    -- rgmii_out
+			eth_mac_rgmii_connection_rx_control : in  std_logic                    := 'X';             -- rx_control
+			eth_mac_rgmii_connection_tx_control : out std_logic;                                       -- tx_control
+			eth_mac_status_connection_set_10    : in  std_logic                    := 'X';             -- set_10
+			eth_mac_status_connection_set_1000  : in  std_logic                    := 'X';             -- set_1000
+			eth_mac_status_connection_eth_mode  : out std_logic;                                       -- eth_mode
+			eth_mac_status_connection_ena_10    : out std_logic;                                       -- ena_10
+			eth_rgmii_rx_clk_clk                : in  std_logic                    := 'X';             -- clk
+			eth_rgmii_tx_clk_clk                : in  std_logic                    := 'X'              -- clk
 		);
 	end component WiPhase_top_level;
 	
 	signal sample_pll_sig : std_logic;
 	
 	
-	signal mdio_clk_sig, mdio_in_sig, mdio_out_sig, mdio_oen_sig : std_logic;
-	signal ENET_MDIO_OUT, ENET_MDIO_IN : std_logic;
+	signal mdio_out_sig, mdio_oen_sig : std_logic;
+	--signal ENET_MDIO_OUT, ENET_MDIO_IN : std_logic;
 	
-	signal enet_rgmii_txclk_sig : std_logic;
-	signal enet_rgmii_rxclk_sig : std_logic;
-	signal enet_rgmii_tx_ctl_sig : std_logic;
-	signal enet_rgmii_rx_ctl_sig : std_logic;
-	signal enet_rgmii_txd_sig : std_logic_vector(3 downto 0);
-	signal enet_rgmii_rxd_sig : std_logic_vector(3 downto 0);
+	--signal enet_rgmii_txclk_sig : std_logic;
+	--signal enet_rgmii_rxclk_sig : std_logic;
+	--signal enet_rgmii_tx_ctl_sig : std_logic;
+	--signal enet_rgmii_rx_ctl_sig : std_logic;
+	--signal enet_rgmii_txd_sig : std_logic_vector(3 downto 0);
+	--signal enet_rgmii_rxd_sig : std_logic_vector(3 downto 0);
 	
 	
 	signal leds_sig : std_logic_vector(7 downto 0);
@@ -143,17 +127,6 @@ component WiPhase_top_level is
 			mclk_i_clk => C10_CLK50M,
 			
 			
-			mac_mdio_connection_mdc => mdio_clk_sig,
-			mac_mdio_connection_mdio_in => mdio_in_sig,
-			mac_mdio_connection_mdio_out => mdio_out_sig,
-			mac_mdio_connection_mdio_oen => mdio_oen_sig,
-			
-			rgmii_connection_rgmii_out => enet_rgmii_txd_sig,
-			rgmii_connection_rgmii_in => enet_rgmii_rxd_sig,
-			rgmii_rx_clk_clk => enet_rgmii_rxclk_sig,
-			rgmii_tx_clk_clk => enet_rgmii_txclk_sig,
-			rgmii_connection_rx_control => enet_rgmii_rx_ctl_sig,
-			rgmii_connection_tx_control => enet_rgmii_tx_ctl_sig,
 			
 			
 			pll_inclk_clk => C10_CLK50M,
@@ -162,11 +135,26 @@ component WiPhase_top_level is
 			
 			spi_signals_o_MOSI => spi_mosi_pin,
 			spi_signals_o_SCLK => spi_sclk_pin,
-			spi_signals_o_SS_n =>  spi_ss_sig
+			spi_signals_o_SS_n =>  spi_ss_sig,
+			
+			
+			eth_mac_mdio_connection_mdc         => ENET_MDC,         --   eth_mac_mdio_connection.mdc
+			eth_mac_mdio_connection_mdio_in     => ENET_MDIO,     --                          .mdio_in
+			eth_mac_mdio_connection_mdio_out    => mdio_out_sig,    --                          .mdio_out
+			eth_mac_mdio_connection_mdio_oen    => mdio_oen_sig,    --                          .mdio_oen
+			eth_mac_rgmii_connection_rgmii_in   => ENET_RG_RXD,   --  eth_mac_rgmii_connection.rgmii_in
+			eth_mac_rgmii_connection_rgmii_out  => ENET_RG_TXD,  --                          .rgmii_out
+			eth_mac_rgmii_connection_rx_control => ENET_RG_RXCTL, --                          .rx_control
+			eth_mac_rgmii_connection_tx_control => ENET_RG_TXCTL, --                          .tx_control
+			--eth_mac_status_connection_set_10    => ,    -- eth_mac_status_connection.set_10
+			eth_mac_status_connection_set_1000  => '1',  --                          .set_1000
+			--eth_mac_status_connection_eth_mode  => ,  --                          .eth_mode
+			--eth_mac_status_connection_ena_10    => ,    --                          .ena_10
+			eth_rgmii_rx_clk_clk                => ENET_RG_RXCLK,                --          eth_rgmii_rx_clk.clk
+			eth_rgmii_tx_clk_clk                => ENET_CLK_125M               --          eth_rgmii_tx_clk.clk
+			
 		);
 		
-	enet_rgmii_txclk_sig <= ENET_CLK_125M;
-	ENET_RG_TXCLK <= enet_rgmii_txclk_sig;
 
 		
 		
@@ -175,31 +163,27 @@ component WiPhase_top_level is
 	spi_vga_cs_pin <= spi_ss_sig(1);
 	spi_dac_cs_pin <= spi_ss_sig(2);
 	
-	ENET_RG_TXD0 <= enet_rgmii_txd_sig(0);
-	ENET_RG_TXD1 <= enet_rgmii_txd_sig(1);
-	ENET_RG_TXD2 <= enet_rgmii_txd_sig(2);
-	ENET_RG_TXD3 <= enet_rgmii_txd_sig(3);
-	
-	enet_rgmii_rxclk_sig <= ENET_RG_RXCLK;
-	enet_rgmii_rxd_sig(0) <= ENET_RG_RXD0;
-	enet_rgmii_rxd_sig(1) <= ENET_RG_RXD1;
-	enet_rgmii_rxd_sig(2) <= ENET_RG_RXD2;
-	enet_rgmii_rxd_sig(3) <= ENET_RG_RXD3;
-	enet_rgmii_rx_ctl_sig <= ENET_RG_RXCTL;
-	
-	process(mdio_oen_sig, ENET_MDIO_OUT)
+	--ENET_RG_TXD0 <= enet_rgmii_txd_sig(0);
+	--ENET_RG_TXD1 <= enet_rgmii_txd_sig(1);
+--	ENET_RG_TXD2 <= enet_rgmii_txd_sig(2);
+--	ENET_RG_TXD3 <= enet_rgmii_txd_sig(3);
+--	
+--	enet_rgmii_rxclk_sig <= ENET_RG_RXCLK;
+--	enet_rgmii_rxd_sig(0) <= ENET_RG_RXD0;
+--	enet_rgmii_rxd_sig(1) <= ENET_RG_RXD1;
+--	enet_rgmii_rxd_sig(2) <= ENET_RG_RXD2;
+--	enet_rgmii_rxd_sig(3) <= ENET_RG_RXD3;
+--	enet_rgmii_rx_ctl_sig <= ENET_RG_RXCTL;
+--	
+	process(mdio_oen_sig, mdio_out_sig)
 	begin
 		if(mdio_oen_sig = '0') then
-			ENET_MDIO <= ENET_MDIO_OUT;
+			ENET_MDIO <= mdio_out_sig;
 		else
 			ENET_MDIO <= 'Z';
 		end if;	
 	end process;
 	
-	ENET_MDIO_OUT <= mdio_out_sig;
-	ENET_MDC <= mdio_clk_sig;
-	mdio_in_sig <= ENET_MDIO_IN;
-	ENET_MDIO_IN <= ENET_MDIO;
 	
 	USER_LED(3) <= leds_sig(0);
 	sample_pll_out <= sample_pll_sig;

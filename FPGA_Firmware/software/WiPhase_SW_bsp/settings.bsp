@@ -2,8 +2,8 @@
 <sch:Settings xmlns:sch="http://www.altera.com/embeddedsw/bsp/schema">
         <BspType>hal</BspType>
         <BspVersion>default</BspVersion>
-        <BspGeneratedTimeStamp>20/08/2018 10:40:46 PM</BspGeneratedTimeStamp>
-        <BspGeneratedUnixTimeStamp>1534768846937</BspGeneratedUnixTimeStamp>
+        <BspGeneratedTimeStamp>09/09/2018 12:51:43 PM</BspGeneratedTimeStamp>
+        <BspGeneratedUnixTimeStamp>1536461503361</BspGeneratedUnixTimeStamp>
         <BspGeneratedLocation>C:\Users\alist\OneDrive\Electrickery\Phased-Array-Radio-Telescope\Phased-Array-WiFi-Camera\FPGA_Firmware\software\WiPhase_SW_bsp</BspGeneratedLocation>
         <BspSettingsFile>settings.bsp</BspSettingsFile>
         <SopcDesignFile>..\..\WiPhase_top_level.sopcinfo</SopcDesignFile>
@@ -959,21 +959,9 @@
                 <attributes>timer</attributes>
         </MemoryMap>
         <MemoryMap>
-                <slaveDescriptor>test_pattern_st_gen_csr</slaveDescriptor>
-                <addressRange>0x00011440 - 0x0001144F</addressRange>
-                <addressSpan>16</addressSpan>
-                <attributes/>
-        </MemoryMap>
-        <MemoryMap>
                 <slaveDescriptor>sample_pll</slaveDescriptor>
                 <addressRange>0x00011450 - 0x0001145F</addressRange>
                 <addressSpan>16</addressSpan>
-                <attributes/>
-        </MemoryMap>
-        <MemoryMap>
-                <slaveDescriptor>test_pattern_st_gen_command</slaveDescriptor>
-                <addressRange>0x00011460 - 0x00011467</addressRange>
-                <addressSpan>8</addressSpan>
                 <attributes/>
         </MemoryMap>
         <MemoryMap>

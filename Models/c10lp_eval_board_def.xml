@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FPGABoard Version="1.0">
+   <BoardName>Cyclone 10 LP Eval Board</BoardName>
+   <FPGA Device="10CL025YU256I7G" Family="Cyclone 10 LP" JTAGChainPosition="1" Package="" Speed="" Vendor="Altera">
+      <Interface>
+         <Type>Clock</Type>
+         <Parameter ID="ClockType">Single-Ended</Parameter>
+         <Parameter ID="Frequency">100</Parameter>
+         <Signal>
+            <SignalName>Clock</SignalName>
+            <Description>Clock</Description>
+            <Direction>in</Direction>
+            <BitWidth>1</BitWidth>
+            <FPGAPin>PIN_E1</FPGAPin>
+            <IOStandard/>
+         </Signal>
+      </Interface>
+      <Interface>
+         <Type>User-defined I/O interface</Type>
+         <Signal>
+            <SignalName>C10_CLK50M</SignalName>
+            <Description>50MHz input clock</Description>
+            <Direction>in</Direction>
+            <BitWidth>1</BitWidth>
+            <FPGAPin>E1</FPGAPin>
+            <IOStandard/>
+         </Signal>
+         <Signal>
+            <SignalName>USER_LED3</SignalName>
+            <Description>led 3</Description>
+            <Direction>out</Direction>
+            <BitWidth>1</BitWidth>
+            <FPGAPin>J13</FPGAPin>
+            <IOStandard/>
+         </Signal>
+      </Interface>
+   </FPGA>
+</FPGABoard>

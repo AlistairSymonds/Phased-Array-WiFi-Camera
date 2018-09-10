@@ -22,14 +22,39 @@ entity Debug_ST_Source is
 end entity Debug_ST_Source;
 
 architecture rtl of Debug_ST_Source is
-begin
 
+signal index : integer range 0 to 512;
+
+constant destAddr : std_logic_vector((6*8)-1 downto 0) := x"ffffffffffff";
+constant sourceAddr : std_logic_vector((6*8)-1 downto 0) := x"0123456789AB";
+
+begin
+	
+	
+	process(clk)
+	begin
+		if rising_edge(clk) then
+			avalon_streaming_source_data <= "00000000";
+			avalon_streaming_source_startofpacket <= '0';
+			avalon_streaming_source_endofpacket <= '0';
+			
+			if (index >= 0 and index < 6) then
+				avalon_streaming_source_startofpacket <='1';
+				avalon_streaming_source_data <= destAddr((index*8) +1 downto index*8);
+			elsif (index >= 6 and index < 12) then
+				avalon_streaming_source_data <= sourceAddr((index*8) +1 downto index*8);
+			
+			
+			elsif (index = 12) then
+				avalon_streaming_source_endofpacket <= '1';
+				
+			end if;
+			
+			index <= index + 1;
+		end if;
+	end process;
 	-- TODO: Auto-generated HDL template
 
-	avalon_streaming_source_data <= "00000000";
-
-	avalon_streaming_source_startofpacket <= '0';
-
-	avalon_streaming_source_endofpacket <= '0';
+	
 
 end architecture rtl; -- of Debug_ST_Source

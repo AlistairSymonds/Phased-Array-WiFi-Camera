@@ -8,8 +8,6 @@ Progress: Adding Debug_ST_Sink_0 [Debug_ST_Sink 1.0]
 Progress: Parameterizing module Debug_ST_Sink_0
 Progress: Adding cpu_v2 [altera_nios2_gen2 17.1]
 Progress: Parameterizing module cpu_v2
-Progress: Adding enet_clk_125M [clock_source 17.1]
-Progress: Parameterizing module enet_clk_125M
 Progress: Adding eth [altera_eth_tse 17.1]
 Progress: Parameterizing module eth
 Progress: Adding jtag_uart [altera_avalon_jtag_uart 17.1]
@@ -44,6 +42,7 @@ Info: WiPhase_top_level.eth.receive/Debug_ST_Sink_0.ST_sink_connection: The sour
 Info: WiPhase_top_level.eth.receive/Debug_ST_Sink_0.ST_sink_connection: The source has a error signal of 6 bits, but the sink does not. Avalon-ST Adapter will be inserted.
 Info: WiPhase_top_level.eth.receive/Debug_ST_Sink_0.ST_sink_connection: The source has a empty signal of 2 bits, but the sink does not. Avalon-ST Adapter will be inserted.
 Info: WiPhase_top_level.eth.receive/Debug_ST_Sink_0.ST_sink_connection: The source data signal is 32 bits, but the sink is 8 bits. Avalon-ST Adapter will be inserted.
+Warning: WiPhase_top_level.eth: eth.mac_misc_connection must be exported, or connected to a matching conduit.
 Info: WiPhase_top_level: Generating WiPhase_top_level "WiPhase_top_level" for SIM_VHDL
 Info: avalon_st_adapter: Inserting data_format_adapter: data_format_adapter_0
 Info: avalon_st_adapter: Inserting error_adapter: error_adapter_0
@@ -56,20 +55,20 @@ Info: Debug_ST_Sink_0: "WiPhase_top_level" instantiated Debug_ST_Sink "Debug_ST_
 Info: cpu_v2: "WiPhase_top_level" instantiated altera_nios2_gen2 "cpu_v2"
 Info: eth: "WiPhase_top_level" instantiated altera_eth_tse "eth"
 Info: jtag_uart: Starting RTL generation for module 'WiPhase_top_level_jtag_uart'
-Info: jtag_uart:   Generation command is [exec C:/intelfpga_lite/17.1/quartus/bin64/perl/bin/perl.exe -I C:/intelfpga_lite/17.1/quartus/bin64/perl/lib -I C:/intelfpga_lite/17.1/quartus/sopc_builder/bin/europa -I C:/intelfpga_lite/17.1/quartus/sopc_builder/bin/perl_lib -I C:/intelfpga_lite/17.1/quartus/sopc_builder/bin -I C:/intelfpga_lite/17.1/quartus/../ip/altera/sopc_builder_ip/common -I C:/intelfpga_lite/17.1/quartus/../ip/altera/sopc_builder_ip/altera_avalon_jtag_uart -- C:/intelfpga_lite/17.1/quartus/../ip/altera/sopc_builder_ip/altera_avalon_jtag_uart/generate_rtl.pl --name=WiPhase_top_level_jtag_uart --dir=C:/Users/alist/AppData/Local/Temp/alt7763_6252652982522219781.dir/0050_jtag_uart_gen/ --quartus_dir=C:/intelfpga_lite/17.1/quartus --verilog --config=C:/Users/alist/AppData/Local/Temp/alt7763_6252652982522219781.dir/0050_jtag_uart_gen//WiPhase_top_level_jtag_uart_component_configuration.pl  --do_build_sim=1    --sim_dir=C:/Users/alist/AppData/Local/Temp/alt7763_6252652982522219781.dir/0050_jtag_uart_gen/  ]
+Info: jtag_uart:   Generation command is [exec C:/intelfpga_lite/17.1/quartus/bin64/perl/bin/perl.exe -I C:/intelfpga_lite/17.1/quartus/bin64/perl/lib -I C:/intelfpga_lite/17.1/quartus/sopc_builder/bin/europa -I C:/intelfpga_lite/17.1/quartus/sopc_builder/bin/perl_lib -I C:/intelfpga_lite/17.1/quartus/sopc_builder/bin -I C:/intelfpga_lite/17.1/quartus/../ip/altera/sopc_builder_ip/common -I C:/intelfpga_lite/17.1/quartus/../ip/altera/sopc_builder_ip/altera_avalon_jtag_uart -- C:/intelfpga_lite/17.1/quartus/../ip/altera/sopc_builder_ip/altera_avalon_jtag_uart/generate_rtl.pl --name=WiPhase_top_level_jtag_uart --dir=C:/Users/alist/AppData/Local/Temp/alt7782_6460931923017482304.dir/0003_jtag_uart_gen/ --quartus_dir=C:/intelfpga_lite/17.1/quartus --verilog --config=C:/Users/alist/AppData/Local/Temp/alt7782_6460931923017482304.dir/0003_jtag_uart_gen//WiPhase_top_level_jtag_uart_component_configuration.pl  --do_build_sim=1    --sim_dir=C:/Users/alist/AppData/Local/Temp/alt7782_6460931923017482304.dir/0003_jtag_uart_gen/  ]
 Info: jtag_uart: Done RTL generation for module 'WiPhase_top_level_jtag_uart'
 Info: jtag_uart: "WiPhase_top_level" instantiated altera_avalon_jtag_uart "jtag_uart"
 Info: ram_onchip: Starting RTL generation for module 'WiPhase_top_level_ram_onchip'
-Info: ram_onchip:   Generation command is [exec C:/intelfpga_lite/17.1/quartus/bin64/perl/bin/perl.exe -I C:/intelfpga_lite/17.1/quartus/bin64/perl/lib -I C:/intelfpga_lite/17.1/quartus/sopc_builder/bin/europa -I C:/intelfpga_lite/17.1/quartus/sopc_builder/bin/perl_lib -I C:/intelfpga_lite/17.1/quartus/sopc_builder/bin -I C:/intelfpga_lite/17.1/quartus/../ip/altera/sopc_builder_ip/common -I C:/intelfpga_lite/17.1/quartus/../ip/altera/sopc_builder_ip/altera_avalon_onchip_memory2 -- C:/intelfpga_lite/17.1/quartus/../ip/altera/sopc_builder_ip/altera_avalon_onchip_memory2/generate_rtl.pl --name=WiPhase_top_level_ram_onchip --dir=C:/Users/alist/AppData/Local/Temp/alt7763_6252652982522219781.dir/0051_ram_onchip_gen/ --quartus_dir=C:/intelfpga_lite/17.1/quartus --verilog --config=C:/Users/alist/AppData/Local/Temp/alt7763_6252652982522219781.dir/0051_ram_onchip_gen//WiPhase_top_level_ram_onchip_component_configuration.pl  --do_build_sim=1    --sim_dir=C:/Users/alist/AppData/Local/Temp/alt7763_6252652982522219781.dir/0051_ram_onchip_gen/  ]
+Info: ram_onchip:   Generation command is [exec C:/intelfpga_lite/17.1/quartus/bin64/perl/bin/perl.exe -I C:/intelfpga_lite/17.1/quartus/bin64/perl/lib -I C:/intelfpga_lite/17.1/quartus/sopc_builder/bin/europa -I C:/intelfpga_lite/17.1/quartus/sopc_builder/bin/perl_lib -I C:/intelfpga_lite/17.1/quartus/sopc_builder/bin -I C:/intelfpga_lite/17.1/quartus/../ip/altera/sopc_builder_ip/common -I C:/intelfpga_lite/17.1/quartus/../ip/altera/sopc_builder_ip/altera_avalon_onchip_memory2 -- C:/intelfpga_lite/17.1/quartus/../ip/altera/sopc_builder_ip/altera_avalon_onchip_memory2/generate_rtl.pl --name=WiPhase_top_level_ram_onchip --dir=C:/Users/alist/AppData/Local/Temp/alt7782_6460931923017482304.dir/0004_ram_onchip_gen/ --quartus_dir=C:/intelfpga_lite/17.1/quartus --verilog --config=C:/Users/alist/AppData/Local/Temp/alt7782_6460931923017482304.dir/0004_ram_onchip_gen//WiPhase_top_level_ram_onchip_component_configuration.pl  --do_build_sim=1    --sim_dir=C:/Users/alist/AppData/Local/Temp/alt7782_6460931923017482304.dir/0004_ram_onchip_gen/  ]
 Info: ram_onchip: Done RTL generation for module 'WiPhase_top_level_ram_onchip'
 Info: ram_onchip: "WiPhase_top_level" instantiated altera_avalon_onchip_memory2 "ram_onchip"
 Info: sample_pll: Generating VHDL simulation model
 Warning: Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
-Warning: Verilog HDL or VHDL warning at WiPhase_top_level_sample_pll.vhd(339): object "wire_w_address_range2w" assigned a value but never read File: C:/Users/alist/AppData/Local/Temp/alt7763_6252652982522219781.dir/0054_sopcqmap/WiPhase_top_level_sample_pll.vhd Line: 339
+Warning: Verilog HDL or VHDL warning at WiPhase_top_level_sample_pll.vhd(339): object "wire_w_address_range2w" assigned a value but never read File: C:/Users/alist/AppData/Local/Temp/alt7782_6460931923017482304.dir/0007_sopcqmap/WiPhase_top_level_sample_pll.vhd Line: 339
 Info: sample_pll: Generated simulation model WiPhase_top_level_sample_pll.vho
 Info: sample_pll: "WiPhase_top_level" instantiated altpll "sample_pll"
 Info: spi: Starting RTL generation for module 'WiPhase_top_level_spi'
-Info: spi:   Generation command is [exec C:/intelfpga_lite/17.1/quartus/bin64/perl/bin/perl.exe -I C:/intelfpga_lite/17.1/quartus/bin64/perl/lib -I C:/intelfpga_lite/17.1/quartus/sopc_builder/bin/europa -I C:/intelfpga_lite/17.1/quartus/sopc_builder/bin/perl_lib -I C:/intelfpga_lite/17.1/quartus/sopc_builder/bin -I C:/intelfpga_lite/17.1/quartus/../ip/altera/sopc_builder_ip/common -I C:/intelfpga_lite/17.1/quartus/../ip/altera/sopc_builder_ip/altera_avalon_spi -- C:/intelfpga_lite/17.1/quartus/../ip/altera/sopc_builder_ip/altera_avalon_spi/generate_rtl.pl --name=WiPhase_top_level_spi --dir=C:/Users/alist/AppData/Local/Temp/alt7763_6252652982522219781.dir/0056_spi_gen/ --quartus_dir=C:/intelfpga_lite/17.1/quartus --verilog --config=C:/Users/alist/AppData/Local/Temp/alt7763_6252652982522219781.dir/0056_spi_gen//WiPhase_top_level_spi_component_configuration.pl  --do_build_sim=1    --sim_dir=C:/Users/alist/AppData/Local/Temp/alt7763_6252652982522219781.dir/0056_spi_gen/  ]
+Info: spi:   Generation command is [exec C:/intelfpga_lite/17.1/quartus/bin64/perl/bin/perl.exe -I C:/intelfpga_lite/17.1/quartus/bin64/perl/lib -I C:/intelfpga_lite/17.1/quartus/sopc_builder/bin/europa -I C:/intelfpga_lite/17.1/quartus/sopc_builder/bin/perl_lib -I C:/intelfpga_lite/17.1/quartus/sopc_builder/bin -I C:/intelfpga_lite/17.1/quartus/../ip/altera/sopc_builder_ip/common -I C:/intelfpga_lite/17.1/quartus/../ip/altera/sopc_builder_ip/altera_avalon_spi -- C:/intelfpga_lite/17.1/quartus/../ip/altera/sopc_builder_ip/altera_avalon_spi/generate_rtl.pl --name=WiPhase_top_level_spi --dir=C:/Users/alist/AppData/Local/Temp/alt7782_6460931923017482304.dir/0009_spi_gen/ --quartus_dir=C:/intelfpga_lite/17.1/quartus --verilog --config=C:/Users/alist/AppData/Local/Temp/alt7782_6460931923017482304.dir/0009_spi_gen//WiPhase_top_level_spi_component_configuration.pl  --do_build_sim=1    --sim_dir=C:/Users/alist/AppData/Local/Temp/alt7782_6460931923017482304.dir/0009_spi_gen/  ]
 Info: spi: Done RTL generation for module 'WiPhase_top_level_spi'
 Info: spi: "WiPhase_top_level" instantiated altera_avalon_spi "spi"
 Info: sysid: "WiPhase_top_level" instantiated altera_avalon_sysid_qsys "sysid"
@@ -82,7 +81,7 @@ Error: test_pattern_st_gen: Functional Simulation Model generation Failed
 Info: test_pattern_st_gen: "WiPhase_top_level" instantiated data_source "test_pattern_st_gen"
 Error: Generation stopped, 8 or more modules remaining
 Info: WiPhase_top_level: Done "WiPhase_top_level" with 18 modules, 10 files
-Error: qsys-generate failed with exit code 1: 2 Errors, 5 Warnings
+Error: qsys-generate failed with exit code 1: 2 Errors, 6 Warnings
 Info: Finished: Create simulation model
 Info: Starting: Create Modelsim Project.
 Info: sim-script-gen --spd=C:\Users\alist\OneDrive\Electrickery\Phased-Array-Radio-Telescope\Phased-Array-WiFi-Camera\FPGA_Firmware\WiPhase_top_level\WiPhase_top_level.spd --output-directory=C:/Users/alist/OneDrive/Electrickery/Phased-Array-Radio-Telescope/Phased-Array-WiFi-Camera/FPGA_Firmware/WiPhase_top_level/simulation/ --use-relative-paths=true
@@ -113,8 +112,6 @@ Progress: Adding Debug_ST_Sink_0 [Debug_ST_Sink 1.0]
 Progress: Parameterizing module Debug_ST_Sink_0
 Progress: Adding cpu_v2 [altera_nios2_gen2 17.1]
 Progress: Parameterizing module cpu_v2
-Progress: Adding enet_clk_125M [clock_source 17.1]
-Progress: Parameterizing module enet_clk_125M
 Progress: Adding eth [altera_eth_tse 17.1]
 Progress: Parameterizing module eth
 Progress: Adding jtag_uart [altera_avalon_jtag_uart 17.1]
@@ -149,6 +146,7 @@ Info: WiPhase_top_level.eth.receive/Debug_ST_Sink_0.ST_sink_connection: The sour
 Info: WiPhase_top_level.eth.receive/Debug_ST_Sink_0.ST_sink_connection: The source has a error signal of 6 bits, but the sink does not. Avalon-ST Adapter will be inserted.
 Info: WiPhase_top_level.eth.receive/Debug_ST_Sink_0.ST_sink_connection: The source has a empty signal of 2 bits, but the sink does not. Avalon-ST Adapter will be inserted.
 Info: WiPhase_top_level.eth.receive/Debug_ST_Sink_0.ST_sink_connection: The source data signal is 32 bits, but the sink is 8 bits. Avalon-ST Adapter will be inserted.
+Warning: WiPhase_top_level.eth: eth.mac_misc_connection must be exported, or connected to a matching conduit.
 Info: qsys-generate succeeded.
 Info: Finished: Create block symbol file (.bsf)
 Info: 
@@ -162,8 +160,6 @@ Progress: Adding Debug_ST_Sink_0 [Debug_ST_Sink 1.0]
 Progress: Parameterizing module Debug_ST_Sink_0
 Progress: Adding cpu_v2 [altera_nios2_gen2 17.1]
 Progress: Parameterizing module cpu_v2
-Progress: Adding enet_clk_125M [clock_source 17.1]
-Progress: Parameterizing module enet_clk_125M
 Progress: Adding eth [altera_eth_tse 17.1]
 Progress: Parameterizing module eth
 Progress: Adding jtag_uart [altera_avalon_jtag_uart 17.1]
@@ -198,6 +194,7 @@ Info: WiPhase_top_level.eth.receive/Debug_ST_Sink_0.ST_sink_connection: The sour
 Info: WiPhase_top_level.eth.receive/Debug_ST_Sink_0.ST_sink_connection: The source has a error signal of 6 bits, but the sink does not. Avalon-ST Adapter will be inserted.
 Info: WiPhase_top_level.eth.receive/Debug_ST_Sink_0.ST_sink_connection: The source has a empty signal of 2 bits, but the sink does not. Avalon-ST Adapter will be inserted.
 Info: WiPhase_top_level.eth.receive/Debug_ST_Sink_0.ST_sink_connection: The source data signal is 32 bits, but the sink is 8 bits. Avalon-ST Adapter will be inserted.
+Warning: WiPhase_top_level.eth: eth.mac_misc_connection must be exported, or connected to a matching conduit.
 Info: WiPhase_top_level: Generating WiPhase_top_level "WiPhase_top_level" for QUARTUS_SYNTH
 Info: avalon_st_adapter: Inserting data_format_adapter: data_format_adapter_0
 Info: avalon_st_adapter: Inserting error_adapter: error_adapter_0
@@ -210,16 +207,16 @@ Info: Debug_ST_Sink_0: "WiPhase_top_level" instantiated Debug_ST_Sink "Debug_ST_
 Info: cpu_v2: "WiPhase_top_level" instantiated altera_nios2_gen2 "cpu_v2"
 Info: eth: "WiPhase_top_level" instantiated altera_eth_tse "eth"
 Info: jtag_uart: Starting RTL generation for module 'WiPhase_top_level_jtag_uart'
-Info: jtag_uart:   Generation command is [exec C:/intelfpga_lite/17.1/quartus/bin64/perl/bin/perl.exe -I C:/intelfpga_lite/17.1/quartus/bin64/perl/lib -I C:/intelfpga_lite/17.1/quartus/sopc_builder/bin/europa -I C:/intelfpga_lite/17.1/quartus/sopc_builder/bin/perl_lib -I C:/intelfpga_lite/17.1/quartus/sopc_builder/bin -I C:/intelfpga_lite/17.1/quartus/../ip/altera/sopc_builder_ip/common -I C:/intelfpga_lite/17.1/quartus/../ip/altera/sopc_builder_ip/altera_avalon_jtag_uart -- C:/intelfpga_lite/17.1/quartus/../ip/altera/sopc_builder_ip/altera_avalon_jtag_uart/generate_rtl.pl --name=WiPhase_top_level_jtag_uart --dir=C:/Users/alist/AppData/Local/Temp/alt7763_6252652982522219781.dir/0062_jtag_uart_gen/ --quartus_dir=C:/intelfpga_lite/17.1/quartus --verilog --config=C:/Users/alist/AppData/Local/Temp/alt7763_6252652982522219781.dir/0062_jtag_uart_gen//WiPhase_top_level_jtag_uart_component_configuration.pl  --do_build_sim=0  ]
+Info: jtag_uart:   Generation command is [exec C:/intelfpga_lite/17.1/quartus/bin64/perl/bin/perl.exe -I C:/intelfpga_lite/17.1/quartus/bin64/perl/lib -I C:/intelfpga_lite/17.1/quartus/sopc_builder/bin/europa -I C:/intelfpga_lite/17.1/quartus/sopc_builder/bin/perl_lib -I C:/intelfpga_lite/17.1/quartus/sopc_builder/bin -I C:/intelfpga_lite/17.1/quartus/../ip/altera/sopc_builder_ip/common -I C:/intelfpga_lite/17.1/quartus/../ip/altera/sopc_builder_ip/altera_avalon_jtag_uart -- C:/intelfpga_lite/17.1/quartus/../ip/altera/sopc_builder_ip/altera_avalon_jtag_uart/generate_rtl.pl --name=WiPhase_top_level_jtag_uart --dir=C:/Users/alist/AppData/Local/Temp/alt7782_6460931923017482304.dir/0015_jtag_uart_gen/ --quartus_dir=C:/intelfpga_lite/17.1/quartus --verilog --config=C:/Users/alist/AppData/Local/Temp/alt7782_6460931923017482304.dir/0015_jtag_uart_gen//WiPhase_top_level_jtag_uart_component_configuration.pl  --do_build_sim=0  ]
 Info: jtag_uart: Done RTL generation for module 'WiPhase_top_level_jtag_uart'
 Info: jtag_uart: "WiPhase_top_level" instantiated altera_avalon_jtag_uart "jtag_uart"
 Info: ram_onchip: Starting RTL generation for module 'WiPhase_top_level_ram_onchip'
-Info: ram_onchip:   Generation command is [exec C:/intelfpga_lite/17.1/quartus/bin64/perl/bin/perl.exe -I C:/intelfpga_lite/17.1/quartus/bin64/perl/lib -I C:/intelfpga_lite/17.1/quartus/sopc_builder/bin/europa -I C:/intelfpga_lite/17.1/quartus/sopc_builder/bin/perl_lib -I C:/intelfpga_lite/17.1/quartus/sopc_builder/bin -I C:/intelfpga_lite/17.1/quartus/../ip/altera/sopc_builder_ip/common -I C:/intelfpga_lite/17.1/quartus/../ip/altera/sopc_builder_ip/altera_avalon_onchip_memory2 -- C:/intelfpga_lite/17.1/quartus/../ip/altera/sopc_builder_ip/altera_avalon_onchip_memory2/generate_rtl.pl --name=WiPhase_top_level_ram_onchip --dir=C:/Users/alist/AppData/Local/Temp/alt7763_6252652982522219781.dir/0063_ram_onchip_gen/ --quartus_dir=C:/intelfpga_lite/17.1/quartus --verilog --config=C:/Users/alist/AppData/Local/Temp/alt7763_6252652982522219781.dir/0063_ram_onchip_gen//WiPhase_top_level_ram_onchip_component_configuration.pl  --do_build_sim=0  ]
+Info: ram_onchip:   Generation command is [exec C:/intelfpga_lite/17.1/quartus/bin64/perl/bin/perl.exe -I C:/intelfpga_lite/17.1/quartus/bin64/perl/lib -I C:/intelfpga_lite/17.1/quartus/sopc_builder/bin/europa -I C:/intelfpga_lite/17.1/quartus/sopc_builder/bin/perl_lib -I C:/intelfpga_lite/17.1/quartus/sopc_builder/bin -I C:/intelfpga_lite/17.1/quartus/../ip/altera/sopc_builder_ip/common -I C:/intelfpga_lite/17.1/quartus/../ip/altera/sopc_builder_ip/altera_avalon_onchip_memory2 -- C:/intelfpga_lite/17.1/quartus/../ip/altera/sopc_builder_ip/altera_avalon_onchip_memory2/generate_rtl.pl --name=WiPhase_top_level_ram_onchip --dir=C:/Users/alist/AppData/Local/Temp/alt7782_6460931923017482304.dir/0016_ram_onchip_gen/ --quartus_dir=C:/intelfpga_lite/17.1/quartus --verilog --config=C:/Users/alist/AppData/Local/Temp/alt7782_6460931923017482304.dir/0016_ram_onchip_gen//WiPhase_top_level_ram_onchip_component_configuration.pl  --do_build_sim=0  ]
 Info: ram_onchip: Done RTL generation for module 'WiPhase_top_level_ram_onchip'
 Info: ram_onchip: "WiPhase_top_level" instantiated altera_avalon_onchip_memory2 "ram_onchip"
 Info: sample_pll: "WiPhase_top_level" instantiated altpll "sample_pll"
 Info: spi: Starting RTL generation for module 'WiPhase_top_level_spi'
-Info: spi:   Generation command is [exec C:/intelfpga_lite/17.1/quartus/bin64/perl/bin/perl.exe -I C:/intelfpga_lite/17.1/quartus/bin64/perl/lib -I C:/intelfpga_lite/17.1/quartus/sopc_builder/bin/europa -I C:/intelfpga_lite/17.1/quartus/sopc_builder/bin/perl_lib -I C:/intelfpga_lite/17.1/quartus/sopc_builder/bin -I C:/intelfpga_lite/17.1/quartus/../ip/altera/sopc_builder_ip/common -I C:/intelfpga_lite/17.1/quartus/../ip/altera/sopc_builder_ip/altera_avalon_spi -- C:/intelfpga_lite/17.1/quartus/../ip/altera/sopc_builder_ip/altera_avalon_spi/generate_rtl.pl --name=WiPhase_top_level_spi --dir=C:/Users/alist/AppData/Local/Temp/alt7763_6252652982522219781.dir/0066_spi_gen/ --quartus_dir=C:/intelfpga_lite/17.1/quartus --verilog --config=C:/Users/alist/AppData/Local/Temp/alt7763_6252652982522219781.dir/0066_spi_gen//WiPhase_top_level_spi_component_configuration.pl  --do_build_sim=0  ]
+Info: spi:   Generation command is [exec C:/intelfpga_lite/17.1/quartus/bin64/perl/bin/perl.exe -I C:/intelfpga_lite/17.1/quartus/bin64/perl/lib -I C:/intelfpga_lite/17.1/quartus/sopc_builder/bin/europa -I C:/intelfpga_lite/17.1/quartus/sopc_builder/bin/perl_lib -I C:/intelfpga_lite/17.1/quartus/sopc_builder/bin -I C:/intelfpga_lite/17.1/quartus/../ip/altera/sopc_builder_ip/common -I C:/intelfpga_lite/17.1/quartus/../ip/altera/sopc_builder_ip/altera_avalon_spi -- C:/intelfpga_lite/17.1/quartus/../ip/altera/sopc_builder_ip/altera_avalon_spi/generate_rtl.pl --name=WiPhase_top_level_spi --dir=C:/Users/alist/AppData/Local/Temp/alt7782_6460931923017482304.dir/0019_spi_gen/ --quartus_dir=C:/intelfpga_lite/17.1/quartus --verilog --config=C:/Users/alist/AppData/Local/Temp/alt7782_6460931923017482304.dir/0019_spi_gen//WiPhase_top_level_spi_component_configuration.pl  --do_build_sim=0  ]
 Info: spi: Done RTL generation for module 'WiPhase_top_level_spi'
 Info: spi: "WiPhase_top_level" instantiated altera_avalon_spi "spi"
 Info: sysid: "WiPhase_top_level" instantiated altera_avalon_sysid_qsys "sysid"
@@ -229,7 +226,7 @@ Info: test_pattern_st_gen_position_ram: Starting generation.
 Info: test_pattern_st_gen_packetcount_ram: Starting generation. 
 Info: test_pattern_st_gen: "WiPhase_top_level" instantiated data_source "test_pattern_st_gen"
 Info: timer: Starting RTL generation for module 'WiPhase_top_level_timer'
-Info: timer:   Generation command is [exec C:/intelFPGA_lite/17.1/quartus/bin64//perl/bin/perl.exe -I C:/intelFPGA_lite/17.1/quartus/bin64//perl/lib -I C:/intelfpga_lite/17.1/quartus/sopc_builder/bin/europa -I C:/intelfpga_lite/17.1/quartus/sopc_builder/bin/perl_lib -I C:/intelfpga_lite/17.1/quartus/sopc_builder/bin -I C:/intelfpga_lite/17.1/quartus/../ip/altera/sopc_builder_ip/common -I C:/intelfpga_lite/17.1/quartus/../ip/altera/sopc_builder_ip/altera_avalon_timer -- C:/intelfpga_lite/17.1/quartus/../ip/altera/sopc_builder_ip/altera_avalon_timer/generate_rtl.pl --name=WiPhase_top_level_timer --dir=C:/Users/alist/AppData/Local/Temp/alt7763_6252652982522219781.dir/0068_timer_gen/ --quartus_dir=C:/intelfpga_lite/17.1/quartus --verilog --config=C:/Users/alist/AppData/Local/Temp/alt7763_6252652982522219781.dir/0068_timer_gen//WiPhase_top_level_timer_component_configuration.pl  --do_build_sim=0  ]
+Info: timer:   Generation command is [exec C:/intelFPGA_lite/17.1/quartus/bin64//perl/bin/perl.exe -I C:/intelFPGA_lite/17.1/quartus/bin64//perl/lib -I C:/intelfpga_lite/17.1/quartus/sopc_builder/bin/europa -I C:/intelfpga_lite/17.1/quartus/sopc_builder/bin/perl_lib -I C:/intelfpga_lite/17.1/quartus/sopc_builder/bin -I C:/intelfpga_lite/17.1/quartus/../ip/altera/sopc_builder_ip/common -I C:/intelfpga_lite/17.1/quartus/../ip/altera/sopc_builder_ip/altera_avalon_timer -- C:/intelfpga_lite/17.1/quartus/../ip/altera/sopc_builder_ip/altera_avalon_timer/generate_rtl.pl --name=WiPhase_top_level_timer --dir=C:/Users/alist/AppData/Local/Temp/alt7782_6460931923017482304.dir/0021_timer_gen/ --quartus_dir=C:/intelfpga_lite/17.1/quartus --verilog --config=C:/Users/alist/AppData/Local/Temp/alt7782_6460931923017482304.dir/0021_timer_gen//WiPhase_top_level_timer_component_configuration.pl  --do_build_sim=0  ]
 Info: timer: Done RTL generation for module 'WiPhase_top_level_timer'
 Info: timer: "WiPhase_top_level" instantiated altera_avalon_timer "timer"
 Info: avalon_st_adapter: Inserting error_adapter: error_adapter_0
@@ -248,19 +245,19 @@ Info: avalon_st_adapter: "WiPhase_top_level" instantiated altera_avalon_st_adapt
 Info: avalon_st_adapter_001: "WiPhase_top_level" instantiated altera_avalon_st_adapter "avalon_st_adapter_001"
 Info: rst_controller: "WiPhase_top_level" instantiated altera_reset_controller "rst_controller"
 Info: cpu: Starting RTL generation for module 'WiPhase_top_level_cpu_v2_cpu'
-Info: cpu:   Generation command is [exec C:/intelFPGA_lite/17.1/quartus/bin64//eperlcmd.exe -I C:/intelFPGA_lite/17.1/quartus/bin64//perl/lib -I C:/intelfpga_lite/17.1/quartus/sopc_builder/bin/europa -I C:/intelfpga_lite/17.1/quartus/sopc_builder/bin/perl_lib -I C:/intelfpga_lite/17.1/quartus/sopc_builder/bin -I C:/intelfpga_lite/17.1/quartus/../ip/altera/nios2_ip/altera_nios2_gen2/cpu_lib -I C:/intelfpga_lite/17.1/quartus/../ip/altera/nios2_ip/altera_nios2_gen2/nios_lib -I C:/intelfpga_lite/17.1/quartus/../ip/altera/nios2_ip/altera_nios2_gen2 -I C:/intelfpga_lite/17.1/quartus/../ip/altera/nios2_ip/altera_nios2_gen2 -- C:/intelfpga_lite/17.1/quartus/../ip/altera/nios2_ip/altera_nios2_gen2/generate_rtl.epl --name=WiPhase_top_level_cpu_v2_cpu --dir=C:/Users/alist/AppData/Local/Temp/alt7763_6252652982522219781.dir/0071_cpu_gen/ --quartus_bindir=C:/intelFPGA_lite/17.1/quartus/bin64/ --verilog --config=C:/Users/alist/AppData/Local/Temp/alt7763_6252652982522219781.dir/0071_cpu_gen//WiPhase_top_level_cpu_v2_cpu_processor_configuration.pl  --do_build_sim=0  ]
-Info: cpu: # 2018.08.20 13:35:38 (*) Starting Nios II generation
-Info: cpu: # 2018.08.20 13:35:38 (*)   Checking for plaintext license.
-Info: cpu: # 2018.08.20 13:35:38 (*)   Couldn't query license setup in Quartus directory C:/intelFPGA_lite/17.1/quartus/bin64/
-Info: cpu: # 2018.08.20 13:35:38 (*)   Defaulting to contents of LM_LICENSE_FILE environment variable
-Info: cpu: # 2018.08.20 13:35:38 (*)   LM_LICENSE_FILE environment variable is empty
-Info: cpu: # 2018.08.20 13:35:38 (*)   Plaintext license not found.
-Info: cpu: # 2018.08.20 13:35:38 (*)   No license required to generate encrypted Nios II/e.
-Info: cpu: # 2018.08.20 13:35:38 (*)   Elaborating CPU configuration settings
-Info: cpu: # 2018.08.20 13:35:38 (*)   Creating all objects for CPU
-Info: cpu: # 2018.08.20 13:35:39 (*)   Generating RTL from CPU objects
-Info: cpu: # 2018.08.20 13:35:39 (*)   Creating plain-text RTL
-Info: cpu: # 2018.08.20 13:35:39 (*) Done Nios II generation
+Info: cpu:   Generation command is [exec C:/intelFPGA_lite/17.1/quartus/bin64//eperlcmd.exe -I C:/intelFPGA_lite/17.1/quartus/bin64//perl/lib -I C:/intelfpga_lite/17.1/quartus/sopc_builder/bin/europa -I C:/intelfpga_lite/17.1/quartus/sopc_builder/bin/perl_lib -I C:/intelfpga_lite/17.1/quartus/sopc_builder/bin -I C:/intelfpga_lite/17.1/quartus/../ip/altera/nios2_ip/altera_nios2_gen2/cpu_lib -I C:/intelfpga_lite/17.1/quartus/../ip/altera/nios2_ip/altera_nios2_gen2/nios_lib -I C:/intelfpga_lite/17.1/quartus/../ip/altera/nios2_ip/altera_nios2_gen2 -I C:/intelfpga_lite/17.1/quartus/../ip/altera/nios2_ip/altera_nios2_gen2 -- C:/intelfpga_lite/17.1/quartus/../ip/altera/nios2_ip/altera_nios2_gen2/generate_rtl.epl --name=WiPhase_top_level_cpu_v2_cpu --dir=C:/Users/alist/AppData/Local/Temp/alt7782_6460931923017482304.dir/0024_cpu_gen/ --quartus_bindir=C:/intelFPGA_lite/17.1/quartus/bin64/ --verilog --config=C:/Users/alist/AppData/Local/Temp/alt7782_6460931923017482304.dir/0024_cpu_gen//WiPhase_top_level_cpu_v2_cpu_processor_configuration.pl  --do_build_sim=0  ]
+Info: cpu: # 2018.09.08 23:15:00 (*) Starting Nios II generation
+Info: cpu: # 2018.09.08 23:15:00 (*)   Checking for plaintext license.
+Info: cpu: # 2018.09.08 23:15:00 (*)   Couldn't query license setup in Quartus directory C:/intelFPGA_lite/17.1/quartus/bin64/
+Info: cpu: # 2018.09.08 23:15:00 (*)   Defaulting to contents of LM_LICENSE_FILE environment variable
+Info: cpu: # 2018.09.08 23:15:00 (*)   LM_LICENSE_FILE environment variable is empty
+Info: cpu: # 2018.09.08 23:15:00 (*)   Plaintext license not found.
+Info: cpu: # 2018.09.08 23:15:00 (*)   No license required to generate encrypted Nios II/e.
+Info: cpu: # 2018.09.08 23:15:00 (*)   Elaborating CPU configuration settings
+Info: cpu: # 2018.09.08 23:15:00 (*)   Creating all objects for CPU
+Info: cpu: # 2018.09.08 23:15:02 (*)   Generating RTL from CPU objects
+Info: cpu: # 2018.09.08 23:15:02 (*)   Creating plain-text RTL
+Info: cpu: # 2018.09.08 23:15:02 (*) Done Nios II generation
 Info: cpu: Done RTL generation for module 'WiPhase_top_level_cpu_v2_cpu'
 Info: cpu: "cpu_v2" instantiated altera_nios2_gen2_unit "cpu"
 Info: i_tse_mac: "eth" instantiated altera_eth_tse_mac "i_tse_mac"
