@@ -1,0 +1,28 @@
+CAPI=2:
+name : ::pawc:0.1
+
+
+
+
+filesets:
+  rtl:
+    depend:
+      - "::picorv32"
+      - "::hyperram"
+    files:
+      - rtl/c10lp_baseline_pinout.v
+      - rtl/pawc_top.sv
+    file_type: systemVerilogSource
+  tb_files:
+    files:
+      - tb/pawc_tb.sv
+    file_type : systemVerilogSource
+
+targets:
+  default:
+    filesets: [rtl]
+  sim:
+    filesets: [rtl, tb_files]
+    default_tool : verilator
+    toplevel : pawc_tb
+    

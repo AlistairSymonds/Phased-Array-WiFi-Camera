@@ -1,0 +1,3 @@
+platform_setup.tcl
+filelist.txt
+c10lp_baseline_pinout.v
