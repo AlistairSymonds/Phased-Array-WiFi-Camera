@@ -11,7 +11,12 @@ assign wb_clk = clk;
 assign wb_rst = ~resetn;
 `include "wb_intercon.vh"
 
-picorv32_wb u_picorv32_wb(
+picorv32_wb #(
+    .ENABLE_MUL          (1'b1),
+    .PROGADDR_RESET      (32'h0000_0000),
+    .STACKADDR           (32'hFFFF_FFFF)
+    )
+    u_picorv32_wb(
 	.trap           ( ),
     .wb_rst_i       (~resetn ),
     .wb_clk_i       (clk ),
