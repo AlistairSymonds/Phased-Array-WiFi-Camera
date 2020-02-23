@@ -1,0 +1,73 @@
+Run 1:  Thu Nov 01 11:21:51 2018.  SL288770.104303.
+        Em version 15.53-Lite (32-bit Windows) on NEON local.
+
+  Project:  C:\Users\alist\OneDrive\Electrickery\Phased-Array-Radio-Telescope\Phased-Array-WiFi-Camera\Models\2450 patch antenna\wifi_patch.son.
+
+    Frequency:  2.29 GHZ
+      Subsectioning at 2.56 GHz with Eeff of 2.7.
+      Subsectioning time:  0.416 seconds.
+      Em license feature:  emlite.
+      Circuit requires 1672 subsections and 22 MB of memory.
+
+      Subsections by level and type:
+      Level 0:
+        Staircase:  1,657
+      Ground Plane:
+        Via:        15
+
+      Required memory by type:
+        System matrix:            21 MB
+        Elemental subsections:
+          Primary structure:      6 MB
+        Fourier transform:        5 MB
+        Waveguide mode:           2 MB
+        Adaptive band synthesis:  2 MB
+        Miscellaneous:            1 MB
+        TOTAL REQUIRED MEMORY:    36 MB
+
+      Matrix solver:  internal 32-bit SSE with loss.
+      Simulation mode:  local machine.
+      Threads:  using 1 thread(s), 4 core(s) available.
+      Waveguide mode time:  0.109 seconds.
+      Fourier transform time:  1 second.
+      Coupling time:  6 seconds.
+      Loss time:  0.016 seconds.
+      Matrix fill time:  8 seconds.
+      Matrix solve time:  1 second.
+      De-embed autognd port 1:
+        Standard 1:  4.5 mm, 75 subsections, about 12 MB.
+          Time:  1 second.
+        Autognd port 1 std 2:
+          4.5 mm length, 60 subsections, 10 MB.
+          Time:  0.125 seconds.
+        Autognd port 1 std 3:
+          9 mm length, 116 subsections, 10 MB.
+          Time:  0.171 seconds.
+      Frequency completed Thu Nov 01 11:22:03 2018.
+      De-embedded S-Parameters. 50.0 Ohm Port Terminations.
+      Magnitude/Angle. Touchstone Format.
+        2.29000000 0.886548 169.98
+        !< P1 F=2.29 Eeff=(3.34558181 -0.0753906) Z0=(57.9705769 0.35130416) R=18.1084078 C=0.05817125 
+      Total time per frequency:  12 seconds.
+
+    Frequency:  2.56 GHZ
+      Frequency completed Thu Nov 01 11:22:16 2018.
+      De-embedded S-Parameters. 50.0 Ohm Port Terminations.
+      Magnitude/Angle. Touchstone Format.
+        2.56000000 0.851897 178.67
+        !< P1 F=2.56 Eeff=(3.34094485 -0.0793185) Z0=(57.9128564 0.30447894) R=15.8069687 C=0.05828984 
+      ABS time:  0.188 seconds.
+
+    Frequency:  2.429 GHZ
+      Frequency completed Thu Nov 01 11:22:28 2018.
+      De-embedded S-Parameters. 50.0 Ohm Port Terminations.
+      Magnitude/Angle. Touchstone Format.
+        2.42900000 0.102269 -175.5
+        !< P1 F=2.429 Eeff=(3.34566434 -0.0778366) Z0=(57.9678591 0.32388146) R=16.849377 C=0.05820942 
+      ABS time:  0.203 seconds.
+
+    Post-Analysis:
+      Total time for 3 frequencies:  37 seconds.
+      Errors detected: 0    Warnings detected: 0.
+
+Analysis completed Thu Nov 01 11:22:28 2018.

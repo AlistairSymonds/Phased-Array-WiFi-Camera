@@ -2159,6 +2159,10 @@ Note, that not all DRC settings must be set by the manufacturer. Several can be 
 <wire x1="36.92" y1="23.145" x2="36.93060625" y2="23.15560625" width="1.4" layer="1"/>
 <via x="39.25" y="23.25" extent="1-16" drill="0.35"/>
 <via x="33.75" y="18.25" extent="1-16" drill="0.35"/>
+<via x="43.75" y="35.25" extent="1-16" drill="0.35"/>
+<via x="43.75" y="36.75" extent="1-16" drill="0.35"/>
+<via x="43.75" y="38" extent="1-16" drill="0.35"/>
+<wire x1="43.75" y1="36.75" x2="43.75" y2="38" width="0" layer="19" extent="1-1"/>
 </signal>
 <signal name="N$2">
 <contactref element="C3" pad="1"/>
@@ -2348,13 +2352,16 @@ Note, that not all DRC settings must be set by the manufacturer. Several can be 
 <wire x1="48.12" y1="15" x2="48.49" y2="14.63" width="0.254" layer="1"/>
 </signal>
 <signal name="N$3">
-<via x="43.75" y="38" extent="1-16" drill="0.35"/>
+<via x="20.75" y="14.5" extent="1-16" drill="0.35"/>
 </signal>
 <signal name="N$6">
-<via x="43.75" y="36.75" extent="1-16" drill="0.35"/>
+<via x="20.75" y="15.5" extent="1-16" drill="0.35"/>
 </signal>
 <signal name="N$7">
-<via x="43.75" y="35.25" extent="1-16" drill="0.35"/>
+<via x="20.75" y="17.25" extent="1-16" drill="0.35"/>
+</signal>
+<signal name="N$8">
+<via x="20.75" y="18" extent="1-16" drill="0.35"/>
 </signal>
 </signals>
 <mfgpreviewcolors>
@@ -2722,13 +2729,8 @@ Note, that not all DRC settings must be set by the manufacturer. Several can be 
 <approved hash="5,1,d13b640d78cdb943"/>
 <approved hash="5,1,253eb7659633a540"/>
 <approved hash="5,1,7eb59c6f30f863b6"/>
-<approved hash="5,1,c09bb9def20dea73"/>
 <approved hash="5,1,ff3775df2b74a90c"/>
-<approved hash="5,1,7de4920af1cc6e63"/>
-<approved hash="5,1,769ab5c68a78e83a"/>
 <approved hash="5,1,9d1ce4fa2a92b265"/>
-<approved hash="5,1,634810a9cb08b2e7"/>
-<approved hash="5,1,9b4e98f8ae1e49d3"/>
 <approved hash="5,1,fd7413ecd7867058"/>
 <approved hash="5,1,b298aa764c53d752"/>
 <approved hash="5,1,e8683606f89bd388"/>
@@ -2865,6 +2867,38 @@ Note, that not all DRC settings must be set by the manufacturer. Several can be 
 <approved hash="5,1,ee638d4e306113da"/>
 <approved hash="5,1,db2916e48e3d22a8"/>
 <approved hash="5,1,dd7a41804581d461"/>
+<approved hash="5,1,d38db60554642f41"/>
+<approved hash="5,1,58d598b9dd79523f"/>
+<approved hash="5,1,a8afb11827a4eb7c"/>
+<approved hash="5,1,f614f64b09d77f51"/>
+<approved hash="5,1,926bc80439087bf1"/>
+<approved hash="5,1,9900f1fe1e4f79ed"/>
+<approved hash="5,1,1778f22d3bd898a1"/>
+<approved hash="5,1,bfb6b67215c7c63f"/>
+<approved hash="5,1,0644e5235cc337b9"/>
+<approved hash="5,1,eaf4e5c254ccad82"/>
+<approved hash="5,1,a6b5028431314e02"/>
+<approved hash="5,1,a12c716c00649543"/>
+<approved hash="5,1,02b7c5cb90903197"/>
+<approved hash="5,1,9528a51317752db7"/>
+<approved hash="5,1,26a3bc2b6f84903a"/>
+<approved hash="5,1,100661042a167b57"/>
+<approved hash="5,1,8297f27512044bfa"/>
+<approved hash="5,1,9e7d1ada66ae98d8"/>
+<approved hash="5,1,837ef11aa2d96ea1"/>
+<approved hash="5,1,b22aca808f694c4f"/>
+<approved hash="5,1,39897cdd07987363"/>
+<approved hash="5,1,b7fb26ce37199392"/>
+<approved hash="5,1,c895ccc9c7e59d33"/>
+<approved hash="5,1,4f87a0dbda7f60f2"/>
+<approved hash="5,1,1a8c970f1ca683f5"/>
+<approved hash="5,1,3fc10cae888e24ba"/>
+<approved hash="23,1,23f8d3ad79ecc62b"/>
+<approved hash="23,1,a766609095c768b1"/>
+<approved hash="23,1,779aaa66a6067bfa"/>
+<approved hash="23,1,b990856c852eb9d2"/>
+<approved hash="23,1,639d5e6142007ffc"/>
+<approved hash="23,1,f400312c63c6121f"/>
 </errors>
 </board>
 </drawing>

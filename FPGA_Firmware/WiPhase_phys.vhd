@@ -67,7 +67,7 @@ component WiPhase_top_level is
 			mclk_reset_reset_n                  : in  std_logic                    := 'X';             -- reset_n
 			pll_inclk_clk                       : in  std_logic                    := 'X';             -- clk
 			pll_out_clk                         : out std_logic;                                       -- clk
-			sample_pll_areset_conduit_export    : in  std_logic                    := 'X';             -- export
+			--sample_pll_areset_conduit_export    : in  std_logic                    := 'X';             -- export
 			sample_pll_locked_conduit_export    : out std_logic;                                       -- export
 			spi_signals_o_MISO                  : in  std_logic                    := 'X';             -- MISO
 			spi_signals_o_MOSI                  : out std_logic;                                       -- MOSI

@@ -1,0 +1,39 @@
+Added Component: Designator=*(jlcpcb 2.4GHz)
+Add component. Clean all parameters for all variants
+Added Component: Designator=J?(CINC-142-0701-801_V)
+Add component. Clean all parameters for all variants
+Add component (AddParameter): Name = "Body Material"; Value = "Brass"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Body Style"; Value = "Straight"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Brand"; Value = "Johnson/EmersonConnectivitySolutions"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Connector Type"; Value = "JackPCB"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Contact Plating"; Value = "Gold"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Datasheet URL"; Value = "https://belfuse.com/resources/Johnson/productinformation/pi-142-0701-801.pdf"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Datasheet Version"; Value = "12/2014"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Factory Pack Quantity"; Value = "5"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Gender"; Value = "Jack(Female)"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Impedance"; Value = "50Ohms"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Manufacturer"; Value = "EmersonConnectivitySolutions"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Manufacturer URL"; Value = "http://www.cinch.com/"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Maximum Frequency"; Value = "18GHz"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Mounting Technology"; Value = "SurfaceMount"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Operating Temperature Range"; Value = "-65Cto+165C"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Orientation"; Value = "Straight"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Package Description"; Value = "5-Pin Surface Mount Device, Body 14.275 x 9.525 mm"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Package Reference"; Value = "142-0701-801"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Package URL"; Value = "https://belfuse.com/resources/Johnson/drawings/dr-1420701801.pdf"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Product"; Value = "Connectors"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Product Category"; Value = "RFConnectors/CoaxialConnectors"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "RF Series"; Value = "SMA"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "RoHS"; Value = "Details"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Series"; Value = "SMA"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Termination Style"; Value = "Solder"; VariantName = "[No Variations]"
+Added Pin To Net: NetName=GND Pin=J?-2
+Added Pin To Net: NetName=GND Pin=J?-3
+Added Pin To Net: NetName=GND Pin=J?-4
+Added Pin To Net: NetName=GND Pin=J?-5
+Added Net: Name=GND
+Added Pin To Net: NetName=Net*_RF Pin=*-RF
+Added Pin To Net: NetName=Net*_RF Pin=J?-1
+Added Net: Name=Net*_RF
+Added Class: Name=2450 patch
+Added Room: Name=2450 patch

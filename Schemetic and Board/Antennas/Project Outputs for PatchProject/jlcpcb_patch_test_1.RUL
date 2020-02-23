@@ -1,0 +1,5 @@
+DRC Rules Export File for PCB: C:\Users\alist\OneDrive\Electrickery\Phased-Array-Radio-Telescope\Phased-Array-WiFi-Camera\Schemetic and Board\Antennas\jlcpcb_patch_test_1.PcbDoc
+RuleKind=Width|RuleName=2.4GHz|Scope=Board|Minimum=10.00
+RuleKind=SolderMaskExpansion|RuleName=SolderMaskExpansion|Scope=Board|Minimum=4.00
+RuleKind=Clearance|RuleName=Clearance|Scope=Board|Minimum=10.00
+RuleKind=ShortCircuit|RuleName=ShortCircuit|Scope=Board|Allowed=0

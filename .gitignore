@@ -44,3 +44,8 @@ PLLJ_PLLSPE_INFO.txt
 #ignore fusesoc generated stuff
 */fusesoc_libraries/
 */build/**
+
+# ~500 MB scope traces
+Models and Simulations/Beamforming test/good_inductor.csv
+Models and Simulations/Beamforming test/bad_inductor.csv
+Schemetic and Board/Antennas/History/**

@@ -1,0 +1,214 @@
+*************************************************************
+FileName = jlcpcb_patch_test_1.GBR
+AutoAperture = True
+*************************************************************
+Generating : Mechanical 13
+      File : jlcpcb_patch_test_1.GM13
+
+    Adding Layer      : Mechanical 13
+
+    Adding Layer      : KEEP_OUT
+
+
+Used DCodes :
+    D24
+*************************************************************
+
+*************************************************************
+Generating : Bottom Solder
+      File : jlcpcb_patch_test_1.GBS
+
+    Adding Layer      : Bottom Solder
+
+    Adding Layer      : KEEP_OUT
+
+    Adding Layer      : Bottom Layer
+
+    Adding Layer      : Multi-Layer
+
+
+Used DCodes :
+    D16
+    D20
+*************************************************************
+
+*************************************************************
+Generating : Top Paste
+      File : jlcpcb_patch_test_1.GTP
+
+    Adding Layer      : Top Paste
+
+    Adding Layer      : KEEP_OUT
+
+    Adding Layer      : Top Layer
+
+    Adding Layer      : Multi-Layer
+
+
+Used DCodes :
+    D12
+    D13
+    D14
+*************************************************************
+
+*************************************************************
+Generating : Bottom Layer
+      File : jlcpcb_patch_test_1.GBL
+
+    Adding Layer      : Bottom Layer
+
+    Adding Layer      : KEEP_OUT
+
+    Adding Layer      : Multi-Layer
+
+
+Used DCodes :
+    D12
+    D23
+*************************************************************
+
+*************************************************************
+Generating : Mechanical 15
+      File : jlcpcb_patch_test_1.GM15
+
+    Adding Layer      : Mechanical 15
+
+    Adding Layer      : KEEP_OUT
+
+
+Used DCodes :
+    D24
+    D25
+*************************************************************
+
+*************************************************************
+Generating : Top Solder
+      File : jlcpcb_patch_test_1.GTS
+
+    Adding Layer      : Top Solder
+
+    Adding Layer      : KEEP_OUT
+
+    Adding Layer      : Top Layer
+
+    Adding Layer      : Multi-Layer
+
+
+Used DCodes :
+    D15
+    D16
+    D17
+    D18
+    D19
+    D20
+*************************************************************
+
+*************************************************************
+Generating : Bottom Pad Master
+      File : jlcpcb_patch_test_1.GPB
+
+    Adding Layer      : Bottom Layer
+
+    Adding Layer      : Multi-Layer
+
+    Adding Layer      : KEEP_OUT
+
+
+Used DCodes :
+    D12
+*************************************************************
+
+*************************************************************
+Generating : Keep-Out Layer
+      File : jlcpcb_patch_test_1.GKO
+
+    Adding Layer      : Keep-Out Layer
+
+    Adding Layer      : KEEP_OUT
+
+
+Used DCodes :
+    D11
+*************************************************************
+
+*************************************************************
+Generating : Bottom Paste
+      File : jlcpcb_patch_test_1.GBP
+
+    Adding Layer      : Bottom Paste
+
+    Adding Layer      : KEEP_OUT
+
+    Adding Layer      : Bottom Layer
+
+    Adding Layer      : Multi-Layer
+
+
+Used DCodes :
+    D12
+*************************************************************
+
+*************************************************************
+Generating : Top Pad Master
+      File : jlcpcb_patch_test_1.GPT
+
+    Adding Layer      : Top Layer
+
+    Adding Layer      : Multi-Layer
+
+    Adding Layer      : KEEP_OUT
+
+
+Used DCodes :
+    D12
+    D13
+    D14
+*************************************************************
+
+*************************************************************
+Generating : Bottom Overlay
+      File : jlcpcb_patch_test_1.GBO
+
+    Adding Layer      : Bottom Overlay
+
+    Adding Layer      : KEEP_OUT
+
+
+Used DCodes :
+    D11
+*************************************************************
+
+*************************************************************
+Generating : Top Overlay
+      File : jlcpcb_patch_test_1.GTO
+
+    Adding Layer      : Top Overlay
+
+    Adding Layer      : KEEP_OUT
+
+
+Used DCodes :
+    D10
+    D11
+*************************************************************
+
+*************************************************************
+Generating : Top Layer
+      File : jlcpcb_patch_test_1.GTL
+
+    Adding Layer      : Top Layer
+
+    Adding Layer      : KEEP_OUT
+
+    Adding Layer      : Multi-Layer
+
+
+Used DCodes :
+    D12
+    D13
+    D14
+    D21
+    D22
+    D23
+*************************************************************
+

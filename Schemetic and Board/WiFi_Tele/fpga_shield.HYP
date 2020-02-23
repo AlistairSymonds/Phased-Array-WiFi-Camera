@@ -1,0 +1,126 @@
+**********************************************************************
+* Exports the board to HyperLynx Signal-Integrity Transfer Format (.HYP)
+* Version 2.00 9/11/97 -- 4.17 15/12/2015
+*
+* EAGLE Version 9.1.3 Copyright (c) 1988-2018 Autodesk, Inc.
+*
+* HyperLynx Board exported from:
+* C:/Users/alist/OneDrive/Electrickery/Phased-Array-Radio-Telescope/Phased-Array-WiFi-Camera/Schemetic and Board/WiFi_Tele/fpga_shield.brd
+* At 13/09/2018 10:14 PM
+*
+* Schematic is loaded.
+*
+
+{VERSION=2.10}  Compatible with Hyperlynx version 2.10.
+{UNITS=ENGLISH WEIGHT}
+
+**********************************************************************
+* Board Dimensions
+*
+{BOARD
+(PERIMETER_SEGMENT X1=0.0000 Y1=0.0000 X2=4.2126 Y2=0.0000) Wires: From Board
+(PERIMETER_SEGMENT X1=4.2126 Y1=0.0000 X2=4.2126 Y2=2.1850) Wires: From Board
+(PERIMETER_SEGMENT X1=4.2126 Y1=2.1850 X2=0.0000 Y2=2.1850) Wires: From Board
+(PERIMETER_SEGMENT X1=0.0000 Y1=2.1850 X2=0.0000 Y2=0.0000) Wires: From Board
+}
+
+**********************************************************************
+* Thickness of Copper and Dielectric Layer Data
+*
+{STACKUP
+(SIGNAL T=0.00070 P=0.00070 L=Top)
+(DIELECTRIC T=0.01943 C=4.80000 L=DL01)
+(SIGNAL T=0.00070 P=0.00000 L=Route2)
+(DIELECTRIC T=0.01943 C=4.80000 L=DL02)
+(SIGNAL T=0.00070 P=0.00000 L=Route15)
+(DIELECTRIC T=0.01943 C=4.80000 L=DL03)
+(SIGNAL T=0.00070 P=0.00070 L=Bottom)
+}
+* Total Board Thickness 0.0625 inch
+
+**********************************************************************
+* Components
+*
+{DEVICES
+(? REF=ADC NAME=HMCAD1511 L=Top)  R270 X=1.1256 Y=1.3476 :  Lib: HMCAD1511 : QFN50P700X700X100-49N : Pins 49
+(? REF=AMP NAME=LMH6522_NJY_54 L=Top)  R180 X=2.9681 Y=1.4567 :  Lib: LMH6522 : SQA54A : Pins 55
+(C REF=C1 VAL=1uF L=Top)  R000 X=3.6433 Y=0.3724 :  Lib: rcl : C0805 : Pins 2
+(C REF=C2 VAL=0.1uF L=Top)  R270 X=3.2917 Y=0.4681 :  Lib: rcl : C0805 : Pins 2
+(C REF=C11 VAL=0.1uF L=Top)  R000 X=2.8843 Y=1.7366 :  Lib: rcl : C0805 : Pins 2
+(C REF=C12 VAL=0.1uF L=Top)  R180 X=2.6449 Y=1.6945 :  Lib: rcl : C0805 : Pins 2
+(C REF=C13 VAL=0.1uF L=Top)  R270 X=2.6953 Y=1.0051 :  Lib: rcl : C0805 : Pins 2
+(C REF=C14 VAL=0.1uF L=Top)  R180 X=2.6921 Y=1.4780 :  Lib: rcl : C0805 : Pins 2
+(C REF=C15 VAL=0.01u L=Top)  R180 X=1.9850 Y=0.8894 :  Lib: rcl : C0805 : Pins 2
+(C REF=C16 VAL=0.01u L=Top)  R180 X=1.9850 Y=0.9909 :  Lib: rcl : C0805 : Pins 2
+(C REF=C17 VAL=0.01u L=Top)  R180 X=2.1425 Y=1.2339 :  Lib: rcl : C0805 : Pins 2
+(C REF=C18 VAL=0.01u L=Top)  R180 X=2.1425 Y=1.3354 :  Lib: rcl : C0805 : Pins 2
+(C REF=C19 VAL=0.01u L=Top)  R180 X=1.9850 Y=1.5692 :  Lib: rcl : C0805 : Pins 2
+(C REF=C20 VAL=0.01u L=Top)  R180 X=1.9865 Y=1.6717 :  Lib: rcl : C0805 : Pins 2
+(C REF=C21 VAL=0.01u L=Top)  R180 X=2.1425 Y=1.9141 :  Lib: rcl : C0805 : Pins 2
+(C REF=C22 VAL=0.01u L=Top)  R180 X=2.1425 Y=2.0080 :  Lib: rcl : C0805 : Pins 2
+(C REF=C23 VAL=22pF L=Top)  R090 X=1.6668 Y=0.9343 :  Lib: rcl : C0805 : Pins 2
+(C REF=C24 VAL=22pF L=Top)  R090 X=1.8275 Y=1.2821 :  Lib: rcl : C0805 : Pins 2
+(C REF=C25 VAL=22pF L=Top)  R090 X=1.6608 Y=1.6208 :  Lib: rcl : C0805 : Pins 2
+(C REF=C26 VAL=22pF L=Top)  R090 X=1.8421 Y=1.9616 :  Lib: rcl : C0805 : Pins 2
+(C REF=C27 VAL=1000uF L=Top)  R090 X=3.0079 Y=0.3606 :  Lib: rcl : 150CLZ-1010 : Pins 2
+(C REF=C28 VAL=1000uF L=Top)  R090 X=2.4736 Y=0.3606 :  Lib: rcl : 150CLZ-1010 : Pins 2
+(C REF=C29 VAL=1000uF L=Top)  R090 X=1.9685 Y=0.3606 :  Lib: rcl : 150CLZ-1010 : Pins 2
+(C REF=C30 VAL=1000uF L=Top)  R090 X=1.3461 Y=0.3831 :  Lib: rcl : 150CLZ-1010 : Pins 2
+(C REF=C31 VAL=0.1uF L=Top)  R090 X=1.1449 Y=1.7579 :  Lib: rcl : C0805 : Pins 2
+(C REF=C32 VAL=0.1uF L=Top)  R090 X=1.2661 Y=1.7579 :  Lib: rcl : C0805 : Pins 2
+(C REF=C33 VAL=0.1uF L=Top)  R090 X=1.0134 Y=1.7579 :  Lib: rcl : C0805 : Pins 2
+(C REF=C34 VAL=0.1uF L=Top)  R270 X=1.2812 Y=1.0182 :  Lib: rcl : C0805 : Pins 2
+(C REF=C35 VAL=0.1uF L=Top)  R270 X=1.1335 Y=1.0119 :  Lib: rcl : C0805 : Pins 2
+(? REF=CH1 NAME=5-1814832-1 L=Top)  R000 X=3.2740 Y=0.9681 :  Lib: 5-1814832-1 : TE_5-1814832-1 : Pins 5
+(? REF=CH2 NAME=5-1814832-1 L=Top)  R000 X=3.6283 Y=1.2736 :  Lib: 5-1814832-1 : TE_5-1814832-1 : Pins 5
+(? REF=CH3 NAME=5-1814832-1 L=Top)  R000 X=3.6283 Y=1.6594 :  Lib: 5-1814832-1 : TE_5-1814832-1 : Pins 5
+(? REF=CH4 NAME=5-1814832-1 L=Top)  R000 X=3.2740 Y=1.9469 :  Lib: 5-1814832-1 : TE_5-1814832-1 : Pins 5
+(L REF=L9 VAL=1uH L=Top)  R090 X=2.3008 Y=0.8371 :  Lib: Passives : INDC2518X180 : Pins 2
+(L REF=L10 VAL=1uH L=Top)  R270 X=2.3008 Y=1.0361 :  Lib: Passives : INDC2518X180 : Pins 2
+(L REF=L11 VAL=1uH L=Top)  R090 X=2.4583 Y=1.1887 :  Lib: Passives : INDC2518X180 : Pins 2
+(L REF=L12 VAL=1uH L=Top)  R270 X=2.4583 Y=1.3806 :  Lib: Passives : INDC2518X180 : Pins 2
+(L REF=L13 VAL=1uH L=Top)  R090 X=2.3008 Y=1.5240 :  Lib: Passives : INDC2518X180 : Pins 2
+(L REF=L14 VAL=1uH L=Top)  R270 X=2.3008 Y=1.7169 :  Lib: Passives : INDC2518X180 : Pins 2
+(L REF=L15 VAL=1uH L=Top)  R090 X=2.4583 Y=1.8689 :  Lib: Passives : INDC2518X180 : Pins 2
+(L REF=L16 VAL=1uH L=Top)  R270 X=2.4583 Y=2.0531 :  Lib: Passives : INDC2518X180 : Pins 2
+(R REF=R1 VAL=22 L=Top)  R090 X=1.7756 Y=0.8496 :  Lib: rcl : R0805 : Pins 2
+(R REF=R2 VAL=22 L=Top)  R090 X=1.7756 Y=1.0268 :  Lib: rcl : R0805 : Pins 2
+(R REF=R3 VAL=22 L=Top)  R090 X=1.9224 Y=1.1968 :  Lib: rcl : R0805 : Pins 2
+(R REF=R4 VAL=22 L=Top)  R090 X=1.9224 Y=1.3739 :  Lib: rcl : R0805 : Pins 2
+(R REF=R5 VAL=22 L=Top)  R090 X=1.7678 Y=1.5308 :  Lib: rcl : R0805 : Pins 2
+(R REF=R6 VAL=22 L=Top)  R090 X=1.7678 Y=1.7080 :  Lib: rcl : R0805 : Pins 2
+(R REF=R7 VAL=22 L=Top)  R090 X=1.9443 Y=1.8768 :  Lib: rcl : R0805 : Pins 2
+(R REF=R8 VAL=22 L=Top)  R090 X=1.9435 Y=2.0466 :  Lib: rcl : R0805 : Pins 2
+(R REF=R9 VAL=22 L=Top)  R180 X=2.1622 Y=0.8894 :  Lib: rcl : R0805 : Pins 2
+(R REF=R10 VAL=22 L=Top)  R180 X=2.1622 Y=0.9909 :  Lib: rcl : R0805 : Pins 2
+(R REF=R11 VAL=22 L=Top)  R180 X=2.3197 Y=1.2339 :  Lib: rcl : R0805 : Pins 2
+(R REF=R12 VAL=22 L=Top)  R180 X=2.3197 Y=1.3354 :  Lib: rcl : R0805 : Pins 2
+(R REF=R13 VAL=22 L=Top)  R180 X=2.1622 Y=1.5692 :  Lib: rcl : R0805 : Pins 2
+(R REF=R14 VAL=22 L=Top)  R180 X=2.1637 Y=1.6717 :  Lib: rcl : R0805 : Pins 2
+(R REF=R15 VAL=22 L=Top)  R180 X=2.3197 Y=1.9141 :  Lib: rcl : R0805 : Pins 2
+(R REF=R16 VAL=22 L=Top)  R180 X=2.3197 Y=2.0080 :  Lib: rcl : R0805 : Pins 2
+(R REF=R17 VAL=100 L=Top)  R270 X=0.4740 Y=1.9283 :  Lib: rcl : R0603 : Pins 2
+(R REF=R18 VAL=100 L=Top)  R090 X=0.1008 Y=1.8957 :  Lib: rcl : R0603 : Pins 2
+(R REF=R19 VAL=100 L=Top)  R090 X=0.0933 Y=1.7382 :  Lib: rcl : R0603 : Pins 2
+(R REF=R20 VAL=100 L=Top)  R090 X=0.1055 Y=1.1870 :  Lib: rcl : R0603 : Pins 2
+(R REF=R21 VAL=100 L=Top)  R090 X=0.1113 Y=0.9840 :  Lib: rcl : R0603 : Pins 2
+(R REF=R22 VAL=100 L=Top)  R090 X=0.1102 Y=0.7933 :  Lib: rcl : R0603 : Pins 2
+(R REF=R23 VAL=100 L=Top)  R090 X=0.1028 Y=0.6358 :  Lib: rcl : R0603 : Pins 2
+(R REF=R24 VAL=100 L=Top)  R090 X=0.1114 Y=0.3981 :  Lib: rcl : R0603 : Pins 2
+(R REF=R25 VAL=100 L=Top)  R090 X=0.1075 Y=0.2618 :  Lib: rcl : R0603 : Pins 2
+(R REF=R26 VAL=100 L=Top)  R090 X=0.1000 Y=0.1043 :  Lib: rcl : R0603 : Pins 2
+(R REF=R28 VAL=2000 L=Top)  R270 X=2.8543 Y=0.9843 :  Lib: rcl : R0805 : Pins 2
+(? REF=SV1 NAME= L=Top)  R270 X=0.2862 Y=1.0461 :  Lib: con-lsta : FE20-2 : Pins 40
+(? REF=SV2 NAME= L=Top)  R090 X=3.8295 Y=0.3262 :  Lib: con-lstb : MA05-1 : Pins 5
+(? REF=SV3 NAME= L=Top)  R090 X=4.0705 Y=0.3262 :  Lib: con-lstb : MA05-1 : Pins 5
+(? REF=SV4 NAME= L=Top)  R180 X=3.9061 Y=0.7681 :  Lib: con-lstb : MA05-1 : Pins 5
+(IC REF=U2 NAME=MICROCHIP_MCP1525T-I-TTMICROCHIP_MCP1525T-I-TT_0_1 L=Top)  R090 X=3.4827 Y=0.4669 :  Lib: MCP1525-TT : MICROCHIP_MCP1525T-I-TT_1 : Pins 3
+(? REF=VCO_TUNE NAME=MCP4921-E_SN L=Top PKG=SO)  R000 X=3.4815 Y=0.2199 :  Lib: MCP4921-E_SN : SOIC127P600X175-8N : Pins 8
+(? REF=VREG1 NAME=TLV75718PDBVR L=Top PKG=SO)  R180 X=1.6248 Y=0.6508 :  Lib: Tl757p : SOT95P240X110-5 : Pins 5
+}
+
+**********************************************************************
+* Pads, Smds, and Via Library
+*
+{PADSTACK=THR001,0.010
+(Top,0,0.018,0.018,0) ISAVIA Shape was Round and is now Round

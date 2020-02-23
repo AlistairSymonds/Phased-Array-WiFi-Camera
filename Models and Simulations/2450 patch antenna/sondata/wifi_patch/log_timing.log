@@ -1,0 +1,57 @@
+Run 1:  Thu Nov 01 11:21:51 2018.  SL288770.104303.
+        Em version 15.53-Lite (32-bit Windows) on NEON local.
+
+  Project:  C:\Users\alist\OneDrive\Electrickery\Phased-Array-Radio-Telescope\Phased-Array-WiFi-Camera\Models\2450 patch antenna\wifi_patch.son.
+
+    Frequency:  2.29 GHZ
+      Subsectioning at 2.56 GHz with Eeff of 2.7.
+      Subsectioning time:  0.416 seconds.
+      Em license feature:  emlite.
+      Circuit requires 1672 subsections and 22 MB of memory.
+
+      Subsections by level and type:
+      Level 0:
+        Staircase:  1,657
+      Ground Plane:
+        Via:        15
+
+      Required memory by type:
+        System matrix:            21 MB
+        Elemental subsections:
+          Primary structure:      6 MB
+        Fourier transform:        5 MB
+        Waveguide mode:           2 MB
+        Adaptive band synthesis:  2 MB
+        Miscellaneous:            1 MB
+        TOTAL REQUIRED MEMORY:    36 MB
+
+      Matrix solver:  internal 32-bit SSE with loss.
+      Simulation mode:  local machine.
+      Threads:  using 1 thread(s), 4 core(s) available.
+      Waveguide mode time:  0.109 seconds.
+      Fourier transform time:  1 second.
+      Coupling time:  6 seconds.
+      Loss time:  0.016 seconds.
+      Matrix fill time:  8 seconds.
+      Matrix solve time:  1 second.
+      De-embed autognd port 1:
+        Standard 1:  4.5 mm, 75 subsections, about 12 MB.
+          Time:  1 second.
+        Autognd port 1 std 2:
+          4.5 mm length, 60 subsections, 10 MB.
+          Time:  0.125 seconds.
+        Autognd port 1 std 3:
+          9 mm length, 116 subsections, 10 MB.
+          Time:  0.171 seconds.
+      Total time per frequency:  12 seconds.
+
+    Frequency:  2.56 GHZ
+      ABS time:  0.188 seconds.
+
+    Frequency:  2.429 GHZ
+      ABS time:  0.203 seconds.
+
+    Post-Analysis:
+      Total time for 3 frequencies:  37 seconds.
+
+Analysis completed Thu Nov 01 11:22:28 2018.

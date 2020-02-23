@@ -2162,7 +2162,9 @@ Note, that not all DRC settings must be set by the manufacturer. Several can be 
 <via x="43.75" y="35.25" extent="1-16" drill="0.35"/>
 <via x="43.75" y="36.75" extent="1-16" drill="0.35"/>
 <via x="43.75" y="38" extent="1-16" drill="0.35"/>
-<wire x1="43.75" y1="36.75" x2="43.75" y2="38" width="0" layer="19" extent="1-1"/>
+<via x="20.75" y="18" extent="1-16" drill="0.35"/>
+<via x="20.75" y="17.25" extent="1-16" drill="0.35"/>
+<via x="20.75" y="14.5" extent="1-16" drill="0.35"/>
 </signal>
 <signal name="N$2">
 <contactref element="C3" pad="1"/>
@@ -2350,12 +2352,6 @@ Note, that not all DRC settings must be set by the manufacturer. Several can be 
 </polygon>
 <wire x1="45.5" y1="15" x2="48.12" y2="15" width="0.254" layer="1"/>
 <wire x1="48.12" y1="15" x2="48.49" y2="14.63" width="0.254" layer="1"/>
-</signal>
-<signal name="N$3">
-<via x="20.75" y="14.5" extent="1-16" drill="0.35"/>
-</signal>
-<signal name="N$6">
-<via x="20.75" y="15.5" extent="1-16" drill="0.35"/>
 </signal>
 </signals>
 <mfgpreviewcolors>
@@ -2700,7 +2696,6 @@ Note, that not all DRC settings must be set by the manufacturer. Several can be 
 <approved hash="3,1,79eb872f874c7988"/>
 <approved hash="3,1,8df38ef0708d93a9"/>
 <approved hash="3,1,b60ffb4ffb1cb65c"/>
-<approved hash="3,1,01991e651f66009a"/>
 <approved hash="5,1,cdc7f112a3992cfd"/>
 <approved hash="5,1,90ea007f33b9c9cf"/>
 <approved hash="5,1,b40e7eae39cc9311"/>
@@ -2888,11 +2883,33 @@ Note, that not all DRC settings must be set by the manufacturer. Several can be 
 <approved hash="5,1,1a8c970f1ca683f5"/>
 <approved hash="5,1,3fc10cae888e24ba"/>
 <approved hash="23,1,23f8d3ad79ecc62b"/>
-<approved hash="23,1,a766609095c768b1"/>
-<approved hash="23,1,779aaa66a6067bfa"/>
-<approved hash="23,1,b990856c852eb9d2"/>
-<approved hash="23,1,639d5e6142007ffc"/>
 <approved hash="23,1,f400312c63c6121f"/>
+<approved hash="5,1,10a29b9032d1aa39"/>
+<approved hash="5,1,ec461373ddc554ec"/>
+<approved hash="5,1,2ec666208085a7b8"/>
+<approved hash="5,1,1011c5ff7403da1d"/>
+<approved hash="5,1,3c96135e4e941f4a"/>
+<approved hash="5,1,60f2c84a01a23d06"/>
+<approved hash="5,1,71b9c66f59a1657b"/>
+<approved hash="5,1,89e7921f155c0768"/>
+<approved hash="5,1,cb7bc092ab19cb37"/>
+<approved hash="5,1,c08ca9cffe209651"/>
+<approved hash="5,1,277ddeffbb053c2e"/>
+<approved hash="5,1,6409222ebaf7918c"/>
+<approved hash="5,1,b50a310f30976f75"/>
+<approved hash="5,1,964ffec1c2b23c8d"/>
+<approved hash="5,1,705a4f87e9154427"/>
+<approved hash="5,1,9dd842e09d13bc11"/>
+<approved hash="5,1,0c9f627e755ddad3"/>
+<approved hash="5,1,a301abd7e51320f6"/>
+<approved hash="5,1,ea4766b385cd8f7a"/>
+<approved hash="5,1,08076c25950f6d93"/>
+<approved hash="5,1,de06765bc9c2387e"/>
+<approved hash="5,1,28134ca63670c075"/>
+<approved hash="5,1,b1b514ab54dc397f"/>
+<approved hash="3,1,01991e651f66009a"/>
+<approved hash="21,19,b7dbb5d9b5d9b7db"/>
+<approved hash="19,1,8e8e8993b3bdb4a0"/>
 </errors>
 </board>
 </drawing>

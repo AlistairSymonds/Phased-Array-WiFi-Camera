@@ -1,0 +1,3 @@
+Change Component Designator: OldDesignator=* NewDesignator=Ant
+Change Component Designator: OldDesignator=J? NewDesignator=SMA
+Change Net Name : Old Net Name=Net*_RF New Net Name=NetAnt_RF

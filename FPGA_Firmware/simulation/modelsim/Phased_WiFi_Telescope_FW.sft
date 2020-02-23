@@ -1,6 +1,0 @@
-set tool_name "ModelSim-Altera (VHDL)"
-set corner_file_list {
-    {{"Slow -8 1.2V 85 Model"} {Phased_WiFi_Telescope_FW_8_1200mv_85c_slow.vho Phased_WiFi_Telescope_FW_8_1200mv_85c_vhd_slow.sdo}}
-    {{"Slow -8 1.2V 0 Model"} {Phased_WiFi_Telescope_FW_8_1200mv_0c_slow.vho Phased_WiFi_Telescope_FW_8_1200mv_0c_vhd_slow.sdo}}
-    {{"Fast -M 1.2V 0 Model"} {Phased_WiFi_Telescope_FW_min_1200mv_0c_fast.vho Phased_WiFi_Telescope_FW_min_1200mv_0c_vhd_fast.sdo}}
-}

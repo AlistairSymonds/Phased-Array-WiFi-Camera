@@ -1,0 +1,25 @@
+Output: Gerber Files
+Type  : Gerber
+From  : Variant [[No Variations]] of Project [PatchProject.PrjPCB]
+   Generated File[jlcpcb_patch_test_1.GTO]
+   Generated File[jlcpcb_patch_test_1.GTP]
+   Generated File[jlcpcb_patch_test_1.GTS]
+   Generated File[jlcpcb_patch_test_1.GTL]
+   Generated File[jlcpcb_patch_test_1.GBL]
+   Generated File[jlcpcb_patch_test_1.GBS]
+   Generated File[jlcpcb_patch_test_1.GBP]
+   Generated File[jlcpcb_patch_test_1.GBO]
+   Generated File[jlcpcb_patch_test_1.GM13]
+   Generated File[jlcpcb_patch_test_1.GM15]
+   Generated File[jlcpcb_patch_test_1.GKO]
+   Generated File[jlcpcb_patch_test_1.GPT]
+   Generated File[jlcpcb_patch_test_1.GPB]
+   Generated File[jlcpcb_patch_test_1.RUL]
+   Generated File[jlcpcb_patch_test_1.EXTREP]
+   Generated File[jlcpcb_patch_test_1.REP]
+
+
+Files Generated   : 16
+Documents Printed : 0
+
+Finished Output Generation At 8:54:35 PM On 19/09/2018
