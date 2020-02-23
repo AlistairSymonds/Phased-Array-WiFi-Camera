@@ -1,24 +1,28 @@
+
+
 module pawc_top(
 input clk, resetn
 
 
 );
 
-
-
+logic wb_clk, wb_rst;
+assign wb_clk = clk;
+assign wb_rst = ~resetn;
+`include "wb_intercon.vh"
 
 picorv32_wb u_picorv32_wb(
 	.trap           ( ),
     .wb_rst_i       (~resetn ),
     .wb_clk_i       (clk ),
-    .wbm_adr_o      ( ),
-    .wbm_dat_o      ( ),
-    .wbm_dat_i      ( ),
-    .wbm_we_o       ( ),
-    .wbm_sel_o      ( ),
-    .wbm_stb_o      ( ),
-    .wbm_ack_i      ( ),
-    .wbm_cyc_o      ( ),
+    .wbm_adr_o      (wb_m2s_pico_rv_adr ),
+    .wbm_dat_o      (wb_m2s_pico_rv_dat),
+    .wbm_dat_i      (wb_s2m_pico_rv_dat ),
+    .wbm_we_o       (wb_m2s_pico_rv_we),
+    .wbm_sel_o      (wb_m2s_pico_rv_sel ),
+    .wbm_stb_o      (wb_m2s_pico_rv_stb ),
+    .wbm_ack_i      (wb_s2m_pico_rv_ack ),
+    .wbm_cyc_o      (wb_m2s_pico_rv_cyc ),
     .pcpi_valid     ( ),
     .pcpi_insn      ( ),
     .pcpi_rs1       ( ),
@@ -34,5 +38,19 @@ picorv32_wb u_picorv32_wb(
     .trace_data     ( ),
     .mem_instr      ( )
 );
+
+rv_init_wb u_rv_init_wb(
+	.clk        (clk        ),
+    .resetn     (resetn     ),
+    .i_wb_cyc   (wb_m2s_boot_cyc   ),
+    .i_wb_stb   (wb_m2s_boot_stb   ),
+    .i_wb_we    (wb_m2s_boot_we    ),
+    .i_wb_addr  (wb_m2s_boot_adr  ),
+    .i_wb_data  (wb_m2s_boot_dat  ),
+    .o_wb_ack   (wb_s2m_boot_ack   ),
+    .o_wb_stall (wb_s2m_boot_rty ), //retry and stall are kinda samey right?
+    .o_wb_data  (wb_s2m_boot_dat  )
+);
+
 
 endmodule

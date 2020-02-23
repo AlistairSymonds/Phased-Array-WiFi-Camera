@@ -5,24 +5,67 @@ name : ::pawc:0.1
 
 
 filesets:
-  rtl:
-    depend:
-      - "::picorv32"
-      - "::hyperram"
+  c10lp-evkit:
     files:
       - rtl/c10lp_baseline_pinout.v
-      - rtl/pawc_top.sv
     file_type: systemVerilogSource
+
+  rtl:
+    depend:
+      #- "::picorv32"
+      - "::hyperram"
+      - fusesoc:utils:generators
+      - "::wb_intercon"
+    files:
+      - rtl/pawc_top.sv
+      - rtl/picorv32.v
+      - rtl/bootloader.sv
+    file_type: systemVerilogSource
+
   tb_files:
     files:
       - tb/pawc_tb.sv
     file_type : systemVerilogSource
 
+  verilator_files:
+    files:
+      #- tb/testbench.h
+      - tb/pawc_tb_verilator.cpp
+    file_type : cppSource
+
+generate:
+  intercon:
+    generator: wb_intercon_gen
+    parameters:
+      masters:
+        pico_rv:
+          slaves: [boot, rom, ram, mm_blinky]
+      slaves:
+        boot:
+          offset: 0
+          size: 128
+        mm_blinky:
+          offset : 0x80000000
+          size   : 4
+        rom:
+          offset : 0x8000000F
+          size   : 0x00001000
+        ram:
+          offset : 0xFFFF0000
+          size   : 0x0000FFFF #128MiB
+
+
+
 targets:
   default:
     filesets: [rtl]
   sim:
-    filesets: [rtl, tb_files]
+    filesets: [rtl, verilator_files]
+    generate: [intercon]
     default_tool : verilator
-    toplevel : pawc_tb
-    
+    tools : 
+      verilator:
+        verilator_options : [-Wno-fatal, +1800-2017ext+sv, --trace]
+      icarus:
+    toplevel : pawc_top
+
