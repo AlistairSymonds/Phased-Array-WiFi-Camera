@@ -45,6 +45,9 @@ PLLJ_PLLSPE_INFO.txt
 */fusesoc_libraries/
 */build/**
 
+#ignore custom picorv toolchain stuff
+**/fpga/sw/*_build/**
+
 # ~500 MB scope traces
 Models and Simulations/Beamforming test/good_inductor.csv
 Models and Simulations/Beamforming test/bad_inductor.csv
