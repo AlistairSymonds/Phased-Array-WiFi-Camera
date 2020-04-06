@@ -25,6 +25,8 @@ filesets:
   tb_files:
     files:
       - tb/pawc_tb.sv
+      - tb/sim_rom.sv
+      - tb/sim_ram.sv
     file_type : systemVerilogSource
 
   verilator_files:
@@ -32,6 +34,17 @@ filesets:
       #- tb/testbench.h
       - tb/pawc_tb_verilator.cpp
     file_type : cppSource
+  
+  sw_src:
+    files:
+    - sw/blinky/main.cpp
+    - sw/pawc_lib/pawc.cpp
+    - sw/pawc_lib/pawc.h
+  
+  sw_tools:
+    files:
+    - sw/Makefile
+    - sw/fusesoc_to_makefile.sh
 
 generate:
   intercon:
@@ -39,33 +52,41 @@ generate:
     parameters:
       masters:
         pico_rv:
-          slaves: [boot, rom, ram, mm_blinky]
+          slaves: [boot, mm_blinky, rom, ram]
       slaves:
         boot:
-          offset: 0
-          size: 128
+          offset : 0x00000000
+          size   : 0x0000000F
         mm_blinky:
-          offset : 0x80000000
-          size   : 4
+          offset : 0x00000080
+          size   : 0x00000004
         rom:
-          offset : 0x8000000F
-          size   : 0x00001000
+          offset : 0x00000100
+          size   : 0x000000FF
         ram:
-          offset : 0xFFFF0000
-          size   : 0x0000FFFF #128MiB
+          offset : 0x00000800
+          size   : 0x00000400
 
+scripts:
+  compile_and_copy_fw:
+    filesets: [sw_tools, sw_src]
+    cmd: ['sh', '../../../sw/fusesoc_to_makefile.sh']
 
+    
 
 targets:
   default:
     filesets: [rtl]
   sim:
-    filesets: [rtl, verilator_files]
+    filesets: [rtl, verilator_files, tb_files]
     generate: [intercon]
     default_tool : verilator
+    hooks:
+      post_build: [compile_and_copy_fw]
     tools : 
       verilator:
         verilator_options : [-Wno-fatal, +1800-2017ext+sv, --trace]
       icarus:
-    toplevel : pawc_top
+    toplevel : pawc_tb
+  
 
