@@ -16,6 +16,8 @@ filesets:
       - "::hyperram"
       - fusesoc:utils:generators
       - "::wb_intercon"
+      - uart16550
+      - gpio
     files:
       - rtl/pawc_top.sv
       - rtl/picorv32.v
@@ -52,20 +54,23 @@ generate:
     parameters:
       masters:
         pico_rv:
-          slaves: [boot, mm_blinky, rom, ram]
+          slaves: [boot, rom, ram, gpio, uart]
       slaves:
         boot:
           offset : 0x00000000
           size   : 0x0000000F
-        mm_blinky:
-          offset : 0x00000080
-          size   : 0x00000004
         rom:
           offset : 0x00000100
           size   : 0x000000FF
         ram:
           offset : 0x00000800
           size   : 0x00000400
+        gpio:
+          offset : 0x80000000
+          size   : 0x00000004
+        uart:
+          offset : 0x80000004
+          size   : 0x00000004
 
 scripts:
   compile_and_copy_fw:

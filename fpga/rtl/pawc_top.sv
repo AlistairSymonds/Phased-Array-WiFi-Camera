@@ -20,7 +20,13 @@ module pawc_top(
     output logic [31:0] o_wb_rom_data, 
     input  logic i_wb_rom_ack,
     input  logic i_wb_rom_stall, 
-    input  logic [31:0] i_wb_rom_data
+    input  logic [31:0] i_wb_rom_data,
+//gpio
+    output logic [7:0] gpio_o,
+
+//uart
+    input logic  uart_rx,
+    output logic uart_tx
 );
 
 logic wb_clk, wb_rst;
@@ -98,6 +104,26 @@ assign wb_s2m_ram_ack       = (i_wb_ram_ack);
 assign wb_s2m_ram_rty       = (i_wb_ram_stall);
 assign wb_s2m_ram_dat       = (i_wb_ram_data );
 
+gpio u_gpio(
+   	.wb_clk(clk),
+	.wb_rst(~resetn),
+
+	.wb_adr_i(wb_m2s_gpio_adr),
+	.wb_dat_i(wb_m2s_gpio_dat[7:0]),
+	.wb_we_i (wb_m2s_gpio_we),
+	.wb_cyc_i(wb_m2s_gpio_cyc),
+	.wb_stb_i(wb_m2s_gpio_stb),
+	.wb_cti_i(),
+	.wb_bte_i(),
+	.wb_dat_o(wb_s2m_gpio_dat),
+	.wb_ack_o(wb_s2m_gpio_ack),
+	.wb_err_o(),
+	.wb_rty_o(wb_s2m_gpio_rty),
+
+	.gpio_i(),
+	.gpio_o(gpio_o),
+	.gpio_dir_o()
+);
 
 endmodule
 `default_nettype wire
